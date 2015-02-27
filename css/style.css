@@ -99,20 +99,21 @@ html, body{
 			background-position: calc(50% - 35px) 0;
 			color: #99cc00;
 		}
-		#header_button_wrapper .btn:hover{
-			color: #99cc00;
-		}
-		#header_button_wrapper .btn:active{
-			/*background-color: #99cc00;
-			color: #ffffff;
-			color: #00a22f;*/
-		}
+
 			#header_button_wrapper .btn .title{
+				display: inline-block;
+				position: relative;
+
+				width: auto; height: 100%;
+
 				line-height: 100px;
 				letter-spacing: 3px;
 			}
+			#header_button_wrapper .btn .title:hover{
+				color: #99cc00;
+			}
 
-			#header_button_wrapper .btn i.fa{
+			#header_button_wrapper .btn .icon{
 				display: inline-block;
 				position: relative;
 				width: 40px; height: 40px;
@@ -125,15 +126,15 @@ html, body{
 				border-radius: 4px;
 
 				line-height: 40px;
-
 			}
-			#header_button_wrapper .btn.open i.fa{
+			#header_button_wrapper .btn.open .icon{
 				background-color: #99cc00;
 			}
-			#header_button_wrapper .btn i.fa:hover {
+			#header_button_wrapper .btn .icon:hover {
 				color: #ffffff;
 				background-color: #99cc00;
 			}
+
 			/*#header_button_wrapper .btn:active i.fa{
 				color: #99cc00;
 				background-color: #00a22f;
@@ -181,12 +182,18 @@ html, body{
 
 				font-size: 18px;
 			}
-
 			.dropDownMenu .menuItem:hover{
+				color: #00a330;
+				border-color: #f2f2f2;
+				background-color: #f2f2f2;
+			}
+			.dropDownMenu .menuItem.active{
 				color: #00a330;
 				border-color: #99cc00;
 				background-color: #f2f2f2;
 			}
+
+			
 
 
 /* HEADER -- end */
