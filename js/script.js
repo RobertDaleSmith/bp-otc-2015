@@ -31,9 +31,55 @@ $("#header_button_wrapper .btn .title").click(function(event){
 $(".menuItem").click(function(event){
 
 	var self = this;
+
+	var pointId = $(self).attr('id');
 	
 	$("#header_button_wrapper .btn").removeClass('open');
 
 	$(self).parent().parent().find('.icon i').attr("class","fa fa-chevron-down");
 
+	$('.mapPoint#'+pointId).click();
+
 });
+
+
+$(".mapPoint").click(function(event){
+
+	var self = this;
+
+	var id = $(this).attr("id");
+
+	console.log($(this).hasClass('open'));
+
+	if( !$(this).hasClass('open') ){
+		var labelWidth = $(this).find('.label').css("width");
+		$(this).find('.label').css('width', labelWidth);
+	}
+
+
+	showFloater( id );
+
+	$('div.mapPoint').removeClass('open');
+
+	setTimeout(function(){
+
+		$(self).addClass('open');
+
+		setTimeout(function(){
+			$(self).css('width', '');
+		}, 1);
+
+	}, 1);
+
+
+	//Stuff for setting active dropDown item.
+	$('.menuItem').removeClass('active');
+	$('.menuItem#'+id).addClass('active');
+
+});
+
+function showFloater(name){
+
+	console.log( name );
+
+}
