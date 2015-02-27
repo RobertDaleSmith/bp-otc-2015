@@ -8,7 +8,13 @@ $("#header_button_wrapper .btn .icon").click(function(event){
 	if ($(self).parent().attr('class').indexOf("open") >= 0) isOpen = true;
 	
 	$("#header_button_wrapper .btn").removeClass('open');
-	if(!isOpen) $(self).parent().addClass('open');
+	if(!isOpen) {
+		$(self).parent().addClass('open');
+
+		$(self).find('i').attr("class","fa fa-chevron-up");
+	} else {
+		$(self).find('i').attr("class","fa fa-chevron-down");
+	}
 
 });
 
@@ -24,7 +30,10 @@ $("#header_button_wrapper .btn .title").click(function(event){
 
 $(".menuItem").click(function(event){
 
-	console.log( "isOpen" );
+	var self = this;
+	
 	$("#header_button_wrapper .btn").removeClass('open');
+
+	$(self).parent().parent().find('.icon i').attr("class","fa fa-chevron-down");
 
 });
