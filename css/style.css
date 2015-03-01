@@ -269,6 +269,9 @@ html, body{
 
 				cursor: pointer;
 			}
+			.mapPoint.open{
+				cursor: default;	
+			}
 
 				.mapPoint .label{
 
@@ -288,6 +291,7 @@ html, body{
 					color: #ffffff;
 
 					white-space: nowrap;
+					overflow: hidden;
 
 					-webkit-transition: all 0.5s;
 					   -moz-transition: all 0.5s;
@@ -302,20 +306,19 @@ html, body{
 				}
 
 
-
-
-
 				.mapPoint.open .label{
 					left: 45px; top: -125px;
 
 					width: 1160px !important; height: 106px;
 
-					color: #ffe300;
 					background-color: #00a22f;
 
 					border-radius: 5px 5px 0 0;
 
 					z-index: 20;
+
+					padding: 15px 20px 0 20px;
+
 				}
 
 				.mapPoint.left.open .label{
@@ -332,6 +335,43 @@ html, body{
 					z-index: 20;
 				}
 
+
+					.mapPoint .label .title{
+						color: #ffffff;
+						font-size: 16px;
+
+					}
+					.mapPoint.open .label .title{
+						color: #ffe300;
+						font-size: 20px;
+						line-height: 18px;
+					}
+
+					.mapPoint .label .close{
+						display: block;
+						position: absolute;
+						right: 35px; top: 35px;
+						width: 0px; height: 0px;
+
+						border-radius: 6px;
+						background-color: rgba(85,85,89,0.7);
+
+						background-image: url('../images/icon_close.svg');
+						background-size: 100% 100%;
+						background-position: center center;
+
+						cursor: pointer;
+						-webkit-transition: all 0.5s;
+						   -moz-transition: all 0.5s;
+							-ms-transition: all 0.5s;
+							 -o-transition: all 0.5s;
+								transition: all 0.5s;
+					}
+					.mapPoint.open .label .close{
+						right: 15px; top: 15px;
+						width: 40px; height: 40px;
+						background-color: #99CC00;
+					}
 
 
 
