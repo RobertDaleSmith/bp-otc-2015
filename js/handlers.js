@@ -36,8 +36,6 @@ BP.handlers = {
 		
 		$("#header_button_wrapper .btn").removeClass('open');
 
-		$(self).parent().parent().find('.icon i').attr("class","fa fa-chevron-down");
-
 		$('.mapPoint#'+pointId).click();
 
 	},
@@ -47,6 +45,10 @@ BP.handlers = {
 		var self = this;
 
 		var id = $(self).attr("id");
+
+		var mapLeft = $(self).attr("mapLeft");
+
+		var mapTop = $(self).attr("mapTop");
 
 		var isOpen = $(self).hasClass('open');
 
@@ -74,7 +76,9 @@ BP.handlers = {
 			$('.menuItem').removeClass('active');
 			$('.menuItem#'+id).addClass('active');
 
-			// $(self).unbind( "click" );
+			//Shift Map
+			$('#map_wrapper').css('left', mapLeft+'px').css('top', mapTop+'px');
+
 		}
 
 	},
@@ -88,6 +92,8 @@ BP.handlers = {
 		point.removeClass('open');
 
 		var id = $(point).attr("id");
+
+		$('#map_wrapper').css('left', '0px').css('top', '0px');
 
 		event.stopPropagation();
 
