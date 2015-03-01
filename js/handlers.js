@@ -79,6 +79,9 @@ BP.handlers = {
 			//Shift Map
 			$('#map_wrapper').css('left', mapLeft+'px').css('top', mapTop+'px');
 
+			//Show footer disclaimer.
+			$('#footer_wrapper').addClass('on');
+
 		}
 
 	},
@@ -94,6 +97,10 @@ BP.handlers = {
 		var id = $(point).attr("id");
 
 		$('#map_wrapper').css('left', '0px').css('top', '0px');
+
+		$('.menuItem').removeClass('active');
+
+		$('#footer_wrapper').removeClass('on');
 
 		event.stopPropagation();
 
