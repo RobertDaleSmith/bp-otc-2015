@@ -47,15 +47,15 @@ BP.handlers = {
 
 		var self = this;
 
+		if( !$(self).parent().parent().hasClass('active') ) {
+			$(self).parent().parent().find('.title').click();
+		}
+
 		var pointId = $(self).attr('id');
 		
 		$("#header_button_wrapper .btn").removeClass('open');
 
 		$('.mapPoint#'+pointId).click();
-
-		// Triggers section.
-		
-		$(self).parent().parent().find('.title').click();
 
 	},
 
