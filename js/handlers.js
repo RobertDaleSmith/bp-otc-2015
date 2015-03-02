@@ -104,6 +104,16 @@ BP.handlers = {
 
 		event.stopPropagation();
 
+	},
+
+	techCategoryToggleClickEvent: function(event) {
+
+		var self = this;
+		
+		var parent = $(self).parent();
+
+		parent.toggleClass('open');
+
 	}
 
 }

@@ -413,7 +413,6 @@ html, body{
 					background-color: rgba(85,85,89,0.7);
 					color: #ffffff;
 
-					white-space: nowrap;
 					overflow: hidden;
 
 					-webkit-transition: all 0.5s;
@@ -450,7 +449,6 @@ html, body{
 
 					width: 1160px !important; height: 106px;
 
-					color: #ffe300;
 					background-color: #00a22f;
 
 					border-radius: 5px 5px 0 0;
@@ -458,8 +456,8 @@ html, body{
 					z-index: 20;
 				}
 
-
 					.mapPoint .label .title{
+
 						display: block;
 						position: relative;
 
@@ -471,11 +469,17 @@ html, body{
 							 -o-transition: all 0.5s;
 								transition: all 0.5s;
 
+						white-space: nowrap;
+
+
 					}
 					.mapPoint.open .label .title{
+
 						color: #ffe300;
-						font-size: 20px;
-						line-height: 18px;
+						font-size: 24px;
+						font-weight: 300;
+						line-height: 20px;
+
 					}
 
 					.mapPoint .label .close{
@@ -516,8 +520,194 @@ html, body{
 
 					}
 
+					.mapPoint .label .description{
+
+						display: block;
+						position: absolute;
+						top: 35px;
+
+						width: 490px; height: 0px;
+
+						opacity: 0;
+
+						letter-spacing: 1px;
+						line-height: 18px;
+						font-size: 14px;
+						font-weight: 300;
+						overflow: hidden;
+
+						-webkit-transition: all 0.25s;
+						   -moz-transition: all 0.25s;
+							-ms-transition: all 0.25s;
+							 -o-transition: all 0.25s;
+								transition: all 0.25s;
+
+					}
+					.mapPoint.open .label .description{
+
+						height: 54px;
+						opacity: 1;
+						margin: 5px 0 0 0;
+
+					}
 
 
+
+
+
+				.mapPoint .techDeployments{
+
+					display: block;
+					position: absolute;
+					left: 45px; top: -19px;
+
+					width: 1160px; height: 0px;
+
+					overflow: hidden;	
+					z-index: 20;
+
+					-webkit-transition: all 2s;
+					   -moz-transition: all 2s;
+						-ms-transition: all 2s;
+						 -o-transition: all 2s;
+							transition: all 2s;
+
+				}
+				.mapPoint.open .techDeployments{
+
+					height: auto;
+
+				}
+					.mapPoint .techDeployments .list{
+
+						display: block;
+						position: relative;
+						float: left;
+
+						width: 50%;
+						height: auto;
+
+						padding: 0 0 10px 0;
+
+						background-color: #ffffff;
+
+						border-radius: 0 0 7px 7px;
+
+					}
+						.mapPoint .techDeployments .list .category{
+
+							display: inline-block;
+							position: relative;
+							width: 100%; height: 50px;
+							margin: 8px 0 0 0;
+							padding: 0 10px 0 0;
+
+						}
+							.mapPoint .techDeployments .list .category .title{
+
+								display: inline-block;
+								position: relative;
+								width: 100%; height: 50px;
+
+								background-color: #ebeef4;
+
+								line-height: 50px;
+
+								border-style: solid;
+								border-width: 0 0 0 24px;
+								padding: 0 12px;
+
+								color: #909396;
+
+								text-align: left;
+								font-size: 22px;
+
+								cursor: pointer;
+
+							}
+
+								.mapPoint .techDeployments .list .category .toggle{
+
+									display: inline-block;
+									position: absolute;
+									top: 5px; right: 15px;
+
+									width: 40px; height: 40px;
+
+									border-radius: 6px;
+
+									background-color: #898d8f;
+
+									background-image: url('../images/icon_max.svg');
+									background-size: 100% 100%;
+									background-position: center center;
+
+									cursor: pointer;
+
+								}
+								.mapPoint .techDeployments .list .category.open .toggle{
+									background-image: url('../images/icon_min.svg');
+								}
+
+							.mapPoint .techDeployments .list .category .techs{
+
+								display: none;
+								position: relative;
+								width: 100%; height: auto;
+
+								background-color: #ffffff;
+
+								border-style: solid;
+								border-width: 0 0 0 10px;
+								padding: 0 0 0 14px;
+
+							}
+							.mapPoint .techDeployments .list .category.open .techs{
+
+								display: inline-block;
+
+							}
+								.mapPoint .tech{
+									display: inline-block;
+									position: relative;
+									width: 100%; height: 30px;
+
+									text-align: left;
+
+									padding: 0 0 0 20px;
+
+									border-style: solid;
+									border-width: 2px 0 0 0;
+									border-color: #ebeef4;
+
+									line-height: 30px;
+
+									color: #898d8f;
+
+								}	
+									.mapPoint .tech.head{
+										color: #a7d322;
+										border-color: #ffffff;
+										font-weight: 700;
+									}
+
+									.mapPoint .tech .name{
+										display: inline-block;
+										position: relative;
+										float: left;
+
+										width: 60%; height: 100%;
+										text-align: left;
+									}
+
+									.mapPoint .tech .status{
+										display: inline-block;
+										position: relative;
+										float: left;
+
+										width: 40%; height: 100%;
+										text-align: left;
+									}
 
 
 				.mapPoint .arrow{
