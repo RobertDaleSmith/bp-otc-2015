@@ -3,9 +3,24 @@ BP.handlers = {
 	headerMainMenuClickEvent: function(event) {
 
 		var self = this;
+
+		var sectionId = $(self).parent().attr('id'); 
+
+		console.log(sectionId);
 		
 		$("#header_button_wrapper .btn").removeClass('active');
+
 		$(self).parent().addClass('active');
+
+		
+		$("#intro_wrapper").css('display','none');
+		if(sectionId == 'deployments') {
+			$("#mapPoints").css('display','');
+		} 
+		if(sectionId == 'projects') {
+			$("#mapPoints").css('display','none');
+		}
+
 
 	},
 
@@ -37,6 +52,10 @@ BP.handlers = {
 		$("#header_button_wrapper .btn").removeClass('open');
 
 		$('.mapPoint#'+pointId).click();
+
+		// Triggers section.
+		
+		$(self).parent().parent().find('.title').click();
 
 	},
 
