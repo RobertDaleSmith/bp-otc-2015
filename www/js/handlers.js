@@ -21,7 +21,6 @@ BP.handlers = {
 			$("#mapPoints").css('display','none');
 		}
 
-
 	},
 
 	headerDropDownMenuClickEvent: function(event) {

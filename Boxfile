@@ -1,0 +1,23 @@
+cache1:
+  name: sessions
+  type: redis
+
+web1:
+  name: bp-otc-2015
+  type: php
+  php_version: 5.3.23
+  httpd_document_root: www
+  php_error_log: true
+  php_fpm_log: true
+  php_extensions:
+    - curl
+    - mysql
+    - eaccelerator
+    - http
+    - sessions
+    - gd
+    - iconv
+    - redis
+  php_session_save_handler: redis
+  php_session_save_path: "tcp://${CACHE1_HOST}:${CACHE1_PORT}"
+  php_default_charset: "UTF-8"
