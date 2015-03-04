@@ -2,8 +2,7 @@ BP.data = {
 
 	deployments: [
 
-	    {
-	    	"id":"alaska",
+	    {   "id":"alaska",
 	        "title":"Alaska",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -21,8 +20,7 @@ BP.data = {
 	        ]
 	    },
 	    
-	    {
-	        "id":"algeria",
+	    {   "id":"algeria",
 	        "title":"Algeria",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -40,8 +38,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"angola",
+	    {   "id":"angola",
 	        "title":"Angola",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -59,9 +56,7 @@ BP.data = {
 	        ]
 	    },
 
-
-	    {
-	        "id":"azerbaijan",
+	    {   "id":"azerbaijan",
 	        "title":"Azerbaijan",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -191,8 +186,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"brazil",
+	    {   "id":"brazil",
 	        "title":"Brazil",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -210,8 +204,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	    	"id":"canada",
+	    {   "id":"canada",
 	        "title":"Canada",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -229,8 +222,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"egypt",
+	    {   "id":"egypt",
 	        "title":"Egypt",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -248,8 +240,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"gulfOfMexico",
+	    {   "id":"gulfOfMexico",
 	        "title":"Gulf of Mexico",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -267,9 +258,7 @@ BP.data = {
 	        ]
 	    },
 
-
-	    {
-	        "id":"indonesia",
+	    {   "id":"indonesia",
 	        "title":"Indonesia",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -287,8 +276,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"iraq",
+	    {   "id":"iraq",
 	        "title":"Iraq",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -306,8 +294,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"northAmerica",
+	    {   "id":"northAmerica",
 	        "title":"North America",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -325,8 +312,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"northSea",
+	    {   "id":"northSea",
 	        "title":"North Sea",
 	        "left":true,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -344,8 +330,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"norway",
+	    {   "id":"norway",
 	        "title":"Norway",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -363,8 +348,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"oman",
+	    {   "id":"oman",
 	        "title":"Oman",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
@@ -382,8 +366,7 @@ BP.data = {
 	        ]
 	    },
 
-	    {
-	        "id":"trinidad",
+	    {   "id":"trinidad",
 	        "title":"Trinidad & Tobago",
 	        "left":false,
 	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
