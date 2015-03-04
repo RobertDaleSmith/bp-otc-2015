@@ -1,30 +1,24 @@
 BP.models = {
 
-	mapPoint: {
+	mapPoint: function( point ) {
 
-		title: "",
-		
-		left: false,
-		
-		location: {
-		
-			x: 0,
-		
-			y: 0
-		
-		},
-		
-		mapShift: {
-		
-			top: 0,
-		
-			left: 0
-		
-		},
+		// Define default values and or set passed values.
 
-		description: "",
+		this.id = point.id || "",
 
-		disclaimer: ""
+		this.title = point.title || "";
+		
+		this.left = point.left || false;
+		
+		this.description = point.description || "";
+
+		this.disclaimer = point.disclaimer || "";
+
+		this.location = point.location || { x: 0, y: 0 };
+
+		this.map = point.map || { x: 0, y: 0 };
+
+		this.technology = point.technology || {column1: [], column2: []};
 
 	}
 

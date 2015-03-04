@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
 		<title>Project Title</title>
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,105 @@
 		
 		<!-- Additional Libraries -->
 		<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="libs/dust-full.min.js"></script>
 
 		<!-- Project Style -->
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600,300' rel='stylesheet' type='text/css'>
+		<link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+		<!-- Dust HTML Templates -->
+		<script type="text/template" name="mapPoint">
+
+			<div class="mapPoint {?left}left{/left}" 
+				  id="{id}" 
+				  mapLeft="{map.x}" 
+				  mapTop="{map.y}" 
+				  style="left:{location.x}px; top:{location.y}px;"
+				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}>
+
+				<div class="arrow"></div>
+
+				<div class="label">
+
+					<div class="title">{title}</div>
+
+					<div class="close"></div>
+
+					<div class="description">{description}</div>
+
+				</div>
+
+				<div class="techDeployments">
+
+					{#technology}
+
+						<div class="list">
+
+							{#.}
+
+								{>"techDeployment"/}
+
+							{/.}
+
+						</div>
+
+					{/technology}
+
+				</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="techDeployment">
+
+			<div class="category">
+
+				<div class="title" style="border-color:#{color};">{name}</div>
+
+				<div class="toggle"></div>
+
+				<div class="techs" style="border-color:#{color};">
+
+					<div class="tech head">
+
+						<div class="name">Technology</div>
+
+						<div class="status">Status</div>
+
+					</div>
+
+					{#types}
+
+						{>"techDeploymentType" name="{.name}" status="{.status}" /}
+
+					{/types}
+
+				</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="techDeploymentType">
+
+			<div class="tech">
+
+				<div class="name">{name}</div>
+
+				<div class="status">{status}</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="menuItem">
+
+			<div class="menuItem" id="{id}">{title}</div>
+
+		</script>
 
 	</head>
 	<body>
@@ -26,21 +121,7 @@
 						<span class="icon"></span>
 
 						<div class="dropDownMenu">
-							<div class="menuItem" id="alaska">Alaska</div>
-							<div class="menuItem" id="algeria">Algeria</div>
-							<div class="menuItem" id="angola">Angola</div>
-							<div class="menuItem" id="azerbaijan">Azerbaijan</div>
-							<div class="menuItem" id="brazil">Brazil</div>
-							<div class="menuItem" id="canada">Canada</div>
-							<div class="menuItem" id="egypt">Egypt</div>
-							<div class="menuItem" id="gulfOfMexico">Gulf of Mexico</div>
-							<div class="menuItem" id="indonesia">Indonesia</div>
-							<div class="menuItem" id="iraq">Iraq</div>
-							<div class="menuItem" id="northAmerica">North America</div>
-							<div class="menuItem" id="northSea">North Sea</div>
-							<div class="menuItem" id="norway">Norway</div>
-							<div class="menuItem" id="oman">Oman</div>
-							<div class="menuItem" id="trinidad">Trinidad & Tobago</div>
+							<!-- <div class="menuItem" id="{id}">{title}</div> -->
 						</div>
 
 					</div>
@@ -62,8 +143,10 @@
 					</div>
 				</div>
 				<div id="logo_wrapper">
+
 					<div class="name">Upstream Technologies</div>
 					<div class="logo"></div>
+
 				</div>
 			</div>
 
@@ -77,302 +160,15 @@
 
 						<div id="mapImage"></div>
 
-						<div id="mapPoints" style="display:none;">
-
-							<div class="mapPoint" id="alaska" mapLeft="0" mapTop="45">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Alaska</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="canada" mapLeft="815" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Canada</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="northAmerica" mapLeft="835" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">North America</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="gulfOfMexico" mapLeft="755" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Gulf of Mexico</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint" id="trinidad" mapLeft="0" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Trinidad & Tobago</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="brazil" mapLeft="480" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Brazil</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="northSea" mapLeft="245" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">North Sea</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint" id="norway" mapLeft="-295" mapTop="5">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Norway</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="algeria" mapLeft="225" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Algeria</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="angola" mapLeft="160" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Angola</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="egypt" mapLeft="85" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Egypt</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint left" id="iraq" mapLeft="5" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Iraq</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint" id="azerbaijan" mapLeft="-510" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Azerbaijan</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-
-
-								<div class="techDeployments">
-
-									<div class="list">
-
-										<div class="category">
-											<div class="title" style="border-color:#00745d;">Advanced Seismic Imaging</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#00745d;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">4D Seismic</div>
-													<div class="status">Deployment</div>
-												</div>
-												<div class="tech">
-													<div class="name">Full Waveform Inversion</div>
-													<div class="status">Deployment</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="category ">
-											<div class="title" style="border-color:#660099;">BP Well Advisor</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#660099;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Casing Running Console</div>
-													<div class="status">Deployment</div>
-												</div>
-												<div class="tech">
-													<div class="name">Completions (Markup Torque)</div>
-													<div class="status">Field Trial</div>
-												</div>
-												<div class="tech">
-													<div class="name">Tripping</div>
-													<div class="status">Field Trial</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="category ">
-											<div class="title" style="border-color:#ffe300;">Beyond Sand Control</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#ffe300;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Downhole Sand Management</div>
-													<div class="status">Deployment</div>
-												</div>
-												<div class="tech">
-													<div class="name">Sand Consolidation</div>
-													<div class="status">Field Trial Completed</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="category ">
-											<div class="title" style="border-color:#000099;">20K&#8482;</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#000099;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Downhole Sand Management</div>
-													<div class="status">Deployment</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-
-									<div class="list">
-
-										<div class="category ">
-											<div class="title" style="border-color:#007cbb;">Field of the Future&#174; Technology</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#007cbb;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Casing Running Console</div>
-													<div class="status">Deployment</div>
-												</div>
-												<div class="tech">
-													<div class="name">Completions (Markup Torque)</div>
-													<div class="status">Field Trial</div>
-												</div>
-												<div class="tech">
-													<div class="name">Tripping</div>
-													<div class="status">Field Trial</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="category">
-											<div class="title" style="border-color:#99cc00;">Facilities & Integrity</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#99cc00;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Downhole Sand Management</div>
-													<div class="status">Deployment</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="category">
-											<div class="title" style="border-color:#ff6600;">Enhanced Oil Recovery</div>
-											<div class="toggle"></div>
-											<div class="techs" style="border-color:#ff6600;">
-												<div class="tech head">
-													<div class="name">Technology</div>
-													<div class="status">Status</div>
-												</div>
-												<div class="tech">
-													<div class="name">Casing Running Console</div>
-													<div class="status">Deployment</div>
-												</div>
-												<div class="tech">
-													<div class="name">Completions (Markup Torque)</div>
-													<div class="status">Field Trial</div>
-												</div>
-												<div class="tech">
-													<div class="name">Tripping</div>
-													<div class="status">Field Trial</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="mapPoint" id="oman" mapLeft="-555" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Oman</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
-							<div class="mapPoint" id="indonesia" mapLeft="-855" mapTop="0">
-								<div class="arrow"></div>
-								<div class="label">
-									<div class="title">Indonesia</div>
-									<div class="close"></div>
-									<div class="description">BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.</div>
-								</div>
-							</div>
-
+						<div id="mapPoints">
+							<!-- <div class="mapPoint" id="{id}" mapLeft="{map.x}" mapTop="{map.y}"></div> -->
 						</div>
 
 					</div>
 
 				</div>
 
-
-				<div id="intro_wrapper">
+				<div id="intro_wrapper" style="display:none;">
 
 					<div class="title">Select a link above to get started</div>
 					
@@ -382,15 +178,14 @@
 
 			</div>
 
-
 			<div id="footer_wrapper">
-				Trademarks appear in this area
+				<!-- Trademarks appear in this area -->
 			</div>
 		</div>
 
 		<!-- Project Script -->
-
 		<script src="js/common.js"></script>
+		<script src="js/data.js"></script>
 		<script src="js/models.js"></script>
 		<script src="js/views.js"></script>
 		<script src="js/handlers.js"></script>

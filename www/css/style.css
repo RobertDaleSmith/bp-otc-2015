@@ -370,9 +370,11 @@ html, body{
 
 		}
 
+
+
 			.mapPoint{
 
-				display: table;
+				display: block;
 				position: absolute;
 				top:0px; left:0px;
 
@@ -390,9 +392,21 @@ html, body{
 				cursor: pointer;
 
 			}
+				.mapPoint::after{
+					content: ' ';
+					display: inline-block;
+
+					width: 18px; height: 18px;
+					border-radius: 16px;
+
+					background-color: #00a22f;
+					margin: 6px;
+
+				}
 			.mapPoint.open{
 
 				cursor: default;
+				z-index: 15;
 
 			}
 

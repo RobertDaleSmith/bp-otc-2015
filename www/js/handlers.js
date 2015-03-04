@@ -1,5 +1,23 @@
 BP.handlers = {
 
+	init: function() {
+
+		$("div#header_button_wrapper .btn .title").click(BP.handlers.headerMainMenuClickEvent);
+
+		$("div#header_button_wrapper .btn .icon").click(BP.handlers.headerDropDownMenuClickEvent);
+
+		$("div.menuItem").click(BP.handlers.headerMenuItemClickEvent);
+
+		$("div.mapPoint").click(BP.handlers.mapPointClickEvent);
+
+		$("div.mapPoint .close").click(BP.handlers.mapPointLabelCloseBtnClickEvent);
+
+		$("div.techDeployments .title").click(BP.handlers.techCategoryToggleClickEvent);
+
+		$("div.techDeployments .toggle").click(BP.handlers.techCategoryToggleClickEvent);
+
+	},
+
 	headerMainMenuClickEvent: function(event) {
 
 		var self = this;
@@ -64,6 +82,8 @@ BP.handlers = {
 
 		var id = $(self).attr("id");
 
+		var disclaimer = $(self).attr("disclaimer") || null;
+
 		var mapLeft = $(self).attr("mapLeft");
 
 		var mapTop = $(self).attr("mapTop");
@@ -91,14 +111,19 @@ BP.handlers = {
 			}, 1);
 
 			//Stuff for setting active dropDown item.
-			$('.menuItem').removeClass('active');
-			$('.menuItem#'+id).addClass('active');
+			$('div.menuItem').removeClass('active');
+			$('div.menuItem#'+id).addClass('active');
 
 			//Shift Map
-			$('#map_wrapper').css('left', mapLeft+'px').css('top', mapTop+'px');
+			$('div#map_wrapper').css('left', mapLeft+'px').css('top', mapTop+'px');
 
-			//Show footer disclaimer.
-			$('#footer_wrapper').addClass('on');
+			//Show footer disclaimer if a disclaimer exists.
+			if(disclaimer != null) {
+				$('div#footer_wrapper').text(disclaimer);
+				$('div#footer_wrapper').addClass('on');
+			} else {
+				$('div#footer_wrapper').removeClass('on');	
+			}
 
 		}
 
@@ -114,11 +139,11 @@ BP.handlers = {
 
 		var id = $(point).attr("id");
 
-		$('#map_wrapper').css('left', '0px').css('top', '0px');
+		$('div#map_wrapper').css('left', '0px').css('top', '0px');
 
-		$('.menuItem').removeClass('active');
+		$('div.menuItem').removeClass('active');
 
-		$('#footer_wrapper').removeClass('on');
+		$('div#footer_wrapper').removeClass('on');
 
 		event.stopPropagation();
 
