@@ -125,6 +125,20 @@ BP.handlers = {
 				$('div#footer_wrapper').removeClass('on');	
 			}
 
+			// Open technology list animations.
+			var lists = $(self).find('.list');
+
+			setTimeout(function(){
+
+				$( lists[0] ).cssAnimateAuto({action: 'open'});
+
+			}, 250);
+			setTimeout(function(){
+
+				$( lists[1] ).cssAnimateAuto({action: 'open'});
+
+			}, 500);
+
 		}
 
 	},
@@ -135,19 +149,36 @@ BP.handlers = {
 
 		var point = $(self).parent().parent().parent();
 
-		point.removeClass('open');
 
 		var id = $(point).attr("id");
 
-		$('div#map_wrapper').css('left', '0px').css('top', '0px');
+		var lists = $(point).find('.list');
 
-		$('div.menuItem').removeClass('active');
+		//Close lists.
+		$( lists[1] ).cssAnimateAuto({action: 'close'});
+		setTimeout(function(){
 
-		$('div#footer_wrapper').removeClass('on');
+			$( lists[0] ).cssAnimateAuto({action: 'close'});
 
-		$('div.mapPoint .category').removeClass('open');
+		}, 250);
 
-		BP.handlers.techCategoryCloseAllEvent();
+		setTimeout(function(){
+
+			point.removeClass('open');
+
+			$('div#map_wrapper').css('left', '0px').css('top', '0px');
+
+			$('div.menuItem').removeClass('active');
+
+			$('div#footer_wrapper').removeClass('on');
+
+			$('div.mapPoint .category').removeClass('open');
+
+			BP.handlers.techCategoryCloseAllEvent();
+
+		}, 500);
+
+		
 
 		event.stopPropagation();
 

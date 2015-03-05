@@ -675,7 +675,7 @@ html, body{
 							float: left;
 
 							width: 50%;
-							height: 0px;
+							height: 0;
 
 							padding: 0 0 0 0;
 
@@ -685,29 +685,23 @@ html, body{
 
 							overflow: hidden;
 
-							max-height: 0px;
-
-							-webkit-transition: all 0.5s;
-							   -moz-transition: all 0.5s;
-								-ms-transition: all 0.5s;
-								 -o-transition: all 0.5s;
-									transition: all 0.5s;
-
 						}
-						.mapPoint.open .techDeployments .list{
+							.mapPoint.open .techDeployments .list .grip{
 
-							height: auto;
-							padding: 0 0 10px 0;
+								display: inline-block;
+								position: relative;
+								width: 100%; height: 10px;
+								float: left;
 
-							max-height: 1000px;
-
-						}
+							}
 
 							.mapPoint .techDeployments .list .category{
 
 								display: inline-block;
 								position: relative;
-								width: 100%; height: 50px;
+								width: 100%; height: auto;
+								float: left;
+
 								margin: 8px 0 0 0;
 								padding: 0 10px 0 0;
 
