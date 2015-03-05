@@ -18,7 +18,7 @@ BP.models = {
 
 		this.map = point.map || { x: 0, y: 0 };
 
-		this.technology = point.technology || {column1: [], column2: []};
+		this.technology = point.technology || [ [], [] ];
 
 	}
 
