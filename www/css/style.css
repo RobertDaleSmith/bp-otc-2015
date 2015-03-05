@@ -372,6 +372,18 @@ html, body{
 
 
 
+			
+			@-webkit-keyframes pointBounceIn {
+				0%   {width: 0px;  height: 0px;  margin:15px;}
+
+				50%  {width: 40px; height: 40px; margin:-5px;}
+
+				80%  {width: 30px; height: 30px; margin:0px;}
+
+				100% {width: 30px; height: 30px; margin:0px;}
+
+			}
+
 			.mapPoint{
 
 				display: block;
@@ -381,26 +393,38 @@ html, body{
 				width: 30px; height: 30px;
 				border-radius: 30px;
 
-				background-color: #99cc00;
 
 				text-align: center;
-
-				background-image: url('../images/mapPoint.svg');
-				background-position: center center;
-				background-size: 100% 100%;
-
 				cursor: pointer;
 
 			}
-				.mapPoint::after{
+				.mapPoint .point{
+
+					display: block;
+					position: relative;
+
+					width: 30px; height: 30px;
+					border-radius: 30px;
+
+					background-color: #99cc00;
+
+					text-align: center;
+					overflow: hidden;
+
+					-webkit-animation: pointBounceIn 1s 1;
+
+				}
+				.mapPoint .point::after{
 					content: ' ';
 					display: inline-block;
+					position: absolute;
+					top: 0px; left: 0px;
 
-					width: 18px; height: 18px;
-					border-radius: 16px;
+					width: 60%; height: 60%;
+					border-radius: 60%;
 
 					background-color: #00a22f;
-					margin: 6px;
+					margin: 20%;
 
 				}
 			.mapPoint.open{
@@ -410,362 +434,397 @@ html, body{
 
 			}
 
-				.mapPoint .label{
+				@-webkit-keyframes pointLabelFadeIn {
+					0%   {opacity: 0;}
 
-					display:inline-block;
-					position: absolute;
+					75%  {opacity: 0;}
 
-					left: 36px; top: -40px;
-					width: auto; height: 37px;
+					100% {opacity: 1;}
+				}
 
-					line-height: 36px;
-					padding: 0 10px;
+				.mapPoint .label_wrapper{
 
-					vertical-align:middle;
-					text-align:left;
+				}
 
-					background-color: rgba(85,85,89,0.7);
-					color: #ffffff;
+					.mapPoint .arrow{
+						display: inline-block;
+						position: absolute;
 
-					overflow: hidden;
+						left: 15px; top: -40px;
 
-					-webkit-transition: all 0.5s;
-					   -moz-transition: all 0.5s;
+						width: 21px; height: 55px;
+
+						background-image: url('../images/mapPointArrow_right.png');
+						background-size: 100% 100%;
+
+						-webkit-transition: all 0.5s;
+						-moz-transition: all 0.5s;
 						-ms-transition: all 0.5s;
-						 -o-transition: all 0.5s;
-							transition: all 0.5s;
+						-o-transition: all 0.5s;
+						transition: all 0.5s;
 
-				}
-				.mapPoint.left .label{
-					left: initial;
-					right: 36px;
-				}
+					}
+					.mapPoint.left .arrow{
+						left: initial;
+						right: 15px;
+
+						background-image: url('../images/mapPointArrow_left.png');
+					}
 
 
-				.mapPoint.open .label{
-					left: 45px; top: -125px;
 
-					width: 1160px !important; height: 106px;
+					.mapPoint.open .arrow{
+						top: -125px;
+						height: 140px;
+						width: 30px;
 
-					background-color: #00a22f;
+						background-image: url('../images/mapPointArrowOpen_right.png');
+					}
 
-					border-radius: 5px 5px 0 0;
+					.mapPoint.left.open .arrow{
+						top: -125px;
+						height: 140px;
+						width: 30px;
 
-					z-index: 20;
+						background-image: url('../images/mapPointArrowOpen_left.png');
+					}
 
-					padding: 15px 20px 0 20px;
+					.mapPoint .label{
 
-				}
+						display:inline-block;
+						position: absolute;
 
-				.mapPoint.left.open .label{
-					left: initial;
-					right: 45px; top: -125px;
+						left: 36px; top: -40px;
+						width: auto; height: 37px;
 
-					width: 1160px !important; height: 106px;
+						line-height: 36px;
+						padding: 0 10px;
 
-					background-color: #00a22f;
+						vertical-align:middle;
+						text-align:left;
 
-					border-radius: 5px 5px 0 0;
-
-					z-index: 20;
-				}
-
-					.mapPoint .label .title{
-
-						display: block;
-						position: relative;
-
+						background-color: rgba(85,85,89,0.7);
 						color: #ffffff;
-						font-size: 16px;
+
+						overflow: hidden;
+
 						-webkit-transition: all 0.5s;
 						   -moz-transition: all 0.5s;
 							-ms-transition: all 0.5s;
 							 -o-transition: all 0.5s;
 								transition: all 0.5s;
 
-						white-space: nowrap;
+						/*-webkit-animation: pointLabelFadeIn 1s 1;*/
 
 
 					}
-					.mapPoint.open .label .title{
-
-						color: #ffe300;
-						font-size: 24px;
-						font-weight: 300;
-						line-height: 20px;
-
-					}
-
-					.mapPoint .label .close{
-						display: block;
-						position: absolute;
-						right: 15px; top: 15px;
-						width: 0px; height: 0px;
-
-						border-radius: 6px;
-						background-color: rgba(85,85,89,0.7);
-						opacity: 0;
-
-						background-image: url('../images/icon_close.svg');
-						background-size: 100% 100%;
-						background-position: center center;
-
-						cursor: pointer;
-						-webkit-transition: all 0.25s;
-						   -moz-transition: all 0.25s;
-							-ms-transition: all 0.25s;
-							 -o-transition: all 0.25s;
-								transition: all 0.25s;
-					}
-					.mapPoint.open .label .close{
-						width: 40px; height: 40px;
-						background-color: #99CC00;
-						background-color: rgba(153,204,0,1);
-						opacity: 1;
-					}
-					.mapPoint .label .close:hover{
-						
-						background-color: rgba(153,204,0,0.9);
-
-					}
-					.mapPoint .label .close:active{
-						
-						background-color: rgba(153,204,0,0.75);
-
-					}
-
-					.mapPoint .label .description{
-
-						display: block;
-						position: absolute;
-						top: 35px;
-
-						width: 490px; height: 0px;
-
-						opacity: 0;
-
-						letter-spacing: 1px;
-						line-height: 18px;
-						font-size: 14px;
-						font-weight: 300;
-						overflow: hidden;
-
-						-webkit-transition: all 0.25s;
-						   -moz-transition: all 0.25s;
-							-ms-transition: all 0.25s;
-							 -o-transition: all 0.25s;
-								transition: all 0.25s;
-
-					}
-					.mapPoint.open .label .description{
-
-						height: 54px;
-						opacity: 1;
-						margin: 5px 0 0 0;
-
+					.mapPoint.left .label{
+						left: initial;
+						right: 36px;
 					}
 
 
+					.mapPoint.open .label{
+						left: 45px; top: -125px;
 
+						width: 1160px !important; height: 106px;
 
+						background-color: #00a22f;
 
-				.mapPoint .techDeployments{
+						border-radius: 5px 5px 0 0;
 
-					display: block;
-					position: absolute;
-					left: 45px; top: -19px;
+						z-index: 20;
 
-					width: 1160px; height: 0px;
-
-					overflow: hidden;	
-					z-index: 20;
-
-					-webkit-transition: all 2s;
-					   -moz-transition: all 2s;
-						-ms-transition: all 2s;
-						 -o-transition: all 2s;
-							transition: all 2s;
-
-				}
-				.mapPoint.open .techDeployments{
-
-					height: auto;
-
-				}
-					.mapPoint .techDeployments .list{
-
-						display: block;
-						position: relative;
-						float: left;
-
-						width: 50%;
-						height: auto;
-
-						padding: 0 0 10px 0;
-
-						background-color: #ffffff;
-
-						border-radius: 0 0 7px 7px;
+						padding: 15px 20px 0 20px;
 
 					}
-						.mapPoint .techDeployments .list .category{
 
-							display: inline-block;
+					.mapPoint.left.open .label{
+						left: initial;
+						right: 45px; top: -125px;
+
+						width: 1160px !important; height: 106px;
+
+						background-color: #00a22f;
+
+						border-radius: 5px 5px 0 0;
+
+						z-index: 20;
+					}
+
+						.mapPoint .label .title{
+
+							display: block;
 							position: relative;
-							width: 100%; height: 50px;
-							margin: 8px 0 0 0;
-							padding: 0 10px 0 0;
+
+							color: #ffffff;
+							font-size: 16px;
+							-webkit-transition: all 0.5s;
+							   -moz-transition: all 0.5s;
+								-ms-transition: all 0.5s;
+								 -o-transition: all 0.5s;
+									transition: all 0.5s;
+
+							white-space: nowrap;
+
 
 						}
-							.mapPoint .techDeployments .list .category .title{
+						.mapPoint.open .label .title{
+
+							color: #ffe300;
+							font-size: 24px;
+							font-weight: 300;
+							line-height: 20px;
+
+						}
+
+						.mapPoint .label .close{
+							display: block;
+							position: absolute;
+							right: 15px; top: 15px;
+							width: 0px; height: 0px;
+
+							border-radius: 6px;
+							background-color: rgba(85,85,89,0.7);
+							opacity: 0;
+
+							background-image: url('../images/icon_close.svg');
+							background-size: 100% 100%;
+							background-position: center center;
+
+							cursor: pointer;
+							-webkit-transition: all 0.25s;
+							   -moz-transition: all 0.25s;
+								-ms-transition: all 0.25s;
+								 -o-transition: all 0.25s;
+									transition: all 0.25s;
+						}
+						.mapPoint.open .label .close{
+							width: 40px; height: 40px;
+							background-color: #99CC00;
+							background-color: rgba(153,204,0,1);
+							opacity: 1;
+						}
+						.mapPoint .label .close:hover{
+							
+							background-color: rgba(153,204,0,0.9);
+
+						}
+						.mapPoint .label .close:active{
+							
+							background-color: rgba(153,204,0,0.75);
+
+						}
+
+						.mapPoint .label .description{
+
+							display: block;
+							position: absolute;
+							top: 35px;
+
+							width: 490px; height: 0px;
+
+							opacity: 0;
+
+							letter-spacing: 1px;
+							line-height: 18px;
+							font-size: 14px;
+							font-weight: 300;
+							overflow: hidden;
+
+							-webkit-transition: all 0.25s;
+							   -moz-transition: all 0.25s;
+								-ms-transition: all 0.25s;
+								 -o-transition: all 0.25s;
+									transition: all 0.25s;
+
+						}
+						.mapPoint.open .label .description{
+
+							height: 54px;
+							opacity: 1;
+							margin: 5px 0 0 0;
+
+						}
+
+
+
+
+
+					.mapPoint .techDeployments{
+
+						display: block;
+						position: absolute;
+						left: 45px; top: -19px;
+
+						width: 1160px; height: 0px;
+
+						/*overflow: hidden;*/
+						z-index: 20;
+
+					}
+					/*.mapPoint.open .techDeployments{
+
+						height: auto;
+
+					}*/
+						.mapPoint .techDeployments .list{
+
+							display: block;
+							position: relative;
+							float: left;
+
+							width: 50%;
+							height: 0px;
+
+							padding: 0 0 0 0;
+
+							background-color: #ffffff;
+
+							border-radius: 0 0 7px 7px;
+
+							overflow: hidden;
+
+							max-height: 0px;
+
+							-webkit-transition: all 0.5s;
+							   -moz-transition: all 0.5s;
+								-ms-transition: all 0.5s;
+								 -o-transition: all 0.5s;
+									transition: all 0.5s;
+
+						}
+						.mapPoint.open .techDeployments .list{
+
+							height: auto;
+							padding: 0 0 10px 0;
+
+							max-height: 1000px;
+
+						}
+
+							.mapPoint .techDeployments .list .category{
 
 								display: inline-block;
 								position: relative;
 								width: 100%; height: 50px;
-
-								background-color: #ebeef4;
-
-								line-height: 50px;
-
-								border-style: solid;
-								border-width: 0 0 0 24px;
-								padding: 0 12px;
-
-								color: #909396;
-
-								text-align: left;
-								font-size: 22px;
-
-								cursor: pointer;
+								margin: 8px 0 0 0;
+								padding: 0 10px 0 0;
 
 							}
-
-								.mapPoint .techDeployments .list .category .toggle{
+								.mapPoint .techDeployments .list .category .title{
 
 									display: inline-block;
-									position: absolute;
-									top: 5px; right: 15px;
+									position: relative;
+									width: 100%; height: 50px;
 
-									width: 40px; height: 40px;
+									background-color: #ebeef4;
 
-									border-radius: 6px;
+									line-height: 50px;
 
-									background-color: #898d8f;
+									border-style: solid;
+									border-width: 0 0 0 24px;
+									padding: 0 12px;
 
-									background-image: url('../images/icon_max.svg');
-									background-size: 100% 100%;
-									background-position: center center;
+									color: #909396;
+
+									text-align: left;
+									font-size: 22px;
 
 									cursor: pointer;
 
 								}
-								.mapPoint .techDeployments .list .category.open .toggle{
-									background-image: url('../images/icon_min.svg');
-								}
 
-							.mapPoint .techDeployments .list .category .techs{
+									.mapPoint .techDeployments .list .category .toggle{
 
-								display: none;
-								position: relative;
-								width: 100%; height: auto;
+										display: inline-block;
+										position: absolute;
+										top: 5px; right: 15px;
 
-								background-color: #ffffff;
+										width: 40px; height: 40px;
 
-								border-style: solid;
-								border-width: 0 0 0 10px;
-								padding: 0 0 0 14px;
+										border-radius: 6px;
 
-							}
-							.mapPoint .techDeployments .list .category.open .techs{
+										background-color: #898d8f;
 
-								display: inline-block;
+										background-image: url('../images/icon_max.svg');
+										background-size: 100% 100%;
+										background-position: center center;
 
-							}
-								.mapPoint .tech{
-									display: inline-block;
+										cursor: pointer;
+
+									}
+									.mapPoint .techDeployments .list .category.open .toggle{
+										background-image: url('../images/icon_min.svg');
+									}
+
+								.mapPoint .techDeployments .list .category .techs{
+
+									display: block;
 									position: relative;
-									width: 100%; height: 30px;
+									width: 100%; height: 0;
 
-									text-align: left;
-
-									padding: 0 0 0 20px;
+									background-color: #ffffff;
 
 									border-style: solid;
-									border-width: 2px 0 0 0;
-									border-color: #ebeef4;
+									border-width: 0 0 0 10px;
+									padding: 0 0 0 14px;
 
-									line-height: 30px;
+									-webkit-transition: all 0.5s;
+									   -moz-transition: all 0.5s;
+										-ms-transition: all 0.5s;
+										 -o-transition: all 0.5s;
+											transition: all 0.5s;
+									overflow: hidden;
 
-									color: #898d8f;
-
-								}	
-									.mapPoint .tech.head{
-										color: #a7d322;
-										border-color: #ffffff;
-										font-weight: 700;
-									}
-
-									.mapPoint .tech .name{
+								}
+								/*.mapPoint .techDeployments .list .category.open .techs{
+									height: auto;
+								}*/
+									.mapPoint .tech{
 										display: inline-block;
 										position: relative;
-										float: left;
+										width: 100%; height: 30px;
 
-										width: 60%; height: 100%;
 										text-align: left;
-									}
 
-									.mapPoint .tech .status{
-										display: inline-block;
-										position: relative;
-										float: left;
+										padding: 0 0 0 20px;
 
-										width: 40%; height: 100%;
-										text-align: left;
-									}
+										border-style: solid;
+										border-width: 2px 0 0 0;
+										border-color: #ebeef4;
 
+										line-height: 30px;
 
-				.mapPoint .arrow{
-					display: inline-block;
-					position: absolute;
+										color: #898d8f;
 
-					left: 15px; top: -40px;
+									}	
+										.mapPoint .tech.head{
+											color: #a7d322;
+											border-color: #ffffff;
+											font-weight: 700;
+										}
 
-					width: 21px; height: 55px;
+										.mapPoint .tech .name{
+											display: inline-block;
+											position: relative;
+											float: left;
 
-					background-image: url('../images/mapPointArrow_right.png');
-					background-size: 100% 100%;
+											width: 60%; height: 100%;
+											text-align: left;
+										}
 
-					-webkit-transition: all 0.5s;
-					-moz-transition: all 0.5s;
-					-ms-transition: all 0.5s;
-					-o-transition: all 0.5s;
-					transition: all 0.5s;
+										.mapPoint .tech .status{
+											display: inline-block;
+											position: relative;
+											float: left;
 
-				}
-				.mapPoint.left .arrow{
-					left: initial;
-					right: 15px;
-
-					background-image: url('../images/mapPointArrow_left.png');
-				}
-
+											width: 40%; height: 100%;
+											text-align: left;
+										}
 
 
-				.mapPoint.open .arrow{
-					top: -125px;
-					height: 140px;
-					width: 30px;
-
-					background-image: url('../images/mapPointArrowOpen_right.png');
-				}
-
-				.mapPoint.left.open .arrow{
-					top: -125px;
-					height: 140px;
-					width: 30px;
-
-					background-image: url('../images/mapPointArrowOpen_left.png');
-				}
+				
 
 
 

@@ -9,6 +9,7 @@
 		
 		<!-- Additional Libraries -->
 		<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="libs/jquery/jquery.cssAnimateAuto.min.js"></script>
 		<script src="libs/dust-full.min.js"></script>
 
 		<!-- Project Style -->
@@ -27,15 +28,21 @@
 				  style="left:{location.x}px; top:{location.y}px;"
 				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}>
 
-				<div class="arrow"></div>
+				<div class="point"></div>
 
-				<div class="label">
+				<div class="label_wrapper">
 
-					<div class="title">{title}</div>
+					<div class="arrow"></div>
 
-					<div class="close"></div>
+					<div class="label">
 
-					<div class="description">{description}</div>
+						<div class="title">{title}</div>
+
+						<div class="close"></div>
+
+						<div class="description">{description}</div>
+
+					</div>
 
 				</div>
 

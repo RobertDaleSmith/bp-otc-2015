@@ -133,7 +133,7 @@ BP.handlers = {
 
 		var self = this;
 
-		var point = $(self).parent().parent();
+		var point = $(self).parent().parent().parent();
 
 		point.removeClass('open');
 
@@ -144,6 +144,10 @@ BP.handlers = {
 		$('div.menuItem').removeClass('active');
 
 		$('div#footer_wrapper').removeClass('on');
+
+		$('div.mapPoint .category').removeClass('open');
+
+		BP.handlers.techCategoryCloseAllEvent();
 
 		event.stopPropagation();
 
@@ -156,6 +160,24 @@ BP.handlers = {
 		var parent = $(self).parent();
 
 		parent.toggleClass('open');
+
+		parent.find('.techs').cssAnimateAuto();
+
+	},
+
+	techCategoryCloseAllEvent: function() {
+
+		var elements = $('div.mapPoint .category .toggle');
+
+		var self = elements;
+		
+		var parent = $(self).parent();
+
+		parent.removeClass('open');
+
+		parent.find('.techs').cssAnimateAuto({
+			action: 'close'
+		});
 
 	}
 
