@@ -18,6 +18,6 @@ function demo(){
 		if( pointCount == $('div.mapPoint').length )
 			pointCount = 0;
 
-	}, 1500 );
+	}, 2000 );
 
 }

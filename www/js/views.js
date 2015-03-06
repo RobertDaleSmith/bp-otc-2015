@@ -44,6 +44,12 @@ BP.views = {
 
 		}
 
+		BP.views.revealMapPoints();
+
+	},
+
+	revealMapPoints: function(){
+
 		// Shuffle the reveal of the mapPoints.
 		var times = [];
 		var tDiff = 75;
@@ -97,7 +103,7 @@ BP.views = {
 			}, times[n] );
 
 		});
-
+		
 	}
 
 }

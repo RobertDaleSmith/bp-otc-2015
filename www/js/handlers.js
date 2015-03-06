@@ -29,14 +29,16 @@ BP.handlers = {
 		$("#header_button_wrapper .btn").removeClass('active');
 
 		$(self).parent().addClass('active');
-
 		
 		$("#intro_wrapper").css('display','none');
+		
+		$("div.mapPoint").addClass('hide');
+
 		if(sectionId == 'deployments') {
-			$("#mapPoints").css('display','');
+			BP.views.revealMapPoints();
 		} 
 		if(sectionId == 'projects') {
-			$("#mapPoints").css('display','none');
+			//TODO: Build out this section dude!
 		}
 
 	},
@@ -83,7 +85,7 @@ BP.handlers = {
 		var pointId = $(self).attr('id');
 		
 		// $("#header_button_wrapper .btn").removeClass('open');
-		
+
 		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({action: 'close'}, function(){
 				
 			$(self).parent().parent().removeClass('open');
