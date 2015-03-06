@@ -16,62 +16,8 @@ BP.data = {
 	            "y":"45"            
 	        },
 	        "technology":[
-
-	        ]
-	    },
-	    
-	    {   "id":"algeria",
-	        "title":"Algeria",
-	        "left":true,
-	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
-	        "disclaimer":"Trademarks appear in this area",
-	        "location":{
-	            "x":"970",
-	            "y":"330"
-	        },
-	        "map":{
-	        	"x":"225",
-	            "y":"0"            
-	        },
-	        "technology":[
-
-	        ]
-	    },
-
-	    {   "id":"angola",
-	        "title":"Angola",
-	        "left":true,
-	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
-	        "disclaimer":"Trademarks appear in this area",
-	        "location":{
-	            "x":"1035",
-	            "y":"530"
-	        },
-	        "map":{
-	        	"x":"160",
-	            "y":"0"            
-	        },
-	        "technology":[
-
-	        ]
-	    },
-
-	    {   "id":"azerbaijan",
-	        "title":"Azerbaijan",
-	        "left":false,
-	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
-	        "disclaimer":"Trademarks appear in this area",
-	        "location":{
-	            "x":"1205",
-	            "y":"255"
-	        },
-	        "map":{
-	            "x":"-510",
-	            "y":"0"
-	        },
-	        "technology":[
-	        	[
-		        	{
+				[
+					{
 						"name": "Advanced Seismic Imaging",
 						"color": "00745d",
 						"types": [
@@ -182,8 +128,398 @@ BP.data = {
 						]
 
 					}
-	        	]
-	        ]
+				]
+			]
+	    },
+	    
+	    {   "id":"algeria",
+	        "title":"Algeria",
+	        "left":true,
+	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
+	        "disclaimer":"Trademarks appear in this area",
+	        "location":{
+	            "x":"970",
+	            "y":"330"
+	        },
+	        "map":{
+	        	"x":"225",
+	            "y":"0"            
+	        },
+	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
+	    },
+
+	    {   "id":"angola",
+	        "title":"Angola",
+	        "left":true,
+	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
+	        "disclaimer":"Trademarks appear in this area",
+	        "location":{
+	            "x":"1035",
+	            "y":"530"
+	        },
+	        "map":{
+	        	"x":"160",
+	            "y":"0"            
+	        },
+	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
+	    },
+
+	    {   "id":"azerbaijan",
+	        "title":"Azerbaijan",
+	        "left":false,
+	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
+	        "disclaimer":"Trademarks appear in this area",
+	        "location":{
+	            "x":"1205",
+	            "y":"255"
+	        },
+	        "map":{
+	            "x":"-510",
+	            "y":"0"
+	        },
+			"technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"brazil",
@@ -200,8 +536,120 @@ BP.data = {
 	            "y":"0"
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"canada",
@@ -218,8 +666,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"egypt",
@@ -236,8 +796,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"gulfOfMexico",
@@ -254,8 +926,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"indonesia",
@@ -272,8 +1056,120 @@ BP.data = {
 	            "y":"0"
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"iraq",
@@ -290,8 +1186,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"northAmerica",
@@ -308,8 +1316,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"northSea",
@@ -326,8 +1446,120 @@ BP.data = {
 	            "y":"0"
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"norway",
@@ -344,8 +1576,120 @@ BP.data = {
 	            "y":"5"
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"oman",
@@ -362,8 +1706,120 @@ BP.data = {
 	            "y":"0"
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    },
 
 	    {   "id":"trinidad",
@@ -380,8 +1836,120 @@ BP.data = {
 	            "y":"0"            
 	        },
 	        "technology":[
+				[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "00745d",
+						"types": [
+							{
+								"name": "4D Seismic",
+								"status": "Deployment"
+							},
+							{
+								"name": "Full Waveform Inversion",
+								"status": "Deployment"
+							}
+						]
 
-	        ]
+					},
+					{
+						"name": "BP Well Advisor",
+						"color": "660099",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trail"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trail"
+							}
+						]
+
+					},
+					{
+						"name": "Beyond Sand Control",
+						"color": "ffe300",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							},
+							{
+								"name": "Sand Consolidation",
+								"status": "Field Trail Completed"
+							}
+						]
+
+					},
+					{
+						"name": "20K™",
+						"color": "000099",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					}
+				],
+				[
+					{
+						"name": "Field of the Future® Technology",
+						"color": "007cbb",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					},
+					{
+						"name": "Facilities & Integrity",
+						"color": "99cc00",
+						"types": [
+							{
+								"name": "Downhole Sand Management",
+								"status": "Deployment"
+							}
+						]
+
+					},
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "ff6600",
+						"types": [
+							{
+								"name": "Casing Running Console",
+								"status": "Deployment"
+							},
+							{
+								"name": "Completions (Markup Torque)",
+								"status": "Field Trial"
+							},
+							{
+								"name": "Tripping",
+								"status": "Field Trial"
+							}
+						]
+
+					}
+				]
+			]
 	    }
 
 	]

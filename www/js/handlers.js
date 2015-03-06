@@ -49,13 +49,25 @@ BP.handlers = {
 
 		if ($(self).parent().attr('class').indexOf("open") >= 0) isOpen = true;
 		
-		$("#header_button_wrapper .btn").removeClass('open');
+		//TODO: $("#header_button_wrapper .btn").removeClass('open');
 		if(!isOpen) {
-			$(self).parent().addClass('open');
 
-			$(self).find('i').attr("class","fa fa-chevron-up");
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({action: 'open'}, function(){
+				
+				$(self).parent().addClass('open');
+				$(self).find('i').attr("class","fa fa-chevron-up");
+
+			});
+
 		} else {
-			$(self).find('i').attr("class","fa fa-chevron-down");
+
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({action: 'close'}, function(){
+				
+				$(self).parent().removeClass('open');
+				$(self).find('i').attr("class","fa fa-chevron-down");
+
+			});
+			
 		}
 
 	},
@@ -70,7 +82,14 @@ BP.handlers = {
 
 		var pointId = $(self).attr('id');
 		
-		$("#header_button_wrapper .btn").removeClass('open');
+		// $("#header_button_wrapper .btn").removeClass('open');
+		
+		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({action: 'close'}, function(){
+				
+			$(self).parent().parent().removeClass('open');
+			$(self).parent().find('i').attr("class","fa fa-chevron-down");
+
+		});
 
 		$('.mapPoint#'+pointId).click();
 
@@ -92,26 +111,24 @@ BP.handlers = {
 
 		if( !isOpen ){
 
-			var labelWidth = $(self).find('.label').css("width");
+			// $('div.mapPoint').removeClass('open');
+			$('div.mapPoint').each(function(){
 
-			$(self).find('.label').css('width', labelWidth);
+				if( $(this).hasClass('open') ){
 
-			$('div.mapPoint').removeClass('open');
+					$(this).find('.label .close').click();
 
-			setTimeout(function(){
+				}
 
-				$(self).addClass('open');
+			});
 
-				setTimeout(function(){
 
-					$(self).css('width', '');
+			$(self).css('z-index', '30');
 
-				}, 1);
-
-			}, 1);
-
+			$(self).addClass('open');
+			
 			//Stuff for setting active dropDown item.
-			$('div.menuItem').removeClass('active');
+			$('div.menuItem').not('div.menuItem#'+id).removeClass('active');
 			$('div.menuItem#'+id).addClass('active');
 
 			//Shift Map
@@ -128,16 +145,40 @@ BP.handlers = {
 			// Open technology list animations.
 			var lists = $(self).find('.list');
 
-			setTimeout(function(){
+			async.series([
 
-				$( lists[0] ).cssAnimateAuto({action: 'open'});
+				function(next){
 
-			}, 250);
-			setTimeout(function(){
+					setTimeout(function(){  next()  }, 250);
 
-				$( lists[1] ).cssAnimateAuto({action: 'open'});
+				},
+				
+				function(next){
 
-			}, 500);
+					$( lists[0] ).cssAnimateAuto({action: 'open'}, function(){next()});
+					
+				},
+
+				function(next){
+
+					$( lists[1] ).cssAnimateAuto({action: 'open'}, function(){next()});
+
+				},
+
+				function(next){
+
+					
+					setTimeout(function(){  
+					
+						$(self).css('z-index', '');
+					
+						next();
+
+					}, 250);
+					
+				}
+
+			]);
 
 		}
 
@@ -149,36 +190,47 @@ BP.handlers = {
 
 		var point = $(self).parent().parent().parent();
 
-
 		var id = $(point).attr("id");
 
 		var lists = $(point).find('.list');
 
-		//Close lists.
-		$( lists[1] ).cssAnimateAuto({action: 'close'});
-		setTimeout(function(){
+		//Close lists one at a time, then rest.
+		async.series([
 
-			$( lists[0] ).cssAnimateAuto({action: 'close'});
+			function(next){
 
-		}, 250);
+				$( lists[1] ).cssAnimateAuto({action: 'close'}, function(){next()});
 
-		setTimeout(function(){
+			},
+			
+			function(next){
 
-			point.removeClass('open');
+				$( lists[0] ).cssAnimateAuto({action: 'close'}, function(){next()});
+				
+			},
+			
+			function(next){
+				
+				point.removeClass('open');
 
-			$('div#map_wrapper').css('left', '0px').css('top', '0px');
+				//Check if any others have opened before shifting back to origin.
+				var cnt = 0;
+				$('div.mapPoint').each(function(){ if( $(this).hasClass('open') ) cnt++; });
 
-			$('div.menuItem').removeClass('active');
+				if(cnt == 0) $('div#map_wrapper').css('left', '0px').css('top', '0px');
 
-			$('div#footer_wrapper').removeClass('on');
+				$('div.menuItem#'+id).removeClass('active');
 
-			$('div.mapPoint .category').removeClass('open');
+				$('div#footer_wrapper').removeClass('on');
 
-			BP.handlers.techCategoryCloseAllEvent();
+				$('div.mapPoint .category').removeClass('open');
 
-		}, 500);
+				BP.handlers.techCategoryCloseAllEvent();
 
-		
+				next();
+			}
+
+		]);
 
 		event.stopPropagation();
 
@@ -190,9 +242,23 @@ BP.handlers = {
 		
 		var parent = $(self).parent();
 
-		parent.toggleClass('open');
+		if( parent.hasClass('open') ){
 
-		parent.find('.techs').cssAnimateAuto();
+			parent.find('.techs').cssAnimateAuto({ action: 'close' }, function(){
+				
+				parent.removeClass('open');
+
+			});
+
+		} else {
+
+			parent.find('.techs').cssAnimateAuto({ action: 'open' }, function(){
+				
+				parent.addClass('open');
+
+			});
+
+		}
 
 	},
 

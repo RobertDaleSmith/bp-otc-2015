@@ -2,15 +2,16 @@
 <html lang="en">
 	<head>
 
-		<title>Project Title</title>
+		<title>BP OTC 2015 - Interactive Map</title>
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="Content-Language" content="en">
 		
 		<!-- Additional Libraries -->
-		<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-		<script src="libs/jquery/jquery.cssAnimateAuto.min.js"></script>
-		<script src="libs/dust-full.min.js"></script>
+		<script type="text/javascript" src="libs/async.js"></script>
+		<script type="text/javascript" src="libs/dust-full.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery.cssAnimateAuto.min.js"></script>
 
 		<!-- Project Style -->
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -21,7 +22,7 @@
 		<!-- Dust HTML Templates -->
 		<script type="text/template" name="mapPoint">
 
-			<div class="mapPoint {?left}left{/left}" 
+			<div class="mapPoint {?left}left{/left} hide" 
 				  id="{id}" 
 				  mapLeft="{map.x}" 
 				  mapTop="{map.y}" 
@@ -30,7 +31,7 @@
 
 				<div class="point"></div>
 
-				<div class="label_wrapper">
+				<div class="label_wrapper hide">
 
 					<div class="arrow"></div>
 
