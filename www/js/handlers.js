@@ -34,6 +34,8 @@ BP.handlers = {
 		
 		$("div.mapPoint").addClass('hide');
 
+		$("div.mapPoint div.label_wrapper").addClass('hide');
+
 		if(sectionId == 'deployments') {
 			BP.views.revealMapPoints();
 		} 
