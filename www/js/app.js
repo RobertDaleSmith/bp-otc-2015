@@ -4,20 +4,30 @@ BP.handlers.init();
 
 
 
+var interval;
 
-function demo(){
+function demo(bool){
 
-	var pointCount = 1;
+	if(bool){
 
-	$('div.mapPoint')[0].click();
-	
-	setInterval(function(){
+		var pointCount = 1;
 
-		$('div.mapPoint')[pointCount].click();
-		pointCount++;
-		if( pointCount == $('div.mapPoint').length )
-			pointCount = 0;
+		$('div.mapPoint')[0].click();
+		
+		interval = setInterval(function(){
 
-	}, 2000 );
+			$('div.mapPoint')[pointCount].click();
+			pointCount++;
+			if( pointCount == $('div.mapPoint').length )
+				pointCount = 0;
+
+		}, 500 );
+
+	}else{
+
+		window.clearInterval(interval);
+
+	}
+
 
 }

@@ -56,7 +56,7 @@ BP.handlers = {
 		//TODO: $("#header_button_wrapper .btn").removeClass('open');
 		if(!isOpen) {
 
-			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({action: 'open'}, function(){
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
 				$(self).parent().addClass('open');
 				$(self).find('i').attr("class","fa fa-chevron-up");
@@ -65,7 +65,7 @@ BP.handlers = {
 
 		} else {
 
-			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({action: 'close'}, function(){
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
 				$(self).parent().removeClass('open');
 				$(self).find('i').attr("class","fa fa-chevron-down");
@@ -88,7 +88,7 @@ BP.handlers = {
 		
 		// $("#header_button_wrapper .btn").removeClass('open');
 
-		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({action: 'close'}, function(){
+		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
 			$(self).parent().parent().removeClass('open');
 			$(self).parent().find('i').attr("class","fa fa-chevron-down");
@@ -153,19 +153,21 @@ BP.handlers = {
 
 				function(next){
 
-					setTimeout(function(){  next()  }, 250);
+					setTimeout(next, 700);
 
 				},
 				
 				function(next){
 
-					$( lists[0] ).cssAnimateAuto({action: 'open'}, function(){next()});
+					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' });
 					
+					setTimeout(next, 150);
+
 				},
 
 				function(next){
 
-					$( lists[1] ).cssAnimateAuto({action: 'open'}, function(){next()});
+					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, next);
 
 				},
 
@@ -203,13 +205,21 @@ BP.handlers = {
 
 			function(next){
 
-				$( lists[1] ).cssAnimateAuto({action: 'close'}, function(){next()});
+				setTimeout(next, 250);
+
+			},
+
+			function(next){
+
+				$( lists[1] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+
+				setTimeout(next, 150);
 
 			},
 			
 			function(next){
 
-				$( lists[0] ).cssAnimateAuto({action: 'close'}, function(){next()});
+				$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, next);
 				
 			},
 			

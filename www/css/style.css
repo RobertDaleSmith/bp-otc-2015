@@ -191,11 +191,11 @@ html, body{
 				background-size: 100% 100%;
 				background-position: center center; 
 
-				-webkit-transition: all 0.2s;
-				   -moz-transition: all 0.2s;
-					-ms-transition: all 0.2s;
-					 -o-transition: all 0.2s;
-						transition: all 0.2s;
+				-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
+				   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
+					-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
+					 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
+						transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
 
 			}
 			#header_button_wrapper .btn.open .icon{
@@ -302,11 +302,11 @@ html, body{
 
 		opacity: 0;
 		
-		-webkit-transition: all 0.5s;
-		   -moz-transition: all 0.5s;
-			-ms-transition: all 0.5s;
-			 -o-transition: all 0.5s;
-				transition: all 0.5s;
+		-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+		   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+			-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+			 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+				transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 	}
 	#footer_wrapper.on{
 
@@ -472,11 +472,12 @@ html, body{
 
 					opacity: 1;
 
-					-webkit-transition: opacity 0.5s;
-					-moz-transition: opacity 0.5s;
-					-ms-transition: opacity 0.5s;
-					-o-transition: opacity 0.5s;
-					transition: opacity 0.5s;
+					-webkit-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
+					   -moz-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
+						-ms-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
+						 -o-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
+							transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
+
 
 				}
 				.mapPoint .label_wrapper.hide{
@@ -494,11 +495,11 @@ html, body{
 						background-image: url('../images/mapPointArrow_right.png');
 						background-size: 100% 100%;
 
-						-webkit-transition: all 0.5s;
-						-moz-transition: all 0.5s;
-						-ms-transition: all 0.5s;
-						-o-transition: all 0.5s;
-						transition: all 0.5s;
+						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+								transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 
 					}
 					.mapPoint.left .arrow{
@@ -545,11 +546,17 @@ html, body{
 
 						overflow: hidden;
 
-						-webkit-transition: all 0.5s;
+						/*-webkit-transition: all 0.5s;
 						   -moz-transition: all 0.5s;
 							-ms-transition: all 0.5s;
 							 -o-transition: all 0.5s;
-								transition: all 0.5s;
+								transition: all 0.5s;*/
+
+						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+								transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 
 						/*-webkit-animation: pointLabelFadeIn 1s 1;*/
 
@@ -599,11 +606,11 @@ html, body{
 
 							color: #ffffff;
 							font-size: 16px;
-							-webkit-transition: all 0.5s;
-							   -moz-transition: all 0.5s;
-								-ms-transition: all 0.5s;
-								 -o-transition: all 0.5s;
-									transition: all 0.5s;
+							-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+								-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+								 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+									transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 
 							white-space: nowrap;
 
@@ -633,11 +640,11 @@ html, body{
 							background-position: center center;
 
 							cursor: pointer;
-							-webkit-transition: all 0.25s;
-							   -moz-transition: all 0.25s;
-								-ms-transition: all 0.25s;
-								 -o-transition: all 0.25s;
-									transition: all 0.25s;
+							-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+							   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+								-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+								 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+									transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
 						}
 						.mapPoint.open .label .close{
 							width: 40px; height: 40px;
@@ -672,11 +679,11 @@ html, body{
 							font-weight: 300;
 							overflow: hidden;
 
-							-webkit-transition: all 0.25s;
-							   -moz-transition: all 0.25s;
-								-ms-transition: all 0.25s;
-								 -o-transition: all 0.25s;
-									transition: all 0.25s;
+							-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+							   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+								-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+								 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+									transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
 
 						}
 						.mapPoint.open .label .description{
@@ -805,11 +812,11 @@ html, body{
 									border-width: 0 0 0 10px;
 									padding: 0 0 0 14px;
 
-									-webkit-transition: all 0.5s;
-									   -moz-transition: all 0.5s;
-										-ms-transition: all 0.5s;
-										 -o-transition: all 0.5s;
-											transition: all 0.5s;
+									-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+									   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+										-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+										 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+											transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 									overflow: hidden;
 
 								}
