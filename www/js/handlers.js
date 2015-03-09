@@ -56,7 +56,7 @@ BP.handlers = {
 		//TODO: $("#header_button_wrapper .btn").removeClass('open');
 		if(!isOpen) {
 
-			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
 				
 				$(self).parent().addClass('open');
 				$(self).find('i').attr("class","fa fa-chevron-up");
@@ -65,7 +65,7 @@ BP.handlers = {
 
 		} else {
 
-			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
+			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
 				
 				$(self).parent().removeClass('open');
 				$(self).find('i').attr("class","fa fa-chevron-down");
