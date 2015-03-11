@@ -34,7 +34,7 @@ BP.handlers = {
 				} else {
 
 					// Close any open mapPoints.
-					$('div.mapPoint.open').find('.close').click();
+					// $('div.mapPoint.open').find('.close').click();
 
 				}
 
