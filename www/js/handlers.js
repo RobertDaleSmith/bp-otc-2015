@@ -111,6 +111,8 @@ BP.handlers = {
 
 		var isOpen = $(self).hasClass('open');
 
+		var isLeft = $(self).hasClass('left');
+
 		if( !isOpen ){
 
 			// $('div.mapPoint').removeClass('open');
@@ -123,7 +125,6 @@ BP.handlers = {
 				}
 
 			});
-
 
 			$(self).css('z-index', '30');
 
@@ -145,7 +146,9 @@ BP.handlers = {
 			}
 
 			// Open technology list animations.
-			var lists = $(self).find('.list');
+			var lists = [ $(self).find('.list')[0], $(self).find('.list')[1] ];
+
+			if(isLeft) lists.reverse();
 
 			var listGroup = $(self).find('.listGroup');
 
@@ -205,7 +208,11 @@ BP.handlers = {
 
 		var id = $(point).attr("id");
 
-		var lists = $(point).find('.list');
+		var lists = [ $(point).find('.list')[0], $(point).find('.list')[1] ];
+
+		var isLeft = $(point).hasClass('left');
+
+		if(isLeft) lists.reverse();
 
 		//Close lists one at a time, then rest.
 		async.series([

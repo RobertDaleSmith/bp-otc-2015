@@ -743,7 +743,11 @@ html, body{
 						.mapPoint .listGroup .list.list_0.short{
 							border-radius: 0 0 0 7px;
 						}
+						.mapPoint .listGroup .list.list_1{
+							float: right;
+						}
 						.mapPoint .listGroup .list.list_1.short{
+							float: right;
 							border-radius: 0 0 7px 0;
 						}
 
