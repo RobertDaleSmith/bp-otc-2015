@@ -651,6 +651,8 @@ html, body{
 							background-color: #99CC00;
 							background-color: rgba(153,204,0,1);
 							opacity: 1;
+
+							-webkit-animation: mapPointDelayFadeIn 1s 1;
 						}
 						.mapPoint .label .close:hover{
 							
@@ -660,6 +662,16 @@ html, body{
 						.mapPoint .label .close:active{
 							
 							background-color: rgba(153,204,0,0.75);
+
+						}
+
+						@-webkit-keyframes mapPointDelayFadeIn {
+
+							0%   {opacity: 0;}
+
+							52%  {opacity: 0;}
+
+							100% {opacity: 1;}
 
 						}
 
@@ -685,12 +697,15 @@ html, body{
 								 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
 									transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
 
+
 						}
 						.mapPoint.open .label .description{
 
 							height: 54px;
-							opacity: 1;
 							margin: 5px 0 0 0;
+							opacity: 1;
+
+							-webkit-animation: mapPointDelayFadeIn 1s 1;
 
 						}
 
