@@ -34,7 +34,7 @@ BP.handlers = {
 				} else {
 
 					// Close any open mapPoints.
-					// $('div.mapPoint.open').find('.close').click();
+					$('div.mapPoint.open').find('.close').click();
 
 				}
 
@@ -68,7 +68,6 @@ BP.handlers = {
 			BP.views.revealMapPoints('deployments');
 		} 
 		if(sectionId == 'projects') {
-			//TODO: Build out this section dude!
 			BP.views.revealMapPoints('projects');
 		}
 
@@ -99,19 +98,19 @@ BP.handlers = {
 	},
 
 	headerMenuItemClickEvent: function(event) {
-
+		console.log('1');
 		var self = this;
 
 		var titleElement = $(self).parent().parent().find('span.title');
 
-		if( $(self).parent().parent().hasClass('active') == false ) {
+		var parentId = $(self).parent().parent().attr('id');
 
-			console.log(titleElement);
+		if( $(self).parent().parent().hasClass('active') == false ) {
 
 			titleElement.click();
 		}
 
-		var pointId = $(self).attr('id');
+		var thisId = $(self).attr('id');
 		
 		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
@@ -119,7 +118,19 @@ BP.handlers = {
 
 		});
 
-		$('div.mapPoint#'+pointId).click();
+
+		if( parentId == 'deployments' ){
+
+			$('div.points#deployments div.mapPoint#'+thisId).click();
+
+		} else {
+
+			// TODO: DUDE! Finish this...
+			console.log('load projects section: ' + thisId);
+
+
+		}
+		
 
 	},
 

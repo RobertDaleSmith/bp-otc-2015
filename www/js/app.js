@@ -3,7 +3,7 @@ BP.views.init();
 BP.handlers.init();
 
 
-$('div#deployments span.title').click();
+// $('div#deployments span.title').click();
 
 
 // Automated demo stuff. 

@@ -1272,22 +1272,185 @@ BP.data = {
 
 	projects: [
 
-		{	"id":"alaska",
-			"title":"Alaska",
-			"left":false,
-			"location":{
-				"x":"197",
-				"y":"88"
-			}
+		{	"id":"asi",
+			"title":"Advanced Seismic Imaging",
+			"locations":[
+
+				{	"id":"alaska",
+					"title":"Alaska",
+					"left":false,
+					"location":{
+						"x":"197",
+						"y":"88"
+					}
+				},
+
+				{	"id":"algeria",
+					"title":"Algeria",
+					"left":true,
+					"location":{
+						"x":"986",
+						"y":"321"
+					}
+				},
+
+				{   "id":"angola",
+				    "title":"Angola",
+				    "left":true,
+				    "location":{
+				        "x":"1001",
+				        "y":"533"
+				    }
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"brazil",
+				    "title":"Brazil",
+				    "left":false,
+				    "location":{
+				        "x":"735",
+				        "y":"600"
+				    }
+				},
+
+				{   "id":"canada",
+				    "title":"Canada",
+				    "left":false,
+				    "location":{
+				        "x":"343",
+				        "y":"146"
+				    }
+				},
+
+				{   "id":"egypt",
+				    "title":"Egypt",
+				    "left":true,
+				    "location":{
+				        "x":"1104",
+				        "y":"298"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":false,
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+
+				{   "id":"indonesia",
+				    "title":"Indonesia",
+				    "left":true,
+				    "location":{
+				        "x":"1674",
+				        "y":"485"
+				    }
+				},
+
+				{   "id":"iraq",
+				    "title":"Iraq",
+				    "left":true,
+				    "location":{
+				        "x":"1197",
+				        "y":"305"
+				    }
+				},
+
+				{   "id":"libya",
+				    "title":"Libya",
+				    "left":true,
+				    "location":{
+				        "x":"1016",
+				        "y":"310"
+				    }
+				},
+
+				{   "id":"northAmerica",
+				    "title":"North America",
+				    "left":false,
+				    "location":{
+				        "x":"341",
+				        "y":"229"
+				    }
+				},
+
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "location":{
+				        "x":"953",
+				        "y":"135"
+				    }
+				},
+
+				{   "id":"norway",
+				    "title":"Norway",
+				    "left":false,
+				    "location":{
+				        "x":"971",
+				        "y":"167"
+				    }
+				},
+
+				{   "id":"oman",
+				    "title":"Oman",
+				    "left":false,
+				    "location":{
+				        "x":"1256",
+				        "y":"360"
+				    }		    
+				},
+
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":false,
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }		    
+				}
+
+			]
 		},
 
-		{	"id":"algeria",
-			"title":"Algeria",
-			"left":true,
-			"location":{
-				"x":"986",
-				"y":"321"
-			}
+		{	"id":"bpwa",
+			"title":"BP Well Advisor",
+			"locations":[]
+		},
+
+		{	"id":"bsc",
+			"title":"Beyond Sand Control",
+			"locations":[]
+		},
+
+		{	"id":"eor",
+			"title":"Enhanced Oil Recovery",
+			"locations":[]
+		},
+
+		{	"id":"fotf",
+			"title":"Field of the Future® Technology",
+			"locations":[]
+		},
+
+		{	"id":"ft",
+			"title":"Facilities & Integrity",
+			"locations":[]
+		},
+
+		{	"id":"ur",
+			"title":"Unconventional Reservoirs",
+			"locations":[]
 		}
 
 	]

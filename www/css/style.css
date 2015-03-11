@@ -1,13 +1,13 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
-  -moz-box-sizing: border-box; /* Needed for Firefox */
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
 }
 
 html, body{
@@ -34,7 +34,6 @@ html, body{
 }
 
 
-
 /* HEADER -- start */
 #header_wrapper{
 
@@ -56,7 +55,6 @@ html, body{
 
 		width: auto; height: 110px;
 
-
 		margin: 0 40px 0 0;
 		cursor: default;
 
@@ -76,7 +74,6 @@ html, body{
 
 			text-transform: capitalize;
 			letter-spacing: 3px;
-
 
 		}
 
@@ -272,11 +269,7 @@ html, body{
 				background-color: #f2f2f2;
 			}
 
-			
-
-
 /* HEADER -- end */
-
 
 
 /* FOOTER -- start */
@@ -309,9 +302,6 @@ html, body{
 
 	}
 /* FOOTER -- end */
-
-
-
 
 
 /* CONTENT -- start */
@@ -355,7 +345,7 @@ html, body{
 			top: 0px; left: 0px;
 			width: 100%; height: 150%;
 
-			background-color: #fefefe;
+			background-color: #f5f5f5;
 			background-image: url('../images/map.jpg');
 
 			background-position: center 0;
@@ -375,20 +365,6 @@ html, body{
 
 		}
 			
-			@-webkit-keyframes pointBounceIn {
-
-				0%   {width: 0px;  height: 0px;  border-width: 0px; left: 0px;}
-
-				25%  {width: 30px; height: 30px; border-width: 6px; left: 0px;}
-
-				50%  {width: 40px; height: 40px; border-width: 8px; left:-5px;}
-
-				75%  {width: 25px; height: 25px; border-width: 5px; left: 0px;}
-
-				100% {width: 30px; height: 30px; border-width: 6px; left: 0px;}
-
-			}
-
 			.mapPoint{
 
 				display: block;
@@ -408,8 +384,6 @@ html, body{
 				display: none;
 
 			}
-
-
 
 				.mapPoint .point{
 
@@ -439,42 +413,15 @@ html, body{
 
 			}
 
-				@-webkit-keyframes pointLabelFadeIn {
-					0%   {opacity: 0;}
-
-					/*50%  {opacity: 0;}
-
-					75%  {opacity: 1;}*/
-
-					100% {opacity: 1;}
-				}
-
 				.mapPoint .label_wrapper{
-					/*display: inline-block;
-					position: absolute;
-
-					width: auto; height: auto;
-
-					left: 15px; top: -40px;
-
-					white-space: nowrap;*/
 
 					/*-webkit-animation: pointLabelFadeIn 1s 1;*/
 
-
-					/*-webkit-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
-					   -moz-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
-						-ms-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
-						 -o-transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;
-							transition: opacity cubic-brezier(.62,.28,.23,.99) 0.7s;*/
-
-
-					-webkit-transition: opacity 0.5s;
-					   -moz-transition: opacity 0.5s;
-						-ms-transition: opacity 0.5s;
-						 -o-transition: opacity 0.5s;
-							transition: opacity 0.5s;
-
+					-webkit-transition: opacity 1s;
+					   -moz-transition: opacity 1s;
+						-ms-transition: opacity 1s;
+						 -o-transition: opacity 1s;
+							transition: opacity 1s;
 
 				}
 				.mapPoint .label_wrapper.hide{
@@ -505,8 +452,6 @@ html, body{
 
 						background-image: url('../images/mapPointArrow_left.png');
 					}
-
-
 
 					.mapPoint.open .arrow{
 						top: -125px;
@@ -545,12 +490,6 @@ html, body{
 
 						overflow: hidden;
 
-						/*-webkit-transition: all 0.5s;
-						   -moz-transition: all 0.5s;
-							-ms-transition: all 0.5s;
-							 -o-transition: all 0.5s;
-								transition: all 0.5s;*/
-
 						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 							-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
@@ -559,13 +498,11 @@ html, body{
 
 						/*-webkit-animation: pointLabelFadeIn 1s 1;*/
 
-
 					}
 					.mapPoint.left .label{
 						left: initial;
 						right: 36px;
 					}
-
 
 					.mapPoint.open .label{
 						left: 45px; top: -125px;
@@ -665,16 +602,6 @@ html, body{
 
 						}
 
-						@-webkit-keyframes mapPointDelayFadeIn {
-
-							0%   {opacity: 0;}
-
-							60%  {opacity: 0;}
-
-							100% {opacity: 1;}
-
-						}
-
 						.mapPoint .label .description{
 
 							display: block;
@@ -709,10 +636,6 @@ html, body{
 
 						}
 
-
-
-
-
 					.mapPoint .listGroup{
 
 						display: block;
@@ -720,9 +643,6 @@ html, body{
 						left: 45px; top: -19px;
 
 						width: 1160px; height: 0px;
-
-						/*overflow: hidden;*/
-						/*z-index: 20;*/
 
 					}
 					.mapPoint.left .listGroup{
@@ -770,7 +690,7 @@ html, body{
 
 								display: inline-block;
 								position: relative;
-								width: 100%; height: 10px;
+								width: 100%; height: 8px;
 								float: left;
 
 							}
@@ -852,9 +772,7 @@ html, body{
 									overflow: hidden;
 
 								}
-								/*.mapPoint .listGroup .list .category.open .techs{
-									height: auto;
-								}*/
+								
 									.mapPoint .tech{
 										display: inline-block;
 										position: relative;
@@ -896,73 +814,6 @@ html, body{
 											width: 40%; height: 100%;
 											text-align: left;
 										}
-
-
-				
-
-
-
-			.mapPoint#alaska{
-				top: 100px; left: 110px;
-			}
-
-			.mapPoint#canada{
-				top: 180px; left: 380px;
-			}
-
-			.mapPoint#northAmerica{
-				top: 260px; left: 360px;
-			}
-
-			.mapPoint#gulfOfMexico{
-				top: 350px; left: 440px;
-			}
-
-			.mapPoint#trinidad{
-				top: 410px; left: 610px;
-			}
-
-			.mapPoint#brazil{
-				top: 585px; left: 715px;
-			}
-
-			.mapPoint#northSea{
-				top: 170px; left: 950px;
-			}
-
-			.mapPoint#norway{
-				top: 140px; left: 990px;
-			}
-
-			.mapPoint#algeria{
-				top: 330px; left: 970px;
-			}
-
-			.mapPoint#angola{
-				top: 530px; left: 1035px;
-			}
-
-			.mapPoint#egypt{
-				top: 310px; left: 1110px;
-			}
-
-			.mapPoint#iraq{
-				top: 300px; left: 1190px;
-			}
-
-			.mapPoint#azerbaijan{
-				top: 255px; left: 1205px;
-			}
-
-			.mapPoint#oman{
-				top: 360px; left: 1250px;
-			}
-
-			.mapPoint#indonesia{
-				top: 510px; left: 1550px;
-			}
-
-
 
 #intro_wrapper{
 
@@ -1016,6 +867,5 @@ html, body{
 		cursor: pointer;
 
 	}
-
 
 /* CONTENT -- end */

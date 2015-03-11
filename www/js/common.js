@@ -2,7 +2,7 @@ var BP = {
 
 	settings : {
 
-		revealLabelsTogether: false,
+		revealLabelsTogether: true,
 
 		transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s'
 
@@ -35,6 +35,7 @@ Array.prototype.shuffle = function(){
 }
 
 $.fn.cssAnimationReset = function(){
+	
 	this.each(function(){
 
 		$(this ).data("transitioning", 0)
@@ -44,4 +45,5 @@ $.fn.cssAnimationReset = function(){
 				.removeClass('is-opened');
 
 	});
+
 };

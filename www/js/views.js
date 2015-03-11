@@ -8,6 +8,8 @@ BP.views = {
 
 		this.loadDeploymentMapElements();
 
+		this.loadProjectsMapElements();
+
 	},
 
 	render: function(view, data, callback ){
@@ -44,23 +46,55 @@ BP.views = {
 
 		}
 
-		// BP.views.revealMapPoints();
+	},
+
+	loadProjectsMapElements: function(){
+		// Renders deployment map points and appends them to mapPoints element.
+		var mapPointsElement = $('div#mapPoints div.points#projects');
+
+		var dropDMenuElement = $('div#projects div.dropDownMenu');
+
+		for(var i=0; i < BP.data.projects.length; i++){
+
+			var section = {id: BP.data.projects[i].id, title: BP.data.projects[i].title};
+
+			BP.views.render('menuItem', section, function(html){
+
+				dropDMenuElement.append(html);
+
+			});
+
+			for(var n=0; n < BP.data.projects[i].locations.length; n++){
+
+				var data = BP.data.projects[i].locations[n];
+
+				var model = new BP.models.mapPoint(data);
+
+				BP.views.render('mapPoint', model, function(html){
+
+					mapPointsElement.append(html);
+
+				});
+
+			}
+
+		}
 
 	},
 
 	revealMapPoints: function(map){
 
+		var parentMap = '';
+		if( map ) parentMap = 'div#' + map + ' ';
+
 		// Shuffle the reveal of the mapPoints.
 		var times = [];
 		var tDiff = 75;
 		var tMin  = 1;
-		for(var i=0; i<$('div.mapPoint').length; i++){
+		for(var i=0; i<$(parentMap+'div.mapPoint').length; i++){
 			times.push( (i * tDiff) + tMin );
 		}
 		times.shuffle();
-
-		var parentMap = '';
-		if( map ) parentMap = 'div#' + map + ' ';
 
 		// Fires when all points have been revealed.
 		var finalize = function(){
@@ -90,10 +124,13 @@ BP.views = {
 		$(parentMap+'div.mapPoint').each(function(n){
 
 			var self = this;
-			
+
+
 			setTimeout(function(){
 
 				$(self).removeClass('hide');
+
+				console.log( $(self).attr('id') );
 
 				remaining--;
 
