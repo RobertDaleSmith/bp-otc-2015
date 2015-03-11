@@ -2,9 +2,9 @@ var BP = {
 
 	settings : {
 
-		transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s',
+		revealLabelsTogether: false,
 
-		revealLabelsTogether: false
+		transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s'
 
 	}
 
@@ -31,4 +31,5 @@ Array.prototype.shuffle = function(){
 	}
 
 	return array;
+	
 }

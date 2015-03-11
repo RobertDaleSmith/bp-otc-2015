@@ -14,6 +14,24 @@ BP.handlers = {
 
 		$("div.listGroup div.title, div.listGroup div.toggle").click(BP.handlers.techCategoryToggleClickEvent);
 
+		this.keyboardKeyEventsInit();
+
+	},
+
+	keyboardKeyEventsInit: function() {
+
+		$(window).on('keyup',function(e){
+		
+			// console.log(e.keyCode);
+
+			if(e.keyCode == 27){ //esc
+				// Close any open mapPoints.
+				$('div.mapPoint.open').find('.close').click();
+				
+			}
+
+
+		});
 	},
 
 	headerMainMenuClickEvent: function(event) {

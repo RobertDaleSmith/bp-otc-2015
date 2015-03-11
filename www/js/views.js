@@ -1,7 +1,7 @@
 BP.views = {
 
 	init: function(){
-		// Compile dust templates.
+		// Compiles dust templates.
 		$('script[type="text/template"]').each(function(){
 			dust.loadSource(dust.compile( $(this).html(), $(this).attr('name') ));
 		});

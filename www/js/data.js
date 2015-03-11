@@ -2,20 +2,20 @@ BP.data = {
 
 	deployments: [
 
-	    {   "id":"alaska",
-	        "title":"Alaska",
-	        "left":false,
-	        "description":"Alaska BP is the largest gross producer of oil in Alaska and operates 13 oil fields on the North Slope, including the supergiant Prudhoe Bay.",
-	        "disclaimer":"Designer Gas is a registered trademark of BP plc | Designer Water and LoSal are registered trademarks of BP plc | Bright Water is a trademark of Nalco Energy Services",
-	        "location":{
-	            "x":"197",
-	            "y":"88"
-	        },
-	        "map":{
-	            "x":"0",
-	            "y":"45"            
-	        },
-	        "technology":[
+		{   "id":"alaska",
+		    "title":"Alaska",
+		    "left":false,
+		    "description":"Alaska BP is the largest gross producer of oil in Alaska and operates 13 oil fields on the North Slope, including the supergiant Prudhoe Bay.",
+		    "disclaimer":"Designer Gas is a registered trademark of BP plc | Designer Water and LoSal are registered trademarks of BP plc | Bright Water is a trademark of Nalco Energy Services",
+		    "location":{
+		        "x":"197",
+		        "y":"88"
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"45"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -86,22 +86,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
-	    
-	    {   "id":"algeria",
-	        "title":"Algeria",
-	        "left":true,
-	        "description":"Major gas business, with two large gas developments — In Salah (dry gas) and In Amenas (wet gas) — both in partnership with Sonatrach and Statoil.",
-	        "disclaimer":"ISS is a registered trademark of BP plc",
-	        "location":{
-	            "x":"986",
-	            "y":"321"
-	        },
-	        "map":{
-	        	"x":"210",
-	            "y":"0"
-	        },
-	        "technology":[
+		},
+
+		{   "id":"algeria",
+		    "title":"Algeria",
+		    "left":true,
+		    "description":"Major gas business, with two large gas developments — In Salah (dry gas) and In Amenas (wet gas) — both in partnership with Sonatrach and Statoil.",
+		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "location":{
+		        "x":"986",
+		        "y":"321"
+		    },
+		    "map":{
+		    	"x":"210",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -129,22 +129,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"angola",
-	        "title":"Angola",
-	        "left":true,
-	        "description":"200,00 barrels per day from BP’s operated and non-operated deepwater and ultra deepwater fields. BP is also exploring pre-salt plays in the Kwanza Basin.",
-	        "disclaimer":"",
-	        "location":{
-	            "x":"1001",
-	            "y":"533"
-	        },
-	        "map":{
-	        	"x":"195",
-	            "y":"0"            
-	        },
-	        "technology":[
+		{   "id":"angola",
+		    "title":"Angola",
+		    "left":true,
+		    "description":"200,00 barrels per day from BP’s operated and non-operated deepwater and ultra deepwater fields. BP is also exploring pre-salt plays in the Kwanza Basin.",
+		    "disclaimer":"",
+		    "location":{
+		        "x":"1001",
+		        "y":"533"
+		    },
+		    "map":{
+		    	"x":"195",
+		        "y":"0"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -195,21 +195,21 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"azerbaijan",
-	        "title":"Azerbaijan",
-	        "left":false,
-	        "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
-	        "disclaimer":"20K is a trademark of BP plc | Designer Gas is a registered trademark of BP plc | Bright Water is a registered trademark of Nalco Energy Services",
-	        "location":{
-	            "x":"1207",
-	            "y":"258"
-	        },
-	        "map":{
-	            "x":"-510",
-	            "y":"0"
-	        },
+		{   "id":"azerbaijan",
+		    "title":"Azerbaijan",
+		    "left":false,
+		    "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
+		    "disclaimer":"20K is a trademark of BP plc | Designer Gas is a registered trademark of BP plc | Bright Water is a registered trademark of Nalco Energy Services",
+		    "location":{
+		        "x":"1207",
+		        "y":"258"
+		    },
+		    "map":{
+		        "x":"-510",
+		        "y":"0"
+		    },
 			"technology":[
 				[
 					{
@@ -325,22 +325,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"brazil",
-	        "title":"Brazil",
-	        "left":false,
-	        "description":"BP holds a diverse portfolio in Brazil, with 27 exploration and production licenses, onshore and offshore, in seven different basins.",
-	        "disclaimer":"",
-	        "location":{
-	            "x":"735",
-	            "y":"600"
-	        },
-	        "map":{
-	        	"x":"-45",
-	            "y":"0"
-	        },
-	        "technology":[
+		{   "id":"brazil",
+		    "title":"Brazil",
+		    "left":false,
+		    "description":"BP holds a diverse portfolio in Brazil, with 27 exploration and production licenses, onshore and offshore, in seven different basins.",
+		    "disclaimer":"",
+		    "location":{
+		        "x":"735",
+		        "y":"600"
+		    },
+		    "map":{
+		    	"x":"-45",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -372,22 +372,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"canada",
-	        "title":"Canada",
-	        "left":false,
-	        "description":"Developing energy from Canada’s oil sands, the third-largest crude reserves in the world, as well as offshore frontiers such as the Arctic and Nova Scotia.",
-	        "disclaimer":"ISS is a registered trademark of BP plc | Designer Steam trademark of BP plc",
-	        "location":{
-	            "x":"343",
-	            "y":"146"
-	        },
-	        "map":{
-	            "x":"0",
-	            "y":"0"            
-	        },
-	        "technology":[
+		{   "id":"canada",
+		    "title":"Canada",
+		    "left":false,
+		    "description":"Developing energy from Canada’s oil sands, the third-largest crude reserves in the world, as well as offshore frontiers such as the Arctic and Nova Scotia.",
+		    "disclaimer":"ISS is a registered trademark of BP plc | Designer Steam trademark of BP plc",
+		    "location":{
+		        "x":"343",
+		        "y":"146"
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -426,22 +426,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"egypt",
-	        "title":"Egypt",
-	        "left":true,
-	        "description":"Sustaining oil production plateau in the Gulf of Suez and opening up a new gas business in the Nile Delta.",
-	        "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc | Bright Water is a trademark of Nalco Energy Services",
-	        "location":{
-	            "x":"1104",
-	            "y":"298"
-	        },
-	        "map":{
-	        	"x":"93",
-	            "y":"0"
-	        },
-	        "technology":[
+		{   "id":"egypt",
+		    "title":"Egypt",
+		    "left":true,
+		    "description":"Sustaining oil production plateau in the Gulf of Suez and opening up a new gas business in the Nile Delta.",
+		    "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc | Bright Water is a trademark of Nalco Energy Services",
+		    "location":{
+		        "x":"1104",
+		        "y":"298"
+		    },
+		    "map":{
+		    	"x":"93",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -504,22 +504,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"gulfOfMexico",
-	        "title":"Gulf of Mexico",
-	        "left":false,
-	        "description":"Largest leaseholder in the deepwater Gulf of Mexico, owning more than 650 gross blocks in water depths of 1,200 feet or greater.",
-	        "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc",
-	        "location":{
-	            "x":"456",
-	            "y":"326"
-	        },
-	        "map":{
-	        	"x":"0",
-	            "y":"-187"            
-	        },
-	        "technology":[
+		{   "id":"gulfOfMexico",
+		    "title":"Gulf of Mexico",
+		    "left":false,
+		    "description":"Largest leaseholder in the deepwater Gulf of Mexico, owning more than 650 gross blocks in water depths of 1,200 feet or greater.",
+		    "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc",
+		    "location":{
+		        "x":"456",
+		        "y":"326"
+		    },
+		    "map":{
+		    	"x":"0",
+		        "y":"-187"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -666,22 +666,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"indonesia",
-	        "title":"Indonesia",
-	        "left":true,
-	        "description":"Significant LNG hub at Tangguh, with material potential in the region for unconventionals",
-	        "disclaimer":"ISSN is a trademark of BP plc",
-	        "location":{
-	            "x":"1674",
-	            "y":"485"
-	        },
-	        "map":{
-	            "x":"0",
-	            "y":"0"
-	        },
-	        "technology":[
+		{   "id":"indonesia",
+		    "title":"Indonesia",
+		    "left":true,
+		    "description":"Significant LNG hub at Tangguh, with material potential in the region for unconventionals",
+		    "disclaimer":"ISSN is a trademark of BP plc",
+		    "location":{
+		        "x":"1674",
+		        "y":"485"
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -734,22 +734,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"iraq",
-	        "title":"Iraq",
-	        "left":true,
-	        "description":"In partnership with Iraqi State Oil Marketing Organisation and CNPC, BP is aiming to almost treble output from the supergiant Rualia to 2.8 million barrels per day.",
-	        "disclaimer":"ISSN is a trademark of BP plc",
-	        "location":{
-	            "x":"1197",
-	            "y":"305"
-	        },
-	        "map":{
-	        	"x":"0",
-	            "y":"0"            
-	        },
-	        "technology":[
+		{   "id":"iraq",
+		    "title":"Iraq",
+		    "left":true,
+		    "description":"In partnership with Iraqi State Oil Marketing Organisation and CNPC, BP is aiming to almost treble output from the supergiant Rualia to 2.8 million barrels per day.",
+		    "disclaimer":"ISSN is a trademark of BP plc",
+		    "location":{
+		        "x":"1197",
+		        "y":"305"
+		    },
+		    "map":{
+		    	"x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -776,22 +776,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"northAmerica",
-	        "title":"North America",
-	        "left":false,
-	        "description":"Top-quality unconventional business, leveraging decades of ‘know-how’ in drilling and completions at scale.",
-	        "disclaimer":"ISS is a registered trademark of BP plc | ISSN is a trademark of BP plc",
-	        "location":{
-	            "x":"341",
-	            "y":"229"
-	        },
-	        "map":{
-	            "x":"0",
-	            "y":"0"            
-	        },
-	        "technology":[
+		{   "id":"northAmerica",
+		    "title":"North America",
+		    "left":false,
+		    "description":"Top-quality unconventional business, leveraging decades of ‘know-how’ in drilling and completions at scale.",
+		    "disclaimer":"ISS is a registered trademark of BP plc | ISSN is a trademark of BP plc",
+		    "location":{
+		        "x":"341",
+		        "y":"229"
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -855,22 +855,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"northSea",
-	        "title":"North Sea",
-	        "left":true,
-	        "description":"Maximizing recovery from this maturing basin with world-class imaging, reservoir management and enhanced oil recovery.",
-	        "disclaimer":"Designer gas is a registered trademark of BP plc | ISS, Designer Water, and LoSal are registered trademarks of BP plc",
-	        "location":{
-	            "x":"953",
-	            "y":"135"
-	        },
-	        "map":{
-	        	"x":"245",
-	            "y":"4"
-	        },
-	        "technology":[
+		{   "id":"northSea",
+		    "title":"North Sea",
+		    "left":true,
+		    "description":"Maximizing recovery from this maturing basin with world-class imaging, reservoir management and enhanced oil recovery.",
+		    "disclaimer":"Designer gas is a registered trademark of BP plc | ISS, Designer Water, and LoSal are registered trademarks of BP plc",
+		    "location":{
+		        "x":"953",
+		        "y":"135"
+		    },
+		    "map":{
+		    	"x":"245",
+		        "y":"4"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -974,22 +974,22 @@ BP.data = {
 
 				]
 			]
-	    },
+		},
 
-	    {   "id":"norway",
-	        "title":"Norway",
-	        "left":false,
-	        "description":"New offshore projects and keen focus on life of field extension, push BP Norge’s plans out to 2050.",
-	        "disclaimer":"Designer Gas is a registered trademark of BP plc",
-	        "location":{
-	            "x":"971",
-	            "y":"167"
-	        },
-	        "map":{
-	        	"x":"-275",
-	            "y":"0"
-	        },
-	        "technology":[
+		{   "id":"norway",
+		    "title":"Norway",
+		    "left":false,
+		    "description":"New offshore projects and keen focus on life of field extension, push BP Norge’s plans out to 2050.",
+		    "disclaimer":"Designer Gas is a registered trademark of BP plc",
+		    "location":{
+		        "x":"971",
+		        "y":"167"
+		    },
+		    "map":{
+		    	"x":"-275",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -1053,22 +1053,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"oman",
-	        "title":"Oman",
-	        "left":false,
-	        "description":"Full Field development of giant Khazzan tight gas field will involve drilling 300 wells over 15 years, to deliver plateau production of a billion cubic feet gas per day.",
-	        "disclaimer":"ISS is a registered trademark of BP plc",
-	        "location":{
-	            "x":"1256",
-	            "y":"360"
-	        },
-	        "map":{
-	        	"x":"-555",
-	            "y":"0"
-	        },
-	        "technology":[
+		{   "id":"oman",
+		    "title":"Oman",
+		    "left":false,
+		    "description":"Full Field development of giant Khazzan tight gas field will involve drilling 300 wells over 15 years, to deliver plateau production of a billion cubic feet gas per day.",
+		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "location":{
+		        "x":"1256",
+		        "y":"360"
+		    },
+		    "map":{
+		    	"x":"-555",
+		        "y":"0"
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -1157,22 +1157,22 @@ BP.data = {
 					}
 				]
 			]
-	    },
+		},
 
-	    {   "id":"trinidad",
-	        "title":"Trinidad & Tobago",
-	        "left":false,
-	        "description":"Huge gas business, averaging approximately two billion standard cubic feet daily sold each day. Increasingly, production is moving subsea and into deepwater.",
-	        "disclaimer":"ISS is a registered trademark of BP plc",
-	        "location":{
-	            "x":"608",
-	            "y":"417"
-	        },
-	        "map":{
-	        	"x":"0",
-	            "y":"0"            
-	        },
-	        "technology":[
+		{   "id":"trinidad",
+		    "title":"Trinidad & Tobago",
+		    "left":false,
+		    "description":"Huge gas business, averaging approximately two billion standard cubic feet daily sold each day. Increasingly, production is moving subsea and into deepwater.",
+		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "location":{
+		        "x":"608",
+		        "y":"417"
+		    },
+		    "map":{
+		    	"x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
 				[
 					{
 						"name": "Advanced Seismic Imaging",
@@ -1266,7 +1266,7 @@ BP.data = {
 
 				]
 			]
-	    }
+		}
 
 	]
 
