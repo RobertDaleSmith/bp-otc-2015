@@ -52,8 +52,7 @@ BP.handlers = {
 
 		// console.log(sectionId);
 
-			$('div.mapPoint.open').find('.close').click();
-
+		$('div.mapPoint.open').find('.close').click();
 		
 		$("#header_button_wrapper .btn").removeClass('active');
 
