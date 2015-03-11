@@ -44,7 +44,7 @@ BP.views = {
 
 		}
 
-		BP.views.revealMapPoints();
+		// BP.views.revealMapPoints();
 
 	},
 

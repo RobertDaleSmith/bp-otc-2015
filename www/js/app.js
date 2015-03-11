@@ -3,9 +3,11 @@ BP.views.init();
 BP.handlers.init();
 
 
+$('div#deployments span.title').click();
 
+
+// Automated demo stuff. 
 var interval;
-
 function demo(bool){
 
 	if(bool){

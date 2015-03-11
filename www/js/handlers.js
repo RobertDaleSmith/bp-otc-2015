@@ -32,7 +32,7 @@ BP.handlers = {
 					$('div#header_button_wrapper .btn.open .icon').click();
 
 				} else {
-					
+
 					// Close any open mapPoints.
 					$('div.mapPoint.open').find('.close').click();
 
@@ -50,7 +50,10 @@ BP.handlers = {
 
 		var sectionId = $(self).parent().attr('id'); 
 
-		console.log(sectionId);
+		// console.log(sectionId);
+
+			$('div.mapPoint.open').find('.close').click();
+
 		
 		$("#header_button_wrapper .btn").removeClass('active');
 
@@ -67,6 +70,7 @@ BP.handlers = {
 		} 
 		if(sectionId == 'projects') {
 			//TODO: Build out this section dude!
+
 		}
 
 	},
@@ -77,25 +81,18 @@ BP.handlers = {
 
 		var isOpen = false;
 
-		if ($(self).parent().attr('class').indexOf("open") >= 0) isOpen = true;
+		if( $(self).parent().hasClass('open') ) isOpen = true;
 		
-		//TODO: $("#header_button_wrapper .btn").removeClass('open');
 		if(!isOpen) {
 
 			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
-				
 				$(self).parent().addClass('open');
-				$(self).find('i').attr("class","fa fa-chevron-up");
-
 			});
 
 		} else {
 
 			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
-				
 				$(self).parent().removeClass('open');
-				$(self).find('i').attr("class","fa fa-chevron-down");
-
 			});
 			
 		}
@@ -107,7 +104,7 @@ BP.handlers = {
 		var self = this;
 
 		if( !$(self).parent().parent().hasClass('active') ) {
-			$(self).parent().parent().find('.title').click();
+			$(self).parent().parent().find('div.title').click();
 		}
 
 		var pointId = $(self).attr('id');
@@ -117,11 +114,10 @@ BP.handlers = {
 		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
 			$(self).parent().parent().removeClass('open');
-			$(self).parent().find('i').attr("class","fa fa-chevron-down");
 
 		});
 
-		$('.mapPoint#'+pointId).click();
+		$('div.mapPoint#'+pointId).click();
 
 	},
 
@@ -185,7 +181,6 @@ BP.handlers = {
 				function(next){
 
 					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
-					//here
 					
 					setTimeout(next, 150);
 
@@ -195,7 +190,9 @@ BP.handlers = {
 
 					checkLoop = setInterval(function(){ BP.views.checklistGroupLengths(listGroup) }, 10);
 
-					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, next);
+					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+
+					setTimeout(next, 500);
 
 				},
 
@@ -239,8 +236,9 @@ BP.handlers = {
 
 			function(next){
 
-				// setTimeout(next, 250);
 				next();
+
+				// setTimeout(next, 250);
 
 			},
 
@@ -254,16 +252,18 @@ BP.handlers = {
 			
 			function(next){
 
-				$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, next);
+				$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
 				
+				setTimeout(next, 500);
+
 			},
 			
 			function(next){
 				
 				point.removeClass('open');
-
 				
 				if(!$('div.mapPoint.open').length) {
+					
 					//Check if any others have opened before shifting back to origin.	
 					$('div#map_wrapper').css('left', '0px').css('top', '0px');
 
@@ -273,7 +273,6 @@ BP.handlers = {
 				}
 
 				$('div.menuItem#'+id).removeClass('active');
-
 
 				$('div.mapPoint div.category').removeClass('open');
 
