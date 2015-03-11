@@ -115,16 +115,8 @@ BP.handlers = {
 
 		if( !isOpen ){
 
-			// $('div.mapPoint').removeClass('open');
-			$('div.mapPoint').each(function(){
-
-				if( $(this).hasClass('open') ){
-
-					$(this).find('.label .close').click();
-
-				}
-
-			});
+			// Closes all other open map points.
+			$('div.mapPoint.open').not(self).find('.close').click();
 
 			$(self).css('z-index', '30');
 
@@ -208,7 +200,7 @@ BP.handlers = {
 
 		var id = $(point).attr("id");
 
-		var lists = [ $(point).find('.list')[0], $(point).find('.list')[1] ];
+		var lists = [ $(point).find('div.list')[0], $(point).find('div.list')[1] ];
 
 		var isLeft = $(point).hasClass('left');
 
@@ -242,15 +234,18 @@ BP.handlers = {
 				
 				point.removeClass('open');
 
-				//Check if any others have opened before shifting back to origin.
-				var cnt = 0;
-				$('div.mapPoint').each(function(){ if( $(this).hasClass('open') ) cnt++; });
+				
+				if(!$('div.mapPoint.open').length) {
+					//Check if any others have opened before shifting back to origin.	
+					$('div#map_wrapper').css('left', '0px').css('top', '0px');
 
-				if(cnt == 0) $('div#map_wrapper').css('left', '0px').css('top', '0px');
+					//Also for disclaimer
+					$('div#footer_wrapper').removeClass('on');
+
+				}
 
 				$('div.menuItem#'+id).removeClass('active');
 
-				$('div#footer_wrapper').removeClass('on');
 
 				$('div.mapPoint .category').removeClass('open');
 

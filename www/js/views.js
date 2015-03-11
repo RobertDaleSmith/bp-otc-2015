@@ -64,7 +64,7 @@ BP.views = {
 		var finalize = function(){
 
 			// Reveals all labels at once.
-			setTimeout(function(){ $('div.mapPoint div.label_wrapper').removeClass('hide'); }, 500 );
+			if(BP.settings.revealLabelsTogether) setTimeout(function(){ $('div.mapPoint div.label_wrapper').removeClass('hide'); }, 500 );
 
 			// Converts auto width on labels to a set width. This is to enable css transitioning.
 			$("div.mapPoint div.label").each(function(){
@@ -98,7 +98,7 @@ BP.views = {
 				if(remaining <= 0) finalize();
 
 				// Reveals labels in sequence.
-				// setTimeout(function(){ $(self).find('.label_wrapper').removeClass('hide'); }, 500 );
+				if(!BP.settings.revealLabelsTogether) setTimeout(function(){ $(self).find('.label_wrapper').removeClass('hide'); }, 500 );
 
 			}, times[n] );
 
