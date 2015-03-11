@@ -102,14 +102,17 @@ BP.handlers = {
 
 		var self = this;
 
-		if( !$(self).parent().parent().hasClass('active') ) {
-			$(self).parent().parent().find('div.title').click();
+		var titleElement = $(self).parent().parent().find('span.title');
+
+		if( $(self).parent().parent().hasClass('active') == false ) {
+
+			console.log(titleElement);
+
+			titleElement.click();
 		}
 
 		var pointId = $(self).attr('id');
 		
-		// $("#header_button_wrapper .btn").removeClass('open');
-
 		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
 				
 			$(self).parent().parent().removeClass('open');
@@ -179,6 +182,9 @@ BP.handlers = {
 				
 				function(next){
 
+					$( lists[0] ).cssAnimationReset();
+					$( lists[0] ).find('div.techs').cssAnimationReset();
+
 					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
 					
 					setTimeout(next, 150);
@@ -188,6 +194,9 @@ BP.handlers = {
 				function(next){
 
 					checkLoop = setInterval(function(){ BP.views.checklistGroupLengths(listGroup) }, 10);
+
+					$( lists[1] ).cssAnimationReset();
+					$( lists[1] ).find('div.techs').cssAnimationReset();
 
 					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
 

@@ -33,3 +33,15 @@ Array.prototype.shuffle = function(){
 	return array;
 	
 }
+
+$.fn.cssAnimationReset = function(){
+	this.each(function(){
+
+		$(this ).data("transitioning", 0)
+				.css('height', '')
+				.css('transition', '')
+				.css('webkit-transition', '')
+				.removeClass('is-opened');
+
+	});
+};
