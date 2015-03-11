@@ -209,7 +209,7 @@ html, body{
 		.dropDownMenu{
 			display: inline-block;
 			position: absolute;
-			top: 100px; right: 0px;
+			top: 110px; right: 0px;
 
 			width: 100%; height: 0px;
 

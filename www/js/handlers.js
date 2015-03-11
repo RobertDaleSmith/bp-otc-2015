@@ -25,9 +25,19 @@ BP.handlers = {
 			// console.log(e.keyCode);
 
 			if(e.keyCode == 27){ //esc
-				// Close any open mapPoints.
-				$('div.mapPoint.open').find('.close').click();
 				
+				if( $('div#header_wrapper .btn.open').length > 0 ){
+
+					// Close any open header menu buttons.
+					$('div#header_button_wrapper .btn.open .icon').click();
+
+				} else {
+					
+					// Close any open mapPoints.
+					$('div.mapPoint.open').find('.close').click();
+
+				}
+
 			}
 
 
@@ -265,7 +275,7 @@ BP.handlers = {
 				$('div.menuItem#'+id).removeClass('active');
 
 
-				$('div.mapPoint .category').removeClass('open');
+				$('div.mapPoint div.category').removeClass('open');
 
 				BP.handlers.techCategoryCloseAllEvent();
 
