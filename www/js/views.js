@@ -6,7 +6,7 @@ BP.views = {
 			dust.loadSource(dust.compile( $(this).html(), $(this).attr('name') ));
 		});
 
-		this.loadDeploymentElements();
+		this.loadDeploymentMapElements();
 
 	},
 
@@ -18,7 +18,7 @@ BP.views = {
 
 	},
 
-	loadDeploymentElements: function(){
+	loadDeploymentMapElements: function(){
 		// Renders deployment map points and appends them to mapPoints element.
 		var mapPointsElement = $('div#mapPoints');
 
