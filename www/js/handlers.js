@@ -12,9 +12,7 @@ BP.handlers = {
 
 		$("div.mapPoint .close").click(BP.handlers.mapPointLabelCloseBtnClickEvent);
 
-		$("div.techDeployments .title").click(BP.handlers.techCategoryToggleClickEvent);
-
-		$("div.techDeployments .toggle").click(BP.handlers.techCategoryToggleClickEvent);
+		$("div.listGroup div.title, div.listGroup div.toggle").click(BP.handlers.techCategoryToggleClickEvent);
 
 	},
 
@@ -149,17 +147,22 @@ BP.handlers = {
 			// Open technology list animations.
 			var lists = $(self).find('.list');
 
+			var listGroup = $(self).find('.listGroup');
+
+			var checkLoop;
+
 			async.series([
 
 				function(next){
 
-					setTimeout(next, 700);
+					setTimeout(next, 400);
 
 				},
 				
 				function(next){
 
-					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' });
+					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+					//here
 					
 					setTimeout(next, 150);
 
@@ -167,12 +170,16 @@ BP.handlers = {
 
 				function(next){
 
-					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, next);
+					checkLoop = setInterval(function(){ BP.views.checklistGroupLengths(listGroup) }, 10);
+
+					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, next);
 
 				},
 
 				function(next){
 
+					clearInterval(checkLoop);
+					BP.views.checklistGroupLengths(listGroup);
 					
 					setTimeout(function(){  
 					
@@ -205,7 +212,8 @@ BP.handlers = {
 
 			function(next){
 
-				setTimeout(next, 250);
+				// setTimeout(next, 250);
+				next();
 
 			},
 
@@ -256,11 +264,19 @@ BP.handlers = {
 		
 		var parent = $(self).parent();
 
+		var listGroup = $(parent).parent().parent();
+
+		var checkLoop = setInterval(function(){ BP.views.checklistGroupLengths(listGroup) }, 10);
+
 		if( parent.hasClass('open') ){
 
 			parent.find('.techs').cssAnimateAuto({ action: 'close' }, function(){
 				
 				parent.removeClass('open');
+
+				//Check if short.
+				clearInterval(checkLoop);
+				BP.views.checklistGroupLengths(listGroup);
 
 			});
 
@@ -269,6 +285,9 @@ BP.handlers = {
 			parent.find('.techs').cssAnimateAuto({ action: 'open' }, function(){
 				
 				parent.addClass('open');
+
+				clearInterval(checkLoop);
+				BP.views.checklistGroupLengths(listGroup);
 
 			});
 

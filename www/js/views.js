@@ -104,6 +104,30 @@ BP.views = {
 
 		});
 		
+	},
+
+	checklistGroupLengths: function(listGroup){
+
+		var lists = listGroup.find('.list');
+
+		var heights = [];
+		
+		lists.each(function(i){ heights[i] = $(this).height(); });
+
+		if( heights[0] < heights[1] ) {
+
+			$(lists[0]).addClass('short'); $(lists[1]).removeClass('short');
+
+		} else if( heights[0] > heights[1] ) {
+
+			$(lists[1]).addClass('short'); $(lists[0]).removeClass('short');
+
+		} else {//( heights[0] == heights[1] )
+
+			$(lists[0]).addClass('short'); $(lists[1]).addClass('short');
+
+		}
+
 	}
 
 }
