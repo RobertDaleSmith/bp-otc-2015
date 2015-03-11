@@ -20,7 +20,7 @@ BP.views = {
 
 	loadDeploymentMapElements: function(){
 		// Renders deployment map points and appends them to mapPoints element.
-		var mapPointsElement = $('div#mapPoints');
+		var mapPointsElement = $('div#mapPoints div.points#deployments');
 
 		var dropDMenuElement = $('div#deployments div.dropDownMenu');
 
@@ -48,7 +48,7 @@ BP.views = {
 
 	},
 
-	revealMapPoints: function(){
+	revealMapPoints: function(map){
 
 		// Shuffle the reveal of the mapPoints.
 		var times = [];
@@ -59,15 +59,17 @@ BP.views = {
 		}
 		times.shuffle();
 
+		var parentMap = '';
+		if( map ) parentMap = 'div#' + map + ' ';
 
 		// Fires when all points have been revealed.
 		var finalize = function(){
 
 			// Reveals all labels at once.
-			if(BP.settings.revealLabelsTogether) setTimeout(function(){ $('div.mapPoint div.label_wrapper').removeClass('hide'); }, 500 );
+			if(BP.settings.revealLabelsTogether) setTimeout(function(){ $(parentMap+'div.label_wrapper').removeClass('hide'); }, 500 );
 
 			// Converts auto width on labels to a set width. This is to enable css transitioning.
-			$("div.mapPoint div.label").each(function(){
+			$(parentMap+'div.mapPoint div.label').each(function(){
 
 				var titleWidth = $(this).find('div.title').css("width").replace('px','');
 
@@ -84,8 +86,8 @@ BP.views = {
 		};
 
 		// Reveals all points randomly.
-		var remaining = $("div.mapPoint").length;
-		$('div.mapPoint').each(function(n){
+		var remaining = $(parentMap+'div.mapPoint').length;
+		$(parentMap+'div.mapPoint').each(function(n){
 
 			var self = this;
 			

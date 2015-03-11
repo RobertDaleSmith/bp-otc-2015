@@ -8,9 +8,9 @@ BP.handlers = {
 
 		$("div.menuItem").click(BP.handlers.headerMenuItemClickEvent);
 
-		$("div.mapPoint").click(BP.handlers.mapPointClickEvent);
+		$("div#deployments div.mapPoint").click(BP.handlers.mapPointClickEvent);
 
-		$("div.mapPoint .close").click(BP.handlers.mapPointLabelCloseBtnClickEvent);
+		$("div#deployments div.mapPoint .close").click(BP.handlers.mapPointLabelCloseBtnClickEvent);
 
 		$("div.listGroup div.title, div.listGroup div.toggle").click(BP.handlers.techCategoryToggleClickEvent);
 
@@ -65,11 +65,11 @@ BP.handlers = {
 		$("div.mapPoint div.label_wrapper").addClass('hide');
 
 		if(sectionId == 'deployments') {
-			BP.views.revealMapPoints();
+			BP.views.revealMapPoints('deployments');
 		} 
 		if(sectionId == 'projects') {
 			//TODO: Build out this section dude!
-
+			BP.views.revealMapPoints('projects');
 		}
 
 	},

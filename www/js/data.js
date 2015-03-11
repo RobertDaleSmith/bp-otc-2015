@@ -1268,6 +1268,28 @@ BP.data = {
 			]
 		}
 
+	],
+
+	projects: [
+
+		{	"id":"alaska",
+			"title":"Alaska",
+			"left":false,
+			"location":{
+				"x":"197",
+				"y":"88"
+			}
+		},
+
+		{	"id":"algeria",
+			"title":"Algeria",
+			"left":true,
+			"location":{
+				"x":"986",
+				"y":"321"
+			}
+		}
+
 	]
 
 }
