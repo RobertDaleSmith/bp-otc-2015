@@ -11,7 +11,10 @@
 		
 		<!-- Additional Libraries -->
 		<script type="text/javascript" src="libs/async.js"></script>
-		<script type="text/javascript" src="libs/dust-full.min.js"></script>
+
+		<script type="text/javascript" src="libs/dustjs/dust-full.min.js"></script>
+		<script type="text/javascript" src="libs/dustjs/dust-helpers.min.js"></script>
+
 		<script type="text/javascript" src="libs/jquery/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="libs/jquery/jquery.cssAnimateAuto.min.js"></script>
 
@@ -22,6 +25,63 @@
 		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 
 		<!-- Dust HTML Templates -->
+		<script type="text/template" name="point">
+
+			{@select key="{count}"}
+
+				{@eq value="1"} {>"point1Color"/} {/eq}
+
+				{@eq value="2"} {>"point2Color"/} {/eq}
+
+				{@eq value="3"} {>"point3Color"/} {/eq}
+
+			{/select}
+			
+		</script>
+
+		<script type="text/template" name="point1Color">
+
+			<div class="point_wrapper">
+				<div class="point {color}"></div>
+			</div>
+
+		</script>
+
+		<script type="text/template" name="point2Color">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+				{/select}'>
+					{>"point1Color" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="point3Color">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+					{@eq value="2"}top{/eq}
+				{/select}'>
+					{>"point1Color" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="point4Color">
+
+
+
+		</script>
+
 		<script type="text/template" name="mapPoint">
 
 			<div class="mapPoint {?left}left{/left} hide" 
@@ -31,9 +91,7 @@
 				  style="left:{location.x}px; top:{location.y}px;"
 				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}>
 
-				<div class="point"></div>
-
-				<div class="halfpoint"><div class="point"></div></div>
+				{>"point" count="{color.length}" color="{color}"/}
 
 				<div class="label_wrapper hide">
 

@@ -385,6 +385,61 @@ html, body{
 
 			}
 
+				.mapPoint .partPoint{
+
+					display: block;
+					position: absolute;
+					top:-5px; left:-5px;
+
+					width: 20px; height: 40px;
+
+					overflow: hidden;
+
+				}
+				.mapPoint .partPoint.right{
+
+					top:-5px; right:-5px;
+					left: initial;
+
+				}
+
+				.mapPoint .partPoint.top{
+
+					width: 40px; height: 20px;
+					top:-5px; left:-5px;
+
+				}
+					
+				.mapPoint .point_wrapper{
+
+					display: block;
+					position: absolute;
+					top:0px; left:0px;
+
+					width: 30px; height: 30px;
+					border-radius: 30px;
+
+					text-align: center;
+					cursor: pointer;
+
+				}
+					.mapPoint .partPoint .point_wrapper{
+
+						top:5px; left:5px;
+
+					}
+					.mapPoint .partPoint.right .point_wrapper{
+
+						top:5px; right:5px; left:initial;
+
+					}
+					.mapPoint .partPoint.top .point_wrapper{
+
+						top:5px; left:5px;
+
+					}
+
+
 				.mapPoint .point{
 
 					display: inline-block;
@@ -401,10 +456,38 @@ html, body{
 					border-width: 6px;
 					border-color: #99cc00;
 
-
 					-webkit-animation: pointBounceIn .5s 1;
 
 				}
+				.mapPoint .point.green{
+
+					background-color: #00a22f;
+					border-color: #99cc00;
+
+				}
+				.mapPoint .point.blue{
+
+					background-color: #0e0e96;
+					border-color: #2499ca;
+
+				}
+				.mapPoint .point.orange{
+
+					background-color: #fa630c;
+					border-color: #fdbd24;
+
+				}
+
+				.mapPoint .partPoint.top .point{
+
+					-webkit-clip-path: polygon(50% 50%, -66% 0, 166% 0);
+					   -moz-clip-path: polygon(50% 50%, -66% 0, 166% 0);
+						-ms-clip-path: polygon(50% 50%, -66% 0, 166% 0);
+						 -o-clip-path: polygon(50% 50%, -66% 0, 166% 0);
+							clip-path: polygon(50% 50%, -66% 0, 166% 0);
+
+				}
+
 
 			.mapPoint.open{
 

@@ -9,7 +9,9 @@ BP.models = {
 		this.title = point.title || "";
 		
 		this.left = point.left || false;
-		
+
+		this.color = point.color || ["green"];
+
 		this.description = point.description || "";
 
 		this.disclaimer = point.disclaimer || "";

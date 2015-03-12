@@ -1279,6 +1279,7 @@ BP.data = {
 				{	"id":"alaska",
 					"title":"Alaska",
 					"left":false,
+					"color":["orange"],
 					"location":{
 						"x":"197",
 						"y":"88"
@@ -1288,6 +1289,7 @@ BP.data = {
 				{	"id":"algeria",
 					"title":"Algeria",
 					"left":true,
+					"color":["green"],
 					"location":{
 						"x":"986",
 						"y":"321"
@@ -1297,6 +1299,7 @@ BP.data = {
 				{   "id":"angola",
 				    "title":"Angola",
 				    "left":true,
+					"color":["orange", "blue"],
 				    "location":{
 				        "x":"1001",
 				        "y":"533"
@@ -1306,6 +1309,7 @@ BP.data = {
 				{   "id":"azerbaijan",
 				    "title":"Azerbaijan",
 				    "left":false,
+				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"1207",
 				        "y":"258"
@@ -1315,6 +1319,7 @@ BP.data = {
 				{   "id":"brazil",
 				    "title":"Brazil",
 				    "left":false,
+					"color":["orange", "blue"],
 				    "location":{
 				        "x":"735",
 				        "y":"600"
@@ -1324,6 +1329,7 @@ BP.data = {
 				{   "id":"canada",
 				    "title":"Canada",
 				    "left":false,
+					"color":["green"],
 				    "location":{
 				        "x":"343",
 				        "y":"146"
@@ -1333,6 +1339,7 @@ BP.data = {
 				{   "id":"egypt",
 				    "title":"Egypt",
 				    "left":true,
+					"color":["orange", "blue"],
 				    "location":{
 				        "x":"1104",
 				        "y":"298"
@@ -1342,6 +1349,7 @@ BP.data = {
 				{   "id":"gulfOfMexico",
 				    "title":"Gulf of Mexico",
 				    "left":false,
+					"color":["orange", "blue"],
 				    "location":{
 				        "x":"456",
 				        "y":"326"
@@ -1351,6 +1359,7 @@ BP.data = {
 				{   "id":"indonesia",
 				    "title":"Indonesia",
 				    "left":true,
+				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"1674",
 				        "y":"485"
@@ -1360,6 +1369,7 @@ BP.data = {
 				{   "id":"iraq",
 				    "title":"Iraq",
 				    "left":true,
+					"color":["green"],
 				    "location":{
 				        "x":"1197",
 				        "y":"305"
@@ -1369,6 +1379,7 @@ BP.data = {
 				{   "id":"libya",
 				    "title":"Libya",
 				    "left":true,
+					"color":["green"],
 				    "location":{
 				        "x":"1016",
 				        "y":"310"
@@ -1378,6 +1389,7 @@ BP.data = {
 				{   "id":"northAmerica",
 				    "title":"North America",
 				    "left":false,
+				    "color":["green", "blue"],
 				    "location":{
 				        "x":"341",
 				        "y":"229"
@@ -1387,6 +1399,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
+				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"953",
 				        "y":"135"
@@ -1396,6 +1409,7 @@ BP.data = {
 				{   "id":"norway",
 				    "title":"Norway",
 				    "left":false,
+				    "color":["orange", "blue"],
 				    "location":{
 				        "x":"971",
 				        "y":"167"
@@ -1405,6 +1419,7 @@ BP.data = {
 				{   "id":"oman",
 				    "title":"Oman",
 				    "left":false,
+				    "color":["green"],
 				    "location":{
 				        "x":"1256",
 				        "y":"360"
@@ -1414,6 +1429,7 @@ BP.data = {
 				{   "id":"trinidad",
 				    "title":"Trinidad & Tobago",
 				    "left":false,
+				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"608",
 				        "y":"417"
