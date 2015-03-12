@@ -29,17 +29,19 @@
 
 			{@select key="{count}"}
 
-				{@eq value="1"} {>"point1Color"/} {/eq}
+				{@eq value="1"} {>"soloPoint"/} {/eq}
 
-				{@eq value="2"} {>"point2Color"/} {/eq}
+				{@eq value="2"} {>"dualPoint"/} {/eq}
 
-				{@eq value="3"} {>"point3Color"/} {/eq}
+				{@eq value="3"} {>"triPoint" /} {/eq}
+
+				{@eq value="4"} {>"quadPoint"/} {/eq}
 
 			{/select}
 			
 		</script>
 
-		<script type="text/template" name="point1Color">
+		<script type="text/template" name="soloPoint">
 
 			<div class="point_wrapper">
 				<div class="point {color}"></div>
@@ -47,7 +49,7 @@
 
 		</script>
 
-		<script type="text/template" name="point2Color">
+		<script type="text/template" name="dualPoint">
 
 			{#color}
 				<div class='partPoint 
@@ -55,13 +57,13 @@
 					{@eq value="0"}left{/eq}
 					{@eq value="1"}right{/eq}
 				{/select}'>
-					{>"point1Color" color="{.}"/}
+					{>"soloPoint" color="{.}"/}
 				</div>
 			{/color}
 
 		</script>
 
-		<script type="text/template" name="point3Color">
+		<script type="text/template" name="triPoint">
 
 			{#color}
 				<div class='partPoint 
@@ -70,21 +72,18 @@
 					{@eq value="1"}right{/eq}
 					{@eq value="2"}top{/eq}
 				{/select}'>
-					{>"point1Color" color="{.}"/}
+					{>"soloPoint" color="{.}"/}
 				</div>
 			{/color}
 
 		</script>
 
-		<script type="text/template" name="point4Color">
-
-
-
+		<script type="text/template" name="quadPoint">
 		</script>
 
 		<script type="text/template" name="mapPoint">
 
-			<div class="mapPoint {?left}left{/left} hide" 
+			<div class="mapPoint{?left} left{/left}{?under} under{/under} hide" 
 				  id="{id}" 
 				  mapLeft="{map.x}" 
 				  mapTop="{map.y}" 
@@ -101,9 +100,9 @@
 
 						<div class="title">{title}</div>
 
-						<div class="close"></div>
-
 						<div class="description">{description}</div>
+
+						<div class="close"></div>
 
 					</div>
 

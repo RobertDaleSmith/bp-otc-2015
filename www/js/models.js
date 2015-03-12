@@ -10,6 +10,8 @@ BP.models = {
 		
 		this.left = point.left || false;
 
+		this.under = point.under || false;
+
 		this.color = point.color || ["green"];
 
 		this.description = point.description || "";

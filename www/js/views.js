@@ -130,7 +130,7 @@ BP.views = {
 
 				$(self).removeClass('hide');
 
-				console.log( $(self).attr('id') );
+				// console.log( $(self).attr('id') );
 
 				remaining--;
 
