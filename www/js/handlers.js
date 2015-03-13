@@ -2,17 +2,19 @@ BP.handlers = {
 
 	init: function() {
 
-		$("div#header_button_wrapper .btn .title").click(BP.handlers.headerMainMenuClickEvent);
+		$('div#header_button_wrapper .btn .title').click(BP.handlers.headerMainMenuClickEvent);
 
-		$("div#header_button_wrapper .btn .icon").click(BP.handlers.headerDropDownMenuClickEvent);
+		$('div#header_button_wrapper .btn .icon').click(BP.handlers.headerDropDownMenuClickEvent);
 
-		$("div.menuItem").click(BP.handlers.headerMenuItemClickEvent);
+		$('div.menuItem').click(BP.handlers.headerMenuItemClickEvent);
 
-		$("div#deployments div.mapPoint").click(BP.handlers.mapPointClickEvent);
+		$('div#deployments div.mapPoint').click(BP.handlers.mapPointClickEvent);
 
-		$("div#deployments div.mapPoint .close").click(BP.handlers.mapPointLabelCloseBtnClickEvent);
+		$('div#deployments div.mapPoint .close').click(BP.handlers.mapPointLabelCloseBtnClickEvent);
 
-		$("div.listGroup div.title, div.listGroup div.toggle").click(BP.handlers.techCategoryToggleClickEvent);
+		$('div.listGroup div.title, div.listGroup div.toggle').click(BP.handlers.techCategoryToggleClickEvent);
+
+		$('div#mapImage').click(BP.handlers.mapClickEvent);
 
 		this.keyboardKeyEventsInit();
 
@@ -357,6 +359,12 @@ BP.handlers = {
 			action: 'close'
 		});
 
+	},
+
+	mapClickEvent: function() {
+
+		$('div.mapPoint.open').find('.close').click();
+		
 	}
 
 }
