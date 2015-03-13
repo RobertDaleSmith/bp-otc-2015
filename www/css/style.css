@@ -299,7 +299,7 @@ html, body{
 
 	#sub_menu_wrapper{
 
-		display: inline-block;
+		display: none;
 		position: absolute;
 		top:110px; left: 0px;
 		width: 100%; height: 100px;
@@ -321,12 +321,11 @@ html, body{
 			border-color: inherit;
 
 			background-color: #ececec;
-
 			color: #56565a;
-
 			padding: 0 0 0 15px;
-
 			font-size: 23px;
+
+			cursor: default;
 		}
 
 		#sub_menu_wrapper .menu{
@@ -680,6 +679,39 @@ html, body{
 					}
 
 
+				.mapPoint .post{
+
+					display: inline-block;
+					position: absolute;
+					top: 0px; left: 0px;
+
+					width: 30px; height: 20px;
+
+					background-color: #00a22f;
+
+					/*opacity: 0;*/
+					
+					border-top-left-radius: 15px;
+  					border-top-right-radius: 15px;
+
+					-webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+							clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+					-webkit-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
+					   -moz-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
+						-ms-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
+						 -o-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
+							transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
+
+				}
+
+				.mapPoint.start .post{
+
+					top: 23px;
+					opacity: 1;
+
+				}
+
 				.mapPoint .point{
 
 					display: inline-block;
@@ -730,7 +762,6 @@ html, body{
 							clip-path: polygon(50% 50%, -66% 0, 166% 0);
 
 				}
-
 
 			.mapPoint.open{
 
