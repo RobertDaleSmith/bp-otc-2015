@@ -562,9 +562,6 @@ html, body{
 				.mapPoint .partPoint.top .point{
 
 					-webkit-clip-path: polygon(50% 50%, -66% 0, 166% 0);
-					   -moz-clip-path: polygon(50% 50%, -66% 0, 166% 0);
-						-ms-clip-path: polygon(50% 50%, -66% 0, 166% 0);
-						 -o-clip-path: polygon(50% 50%, -66% 0, 166% 0);
 							clip-path: polygon(50% 50%, -66% 0, 166% 0);
 
 				}
@@ -600,8 +597,15 @@ html, body{
 
 						width: 21px; height: 55px;
 
-						background-image: url('../images/mapPointArrow_right.png');
-						background-size: 100% 100%;
+						/*background-image: url('../images/mapPointArrow_right.png');
+						background-size: 100% 100%;*/
+
+						background-color: rgba(85,85,89,0.7);
+						/*-webkit-clip-path: polygon(100% 0, 0 100%, 100% 37px);
+								clip-path: polygon(100% 0, 0 100%, 100% 37px);*/
+						
+						-webkit-clip-path: polygon(21px 0, 21px 37px, 0 55px);
+								clip-path: polygon(21px 0, 21px 37px, 0 55px);
 
 						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
@@ -614,7 +618,24 @@ html, body{
 						left: initial;
 						right: 15px;
 
-						background-image: url('../images/mapPointArrow_left.png');
+						/*background-image: url('../images/mapPointArrow_left.png');*/
+
+						-webkit-clip-path: polygon(0 0, 100% 100%, 0 37px);
+								clip-path: polygon(0 0, 100% 100%, 0 37px);
+					}
+
+					.mapPoint.under .arrow{
+						top: 15px;
+
+						-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
+								clip-path: polygon(0 0, 100% 18px, 100% 100%);
+					}
+
+					.mapPoint.left.under .arrow{
+						
+
+						-webkit-clip-path: polygon(0 18px, 21px 0, 0 55px);
+								clip-path: polygon(0 18px, 21px 0, 0 55px);
 					}
 
 					.mapPoint.open .arrow{
@@ -622,7 +643,13 @@ html, body{
 						height: 140px;
 						width: 30px;
 
-						background-image: url('../images/mapPointArrowOpen_right.png');
+						/*background-image: url('../images/mapPointArrowOpen_right.png');*/
+
+						background-color: #00a22f;
+						/*-webkit-clip-path: polygon(100% 4px, 0 100%, 100% 106px);
+								clip-path: polygon(100% 4px, 0 100%, 100% 106px);*/
+						-webkit-clip-path: polygon(30px 4px, 30px 106px, 0 140px);
+								clip-path: polygon(30px 4px, 30px 106px, 0 140px);
 					}
 
 					.mapPoint.left.open .arrow{
@@ -630,7 +657,19 @@ html, body{
 						height: 140px;
 						width: 30px;
 
-						background-image: url('../images/mapPointArrowOpen_left.png');
+						/*background-image: url('../images/mapPointArrowOpen_left.png');*/
+
+						-webkit-clip-path: polygon(0 4px, 100% 100%, 0 106px);
+								clip-path: polygon(0 4px, 100% 100%, 0 106px);
+					}
+
+					.mapPoint.under.open .arrow{
+						top: 125px;
+						height: 140px;
+						width: 30px;
+
+						-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
+								clip-path: polygon(0 0, 100% 18px, 100% 100%);
 					}
 
 					.mapPoint .label{
@@ -666,6 +705,9 @@ html, body{
 					.mapPoint.left .label{
 						left: initial;
 						right: 36px;
+					}
+					.mapPoint.under .label{
+						top: 33px;
 					}
 
 					.mapPoint.open .label{

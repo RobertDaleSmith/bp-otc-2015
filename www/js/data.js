@@ -1359,7 +1359,7 @@ BP.data = {
 				{   "id":"indonesia",
 				    "title":"Indonesia",
 				    "left":true,
-				    "color":["green", "blue", "orange", "purple"],
+				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"1674",
 				        "y":"485"
@@ -1419,7 +1419,8 @@ BP.data = {
 
 				{   "id":"oman",
 				    "title":"Oman",
-				    "left":false,
+				    "left":true,
+				    "under":true,
 				    "color":["green"],
 				    "location":{
 				        "x":"1256",
