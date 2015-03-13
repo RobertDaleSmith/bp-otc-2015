@@ -1,0 +1,21 @@
+
+/* Header mods to fit down width of 720p aka 1280 */
+@media (max-width: 1340px) {
+
+	#header_button_wrapper .btn .title{
+
+		padding: 0 100px 0 30px;
+
+	}
+
+	#header_button_wrapper .btn .icon{
+		right: 30px;
+	}
+
+	#header_wrapper #logo_wrapper{
+
+		margin-right: 30px;
+
+	}
+
+}

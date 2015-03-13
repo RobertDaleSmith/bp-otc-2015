@@ -164,7 +164,7 @@ BP.handlers = {
 			$('div.menuItem#'+id).addClass('active');
 
 			//Shift Map
-			$('div#map_wrapper').css('left', mapLeft+'px').css('top', mapTop+'px');
+			$('div#map_canvas').css('left', mapLeft+'px').css('top', mapTop+'px');
 
 			//Show footer disclaimer if a disclaimer exists.
 			if(disclaimer != null) {
@@ -284,7 +284,7 @@ BP.handlers = {
 				if(!$('div.mapPoint.open').length) {
 					
 					//Check if any others have opened before shifting back to origin.	
-					$('div#map_wrapper').css('left', '0px').css('top', '0px');
+					$('div#map_canvas').css('left', '0px').css('top', '0px');
 
 					//Also for disclaimer
 					$('div#footer_wrapper').removeClass('on');

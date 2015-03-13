@@ -23,6 +23,7 @@
 		<!-- <link href="css/fonts.css" media="all" rel="stylesheet" type="text/css" /> -->
 		<link href="css/animation.css" media="all" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="css/responsive.css" media="all" rel="stylesheet" type="text/css" />
 
 		<!-- Dust HTML Templates -->
 		<script type="text/template" name="point">
@@ -217,30 +218,34 @@
 
 			<div id="content_wrapper">
 
-				<div id="map_wrapper">
+				<div id="map_viewport">
 
-					<div id="map_content_wrapper">
+					<div id="map_canvas">
 
-						<div id="mapImage"></div>
+						<div id="map_content_wrapper">
 
-						<div id="mapPoints">
+							<div id="mapImage"></div>
 
-							<div class="points" id="deployments">
+							<div id="mapPoints">
 
-								<!-- template :: mapPoint -->
+								<div class="points" id="deployments">
 
-							</div>
+									<!-- template :: mapPoint -->
 
-							<div class="points" id="projects">
+								</div>
 
-								<!-- template :: mapPoint -->
+								<div class="points" id="projects">
+
+									<!-- template :: mapPoint -->
+
+								</div>
 
 							</div>
 
 						</div>
 
 					</div>
-
+				
 				</div>
 
 				<div id="intro_wrapper" style="display:none;">

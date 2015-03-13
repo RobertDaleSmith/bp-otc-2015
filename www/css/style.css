@@ -11,12 +11,13 @@
 }
 
 html, body{
-	
+
+	display: block; position: absolute;
+	top:0px; left: 0px;
+	width: 100%; height: 100%;
+	padding: 0; margin: 0;
 	color: #000000;
 	background-color: #FFFFFF;
-
-	padding: 0; margin: 0;
-
 	font-family: 'Open Sans', sans-serif;
 
 }
@@ -25,7 +26,10 @@ html, body{
 
 	display: block;
 	position: relative;
-	width: 1920px; height: 1080px;
+	width: 100%; height: 100%;
+	
+	min-width: 1280px; min-height:  720px;
+	max-width: 1920px; max-height: 1080px;
 
 	background-color: #bbbbbb;
 
@@ -140,6 +144,12 @@ html, body{
 				border-style: solid;
 				border-width: 10px 0 0 0;
 				border-color: transparent;
+
+				-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+				   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+					-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+					 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
+						transition: all cubic-bezier(.62,.28,.23,.99) 0.25s;
 
 			}
 			#header_button_wrapper .btn .title:hover{
@@ -312,9 +322,24 @@ html, body{
 	top: 110px; left: 0px;
 	width: 100%; height: calc(100% - 110px);
 
+	overflow: scroll;
+
 }
 
-#map_wrapper{
+#content_wrapper::-webkit-scrollbar { 
+    display: none; 
+}
+
+#map_viewport{
+
+	display: inline-block;
+	position: relative;
+	width: 1920px; height: 970px;
+	overflow: hidden;
+
+}
+
+#map_canvas{
 
 	display: inline-block;
 	position: absolute;
@@ -328,6 +353,7 @@ html, body{
 			transition: top 0.5s, left 0.5s;
 
 }
+
 
 	#map_content_wrapper{
 
