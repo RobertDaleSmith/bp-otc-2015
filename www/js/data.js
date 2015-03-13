@@ -6,7 +6,7 @@ BP.data = {
 		    "title":"Alaska",
 		    "left":false,
 		    "description":"Alaska BP is the largest gross producer of oil in Alaska and operates 13 oil fields on the North Slope, including the supergiant Prudhoe Bay.",
-		    "disclaimer":"Designer Gas is a registered trademark of BP plc | Designer Water and LoSal are registered trademarks of BP plc | Bright Water is a trademark of Nalco Energy Services",
+		    "disclaimer":"Designer Gas is a registered trade mark of BP plc | Designer Water and LoSal are registered trade marks of BP plc | Bright Water is a trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"197",
 		        "y":"88"
@@ -92,7 +92,7 @@ BP.data = {
 		    "title":"Algeria",
 		    "left":true,
 		    "description":"Major gas business, with two large gas developments — In Salah (dry gas) and In Amenas (wet gas) — both in partnership with Sonatrach and Statoil.",
-		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
 		        "x":"986",
 		        "y":"321"
@@ -201,7 +201,7 @@ BP.data = {
 		    "title":"Azerbaijan",
 		    "left":false,
 		    "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
-		    "disclaimer":"20K is a trademark of BP plc | Designer Gas is a registered trademark of BP plc | Bright Water is a registered trademark of Nalco Energy Services",
+		    "disclaimer":"20K is a trade mark of BP plc | Designer Gas is a registered trade mark of BP plc | Bright Water is a registered trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"1207",
 		        "y":"258"
@@ -378,7 +378,7 @@ BP.data = {
 		    "title":"Canada",
 		    "left":false,
 		    "description":"Developing energy from Canada’s oil sands, the third-largest crude reserves in the world, as well as offshore frontiers such as the Arctic and Nova Scotia.",
-		    "disclaimer":"ISS is a registered trademark of BP plc | Designer Steam trademark of BP plc",
+		    "disclaimer":"ISS is a registered trade mark of BP plc | Designer Steam trade mark of BP plc",
 		    "location":{
 		        "x":"343",
 		        "y":"146"
@@ -432,7 +432,7 @@ BP.data = {
 		    "title":"Egypt",
 		    "left":true,
 		    "description":"Sustaining oil production plateau in the Gulf of Suez and opening up a new gas business in the Nile Delta.",
-		    "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc | Bright Water is a trademark of Nalco Energy Services",
+		    "disclaimer":"Designer Water and LoSal are registered trade mark of BP plc | 20K is a trade mark of BP plc | Bright Water is a trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"1104",
 		        "y":"298"
@@ -510,7 +510,7 @@ BP.data = {
 		    "title":"Gulf of Mexico",
 		    "left":false,
 		    "description":"Largest leaseholder in the deepwater Gulf of Mexico, owning more than 650 gross blocks in water depths of 1,200 feet or greater.",
-		    "disclaimer":"Designer Water and LoSal are registered trademark of BP plc | 20K is a trademark of BP plc",
+		    "disclaimer":"Designer Water and LoSal are registered trade mark of BP plc | 20K is a trade mark of BP plc",
 		    "location":{
 		        "x":"456",
 		        "y":"326"
@@ -672,7 +672,7 @@ BP.data = {
 		    "title":"Indonesia",
 		    "left":true,
 		    "description":"Significant LNG hub at Tangguh, with material potential in the region for unconventionals",
-		    "disclaimer":"ISSN is a trademark of BP plc",
+		    "disclaimer":"ISSN is a trade mark of BP plc",
 		    "location":{
 		        "x":"1674",
 		        "y":"485"
@@ -740,7 +740,7 @@ BP.data = {
 		    "title":"Iraq",
 		    "left":true,
 		    "description":"In partnership with Iraqi State Oil Marketing Organisation and CNPC, BP is aiming to almost treble output from the supergiant Rualia to 2.8 million barrels per day.",
-		    "disclaimer":"ISSN is a trademark of BP plc",
+		    "disclaimer":"ISSN is a trade mark of BP plc",
 		    "location":{
 		        "x":"1197",
 		        "y":"305"
@@ -782,7 +782,7 @@ BP.data = {
 		    "title":"North America",
 		    "left":false,
 		    "description":"Top-quality unconventional business, leveraging decades of ‘know-how’ in drilling and completions at scale.",
-		    "disclaimer":"ISS is a registered trademark of BP plc | ISSN is a trademark of BP plc",
+		    "disclaimer":"ISS is a registered trade mark of BP plc | ISSN is a trade mark of BP plc",
 		    "location":{
 		        "x":"341",
 		        "y":"229"
@@ -861,7 +861,7 @@ BP.data = {
 		    "title":"North Sea",
 		    "left":true,
 		    "description":"Maximizing recovery from this maturing basin with world-class imaging, reservoir management and enhanced oil recovery.",
-		    "disclaimer":"Designer gas is a registered trademark of BP plc | ISS, Designer Water, and LoSal are registered trademarks of BP plc",
+		    "disclaimer":"Designer gas is a registered trade mark of BP plc | ISS, Designer Water, and LoSal are registered trade marks of BP plc",
 		    "location":{
 		        "x":"953",
 		        "y":"135"
@@ -980,7 +980,7 @@ BP.data = {
 		    "title":"Norway",
 		    "left":false,
 		    "description":"New offshore projects and keen focus on life of field extension, push BP Norge’s plans out to 2050.",
-		    "disclaimer":"Designer Gas is a registered trademark of BP plc",
+		    "disclaimer":"Designer Gas is a registered trade mark of BP plc",
 		    "location":{
 		        "x":"971",
 		        "y":"167"
@@ -1059,7 +1059,7 @@ BP.data = {
 		    "title":"Oman",
 		    "left":false,
 		    "description":"Full Field development of giant Khazzan tight gas field will involve drilling 300 wells over 15 years, to deliver plateau production of a billion cubic feet gas per day.",
-		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
 		        "x":"1256",
 		        "y":"360"
@@ -1163,7 +1163,7 @@ BP.data = {
 		    "title":"Trinidad & Tobago",
 		    "left":false,
 		    "description":"Huge gas business, averaging approximately two billion standard cubic feet daily sold each day. Increasingly, production is moving subsea and into deepwater.",
-		    "disclaimer":"ISS is a registered trademark of BP plc",
+		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
 		        "x":"608",
 		        "y":"417"
@@ -1278,7 +1278,8 @@ BP.data = {
 
 				{	"id":"alaska",
 					"title":"Alaska",
-					"left":false,
+					"left":true,
+					"under":true,
 					"color":["orange"],
 					"location":{
 						"x":"197",
@@ -1298,7 +1299,7 @@ BP.data = {
 
 				{   "id":"angola",
 				    "title":"Angola",
-				    "left":true,
+				    "left":false,
 					"color":["orange", "blue"],
 				    "location":{
 				        "x":"1001",
@@ -1338,7 +1339,8 @@ BP.data = {
 
 				{   "id":"egypt",
 				    "title":"Egypt",
-				    "left":true,
+				    "left":false,
+				    "under":true,
 					"color":["orange", "blue"],
 				    "location":{
 				        "x":"1104",
@@ -1371,8 +1373,8 @@ BP.data = {
 				    "left":true,
 					"color":["green"],
 				    "location":{
-				        "x":"1197",
-				        "y":"305"
+				        "x":"1202",
+				        "y":"299"
 				    }
 				},
 
@@ -1389,7 +1391,7 @@ BP.data = {
 
 				{   "id":"northAmerica",
 				    "title":"North America",
-				    "left":false,
+				    "left":true,
 				    "color":["green", "blue"],
 				    "location":{
 				        "x":"341",
@@ -1419,8 +1421,8 @@ BP.data = {
 
 				{   "id":"oman",
 				    "title":"Oman",
-				    "left":true,
-				    "under":true,
+				    "left":false,
+				    "under":false,
 				    "color":["green"],
 				    "location":{
 				        "x":"1256",
@@ -1431,6 +1433,7 @@ BP.data = {
 				{   "id":"trinidad",
 				    "title":"Trinidad & Tobago",
 				    "left":false,
+				    "under":true,
 				    "color":["green", "orange", "blue"],
 				    "location":{
 				        "x":"608",

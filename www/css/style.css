@@ -44,6 +44,7 @@ html, body{
 	background-color: #bbbbbb;
 
 	overflow: hidden;
+	text-align: left;
 
 }
 
@@ -52,7 +53,8 @@ html, body{
 #header_wrapper{
 
 	display: inline-block;
-	position: relative;
+	position: absolute;
+	top: 0px; left: 0px;
 	width: 100%; height: 110px;
 
 	background-color: #ffffff;
@@ -291,6 +293,169 @@ html, body{
 			}
 
 /* HEADER -- end */
+
+
+/* SUBMENU -- start */
+
+	#sub_menu_wrapper{
+
+		display: inline-block;
+		position: absolute;
+		top:110px; left: 0px;
+		width: 100%; height: 100px;
+
+		z-index: 45;
+
+		border-color: #56565a;
+
+	}
+		#sub_menu_wrapper .title{
+			display: inline-block;
+			position: relative;
+			float: left;
+			width: 100%; height: 50px;
+			line-height: 50px;
+
+			border-style: solid;
+			border-width: 0 0 0 23px;
+			border-color: inherit;
+
+			background-color: #ececec;
+
+			color: #56565a;
+
+			padding: 0 0 0 15px;
+
+			font-size: 23px;
+		}
+
+		#sub_menu_wrapper .menu{
+			display: inline-block;
+			position: relative;
+			float: left;
+			width: 100%; height: 50px;
+			
+
+			border-style: solid;
+			border-width: 0 0 0 10px;
+			border-color: inherit;
+
+			background-color: #dfdfdf;
+
+			padding: 0 10px;
+		}
+			#sub_menu_wrapper .menu .btn{
+
+				display: inline-block;
+				position: relative;
+				float: left;
+				width: auto; height: 35px;
+				line-height: 35px;
+
+				margin: 7px 2px 8px 2px;
+				border-radius: 4px;
+				cursor: pointer;
+
+			}
+
+			#sub_menu_wrapper .menu .btn.green{
+				background-color: rgba(178,211,188,0.4);
+				color: #00a22f;
+			}
+			#sub_menu_wrapper .menu .btn.green:hover,
+			#sub_menu_wrapper .menu .btn.green:active{
+				background-color: rgba(178,211,188,1.0);
+				color: #00a22f;
+			}
+
+			#sub_menu_wrapper .menu .btn.orange{
+				background-color: rgba(229,199,178,0.4);
+				color: #ff6600;
+			}
+			#sub_menu_wrapper .menu .btn.orange:hover,
+			#sub_menu_wrapper .menu .btn.orange:active{
+				background-color: rgba(229,199,178,1.0);
+				color: #ff6600;
+			}
+
+			#sub_menu_wrapper .menu .btn.blue{
+				background-color: rgba(178,178,209,0.4);
+				color: #000099;
+			}
+			#sub_menu_wrapper .menu .btn.blue:hover,
+			#sub_menu_wrapper .menu .btn.blue:active{
+				background-color: rgba(178,178,209,1.0);
+				color: #000099;
+			}
+
+				#sub_menu_wrapper .menu .btn .item{
+
+					display: inline-block;
+					position: relative;
+					
+					width: auto; height: 35px;
+
+					padding: 0 18px;
+
+					font-size: 16px;
+
+				}
+
+/* SUBMENU -- end */
+
+
+/* SUB_DETAILS -- start */
+
+	#sub_details_wrapper{
+
+		display: inline-block;
+		position: absolute;
+		bottom: 40px; left: 138px;
+		width: auto; height: 124px;
+
+		z-index: 45;
+
+		border-style: solid;
+		border-width: 9px 0 0 0;
+		border-color: #56565a;
+
+		background-color: rgba(255,255,255,0.74);
+
+	}
+
+		#sub_details_wrapper .item{
+
+			display: inline-block;
+			position: relative;
+			float: left;
+			height: 100%; width: 336px;
+
+			padding: 25px 25px 0;
+
+		}
+
+			#sub_details_wrapper .item .title{
+
+				height: 18px;
+				line-height: 18px;
+
+				font-size: 19px;
+				/*font-weight: 600;*/
+				color: #00a22f;
+
+			}
+
+			#sub_details_wrapper .item .description{
+
+				margin: 6px 0 0 0;
+				line-height: 22px;
+
+				font-size: 16px;
+				color: #56565a;
+
+			}
+
+/* SUB_DETAILS -- end */
 
 
 /* FOOTER -- start */
