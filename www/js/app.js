@@ -6,11 +6,12 @@ BP.handlers.init();
 // $('div#deployments span.title').click();
 
 
+
 // Automated demo stuff. 
 var interval;
 function demo(bool){
 
-	if(bool){
+	if(bool) {
 
 		var pointCount = 1;
 
@@ -20,12 +21,11 @@ function demo(bool){
 
 			$('div.mapPoint')[pointCount].click();
 			pointCount++;
-			if( pointCount == $('div.mapPoint').length )
-				pointCount = 0;
+			if( pointCount == $('div.mapPoint').length ) pointCount = 0;
 
 		}, 500 );
 
-	}else{
+	} else {
 
 		window.clearInterval(interval);
 

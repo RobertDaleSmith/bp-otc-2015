@@ -90,7 +90,7 @@ BP.views = {
 		// Shuffle the reveal of the mapPoints.
 		var times = [];
 		var tDiff = 75;
-		var tMin  = 1;
+		var tMin  = 100;
 		for(var i=0; i<$(parentMap+'div.mapPoint').length; i++){
 			times.push( (i * tDiff) + tMin );
 		}
@@ -124,7 +124,6 @@ BP.views = {
 		$(parentMap+'div.mapPoint').each(function(n){
 
 			var self = this;
-
 
 			setTimeout(function(){
 

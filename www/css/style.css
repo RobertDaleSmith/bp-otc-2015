@@ -10,6 +10,7 @@
 			user-select: none;
 }
 
+
 html, body{
 
 	display: block; position: absolute;
@@ -19,12 +20,21 @@ html, body{
 	color: #000000;
 	background-color: #FFFFFF;
 	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	background-color: #f5f5f5;
 
+}
+
+#center_wrapper{
+	display: block;
+	position: relative;
+	width: 100%; height: 100%;
+	overflow: hidden;
 }
 
 #main_wrapper{
 
-	display: block;
+	display: inline-block;
 	position: relative;
 	width: 100%; height: 100%;
 	
@@ -100,7 +110,8 @@ html, body{
 	#header_button_wrapper{
 
 		display: inline-block;
-		position: relative;
+		position: absolute;
+		top:0px; left: 0px;
 		width: auto; height: 100%;
 
 		margin: 0 0 0 0px;
@@ -297,6 +308,7 @@ html, body{
 		line-height: 40px;
 		font-size: 13px;
 
+		z-index: 20;
 		opacity: 0;
 		
 		-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
@@ -334,6 +346,7 @@ html, body{
 
 	display: inline-block;
 	position: relative;
+	float: left;
 	width: 1920px; height: 970px;
 	overflow: hidden;
 
@@ -410,6 +423,11 @@ html, body{
 				display: none;
 
 			}
+			#projects.mapPoint{
+
+				cursor: default;
+
+			}
 
 				.mapPoint .partPoint{
 
@@ -435,6 +453,22 @@ html, body{
 					top:-5px; left:-5px;
 
 				}
+
+				.mapPoint .partPoint.bottomRight{
+
+					width: 20px; height: 20px;
+					bottom:-5px; right:-5px;
+					top: initial; left: initial;
+
+				}
+
+				.mapPoint .partPoint.bottomLeft{
+
+					width: 20px; height: 20px;
+					bottom:-5px; left:-5px;
+					top:initial; right:initial;
+
+				}
 					
 				.mapPoint .point_wrapper{
 
@@ -446,7 +480,6 @@ html, body{
 					border-radius: 30px;
 
 					text-align: center;
-					cursor: pointer;
 
 				}
 					.mapPoint .partPoint .point_wrapper{
@@ -462,6 +495,18 @@ html, body{
 					.mapPoint .partPoint.top .point_wrapper{
 
 						top:5px; left:5px;
+
+					}
+					.mapPoint .partPoint.bottomRight .point_wrapper{
+
+						bottom:5px; right:5px; 
+						top:initial; left:initial;
+
+					}
+					.mapPoint .partPoint.bottomLeft .point_wrapper{
+
+						bottom:5px; left:5px; 
+						top:initial; right:initial;
 
 					}
 
@@ -501,6 +546,12 @@ html, body{
 
 					background-color: #fa630c;
 					border-color: #fdbd24;
+
+				}
+				.mapPoint .point.purple{
+
+					background-color: #650f97;
+					border-color: #ca5dfc;
 
 				}
 

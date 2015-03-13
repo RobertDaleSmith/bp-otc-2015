@@ -26,62 +26,6 @@
 		<link href="css/responsive.css" media="all" rel="stylesheet" type="text/css" />
 
 		<!-- Dust HTML Templates -->
-		<script type="text/template" name="point">
-
-			{@select key="{count}"}
-
-				{@eq value="1"} {>"soloPoint"/} {/eq}
-
-				{@eq value="2"} {>"dualPoint"/} {/eq}
-
-				{@eq value="3"} {>"triPoint" /} {/eq}
-
-				{@eq value="4"} {>"quadPoint"/} {/eq}
-
-			{/select}
-			
-		</script>
-
-		<script type="text/template" name="soloPoint">
-
-			<div class="point_wrapper">
-				<div class="point {color}"></div>
-			</div>
-
-		</script>
-
-		<script type="text/template" name="dualPoint">
-
-			{#color}
-				<div class='partPoint 
-				{@select key="{$idx}"}
-					{@eq value="0"}left{/eq}
-					{@eq value="1"}right{/eq}
-				{/select}'>
-					{>"soloPoint" color="{.}"/}
-				</div>
-			{/color}
-
-		</script>
-
-		<script type="text/template" name="triPoint">
-
-			{#color}
-				<div class='partPoint 
-				{@select key="{$idx}"}
-					{@eq value="0"}left{/eq}
-					{@eq value="1"}right{/eq}
-					{@eq value="2"}top{/eq}
-				{/select}'>
-					{>"soloPoint" color="{.}"/}
-				</div>
-			{/color}
-
-		</script>
-
-		<script type="text/template" name="quadPoint">
-		</script>
-
 		<script type="text/template" name="mapPoint">
 
 			<div class="mapPoint{?left} left{/left}{?under} under{/under} hide" 
@@ -130,6 +74,77 @@
 				</div>
 
 			</div>
+
+		</script>
+
+		<script type="text/template" name="point">
+
+			{@select key="{count}"}
+
+				{@eq value="1"} {>"soloPoint"/} {/eq}
+
+				{@eq value="2"} {>"dualPoint"/} {/eq}
+
+				{@eq value="3"} {>"triPoint" /} {/eq}
+
+				{@eq value="4"} {>"quadPoint"/} {/eq}
+
+				{@none} {>"soloPoint"/} {/none}
+
+			{/select}
+			
+		</script>
+
+		<script type="text/template" name="soloPoint">
+
+			<div class="point_wrapper">
+				<div class="point {color}"></div>
+			</div>
+
+		</script>
+
+		<script type="text/template" name="dualPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="triPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+					{@eq value="2"}top{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="quadPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+					{@eq value="2"}bottomRight{/eq}
+					{@eq value="3"}bottomLeft{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
 
 		</script>
 
@@ -182,87 +197,105 @@
 		</script>
 
 	</head>
+
 	<body>
 
-		<div id="main_wrapper">
-			<div id="header_wrapper">
-				<div id="header_button_wrapper">
-					<div class="btn" id="deployments">
 
-						<span class="title">technology deployment</span>
-						<span class="icon"></span>
+		<div id="center_wrapper">
 
-						<div class="dropDownMenu">
-							<!-- templates :: menuItem -->
+			<div id="main_wrapper">
+
+				<div id="header_wrapper">
+
+					<div id="header_button_wrapper">
+
+						<div class="btn" id="deployments">
+
+							<span class="title">technology deployment</span>
+
+							<span class="icon"></span>
+
+							<div class="dropDownMenu">
+								<!-- templates :: menuItem -->
+							</div>
+
+						</div>
+
+						<div class="btn" id="projects">
+
+							<span class="title">technology projects</span>
+
+							<span class="icon"></span>
+
+							<div class="dropDownMenu">
+								<!-- templates :: menuItem -->
+							</div>
+
 						</div>
 
 					</div>
-					<div class="btn" id="projects">
 
-						<span class="title">technology projects</span>
-						<span class="icon"></span>
+					<div id="logo_wrapper">
 
-						<div class="dropDownMenu">
-							<!-- templates :: menuItem -->
-						</div>
+						<div class="name">Upstream Technologies</div>
+
+						<div class="logo"></div>
 
 					</div>
-				</div>
-				<div id="logo_wrapper">
-
-					<div class="name">Upstream Technologies</div>
-					<div class="logo"></div>
 
 				</div>
-			</div>
 
-			<div id="content_wrapper">
+				<div id="content_wrapper">
 
-				<div id="map_viewport">
+					<div id="map_viewport">
 
-					<div id="map_canvas">
+						<div id="map_canvas">
 
-						<div id="map_content_wrapper">
+							<div id="map_content_wrapper">
 
-							<div id="mapImage"></div>
+								<div id="mapImage"></div>
 
-							<div id="mapPoints">
+								<div id="mapPoints">
 
-								<div class="points" id="deployments">
+									<div class="points" id="deployments">
 
-									<!-- template :: mapPoint -->
+										<!-- template :: mapPoint -->
 
-								</div>
+									</div>
 
-								<div class="points" id="projects">
+									<div class="points" id="projects">
 
-									<!-- template :: mapPoint -->
+										<!-- template :: mapPoint -->
+
+									</div>
 
 								</div>
 
 							</div>
 
 						</div>
+					
+					</div>
+
+					<div id="intro_wrapper" style="display:none;">
+
+						<div class="title">Select a link above to get started</div>
+						
+						<div class="video"></div>
 
 					</div>
-				
+
 				</div>
 
-				<div id="intro_wrapper" style="display:none;">
+				<div id="footer_wrapper">
 
-					<div class="title">Select a link above to get started</div>
-					
-					<div class="video"></div>
+					<!-- Trademarks appears in this area -->
 
 				</div>
 
 			</div>
 
-			<div id="footer_wrapper">
-				<!-- Trademarks appears in this area -->
-			</div>
 		</div>
-
 		<!-- Project Scripts -->
 		<script src="js/common.js"></script>
 		<script src="js/data.js"></script>
@@ -272,4 +305,5 @@
 		<script src="js/app.js"></script>
 
 	</body>
+
 </html>
