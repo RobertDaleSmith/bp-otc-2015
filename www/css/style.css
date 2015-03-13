@@ -416,6 +416,10 @@ html, body{
 				text-align: center;
 				cursor: pointer;
 
+			}
+			#projects .mapPoint{
+
+				cursor: default;
 
 			}
 			.mapPoint.hide{
