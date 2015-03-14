@@ -68,14 +68,15 @@ BP.handlers = {
 
 		if(sectionId == 'deployments') {
 			
-			$('div#sub_menu_wrapper').css('display','none');
+			$('div#sub_menu_wrapper').removeClass('open');
+
 			$('div#map_canvas').css('left', '0px').css('top', '0px');
 			BP.views.revealMapPoints('deployments');
 
 		} 
 		if(sectionId == 'projects') {
 
-			$('div#sub_menu_wrapper').css('display','inline-block');
+			$('div#sub_menu_wrapper').addClass('open');
 
 			$('div#map_canvas').css('left', '0px').css('top', '100px');
 			BP.views.revealMapPoints('projects');			

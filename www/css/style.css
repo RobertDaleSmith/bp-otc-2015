@@ -299,14 +299,25 @@ html, body{
 
 	#sub_menu_wrapper{
 
-		display: none;
+		display: inline-block;
 		position: absolute;
-		top:110px; left: 0px;
+		top: 10px; left: 0px;
 		width: 100%; height: 100px;
 
 		z-index: 45;
 
 		border-color: #56565a;
+
+		-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+		   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+			-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+			 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+				transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+
+	}
+	#sub_menu_wrapper.open{
+
+		top: 110px;
 
 	}
 		#sub_menu_wrapper .title{
@@ -326,6 +337,9 @@ html, body{
 			font-size: 23px;
 
 			cursor: default;
+
+			z-index: 47;
+
 		}
 
 		#sub_menu_wrapper .menu{
@@ -333,16 +347,30 @@ html, body{
 			position: relative;
 			float: left;
 			width: 100%; height: 50px;
-			
 
 			border-style: solid;
 			border-width: 0 0 0 10px;
 			border-color: inherit;
 
 			background-color: #dfdfdf;
-
 			padding: 0 10px;
+			z-index: 46;
+
+			-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 1s;
+			   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 1s;
+				-ms-transition: all cubic-bezier(.62,.28,.23,.99) 1s;
+				 -o-transition: all cubic-bezier(.62,.28,.23,.99) 1s;
+					transition: all cubic-bezier(.62,.28,.23,.99) 1s;
+
+			top: -50px;
+
 		}
+		#sub_menu_wrapper.open .menu{
+
+			top: 0px;
+
+		}
+
 			#sub_menu_wrapper .menu .btn{
 
 				display: inline-block;
