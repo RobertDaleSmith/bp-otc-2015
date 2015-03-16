@@ -12,6 +12,14 @@
 
 }
 
+@-webkit-keyframes keepPointOverflowHidden {
+
+	0%   {overflow: hidden;}
+
+	100% {overflow: default;}
+
+}
+
 @-webkit-keyframes pointLabelFadeIn {
 
 	0%   {opacity: 0;}

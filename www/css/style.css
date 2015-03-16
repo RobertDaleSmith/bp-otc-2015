@@ -608,6 +608,12 @@ html, body{
 				text-align: center;
 				cursor: pointer;
 
+				-webkit-transition: margin-top cubic-bezier(.62,.28,.23,.99) 0.7s;
+				   -moz-transition: margin-top cubic-bezier(.62,.28,.23,.99) 0.7s;
+					-ms-transition: margin-top cubic-bezier(.62,.28,.23,.99) 0.7s;
+					 -o-transition: margin-top cubic-bezier(.62,.28,.23,.99) 0.7s;
+						transition: margin-top cubic-bezier(.62,.28,.23,.99) 0.7s;
+
 			}
 			#projects .mapPoint{
 
@@ -717,7 +723,7 @@ html, body{
 
 					background-color: #00a22f;
 
-					/*opacity: 0;*/
+					opacity: 0;
 					
 					border-top-left-radius: 15px;
   					border-top-right-radius: 15px;
@@ -725,17 +731,22 @@ html, body{
 					-webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
 							clip-path: polygon(0 0, 100% 0, 50% 100%);
 
-					-webkit-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
-					   -moz-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
-						-ms-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
-						 -o-transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
-							transition: top cubic-bezier(.62,.28,.23,.99) 0.7s;
-
+					-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+					   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+						-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+						 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+							transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+					
 				}
 
-				.mapPoint.start .post{
+				.mapPoint.start {
 
-					top: 23px;
+					margin-top: -23px;
+
+				}
+				.mapPoint.start .post {
+
+					top: 20px;
 					opacity: 1;
 
 				}
@@ -765,19 +776,22 @@ html, body{
 					border-color: #99cc00;
 
 				}
-				.mapPoint .point.blue{
+				.mapPoint .point_wrapper.blue .point,
+				.mapPoint .point_wrapper.blue .post{
 
 					background-color: #0e0e96;
 					border-color: #2499ca;
 
 				}
-				.mapPoint .point.orange{
+				.mapPoint .point_wrapper.orange .point,
+				.mapPoint .point_wrapper.orange .post{
 
 					background-color: #fa630c;
 					border-color: #fdbd24;
 
 				}
-				.mapPoint .point.purple{
+				.mapPoint .point_wrapper.purple .point,
+				.mapPoint .point_wrapper.purple .post{
 
 					background-color: #650f97;
 					border-color: #ca5dfc;
