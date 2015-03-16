@@ -28,6 +28,8 @@ BP.handlers = {
 
 		var id = $(self).attr('id');
 
+		var active = $(self).hasClass('active');
+
 		var color = $(self).attr('class') || "";
 			color = color.replace('btn ','').replace(' active','') || 'none';
 
@@ -35,64 +37,84 @@ BP.handlers = {
 
 		var inactivePoints = [];
 
-		$('div#projects div.mapPoint').each(function(){
+		if(!active){
 
-			if( $(this).attr('color').contains(color) ){
+			// Not active, so activate it.
 
-				activePoints.push( this );
+			$('div#projects div.mapPoint').each(function(){
 
-			} else {
+				if( $(this).attr('color').contains(color) ){
+
+					activePoints.push( this );
+
+				} else {
+					
+					inactivePoints.push( this );
+
+				}
+
+			});
+
+			$(activePoints).each(function(){
+
+				$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple').addClass(color);
+				$(this).removeClass('inactive');
 				
-				inactivePoints.push( this );
+			});
+
+			$(inactivePoints).each(function(){
+
+				$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple');
+				
+				if(color != 'none')
+					$(this).addClass('inactive');
+				else
+					$(this).removeClass('inactive');
+
+			});
+
+			// Hide/show sub_details_wrapper.
+			$('div.sub_details_wrapper#asi div.sub_details').removeClass('active');
+			$('div.sub_details_wrapper#asi div.sub_details.'+color).addClass('active');
+
+			// Submenu btn active state toggle.
+			$('div#sub_menu_wrapper .menu .btn').removeClass('active');
+			$('div#sub_menu_wrapper .menu .btn.'+color).addClass('active');
+
+			// Manual Sequences
+			$('div.mapPoint').removeClass('start');
+			if(color == 'green'){
+
+				// Hard code green ASI sequence here.
+
+				$('div.mapPoint#algeria').addClass('start');
+
+				setTimeout(function(){
+
+					console.log('GO TEAM GREEN SAUCE!!');
+
+				},1000);
+
+
+
+			} else if(color == 'orange'){
+
+				$('div.mapPoint#northSea').addClass('start');
+
+			} else if(color == 'blue'){
+
+				$('div.mapPoint#brazil').addClass('start');
 
 			}
 
-		});
+		} else {
 
-		$(activePoints).each(function(){
-
-			$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple').addClass(color);
-			$(this).removeClass('inactive');
-			
-		});
-
-		$(inactivePoints).each(function(){
-
-			$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple');
-			
-			if(color != 'none')
-				$(this).addClass('inactive');
-			else
-				$(this).removeClass('inactive');
-
-		});
-
-
-
-		// Hide/show sub_details_wrapper.
-		$('div.sub_details_wrapper#asi div.sub_details').removeClass('active');
-		$('div.sub_details_wrapper#asi div.sub_details.'+color).addClass('active');
-
-
-		// Submenu btn active state toggle.
-		$('div#sub_menu_wrapper .menu .btn').removeClass('active');
-		$('div#sub_menu_wrapper .menu .btn.'+color).addClass('active');
-
-		// Manual Sequences
-		$('div.mapPoint').removeClass('start');
-		if(color == 'green'){
-
-			$('div.mapPoint#algeria').addClass('start');
-
-		} else if(color == 'orange'){
-
-			$('div.mapPoint#northSea').addClass('start');
-
-		} else if(color == 'blue'){
-
-			$('div.mapPoint#brazil').addClass('start');
+			// Active, so reset section state.
+			BP.handlers.resetProjectsStateEvent();
 
 		}
+
+			
 
 	},
 
@@ -167,6 +189,8 @@ BP.handlers = {
 			$('div#footer_wrapper').text('');
 			$('div#footer_wrapper').removeClass('on');
 
+			$('svg#arrow_paths_wrapper').removeClass('on');
+
 		} 
 		if(sectionId == 'projects') {
 
@@ -179,6 +203,9 @@ BP.handlers = {
 
 			$('div#footer_wrapper').text( $('div.sub_details_wrapper#asi').attr('disclaimer') );
 			$('div#footer_wrapper').addClass('on');
+
+			$('svg#arrow_paths_wrapper').addClass('on');
+
 
 		}
 
