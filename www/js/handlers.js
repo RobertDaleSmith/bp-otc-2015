@@ -18,6 +18,89 @@ BP.handlers = {
 
 		this.keyboardKeyEventsInit();
 
+		$('#sub_menu_wrapper .menu .btn').click(BP.handlers.subMenuClickEvent);
+
+	},
+
+	subMenuClickEvent: function() {
+
+		var self = this;
+
+		var id = $(self).attr('id');
+
+		var color = $(self).attr('class') || "";
+			color = color.replace('btn ','').replace(' active','') || 'none';
+
+		var activePoints = [];
+
+		var inactivePoints = [];
+
+		$('div#projects div.mapPoint').each(function(){
+
+			if( $(this).attr('color').contains(color) ){
+
+				activePoints.push( this );
+
+			} else {
+				
+				inactivePoints.push( this );
+
+			}
+
+		});
+
+		$(activePoints).each(function(){
+
+			$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple').addClass(color);
+			$(this).removeClass('inactive');
+			
+		});
+
+		$(inactivePoints).each(function(){
+
+			$(this).removeClass('green').removeClass('blue').removeClass('orange').removeClass('purple');
+			
+			if(color != 'none')
+				$(this).addClass('inactive');
+			else
+				$(this).removeClass('inactive');
+
+		});
+
+
+
+		// Hide/show sub_details_wrapper.
+		$('div.sub_details_wrapper#asi div.sub_details').removeClass('active');
+		$('div.sub_details_wrapper#asi div.sub_details.'+color).addClass('active');
+
+
+		// Submenu btn active state toggle.
+		$('div#sub_menu_wrapper .menu .btn').removeClass('active');
+		$('div#sub_menu_wrapper .menu .btn.'+color).addClass('active');
+
+		// Manual Sequences
+		$('div.mapPoint').removeClass('start');
+		if(color == 'green'){
+
+			$('div.mapPoint#algeria').addClass('start');
+
+		} else if(color == 'orange'){
+
+			$('div.mapPoint#northSea').addClass('start');
+
+		} else if(color == 'blue'){
+
+			$('div.mapPoint#brazil').addClass('start');
+
+		}
+
+	},
+
+	resetProjectsStateEvent: function() {
+		
+		// Fires without a color, hence resets points.
+		BP.handlers.subMenuClickEvent();
+
 	},
 
 	keyboardKeyEventsInit: function() {
@@ -33,10 +116,15 @@ BP.handlers = {
 					// Close any open header menu buttons.
 					$('div#header_button_wrapper .btn.open .icon').click();
 
-				} else {
+				} else if ( $('div.mapPoint.open').length > 0 ) {
 
 					// Close any open mapPoints.
 					$('div.mapPoint.open').find('.close').click();
+
+				} else {
+
+					// 
+					BP.handlers.resetProjectsStateEvent();
 
 				}
 
@@ -73,13 +161,24 @@ BP.handlers = {
 			$('div#map_canvas').css('left', '0px').css('top', '0px');
 			BP.views.revealMapPoints('deployments');
 
+			$('div.sub_details_wrapper').removeClass('active');
+			$('div.sub_details_wrapper div.sub_details').removeClass('active');
+
+			$('div#footer_wrapper').text('');
+			$('div#footer_wrapper').removeClass('on');
+
 		} 
 		if(sectionId == 'projects') {
 
 			$('div#sub_menu_wrapper').addClass('open');
 
 			$('div#map_canvas').css('left', '0px').css('top', '100px');
-			BP.views.revealMapPoints('projects');			
+			BP.views.revealMapPoints('projects');
+
+			$('div.sub_details_wrapper#asi').addClass('active');
+
+			$('div#footer_wrapper').text( $('div.sub_details_wrapper#asi').attr('disclaimer') );
+			$('div#footer_wrapper').addClass('on');
 
 		}
 

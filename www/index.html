@@ -33,7 +33,8 @@
 				  mapLeft="{map.x}" 
 				  mapTop="{map.y}" 
 				  style="left:{location.x}px; top:{location.y}px;"
-				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}>
+				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}
+				  color="{color}">
 
 				{>"point" count="{color.length}" color="{color}"/}
 
@@ -251,14 +252,14 @@
 					<div class="title">Advanced Seismic Imaging</div>
 
 					<div class="menu">
-						<div class="btn green">
+						<div class="btn green" id="asi_green">
 							<div class="item">ISS™</div>
 							<div class="item">ISSN™</div>
 						</div>
-						<div class="btn orange">
+						<div class="btn orange" id="asi_orange">
 							<div class="item">Full Waveform Inversions</div>
 						</div>
-						<div class="btn blue">
+						<div class="btn blue" id="asi_blue">
 							<div class="item">Multi-Azimuth Seismic</div>
 							<div class="item">Wide Azimuth Towed Streamer</div>
 							<div class="item">Ocean Bottom Nodes</div>
@@ -269,15 +270,57 @@
 
 				</div>
 
-				<div id="sub_details_wrapper" style="border-color:#00a22f;">
+				<div class="sub_details_wrapper" id="asi" disclaimer="ISS is a registered trade mark of BP plc  |  ISSN is a trade mark of BP plc">
 
-					<div class="item">
-						<div class="title">ISS™</div>
-						<div class="description">ISS™ technology using nodes to record seismic data</div>
+					<div class="sub_details green">
+
+						<div class="item">
+							<div class="title">ISS™</div>
+							<div class="description">ISS™ technology using nodes to record seismic data</div>
+						</div>
+						<div class="item">
+							<div class="title">ISSN™</div>
+							<div class="description">Multiple sources working inde-pendently but recorded continuously</div>
+						</div>
+
 					</div>
-					<div class="item">
-						<div class="title">ISSN™</div>
-						<div class="description">Multiple sources working inde-pendently but recorded continuously</div>
+
+					<div class="sub_details orange">
+
+						<div class="item">
+							<div class="title">Full Waveform Inversions</div>
+							<div class="description">Lorem ipsum dolor sit amet, consec-tetuer adipiscing elit, sed do eisumod</div>
+						</div>
+
+					</div>
+
+					<div class="sub_details blue">
+
+						<div class="item">
+							<div class="title">Multi-Azimuth Seismic</div>
+							<div class="description">Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+						</div>
+
+						<div class="item">
+							<div class="title">Wide Azimuth Towed Streamer</div>
+							<div class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</div>
+						</div>
+
+						<div class="item">
+							<div class="title">Ocean Bottom Nodes</div>
+							<div class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quams</div>
+						</div>
+
+						<div class="item">
+							<div class="title">Seismic Simulations</div>
+							<div class="description">Lorem ipsum dolor sit amet, consec-tetuer adipiscing elit, sed do eisumod</div>
+						</div>
+
+						<div class="item">
+							<div class="title">4D Seismic</div>
+							<div class="description">Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+						</div>
+
 					</div>
 
 				</div>

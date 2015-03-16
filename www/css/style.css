@@ -384,33 +384,45 @@ html, body{
 				cursor: pointer;
 
 			}
+			#sub_menu_wrapper .menu .btn.active{
+				cursor: default;
+			}
 
 			#sub_menu_wrapper .menu .btn.green{
-				background-color: rgba(178,211,188,0.4);
+				background-color: rgba(178,211,188,0.2);
 				color: #00a22f;
 			}
-			#sub_menu_wrapper .menu .btn.green:hover,
-			#sub_menu_wrapper .menu .btn.green:active{
+			#sub_menu_wrapper .menu .btn.green:hover{
+				background-color: rgba(178,211,188,0.2);
+			}
+			#sub_menu_wrapper .menu .btn.green:active,
+			#sub_menu_wrapper .menu .btn.green.active{
 				background-color: rgba(178,211,188,1.0);
 				color: #00a22f;
 			}
 
 			#sub_menu_wrapper .menu .btn.orange{
-				background-color: rgba(229,199,178,0.4);
+				background-color: rgba(229,199,178,0.2);
 				color: #ff6600;
 			}
-			#sub_menu_wrapper .menu .btn.orange:hover,
-			#sub_menu_wrapper .menu .btn.orange:active{
+			#sub_menu_wrapper .menu .btn.orange:hover{
+				background-color: rgba(229,199,178,0.4);
+			}
+			#sub_menu_wrapper .menu .btn.orange:active,
+			#sub_menu_wrapper .menu .btn.orange.active{
 				background-color: rgba(229,199,178,1.0);
 				color: #ff6600;
 			}
 
 			#sub_menu_wrapper .menu .btn.blue{
-				background-color: rgba(178,178,209,0.4);
+				background-color: rgba(178,178,209,0.2);
 				color: #000099;
 			}
-			#sub_menu_wrapper .menu .btn.blue:hover,
-			#sub_menu_wrapper .menu .btn.blue:active{
+			#sub_menu_wrapper .menu .btn.blue:hover{
+				background-color: rgba(178,178,209,0.4);
+			}
+			#sub_menu_wrapper .menu .btn.blue:active,
+			#sub_menu_wrapper .menu .btn.blue.active{
 				background-color: rgba(178,178,209,1.0);
 				color: #000099;
 			}
@@ -433,14 +445,26 @@ html, body{
 
 /* SUB_DETAILS -- start */
 
-	#sub_details_wrapper{
+.sub_details_wrapper{
 
-		display: inline-block;
-		position: absolute;
-		bottom: 40px; left: 138px;
+	display: none;
+	position: absolute;
+	bottom: 40px; left: 120px;
+	width: auto; height: 124px;
+
+	z-index: 45;
+
+}
+.sub_details_wrapper.active{
+	display: inline-block;
+}
+
+	.sub_details{
+
+		display: none;
+		position: relative;
 		width: auto; height: 124px;
-
-		z-index: 45;
+		float: left;
 
 		border-style: solid;
 		border-width: 9px 0 0 0;
@@ -449,8 +473,23 @@ html, body{
 		background-color: rgba(255,255,255,0.74);
 
 	}
+	.sub_details.active{
+		display: inline-block;
+	}
+	.sub_details.green{
+		border-color:#00a22f;
+	}
+	.sub_details.blue{
+		border-color:#0e0e96;
+	}
+	.sub_details.orange{
+		border-color:#ff6600;
+	}
+	.sub_details.purple{
+		border-color:#cc66ff;
+	}
 
-		#sub_details_wrapper .item{
+		.sub_details .item{
 
 			display: inline-block;
 			position: relative;
@@ -461,23 +500,32 @@ html, body{
 
 		}
 
-			#sub_details_wrapper .item .title{
+			.sub_details .item .title{
 
 				height: 18px;
 				line-height: 18px;
-
 				font-size: 19px;
-				/*font-weight: 600;*/
-				color: #00a22f;
 
 			}
+			.sub_details.green .item .title{
+				color:#00a22f;
+			}
+			.sub_details.blue .item .title{
+				color:#0e0e96;
+			}
+			.sub_details.orange .item .title{
+				color:#ff6600;
+			}
+			.sub_details.purple .item .title{
+				color:#cc66ff;
+			}
 
-			#sub_details_wrapper .item .description{
+			.sub_details .item .description{
 
 				margin: 6px 0 0 0;
 				line-height: 22px;
 
-				font-size: 16px;
+				font-size: 15px;
 				color: #56565a;
 
 			}
@@ -630,6 +678,11 @@ html, body{
 				cursor: default;
 
 			}
+			.mapPoint.inactive{
+
+				opacity: 0.4;
+
+			}
 
 				.mapPoint .partPoint{
 
@@ -640,6 +693,11 @@ html, body{
 					width: 20px; height: 40px;
 
 					overflow: hidden;
+
+				}
+				.mapPoint .partPoint.left{
+
+					overflow: initial;
 
 				}
 				.mapPoint .partPoint.right{
@@ -653,6 +711,8 @@ html, body{
 
 					width: 40px; height: 20px;
 					top:-5px; left:-5px;
+					opacity: 1;
+
 
 				}
 
@@ -750,7 +810,7 @@ html, body{
 					opacity: 1;
 
 				}
-
+					
 				.mapPoint .point{
 
 					display: inline-block;
@@ -770,7 +830,8 @@ html, body{
 					-webkit-animation: pointBounceIn .5s 1;
 
 				}
-				.mapPoint .point.green{
+				.mapPoint .point_wrapper.green .point,
+				.mapPoint .point_wrapper.green .post{
 
 					background-color: #00a22f;
 					border-color: #99cc00;
@@ -795,6 +856,45 @@ html, body{
 
 					background-color: #650f97;
 					border-color: #ca5dfc;
+
+				}
+
+				.mapPoint.green .partPoint.top,
+				.mapPoint.blue .partPoint.top,
+				.mapPoint.orange .partPoint.top,
+				.mapPoint.purple .partPoint.top {
+						
+					opacity: 0;
+
+				}
+
+				/* Override point colors */
+				.mapPoint.green .point,
+				.mapPoint.green .post{
+
+					background-color: #00a22f !important;
+					border-color: #99cc00 !important;
+
+				}
+				.mapPoint.blue .point,
+				.mapPoint.blue .post{
+
+					background-color: #0e0e96 !important;
+					border-color: #2499ca !important;
+
+				}
+				.mapPoint.orange .point,
+				.mapPoint.orange .post{
+
+					background-color: #fa630c !important;
+					border-color: #fdbd24 !important;
+
+				}
+				.mapPoint.purple .point,
+				.mapPoint.purple .post{
+
+					background-color: #650f97 !important;
+					border-color: #ca5dfc !important;
 
 				}
 

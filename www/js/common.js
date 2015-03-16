@@ -34,6 +34,12 @@ Array.prototype.shuffle = function(){
 	
 }
 
+String.prototype.contains = function(subStr){
+
+	return (this.indexOf(subStr) > -1);
+
+}
+
 $.fn.cssAnimationReset = function(){
 	
 	this.each(function(){
