@@ -109,9 +109,9 @@ BP.handlers = {
 
                 $('#test_path').attr('d', pathToStr(path));
 
-                $('#test_guide1').attr('d', 'M'+path.Xc1+' '+path.Yc1+' '+path.X1+' '+path.Y1);
-                $('#test_guide2').attr('d', 'M'+path.Xc2+' '+path.Yc2+' '+path.X2+' '+path.Y2);
-
+                $('#test_guide1').attr('d', 'M'+path.Xc1+' '+path.Yc1+' '+path.X1 +' '+path.Y1);
+                $('#test_guide2').attr('d', 'M'+path.Xc2+' '+path.Yc2+' '+path.X2 +' '+path.Y2);
+                $('#test_guide3').attr('d', 'M'+path.Xc1+' '+path.Yc1+' '+path.Xc2+' '+path.Yc2);
 
 			}
 
