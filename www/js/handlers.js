@@ -21,25 +21,14 @@ BP.handlers = {
 		$('#sub_menu_wrapper .menu .btn').click(BP.handlers.subMenuClickEvent);
 
 
-		var pathStr = "M1031 325C1080 500 1100 500 1271 375";
-		var path = {
 
-			X1 : 1031,
-			Y1 : 325,
-			Xc1: 1080,
-			Yc1: 500,
-			Xc2: 1100,
-			Yc2: 500,
-			X2: 1271,
-			Y2: 375
 
-		}
 
-		pathStr = pathToStr(path);
 
-		function pathToStr(){
-			return "M"+path.X1+" "+path.Y1+"C"+path.Xc1+" "+path.Yc1+" "+path.Xc2+" "+path.Yc2+" "+path.X2+" "+path.Y2+"";
-		}
+		
+
+
+		
 
 		var bMouseDragging = false;
 		var nMouseOffsetX = 0;
@@ -62,6 +51,11 @@ BP.handlers = {
             nMouseOffsetY = p.y - parseInt( self.getAttribute("cy") );
 
             draggingEl = this;
+
+
+            if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','1');
+			console.log($(this));
+
 		};
 		function mouseMove(e){
 
@@ -77,42 +71,47 @@ BP.handlers = {
 			// console.log(p);
 
 			if(bMouseDragging) {
+
+				$('#test_path').attr('stroke','LIGHTGREY');
 				
-				self.setAttribute("cx", p.x - nMouseOffsetX);
-                self.setAttribute("cy", p.y - nMouseOffsetY);
+				var pos = {x: p.x - nMouseOffsetX, y: p.y - nMouseOffsetY};
+				self.setAttribute("cx", pos.x);
+                self.setAttribute("cy", pos.y);
 
                 //do something
                 var whichPoint = $(draggingEl).attr('class');
                 // console.log( whichPoint );
                 if(whichPoint == 'start'){
 
-                	path.X1 = p.x;
-                	path.Y1 = p.y;
+                	path.X1 = pos.x;
+                	path.Y1 = pos.y;
 
                 }
 
                 if(whichPoint == 'end'){
 
-                	path.X2 = p.x;
-                	path.Y2 = p.y;
+                	path.X2 = pos.x;
+                	path.Y2 = pos.y;
 
                 }
 
                 if(whichPoint == 'ctr1'){
 
-                	path.Xc1 = p.x;
-                	path.Yc1 = p.y;
+                	path.Xc1 = pos.x;
+                	path.Yc1 = pos.y;
 
                 }
 
                 if(whichPoint == 'ctr2'){
 
-                	path.Xc2 = p.x;
-                	path.Yc2 = p.y;
+                	path.Xc2 = pos.x;
+                	path.Yc2 = pos.y;
 
                 }
 
                 $('#test_path').attr('d', pathToStr(path));
+
+
 
 			}
 
@@ -123,6 +122,11 @@ BP.handlers = {
 
 			draggingEl = null;
 
+			$('#test_path').attr('stroke','transparent');
+			if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','0');
+
+			play();
+
 		};
 
 		$('#arrow_paths_wrapper circle').each(function(){
@@ -131,8 +135,6 @@ BP.handlers = {
 			this.addEventListener("mousemove", mouseMove, false);
 		});
 		$('svg#arrow_paths_wrapper')[0].addEventListener("mousemove", mouseMove, false);
-
-
 
 	},
 
