@@ -1381,7 +1381,7 @@ BP.data = {
 				{   "id":"libya",
 				    "title":"Libya",
 				    "left":false,
-				    "under":true,
+				    "under":false,
 					"color":["green"],
 				    "location":{
 				        "x":"1016",

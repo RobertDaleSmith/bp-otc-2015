@@ -20,6 +20,120 @@ BP.handlers = {
 
 		$('#sub_menu_wrapper .menu .btn').click(BP.handlers.subMenuClickEvent);
 
+
+		var pathStr = "M1031 325C1080 500 1100 500 1271 375";
+		var path = {
+
+			X1 : 1031,
+			Y1 : 325,
+			Xc1: 1080,
+			Yc1: 500,
+			Xc2: 1100,
+			Yc2: 500,
+			X2: 1271,
+			Y2: 375
+
+		}
+
+		pathStr = pathToStr(path);
+
+		function pathToStr(){
+			return "M"+path.X1+" "+path.Y1+"C"+path.Xc1+" "+path.Yc1+" "+path.Xc2+" "+path.Yc2+" "+path.X2+" "+path.Y2+"";
+		}
+
+		var bMouseDragging = false;
+		var nMouseOffsetX = 0;
+		var nMouseOffsetY = 0;
+		var draggingEl = null;
+
+		function mouseDown(e){
+			
+			var self = this;
+
+			bMouseDragging = true;
+
+			var p = $('svg#arrow_paths_wrapper')[0].createSVGPoint();
+            p.x = e.clientX;
+            p.y = e.clientY;
+            
+            var m = self.getScreenCTM();
+            p = p.matrixTransform(m.inverse());
+            nMouseOffsetX = p.x - parseInt( self.getAttribute("cx") );
+            nMouseOffsetY = p.y - parseInt( self.getAttribute("cy") );
+
+            draggingEl = this;
+		};
+		function mouseMove(e){
+
+			var self = draggingEl || this;
+
+			var p = $('svg#arrow_paths_wrapper')[0].createSVGPoint();
+            p.x = e.clientX;
+            p.y = e.clientY;
+
+            var m = self.getScreenCTM();
+			p = p.matrixTransform(m.inverse());
+			// console.log('('+p.x+', '+p.y+')');
+			// console.log(p);
+
+			if(bMouseDragging) {
+				
+				self.setAttribute("cx", p.x - nMouseOffsetX);
+                self.setAttribute("cy", p.y - nMouseOffsetY);
+
+                //do something
+                var whichPoint = $(draggingEl).attr('class');
+                // console.log( whichPoint );
+                if(whichPoint == 'start'){
+
+                	path.X1 = p.x;
+                	path.Y1 = p.y;
+
+                }
+
+                if(whichPoint == 'end'){
+
+                	path.X2 = p.x;
+                	path.Y2 = p.y;
+
+                }
+
+                if(whichPoint == 'ctr1'){
+
+                	path.Xc1 = p.x;
+                	path.Yc1 = p.y;
+
+                }
+
+                if(whichPoint == 'ctr2'){
+
+                	path.Xc2 = p.x;
+                	path.Yc2 = p.y;
+
+                }
+
+                $('#test_path').attr('d', pathToStr(path));
+
+			}
+
+		};
+		function mouseUp(e){
+			
+			bMouseDragging = false;
+
+			draggingEl = null;
+
+		};
+
+		$('#arrow_paths_wrapper circle').each(function(){
+			this.addEventListener("mousedown", mouseDown, false);
+			this.addEventListener("mouseup", mouseUp, false);
+			this.addEventListener("mousemove", mouseMove, false);
+		});
+		$('svg#arrow_paths_wrapper')[0].addEventListener("mousemove", mouseMove, false);
+
+
+
 	},
 
 	subMenuClickEvent: function() {
