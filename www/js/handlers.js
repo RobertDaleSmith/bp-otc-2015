@@ -52,9 +52,7 @@ BP.handlers = {
 
             draggingEl = this;
 
-
             if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','1');
-			console.log($(this));
 
 		};
 		function mouseMove(e){
