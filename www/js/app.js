@@ -61,49 +61,37 @@ var loop = null;
 function play(){
 
   var bezier = new Bezier( path.X1, path.Y1, path.Xc1, path.Yc1, path.Xc2, path.Yc2, path.X2, path.Y2 );
-  var length = parseInt(bezier.length());
+  var length = bezier.length();
 
   console.log("Curve length is " + length + "px");
 
 	clearInterval(loop);
 
   var pps = 720;
-  var fps = 45;
+  var fps = 60;
 
-  var duration = ((length / pps) * 1000).round(0);
-  var inc = ((1000/fps) / duration).round(4);
+  var duration = (length / pps) * 1000;
+  var inc = ((1000/fps) / duration);
 
   var lambda = 0;
   var loopCount = 0;
   var maxLambda = 1;
-
   
-  maxLambda = ((length - 15) / length).round(4);
+  // maxLambda = 1 - ( 15 / length);
   console.log( maxLambda );
 
-  console.log("Needs to last " + duration + "ms");
+  // console.log("Needs to last " + duration + "ms");
 
-  console.log("Increments percentage traveled by " + (inc*100).round(4) + "% " + fps + " times a second.");
+  // console.log("Increments percentage traveled by " + (inc*100) + "% " + fps + " times a second.");
 
 	loop = setInterval(function(){
 
-		lambda = lambda + inc;
+		lambda = (lambda + inc);
     
-    // if(lambda >= maxLambda) lambda = maxLambda;
+    if(lambda >= maxLambda) lambda = maxLambda;
     // console.log( lambda );
 
-		$('#test_lambda').attr('d', interpolateCubicBezierCurve(
-			0,
-			lambda,
-			path.X1,
-			path.Y1,
-			path.Xc1,
-			path.Yc1,
-			path.Xc2,
-			path.Yc2,
-			path.X2,
-			path.Y2 
-		));
+		$('#test_lambda').attr('d', interpolateCubicBezierCurve(0, lambda, path));
 
     var degrees = 0;
 		var arrowPos = posAlongCubicBezierCurve(lambda, path);
@@ -122,7 +110,7 @@ function play(){
     loopCount++;
 		if(lambda >= maxLambda) {
 			clearInterval(loop);
-      console.log("Took: " + ( parseInt(loopCount)*(1000/fps) ) + "ms at " + pps + "px/s");
+      // console.log("Took: " + ( parseInt(loopCount)*(1000/fps) ) + "ms at " + pps + "px/s");
 		}
    
   },(1000/fps));
@@ -233,16 +221,14 @@ function play(){
  function interpolateCubicBezierCurve(
                                       lambdaStart,
                                       lambdaEnd,
-                                      xAnchorStart,
-                                      yAnchorStart,
-                                      xHandleStart,
-                                      yHandleStart,
-                                      xHandleEnd,
-                                      yHandleEnd,
-                                      xAnchorEnd,
-                                      yAnchorEnd 
+                                      path
                                     ) {
   'use strict';
+
+  var xAnchorStart = path.X1,  yAnchorStart = path.Y1,
+      xHandleStart = path.Xc1, yHandleStart = path.Yc1,
+      xHandleEnd   = path.Xc2, yHandleEnd   = path.Yc2,
+      xAnchorEnd   = path.X2,  yAnchorEnd   = path.Y2;
 
   var x0, y0, x1, y1, x2, y2, x3, y3, x4, y4, path, txt;
 
@@ -298,17 +284,7 @@ function play(){
 
  function posAlongCubicBezierCurve( lambda, path ){
 
- 	var pathStr = interpolateCubicBezierCurve( 0,
-                                 lambda,
-                                 path.X1,
-                                 path.Y1,
-                                 path.Xc1,
-                                 path.Yc1,
-                                 path.Xc2,
-                                 path.Yc2,
-                                 path.X2,
-                                 path.Y2 
-                                );
+ 	var pathStr = interpolateCubicBezierCurve( 0, lambda, path);
 
  	var parts = pathStr.split(" ");
 
