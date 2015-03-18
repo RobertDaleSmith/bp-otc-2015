@@ -75,6 +75,11 @@ function play(){
 
   var lambda = 0;
   var loopCount = 0;
+  var maxLambda = 1;
+
+  
+  maxLambda = ((length - 15) / length).round(4);
+  console.log( maxLambda );
 
   console.log("Needs to last " + duration + "ms");
 
@@ -83,6 +88,9 @@ function play(){
 	loop = setInterval(function(){
 
 		lambda = lambda + inc;
+    
+    // if(lambda >= maxLambda) lambda = maxLambda;
+    // console.log( lambda );
 
 		$('#test_lambda').attr('d', interpolateCubicBezierCurve(
 			0,
@@ -97,27 +105,22 @@ function play(){
 			path.Y2 
 		));
 
-    // angle in degrees
     var degrees = 0;
-    
-
 		var arrowPos = posAlongCubicBezierCurve(lambda, path);
-    var tan = bezier.derivative(lambda);
-    tan.x = parseInt(arrowPos.x) + tan.x;
-    tan.y = parseInt(arrowPos.y) + tan.y;
+    var tan   = bezier.derivative(lambda);
+        tan.x = parseInt(arrowPos.x) + tan.x;
+        tan.y = parseInt(arrowPos.y) + tan.y;
 
     $('#test_tangent').attr('d', 'M'+arrowPos.x+' '+arrowPos.y+' '+tan.x+' '+tan.y);
 
     degrees = (Math.atan2(tan.y - arrowPos.y, tan.x - arrowPos.x) * 180 / Math.PI) + 90;
-    console.log(degrees);
+    // console.log(degrees);
 
     $('#test_head').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
     $('#test_arrow').attr('transform', "translate(" + (arrowPos.x-13) + "," + (arrowPos.y-14) + ") rotate(" + degrees + " 13 14)");
 
-
-
     loopCount++;
-		if(lambda >= 1) {
+		if(lambda >= maxLambda) {
 			clearInterval(loop);
       console.log("Took: " + ( parseInt(loopCount)*(1000/fps) ) + "ms at " + pps + "px/s");
 		}
