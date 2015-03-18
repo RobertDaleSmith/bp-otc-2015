@@ -60,37 +60,67 @@ function pathToStr(){
 var loop = null;
 function play(){
 
-	try{
-		if(loop) clearInterval(loop);
+  var bezier = new Bezier( path.X1, path.Y1, path.Xc1, path.Yc1, path.Xc2, path.Yc2, path.X2, path.Y2 );
+  var length = parseInt(bezier.length());
+  // .derivative(t)
 
-		var lambda = 0;
-		var loop = setInterval(function(){
 
-			lambda = lambda + 0.01;
 
-			$('#test_lambda').attr('d', interpolateCubicBezierCurve(
-				0,
-				lambda,
-				path.X1,
-				path.Y1,
-				path.Xc1,
-				path.Yc1,
-				path.Xc2,
-				path.Yc2,
-				path.X2,
-				path.Y2 
-			));
+  console.log("Curve length is " + length + "px");
 
-			var arrowPos = posAlongCubicBezierCurve(lambda, path);
-			$('#test_arrow').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
+	clearInterval(loop);
 
-			if(lambda >= 1) {
-				clearInterval(loop);
-			}
+  var pps = 360;
+  var fps = 45;
 
-        },10);
+  var duration = ((length / pps) * 1000).round(0);
+  var inc = ((1000/fps) / duration).round(4);
 
-    }catch(e){}
+  
+  var lambda = 0;
+  var loopCount = 0;
+
+  console.log("Needs to last " + duration + "ms");
+
+  console.log("Increments percentage traveled by " + (inc*100).round(4) + "% " + fps + " times a second.");
+
+	loop = setInterval(function(){
+
+		lambda = lambda + inc;
+
+    // 
+
+    
+
+		$('#test_lambda').attr('d', interpolateCubicBezierCurve(
+			0,
+			lambda,
+			path.X1,
+			path.Y1,
+			path.Xc1,
+			path.Yc1,
+			path.Xc2,
+			path.Yc2,
+			path.X2,
+			path.Y2 
+		));
+
+		var arrowPos = posAlongCubicBezierCurve(lambda, path);
+		$('#test_arrow').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
+
+    var tan = bezier.derivative(lambda);
+    tan.x = parseInt(arrowPos.x) + tan.x;
+    tan.y = parseInt(arrowPos.y) + tan.y;
+
+    $('#test_tangent').attr('d', 'M'+arrowPos.x+' '+arrowPos.y+' '+tan.x+' '+tan.y);
+
+    loopCount++;
+		if(lambda >= 1) {
+			clearInterval(loop);
+      console.log("Took: " + ( parseInt(loopCount)*(1000/fps) ) + "ms at " + pps + "px/s");
+		}
+   
+  },(1000/fps));
 
 }
 
@@ -252,18 +282,11 @@ function play(){
    xAnchorEnd   = x3 + lambdaEnd * ( x4 - x3 );
    yAnchorEnd   = y3 + lambdaEnd * ( y4 - y3 );
   }
-  
-  // path = document.createElementNS( nameSpace, 'path' );
 
   txt  = 'M' +  xAnchorStart + ' ' +  yAnchorStart;
   txt += 'C' +  xHandleStart + ' ' +  yHandleStart;
   txt += ' ' +  xHandleEnd   + ' ' +  yHandleEnd  ;
   txt += ' ' +  xAnchorEnd   + ' ' +  yAnchorEnd;
-
-  // path.setAttribute( 'd' , txt );
-  // path.setAttribute( 'stroke' , '#0000FF' );
-  // path.setAttribute( 'stroke-width' , 2.0 );
-  // path.setAttribute( 'fill' , 'none' );
 
   return txt;
  }

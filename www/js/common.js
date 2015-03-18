@@ -40,6 +40,14 @@ String.prototype.contains = function(subStr){
 
 }
 
+Number.prototype.round = function(places) {
+
+	if(!places) places = 0;
+    var multiplier = Math.pow(10, places);
+    return Math.round(this * multiplier) / multiplier;
+
+}
+
 $.fn.cssAnimationReset = function(){
 	
 	this.each(function(){
