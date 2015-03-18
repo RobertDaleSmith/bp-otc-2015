@@ -62,21 +62,17 @@ function play(){
 
   var bezier = new Bezier( path.X1, path.Y1, path.Xc1, path.Yc1, path.Xc2, path.Yc2, path.X2, path.Y2 );
   var length = parseInt(bezier.length());
-  // .derivative(t)
-
-
 
   console.log("Curve length is " + length + "px");
 
 	clearInterval(loop);
 
-  var pps = 360;
+  var pps = 720;
   var fps = 45;
 
   var duration = ((length / pps) * 1000).round(0);
   var inc = ((1000/fps) / duration).round(4);
 
-  
   var lambda = 0;
   var loopCount = 0;
 
@@ -87,10 +83,6 @@ function play(){
 	loop = setInterval(function(){
 
 		lambda = lambda + inc;
-
-    // 
-
-    
 
 		$('#test_lambda').attr('d', interpolateCubicBezierCurve(
 			0,
@@ -105,14 +97,24 @@ function play(){
 			path.Y2 
 		));
 
-		var arrowPos = posAlongCubicBezierCurve(lambda, path);
-		$('#test_arrow').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
+    // angle in degrees
+    var degrees = 0;
+    
 
+		var arrowPos = posAlongCubicBezierCurve(lambda, path);
     var tan = bezier.derivative(lambda);
     tan.x = parseInt(arrowPos.x) + tan.x;
     tan.y = parseInt(arrowPos.y) + tan.y;
 
     $('#test_tangent').attr('d', 'M'+arrowPos.x+' '+arrowPos.y+' '+tan.x+' '+tan.y);
+
+    degrees = (Math.atan2(tan.y - arrowPos.y, tan.x - arrowPos.x) * 180 / Math.PI) + 90;
+    console.log(degrees);
+
+    $('#test_head').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
+    $('#test_arrow').attr('transform', "translate(" + (arrowPos.x-13) + "," + (arrowPos.y-14) + ") rotate(" + degrees + " 13 14)");
+
+
 
     loopCount++;
 		if(lambda >= 1) {
