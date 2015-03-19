@@ -40,14 +40,14 @@ function demo(bool){
 var pathStr = "M1031 325C1031 500 1271 530 1271 375";
 var path = {
 
-	X1 : 1031,
-	Y1 : 325,
-	Xc1: 1031,
-	Yc1: 500,
-	Xc2: 1271,
-	Yc2: 530,
-	X2: 1271,
-	Y2: 375
+  X1 : 1031,
+  Y1 : 325,
+  Xc1: 1031,
+  Yc1: 500,
+  Xc2: 1271,
+  Yc2: 530,
+  X2: 1271,
+  Y2: 375
 
 }
 
@@ -57,11 +57,61 @@ function pathToStr(){
 	return "M"+path.X1+" "+path.Y1+"C"+path.Xc1+" "+path.Yc1+" "+path.Xc2+" "+path.Yc2+" "+path.X2+" "+path.Y2+"";
 }
 
+
+
+
+
+function svgPathStrToPts(str){
+
+  var vals = str.replaceAll('M','').replaceAll('C',' ').split(' ');
+  var pts = [], x = [], y = [];
+
+  vals.forEach(function(val, i){
+
+    if(i%2==0 || i==0) x.push(val); else y.push(val);
+
+  });
+  
+  var count = ((x.length <= y.length) ? x.length : y.length);
+  for(var i=0; i<count; i++) pts.push( {x:x[i], y:y[i]} );
+
+  return pts;
+
+}
+
+function ptsToSvgPathStr(points){
+
+  var str = "";
+
+  points.forEach(function(point, i){
+
+    if(i==0) str+="M";
+    else if(i==1 && points.length > 2) str+="C";
+    else if(i>=2) str+=" ";
+
+    str = str + point.x + " " + point.y;
+    
+  });
+
+  return str;
+
+}
+
 var loop = null;
 function play(){
 
   var bezier = new Bezier( path.X1, path.Y1, path.Xc1, path.Yc1, path.Xc2, path.Yc2, path.X2, path.Y2 );
   var length = bezier.length();
+
+  console.log(bezier);
+
+  var str = ptsToSvgPathStr(bezier.points)
+  var pts = svgPathStrToPts(str);
+  console.log( str );
+  console.log( pts );
+  console.log( pts.length );
+
+
 
   // console.log("Curve length is " + length + "px");
 

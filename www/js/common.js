@@ -32,13 +32,18 @@ Array.prototype.shuffle = function(){
 
 	return array;
 	
-}
+};
 
 String.prototype.contains = function(subStr){
 
 	return (this.indexOf(subStr) > -1);
 
-}
+};
+
+String.prototype.replaceAll = function (find, replace) {
+    var str = this;
+    return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
 
 Number.prototype.round = function(places) {
 
@@ -46,7 +51,7 @@ Number.prototype.round = function(places) {
     var multiplier = Math.pow(10, places);
     return Math.round(this * multiplier) / multiplier;
 
-}
+};
 
 $.fn.cssAnimationReset = function(){
 	
