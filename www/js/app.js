@@ -63,7 +63,7 @@ function play(){
   var bezier = new Bezier( path.X1, path.Y1, path.Xc1, path.Yc1, path.Xc2, path.Yc2, path.X2, path.Y2 );
   var length = bezier.length();
 
-  console.log("Curve length is " + length + "px");
+  // console.log("Curve length is " + length + "px");
 
 	clearInterval(loop);
 
@@ -78,7 +78,7 @@ function play(){
   var maxLambda = 1;
   
   // maxLambda = 1 - ( 15 / length);
-  console.log( maxLambda );
+  // console.log( maxLambda );
 
   // console.log("Needs to last " + duration + "ms");
 
@@ -91,7 +91,8 @@ function play(){
     if(lambda >= maxLambda) lambda = maxLambda;
     // console.log( lambda );
 
-		$('#test_lambda').attr('d', interpolateCubicBezierCurve(0, lambda, path));
+    var newPathStr = interpolateCubicBezierCurve(0, lambda, path);
+		$('#test_lambda').attr('d', newPathStr);
 
     var degrees = 0;
 		var arrowPos = posAlongCubicBezierCurve(lambda, path);
@@ -103,6 +104,12 @@ function play(){
 
     degrees = (Math.atan2(tan.y - arrowPos.y, tan.x - arrowPos.x) * 180 / Math.PI) + 90;
     // console.log(degrees);
+
+
+    // var distance = linLength(arrowPos.x, arrowPos.y, path.X2, path.Y2);
+    // console.log(distance);
+    // var ds = newPathStr.split(' ');
+    // console.log( {x:parseInt(ds[ds.length-1]),y:parseInt(ds[ds.length-2])} );
 
     $('#test_head').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
     $('#test_arrow').attr('transform', "translate(" + (arrowPos.x-13) + "," + (arrowPos.y-14) + ") rotate(" + degrees + " 13 14)");
@@ -291,3 +298,12 @@ function play(){
  	return {x: parts[parts.length-2], y: parts[parts.length-1]};
  }
 
+
+
+function linLength(x1, y1, x2, y2){
+
+  var d = Math.sqrt( (x2-=x1)*x2 + (y2-=y1)*y2 );
+
+  return d;
+
+}
