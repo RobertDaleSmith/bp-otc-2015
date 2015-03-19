@@ -34,6 +34,14 @@ Array.prototype.shuffle = function(){
 	
 };
 
+Number.prototype.round = function(places) {
+
+	if(!places) places = 0;
+	var multiplier = Math.pow(10, places);
+	return Math.round(this * multiplier) / multiplier;
+
+};
+
 String.prototype.contains = function(subStr){
 
 	return (this.indexOf(subStr) > -1);
@@ -41,16 +49,8 @@ String.prototype.contains = function(subStr){
 };
 
 String.prototype.replaceAll = function (find, replace) {
-    var str = this;
-    return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
-};
-
-Number.prototype.round = function(places) {
-
-	if(!places) places = 0;
-    var multiplier = Math.pow(10, places);
-    return Math.round(this * multiplier) / multiplier;
-
+	var str = this;
+	return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
 };
 
 $.fn.cssAnimationReset = function(){

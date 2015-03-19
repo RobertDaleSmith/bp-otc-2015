@@ -2,139 +2,23 @@ BP.handlers = {
 
 	init: function() {
 
-		$('div#header_button_wrapper .btn .title').click(BP.handlers.headerMainMenuClickEvent);
+		$('div#header_button_wrapper .btn .title').click(this.headerMainMenuClickEvent);
 
-		$('div#header_button_wrapper .btn .icon').click(BP.handlers.headerDropDownMenuClickEvent);
+		$('div#header_button_wrapper .btn .icon').click(this.headerDropDownMenuClickEvent);
 
-		$('div.menuItem').click(BP.handlers.headerMenuItemClickEvent);
+		$('div.menuItem').click(this.headerMenuItemClickEvent);
 
-		$('div#deployments div.mapPoint').click(BP.handlers.mapPointClickEvent);
+		$('#sub_menu_wrapper .menu .btn').click(this.subMenuClickEvent);
+		
+		$('div#deployments div.mapPoint').click(this.mapPointClickEvent);
 
-		$('div#deployments div.mapPoint .close').click(BP.handlers.mapPointLabelCloseBtnClickEvent);
+		$('div#deployments div.mapPoint .close').click(this.mapPointLabelCloseBtnClickEvent);
 
-		$('div.listGroup div.title, div.listGroup div.toggle').click(BP.handlers.techCategoryToggleClickEvent);
+		$('div.listGroup div.title, div.listGroup div.toggle').click(this.techCategoryToggleClickEvent);
 
-		$('div#mapImage').click(BP.handlers.mapClickEvent);
+		$('div#mapImage').click(this.mapClickEvent);
 
 		this.keyboardKeyEventsInit();
-
-		$('#sub_menu_wrapper .menu .btn').click(BP.handlers.subMenuClickEvent);
-
-
-
-
-
-
-		
-
-
-		
-
-		var bMouseDragging = false;
-		var nMouseOffsetX = 0;
-		var nMouseOffsetY = 0;
-		var draggingEl = null;
-
-		function mouseDown(e){
-			
-			var self = this;
-
-			bMouseDragging = true;
-
-			var p = $('svg#arrow_paths_wrapper')[0].createSVGPoint();
-            p.x = e.clientX;
-            p.y = e.clientY;
-            
-            var m = self.getScreenCTM();
-            p = p.matrixTransform(m.inverse());
-            nMouseOffsetX = p.x - parseInt( self.getAttribute("cx") );
-            nMouseOffsetY = p.y - parseInt( self.getAttribute("cy") );
-
-            draggingEl = this;
-
-            if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','1');
-
-		};
-		function mouseMove(e){
-
-			var self = draggingEl || this;
-
-			var p = $('svg#arrow_paths_wrapper')[0].createSVGPoint();
-            p.x = e.clientX;
-            p.y = e.clientY;
-
-            var m = self.getScreenCTM();
-			p = p.matrixTransform(m.inverse());
-			// console.log('('+p.x+', '+p.y+')');
-			// console.log(p);
-
-			if(bMouseDragging) {
-
-				$('#test_path').attr('stroke','LIGHTGREY');
-				
-				var pos = {x: p.x - nMouseOffsetX, y: p.y - nMouseOffsetY};
-				self.setAttribute("cx", pos.x);
-                self.setAttribute("cy", pos.y);
-
-                //do something
-                var whichPoint = $(draggingEl).attr('class');
-                // console.log( whichPoint );
-                if(whichPoint == 'start'){
-
-                	path.X1 = pos.x;
-                	path.Y1 = pos.y;
-
-                }
-
-                if(whichPoint == 'end'){
-
-                	path.X2 = pos.x;
-                	path.Y2 = pos.y;
-
-                }
-
-                if(whichPoint == 'ctr1'){
-
-                	path.Xc1 = pos.x;
-                	path.Yc1 = pos.y;
-
-                }
-
-                if(whichPoint == 'ctr2'){
-
-                	path.Xc2 = pos.x;
-                	path.Yc2 = pos.y;
-
-                }
-
-                $('#test_path').attr('d', pathToStr(path));
-
-                $('#test_guide1').attr('d', 'M'+path.Xc1+' '+path.Yc1+' '+path.X1 +' '+path.Y1);
-                $('#test_guide2').attr('d', 'M'+path.Xc2+' '+path.Yc2+' '+path.X2 +' '+path.Y2);
-                $('#test_guide3').attr('d', 'M'+path.Xc1+' '+path.Yc1+' '+path.Xc2+' '+path.Yc2);
-
-			}
-
-		};
-		function mouseUp(e){
-			
-			bMouseDragging = false;
-
-			draggingEl = null;
-
-			$('#test_path').attr('stroke','transparent');
-			if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','0');
-
-			play();
-
-		};
-
-		$('#arrow_paths_wrapper circle').each(function(){
-			this.addEventListener("mousedown", mouseDown, false);
-			this.addEventListener("mouseup", mouseUp, false);
-			this.addEventListener("mousemove", mouseMove, false);
-		});
-		$('svg#arrow_paths_wrapper')[0].addEventListener("mousemove", mouseMove, false);
 
 	},
 
@@ -230,8 +114,6 @@ BP.handlers = {
 
 		}
 
-			
-
 	},
 
 	resetProjectsStateEvent: function() {
@@ -270,6 +152,7 @@ BP.handlers = {
 
 
 		});
+
 	},
 
 	headerMainMenuClickEvent: function(event) {
@@ -384,7 +267,6 @@ BP.handlers = {
 
 
 		}
-		
 
 	},
 
