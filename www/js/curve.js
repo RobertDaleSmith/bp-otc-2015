@@ -33,7 +33,9 @@
 
 		//render view before connecting handlers...
 		var curveData = {
-			index: indexInt,
+			section: sectionId,
+			color: colorStr,
+			index: indexInt,			
 			paths: {
 				base:   "M1031 325C1031 500 1271 530 1271 375",
 				guide1: "M1031 500 1031 325",
@@ -48,6 +50,7 @@
 				ctr2:  {x:1271,y:530}
 			}
 		}
+		
 
 		// BP.views.render('curveSection', {section: "asi"}, function(html){
 
@@ -57,24 +60,36 @@
 
 				// $('#lines_'+sectionId).append(html);
 
-				BP.views.render('curveLine', curveData, function(html){
-					
-					$('#lines_'+sectionId+' .lines.'+colorStr).append(html);
+				// BP.views.render('curveLine', curveData, function(html){
 
-				});
+				// 	$('#lines_'+sectionId+' .lines.'+colorStr).append(html);
+
+				// });
 
 			// });
 
 		// });
 
+		
 
-		group = $('#arrow_paths #lines_'+this.section+' .lines.'+this.color+' .line.line_'+this.index);
+		BP.views.render('svg', curveData, function(html){
+					
+			$('#map_content_wrapper').append(html);
 
-		group.find('g.handles circle').each(function(){
-			this.addEventListener("mousedown", function(e){ mouseDown(e, this); }, false);
-			this.addEventListener("mouseup"  , function(e){ mouseUp(e, this); }, false);
-			this.addEventListener("mousemove", function(e){ mouseMove(e, (draggingEl || this)); }, false);
+			SVGWrapper = $('svg#arrow_paths')[0];
+
+			group = $('#arrow_paths #lines_'+sectionId+' .lines.'+colorStr+' .line.line_'+indexInt);
+
+			group.find('g.handles circle').each(function(){
+				this.addEventListener("mousedown", function(e){ mouseDown(e, this); }, false);
+				this.addEventListener("mouseup"  , function(e){ mouseUp(e, this); }, false);
+				this.addEventListener("mousemove", function(e){ mouseMove(e, (draggingEl || this)); }, false);
+			});
+
 		});
+
+
+		
 
 	};
 
