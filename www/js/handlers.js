@@ -188,7 +188,7 @@ BP.handlers = {
 			$('div#footer_wrapper').text('');
 			$('div#footer_wrapper').removeClass('on');
 
-			$('svg#arrow_paths_wrapper').attr('class','');
+			$('svg#arrow_paths').attr('class','');
 
 		} 
 		if(sectionId == 'projects') {
@@ -203,7 +203,7 @@ BP.handlers = {
 			$('div#footer_wrapper').text( $('div.sub_details_wrapper#asi').attr('disclaimer') );
 			$('div#footer_wrapper').addClass('on');
 
-			$('svg#arrow_paths_wrapper').attr('class','on');
+			$('svg#arrow_paths').attr('class','on');
 
 
 		}

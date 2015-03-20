@@ -1359,22 +1359,56 @@ html, body{
 											text-align: left;
 										}
 
-		#arrow_paths_wrapper{
 
-			display: none;
-			position: relative;
-			bottom: 0px; left: 1920px;
-			width: 1920px; height: 100%;
+/* SVG arrows  -  START */
 
-			background-color: transparent;
+	#arrow_paths{
+
+		display: none;
+		position: relative;
+		bottom: 0px; left: 1920px;
+		width: 1920px; height: 100%;
+
+		background-color: transparent;
+
+	}
+	#arrow_paths.on{
+
+		display: block;
+
+	}
+
+		#arrow_paths .section{
 
 		}
-		#arrow_paths_wrapper.on{
 
-			display: block;
+			#arrow_paths .section .lines{
 
-		}
+			}
 
+				#arrow_paths .lines .line{
+
+				}
+
+					#arrow_paths .line .guides{
+						display: none;
+					}
+					#arrow_paths .line.edit .guides{
+						display: block;
+					}
+
+					#arrow_paths .line .curve{
+						
+					}
+
+					#arrow_paths .line .handles{
+						display: none;
+					}
+					#arrow_paths .line.edit .handles{
+						display: block;
+					}
+
+/* SVG arrows  -  END */
 
 
 #intro_wrapper{
