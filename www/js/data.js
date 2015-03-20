@@ -1404,7 +1404,7 @@ BP.data = {
 				    "left":true,
 				    "color":["green", "orange", "blue"],
 				    "location":{
-				        "x":"953",
+				        "x":"938",
 				        "y":"135"
 				    }
 				},
@@ -1489,7 +1489,44 @@ BP.data = {
 				{	
 					color: "orange",
 					menu: [ "Full Waveform Inversions" ],
-					curves: []
+					curves: [
+						{
+							order: 1,
+							path: "M 986 182 C 1097 168 1184 189 1214 253"
+						},
+						{
+							order: 2,
+							path: "M 1222 273 C 977 201 768 288 638 418"
+						},
+						{
+							order: 3,
+							path: "M 624 431 C 604 370 553 340 492 342"
+						},
+						{
+							order: 4,
+							path: "M 471 341 C 422 156 769 140 932 149"
+						},
+						{
+							order: 5,
+							path: "M 953 150 C 1022 47 1812 133 1696 480"
+						},
+						{
+							order: 6,
+							path: "M 1689 500 C 1458 473 1371 588 1037 550"
+						},
+						{
+							order: 7,
+							path: "M 1016 548 C 1018 391 1101 450 1117 334"
+						},
+						{
+							order: 8,
+							path: "M 1119 314 C 720 524 903 5 232 100"
+						},
+						{
+							order: 9,
+							path: "M 212 103 C 243 455 263 687 730 618"
+						}
+					]
 				},
 				{	
 					color: "blue",

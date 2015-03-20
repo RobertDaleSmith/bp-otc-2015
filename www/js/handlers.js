@@ -9,7 +9,7 @@ BP.handlers = {
 		$('div.menuItem').click(this.headerMenuItemClickEvent);
 
 		$('#sub_menu_wrapper .menu .btn').click(this.subMenuClickEvent);
-		
+
 		$('div#deployments div.mapPoint').click(this.mapPointClickEvent);
 
 		$('div#deployments div.mapPoint .close').click(this.mapPointLabelCloseBtnClickEvent);
@@ -99,7 +99,7 @@ BP.handlers = {
 
 			} else if(color == 'orange'){
 
-				$('div.mapPoint#northSea').addClass('start');
+				$('div.mapPoint#norway').addClass('start');
 
 			} else if(color == 'blue'){
 
