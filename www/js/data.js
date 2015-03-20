@@ -1310,7 +1310,7 @@ BP.data = {
 				{   "id":"azerbaijan",
 				    "title":"Azerbaijan",
 				    "left":false,
-				    "color":["green", "orange", "blue"],
+				    "color":["orange", "blue"],
 				    "location":{
 				        "x":"1207",
 				        "y":"258"
@@ -1412,6 +1412,7 @@ BP.data = {
 				{   "id":"norway",
 				    "title":"Norway",
 				    "left":false,
+				    "under":true,
 				    "color":["orange", "blue"],
 				    "location":{
 				        "x":"971",
@@ -1422,7 +1423,7 @@ BP.data = {
 				{   "id":"oman",
 				    "title":"Oman",
 				    "left":false,
-				    "under":false,
+				    "under":true,
 				    "color":["green"],
 				    "location":{
 				        "x":"1256",
@@ -1432,7 +1433,7 @@ BP.data = {
 
 				{   "id":"trinidad",
 				    "title":"Trinidad & Tobago",
-				    "left":false,
+				    "left":true,
 				    "under":true,
 				    "color":["green", "orange", "blue"],
 				    "location":{
@@ -1441,6 +1442,60 @@ BP.data = {
 				    }		    
 				}
 
+			],
+			"sections":[
+				{	
+					color: "green",
+					menu: [ "ISS™", "ISSN™" ],
+					curves: [
+						{
+							order: 1,
+							path: "M 1001 313 C 915 330 1023 412 1029 347"
+						},
+						{
+							order: 2,
+							path: "M 1031 325 C 1087 393 1295 408 1231 329"
+						},
+						{
+							order: 2,
+							path: "M 1031 325 C 1021 475 1199 472 1258 394"
+						},
+						{
+							order: 3,
+							path: "M 1217 314 C 1160 336 1095 340 1051 328"
+						},
+						{
+							order: 3,
+							path: "M 1217 314 C 1407 328 1555 386 1672 487"
+						},
+						{
+							order: 3,
+							path: "M 1270 375 C 1254 213 1169 160 990 151"
+						},
+						{
+							order: 4,
+							path: "M 1689 499 C 1687 4 548 -5 371 228"
+						},
+						{
+							order: 4,
+							path: "M 968 150 C 793 207 626 316 624 411"
+						},
+						{
+							order: 5,
+							path: "M 623 432 C 1178 758 1811 533 1236 322"
+						}
+					]
+				},
+				{	
+					color: "orange",
+					menu: [ "Full Waveform Inversions" ],
+					curves: []
+				},
+				{	
+					color: "blue",
+					menu: [ "Multi-Azimuth Seismic", "Wide Azimuth Towed Streamer", "Ocean Bottom Nodes", "Seismic Simulations", "4D Seismic" ],
+					curves: []
+				}
 			]
 		},
 

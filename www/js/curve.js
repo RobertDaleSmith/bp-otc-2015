@@ -50,7 +50,7 @@
 				ctr2:  {x:1271,y:530}
 			}
 		}
-		
+
 
 		// BP.views.render('curveSection', {section: "asi"}, function(html){
 
@@ -270,6 +270,9 @@
 			}
 
 		}, (1000/fps) );
+
+
+		console.log(str);
 
 	};
 
