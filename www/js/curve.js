@@ -1,58 +1,90 @@
-BP.curves = {
 
-	id: null,
-	
-	color: '',
+(function() {
 
-	index: 0,
+	"use strict";
 
-	bezier: null,
+	var bezier = null;
 
-	bMouseDragging: false,
+	var bMouseDragging = false;
 
-	nMouseOffsetX: 0,
+	var nMouseOffsetX = 0;
 
-	nMouseOffsetY: 0,
+	var nMouseOffsetY = 0;
 
-	draggingEl: null,
+	var draggingEl = null;
 
-	SVGParent: null,
+	var SVGWrapper = null;
 
-	group: null,
+	var group = null;
 
-	loop: null,
+	var loop = null;
 
-	init: function(sectionId, colorStr, indexInt, pathStr){
+	var Curve = function(sectionId, colorStr, indexInt, pathStr){
+		
+		this.section = sectionId;
 
-		var self = this;
+		this.color = colorStr;
 
-		self.id = sectionId;
+		this.index = indexInt;
 
-		self.color = colorStr;
+		SVGWrapper = $('svg#arrow_paths')[0];
 
-		self.index = indexInt;
+		bezier = new Bezier( svgPathStrToPts(pathStr) );
 
-		self.SVGParent = $('svg#arrow_paths')[0];
+		//render view before connecting handlers...
+		var curveData = {
+			index: indexInt,
+			paths: {
+				base:   "M1031 325C1031 500 1271 530 1271 375",
+				guide1: "M1031 500 1031 325",
+				guide2: "M1271 530 1271 375",
+				guide3: "M1031 500 1271 530"
+			},
+			points: {
+				arrow: {x:1258,y:361},
+				start: {x:1031,y:325},
+				end:   {x:1271,y:375},
+				ctr1:  {x:1031,y:500},
+				ctr2:  {x:1271,y:530}
+			}
+		}
 
-		self.bezier = new Bezier( this.svgPathStrToPts(pathStr) );
+		// BP.views.render('curveSection', {section: "asi"}, function(html){
 
-		self.group = $('#arrow_paths #lines_'+self.id+' .lines.'+self.color+' .line.line_'+self.index);
+			// $('svg#arrow_paths').append(html);
 
-		self.group.find('g.handles circle').each(function(){
-			this.addEventListener("mousedown", function(e){ self.mouseDown(e, this, self); }, false);
-			this.addEventListener("mouseup"  , function(e){ self.mouseUp(e, this, self); }, false);
-			this.addEventListener("mousemove", function(e){ self.mouseMove(e, (self.draggingEl || this), self); }, false);
+			// BP.views.render('curveGroup', {color: colorStr}, function(html){
+
+				// $('#lines_'+sectionId).append(html);
+
+				BP.views.render('curveLine', curveData, function(html){
+					
+					$('#lines_'+sectionId+' .lines.'+colorStr).append(html);
+
+				});
+
+			// });
+
+		// });
+
+
+		group = $('#arrow_paths #lines_'+this.section+' .lines.'+this.color+' .line.line_'+this.index);
+
+		group.find('g.handles circle').each(function(){
+			this.addEventListener("mousedown", function(e){ mouseDown(e, this); }, false);
+			this.addEventListener("mouseup"  , function(e){ mouseUp(e, this); }, false);
+			this.addEventListener("mousemove", function(e){ mouseMove(e, (draggingEl || this)); }, false);
 		});
 
-	},
+	};
 
-	mouseDown: function(evt, element, self){
+	var mouseDown = function(evt, element){
 
-		self.SVGParent.addEventListener("mousemove", function(e){ self.mouseMove(e, (self.draggingEl || this), self); }, false);
+		SVGWrapper.addEventListener("mousemove", function(e){ mouseMove(e, (draggingEl || this)); }, false);
 		
-		self.bMouseDragging = true;
+		bMouseDragging = true;
 
-		var p = self.SVGParent.createSVGPoint();
+		var p = SVGWrapper.createSVGPoint();
 		p.x = evt.clientX;
 		p.y = evt.clientY;
 
@@ -62,15 +94,15 @@ BP.curves = {
 		nMouseOffsetX = p.x - parseInt( element.getAttribute("cx") );
 		nMouseOffsetY = p.y - parseInt( element.getAttribute("cy") );
 
-		self.draggingEl = element;
+		draggingEl = element;
 
 		if( $(element).attr('class') =='start' || $(element).attr('class') =='end' ) $(element).attr('stroke-width','1');
 
-	},
+	};
 
-	mouseMove: function(e, element, self){
+	var mouseMove = function(e, element){
 
-		var p = self.SVGParent.createSVGPoint();
+		var p = SVGWrapper.createSVGPoint();
 			p.x = e.clientX;
 			p.y = e.clientY;
 
@@ -78,76 +110,76 @@ BP.curves = {
 		p = p.matrixTransform(m.inverse());
 		// console.log('('+p.x+', '+p.y+')');
 
-		if(self.bMouseDragging) {
+		if(bMouseDragging) {
 
-			self.group.find('g.guides path.base').attr('stroke','LIGHTGREY');
+			group.find('g.guides path.base').attr('stroke','LIGHTGREY');
 			
 			var pos = {x: p.x - nMouseOffsetX, y: p.y - nMouseOffsetY};
 			element.setAttribute("cx", pos.x);
 			element.setAttribute("cy", pos.y);
 
 			//do something
-			var whichPoint = $(self.draggingEl).attr('class');
+			var whichPoint = $(draggingEl).attr('class');
 			// console.log( whichPoint );
 			if(whichPoint == 'start'){
 
-				self.bezier.points[0].x = pos.x;
-				self.bezier.points[0].y = pos.y;
+				bezier.points[0].x = pos.x;
+				bezier.points[0].y = pos.y;
 
 			}
 
 			if(whichPoint == 'ctr1'){
 
-				self.bezier.points[1].x = pos.x;
-				self.bezier.points[1].y = pos.y;
+				bezier.points[1].x = pos.x;
+				bezier.points[1].y = pos.y;
 
 			}
 
 			if(whichPoint == 'ctr2'){
 
-				self.bezier.points[2].x = pos.x;
-				self.bezier.points[2].y = pos.y;
+				bezier.points[2].x = pos.x;
+				bezier.points[2].y = pos.y;
 
 			}
 
 			if(whichPoint == 'end'){
 
-				self.bezier.points[3].x = pos.x;
-				self.bezier.points[3].y = pos.y;
+				bezier.points[3].x = pos.x;
+				bezier.points[3].y = pos.y;
 
 			}
 
-			self.bezier.update();
+			bezier.update();
 
-			self.group.find('g.guides path.base').attr('d', self.bezier.toSVG());
+			group.find('g.guides path.base').attr('d', bezier.toSVG());
 
-			// console.log(self.ptsToSvgPathStr( [ self.bezier.points[1], self.bezier.points[0] ]));
-			self.group.find('g.guides path.guide1').attr('d', self.ptsToSvgPathStr( [ self.bezier.points[1], self.bezier.points[0] ]) );
-			self.group.find('g.guides path.guide2').attr('d', self.ptsToSvgPathStr( [ self.bezier.points[2], self.bezier.points[3] ]) );
-			self.group.find('g.guides path.guide3').attr('d', self.ptsToSvgPathStr( [ self.bezier.points[1], self.bezier.points[2] ]) );
+			// console.log(ptsToSvgPathStr( [ bezier.points[1], bezier.points[0] ]));
+			group.find('g.guides path.guide1').attr('d', ptsToSvgPathStr( [ bezier.points[1], bezier.points[0] ]) );
+			group.find('g.guides path.guide2').attr('d', ptsToSvgPathStr( [ bezier.points[2], bezier.points[3] ]) );
+			group.find('g.guides path.guide3').attr('d', ptsToSvgPathStr( [ bezier.points[1], bezier.points[2] ]) );
 		}
 
-	},
+	};
 
-	mouseUp: function(evt, element, self){
+	var mouseUp = function(evt, element){
 		
-		self.bMouseDragging = false;
+		bMouseDragging = false;
 
-		self.draggingEl = null;
+		draggingEl = null;
 
-		self.group.find('g.guides path.base').attr('stroke','transparent');
+		group.find('g.guides path.base').attr('stroke','transparent');
 
 		if( $(element).attr('class') =='start' || 
 			$(element).attr('class') =='end' ) 
 			$(element).attr('stroke-width','0');
 
-		self.play();
+		play();
 
-		$(self.SVGParent).unbind();
+		$(SVGWrapper).unbind();
 
-	},
+	};
 
-	svgPathStrToPts: function(str){
+	var svgPathStrToPts = function(str){
 
 		var pts = [], x = [], y = [];
 
@@ -166,9 +198,9 @@ BP.curves = {
 
 		return pts;
 
-	},
+	};
 
-	ptsToSvgPathStr: function(points){
+	var ptsToSvgPathStr = function(points){
 
 		var str = "";
 
@@ -184,16 +216,14 @@ BP.curves = {
 
 		return str;
 
-	},
+	};
 
-	play: function(){
-
-		var self = this;
+	var play = function(){
 		
-		var length = self.bezier.length();
+		var length = bezier.length();
 
-		var str = self.bezier.toSVG();
-		var pts = self.svgPathStrToPts(str);
+		var str = bezier.toSVG();
+		var pts = svgPathStrToPts(str);
 
 		var pps = 720;
 		var fps = 60;
@@ -207,57 +237,55 @@ BP.curves = {
 		// console.log("Needs to last " + duration + "ms");
 		// console.log("Increments percentage traveled by " + (inc*100) + "% " + fps + " times a second.");
 
-		clearInterval(self.loop);
+		clearInterval(loop);
 
-		self.loop = setInterval(function(){
+		loop = setInterval(function(){
 
 			lambda = (lambda + inc);
 
 			if(lambda > 1) lambda = 1;
 
-			self.render(lambda);
+			render(lambda);
 
 			loopCount++;
 
 			if(lambda >= 1) {
 				// console.log("Took: " + ( parseInt(loopCount)*(1000/fps) ) + "ms at " + pps + "px/s");
-				clearInterval(self.loop);
+				clearInterval(loop);
 			}
 
 		}, (1000/fps) );
 
-	},
+	};
 
-	render: function(lambda){
+	var render = function(lambda){
 
-		var self = this;
-
-		var newPathStr = self.interpolateCubicBezierCurve(0, lambda, self.bezier.points);
+		var newPathStr = interpolateCubicBezierCurve(0, lambda, bezier.points);
 			
-		var newPathPts = self.svgPathStrToPts(newPathStr);
+		var newPathPts = svgPathStrToPts(newPathStr);
 
 		var arrowPos = newPathPts[newPathPts.length-1];
 
-		var tan   = self.bezier.derivative(lambda);
+		var tan   = bezier.derivative(lambda);
 			tan.x = parseInt(arrowPos.x) + tan.x;
 			tan.y = parseInt(arrowPos.y) + tan.y;
 
 		var degrees = ((Math.atan2(tan.y - arrowPos.y, tan.x - arrowPos.x) * 180 / Math.PI) + 90) || 0;
 
-		self.group.find('g.curve path.lambda').attr('d', newPathStr);
+		group.find('g.curve path.lambda').attr('d', newPathStr);
 
-		self.group.find('g.curve polygon.arrow').attr('transform', "translate(" + (arrowPos.x-13) + "," + (arrowPos.y-14) + ") rotate(" + degrees + " 13 14)");
+		group.find('g.curve polygon.arrow').attr('transform', "translate(" + (arrowPos.x-13) + "," + (arrowPos.y-14) + ") rotate(" + degrees + " 13 14)");
 
-		if(lambda == 0) self.group.find('g.curve polygon.arrow').attr('display','none');
-		else self.group.find('g.curve polygon.arrow').attr('display','');
+		if(lambda == 0) group.find('g.curve polygon.arrow').attr('display','none');
+		else group.find('g.curve polygon.arrow').attr('display','');
 
-		// self.group.find('g.guides path.tangent').attr('d', 'M'+arrowPos.x+' '+arrowPos.y+' '+tan.x+' '+tan.y);
+		// group.find('g.guides path.tangent').attr('d', 'M'+arrowPos.x+' '+arrowPos.y+' '+tan.x+' '+tan.y);
 
-		// self.group.find('g.guides circle.head').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
+		// group.find('g.guides circle.head').attr('cx', arrowPos.x).attr('cy', arrowPos.y);
 
-	},
+	};
 
-	interpolateLinearBezierCurve: function( lambdaStart, lambdaEnd, points ){
+	var interpolateLinearBezierCurve = function( lambdaStart, lambdaEnd, points ){
 		
 		'use strict';
 
@@ -278,9 +306,9 @@ BP.curves = {
 
 		return txt;
 
-	},
+	};
 
-	interpolateQuadraticBezierCurve: function (lambdaStart, lambdaEnd, points) {
+	var interpolateQuadraticBezierCurve = function (lambdaStart, lambdaEnd, points) {
 		
 		'use strict';
 
@@ -316,9 +344,9 @@ BP.curves = {
 
 		return txt;
 
-	},
+	};
 
-	interpolateCubicBezierCurve: function(lambdaStart, lambdaEnd, points) {
+	var interpolateCubicBezierCurve = function(lambdaStart, lambdaEnd, points) {
 
 		'use strict';
 
@@ -384,9 +412,9 @@ BP.curves = {
 
 		return txt;
 
-	},
+	};
 
-	posAlongCubicBezierCurve: function( lambda, points ){
+	var posAlongCubicBezierCurve = function( lambda, points ){
 
 		var pathStr = this.interpolateCubicBezierCurve( 0, lambda, points);
 
@@ -394,12 +422,34 @@ BP.curves = {
 
 		return {x: parseInt(parts[parts.length-2]), y: parseInt(parts[parts.length-1])};
 
-	},
+	};
 
-	linLength: function(x1, y1, x2, y2){
+	var linLength = function(x1, y1, x2, y2){
 
 		return Math.sqrt( (x2-=x1)*x2 + (y2-=y1)*y2 );
 
+	};
+
+	// Public methods.
+	Curve.prototype = {
+		
+		play: function() {
+			play();
+			return;
+		},
+
+	};
+
+	if(typeof module !== "undefined" && module.exports) {
+		module.exports = Curve;
 	}
 
-}
+	else if(typeof define !== "undefined") {
+		define(function() { return Curve; });
+	}
+
+	else if(typeof window !== "undefined") {
+		window.Curve = Curve;
+	}
+
+}());
