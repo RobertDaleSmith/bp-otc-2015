@@ -1448,6 +1448,7 @@ BP.data = {
 					color: "green",
 					menu: [ "ISS™", "ISSN™" ],
 					curves: [
+
 						{
 							order: 1,
 							path: "M 1001 313 C 915 330 1023 412 1029 347"
@@ -1484,12 +1485,14 @@ BP.data = {
 							order: 5,
 							path: "M 623 432 C 1178 758 1811 533 1236 322"
 						}
+
 					]
 				},
 				{	
 					color: "orange",
 					menu: [ "Full Waveform Inversions" ],
 					curves: [
+
 						{
 							order: 1,
 							path: "M 986 182 C 1097 168 1184 189 1214 253"
@@ -1526,6 +1529,7 @@ BP.data = {
 							order: 9,
 							path: "M 212 103 C 243 455 263 687 730 618"
 						}
+						
 					]
 				},
 				{	
