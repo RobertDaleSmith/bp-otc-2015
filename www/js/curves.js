@@ -9,35 +9,35 @@ BP.curves = {
 
 	init: function(){
 
-		BP.curves.bezier = new Bezier( this.svgPathStrToPts(this.pathStr) );
+		var self = this; 
+
+		self.bezier = new Bezier( this.svgPathStrToPts(this.pathStr) );
 
 		$('#arrow_paths_wrapper circle').each(function(){
-			this.addEventListener("mousedown", BP.curves.mouseDown, false);
-			this.addEventListener("mouseup", BP.curves.mouseUp, false);
-			this.addEventListener("mousemove", BP.curves.mouseMove, false);
+			this.addEventListener("mousedown", function(e){ self.mouseDown(e, this, self); }, false);
+			this.addEventListener("mouseup", function(e){ self.mouseUp(e, this, self); }, false);
+			this.addEventListener("mousemove", self.mouseMove, false);
 		});
-		$('svg#arrow_paths_wrapper')[0].addEventListener("mousemove", BP.curves.mouseMove, false);
+		$('svg#arrow_paths_wrapper')[0].addEventListener("mousemove", self.mouseMove, false);
 
 	},
 
-	mouseDown: function(e){
+	mouseDown: function(evt, element, self){
 		
-		var self = this;
-
-		BP.curves.bMouseDragging = true;
+		self.bMouseDragging = true;
 
 		var p = $('svg#arrow_paths_wrapper')[0].createSVGPoint();
-		p.x = e.clientX;
-		p.y = e.clientY;
+		p.x = evt.clientX;
+		p.y = evt.clientY;
 
-		var m = self.getScreenCTM();
+		var m = element.getScreenCTM();
 		p = p.matrixTransform(m.inverse());
-		nMouseOffsetX = p.x - parseInt( self.getAttribute("cx") );
-		nMouseOffsetY = p.y - parseInt( self.getAttribute("cy") );
+		nMouseOffsetX = p.x - parseInt( element.getAttribute("cx") );
+		nMouseOffsetY = p.y - parseInt( element.getAttribute("cy") );
 
-		BP.curves.draggingEl = this;
+		self.draggingEl = element;
 
-		if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','1');
+		if( $(element).attr('class') =='start' || $(element).attr('class') =='end' ) $(element).attr('stroke-width','1');
 
 	},
 
@@ -95,7 +95,7 @@ BP.curves = {
 
 			BP.curves.bezier.update();
 
-			$('#test_path').attr('d', BP.curves.ptsToSvgPathStr(BP.curves.bezier.points));
+			$('#test_path').attr('d', BP.curves.bezier.toSVG());
 
 			// console.log(BP.curves.ptsToSvgPathStr( [ BP.curves.bezier.points[1], BP.curves.bezier.points[0] ]));
 			$('#test_guide1').attr('d', BP.curves.ptsToSvgPathStr( [ BP.curves.bezier.points[1], BP.curves.bezier.points[0] ]) );
@@ -105,16 +105,19 @@ BP.curves = {
 
 	},
 
-	mouseUp: function(e){
+	mouseUp: function(evt, element, self){
 		
-		BP.curves.bMouseDragging = false;
+		self.bMouseDragging = false;
 
-		draggingEl = null;
+		self.draggingEl = null;
 
 		$('#test_path').attr('stroke','transparent');
-		if( $(this).attr('class') =='start' || $(this).attr('class') =='end' ) $(this).attr('stroke-width','0');
 
-		BP.curves.play();
+		if( $(element).attr('class') =='start' || 
+			$(element).attr('class') =='end' ) 
+			$(element).attr('stroke-width','0');
+
+		self.play();
 
 	},
 
@@ -127,8 +130,6 @@ BP.curves = {
 		vals.forEach(function(val, i){
 
 			val = parseFloat(val).round(0);
-
-			// val = parseInt(val);
 
 			if(i%2==0 || i==0) x.push(val); else y.push(val);
 
@@ -164,9 +165,8 @@ BP.curves = {
 	play: function(){
 		
 		var length = BP.curves.bezier.length();
-		// console.log(length);
 
-		var str = BP.curves.ptsToSvgPathStr(BP.curves.bezier.points)
+		var str = BP.curves.bezier.toSVG();
 		var pts = BP.curves.svgPathStrToPts(str);
 
 		var pps = 720;
@@ -180,7 +180,7 @@ BP.curves = {
 		var maxLambda = 1;
 
 		// maxLambda = 1 - ( 15 / length);
-		// console.log( maxLambda );
+
 		// console.log("Needs to last " + duration + "ms");
 		// console.log("Increments percentage traveled by " + (inc*100) + "% " + fps + " times a second.");
 
@@ -203,8 +203,6 @@ BP.curves = {
 				tan.y = parseInt(arrowPos.y) + tan.y;
 
 			var degrees = ((Math.atan2(tan.y - arrowPos.y, tan.x - arrowPos.x) * 180 / Math.PI) + 90) || 0;
-
-			
 
 			$('#test_lambda').attr('d', newPathStr);
 
