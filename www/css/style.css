@@ -1397,9 +1397,36 @@ html, body{
 						display: block;
 					}
 
+						#arrow_paths .guides .guide{
+							stroke: GREY;
+							stroke-width: 1;
+							fill: none;
+							stroke-dasharray: 10,10;
+						}
+
 					#arrow_paths .line .curve{
 						
 					}
+						#arrow_paths .line .curve .lambda{
+							stroke-width: 6px;
+							fill: none;
+							stroke-linecap: butt;
+						}
+
+						#arrow_paths .green .curve .lambda{
+							stroke: #00a22f;
+						}
+						#arrow_paths .green .curve .arrow{
+							fill: #00a22f;
+						}
+
+						#arrow_paths .orange .curve .lambda{
+							stroke: #fa630c;
+						}
+						#arrow_paths .orange .curve .arrow{
+							fill: #fa630c;
+						}
+
 
 					#arrow_paths .line .handles{
 						display: none;
@@ -1409,6 +1436,8 @@ html, body{
 					}
 
 /* SVG arrows  -  END */
+
+
 
 
 #intro_wrapper{

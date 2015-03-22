@@ -49,8 +49,15 @@ String.prototype.contains = function(subStr){
 };
 
 String.prototype.replaceAll = function (find, replace) {
-	var str = this;
-	return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+
+	return this.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+
+};
+
+String.prototype.remove = function (str) {
+
+	return this.replaceAll(str,'');
+
 };
 
 $.fn.cssAnimationReset = function(){

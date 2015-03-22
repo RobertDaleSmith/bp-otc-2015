@@ -2,8 +2,23 @@ BP.views.init();
 
 BP.handlers.init();
 
-// BP.curves.init("asi", "green", 0, "M1031 325C1031 500 1271 530 1271 375");
 
-var curve = new Curve("asi", "green", 1, "M1031 325C1031 500 1271 530 1271 375");
+var arrows = [];
 
-// var curve = new Curve();
+BP.views.render('svg', {projects: BP.data.projects}, function(html){
+	
+	// Insert rendered SVG markup.	
+	$('#map_content_wrapper').append(html);
+
+	// Init SVG paths and handlers.
+	BP.data.projects[0].sections[0].arrows.forEach(function(curve, idx){
+		
+		var color = BP.data.projects[0].sections[0].color,
+				id 		= BP.data.projects[0].id;
+		 
+		arrows.push( new Arrow(id, color, idx, curve.path) );
+
+	});
+
+});
+

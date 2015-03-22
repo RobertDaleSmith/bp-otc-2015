@@ -1445,97 +1445,97 @@ BP.data = {
 			],
 			"sections":[
 				{	
-					color: "green",
-					menu: [ "ISS™", "ISSN™" ],
-					curves: [
+					"color": "green",
+					"menu": [ "ISS™", "ISSN™" ],
+					"arrows": [
 
 						{
-							order: 1,
-							path: "M 1001 313 C 915 330 1023 412 1029 347"
+							"order": 1,
+							"path": "M 1001 313 C 846 283 923 482 1019 342"
 						},
 						{
-							order: 2,
-							path: "M 1031 325 C 1087 393 1295 408 1231 329"
+							"order": 2,
+							"path": "M 1031 325 C 1113 413 1272 421 1226 333"
 						},
 						{
-							order: 2,
-							path: "M 1031 325 C 1021 475 1199 472 1258 394"
+							"order": 2,
+							"path": "M 1031 325 C 1021 475 1199 472 1258 394"
 						},
 						{
-							order: 3,
-							path: "M 1217 314 C 1160 336 1095 340 1051 328"
+							"order": 3,
+							"path": "M 1217 314 C 1173 307 1099 311 1052 323"
 						},
 						{
-							order: 3,
-							path: "M 1217 314 C 1407 328 1555 386 1672 487"
+							"order": 3,
+							"path": "M 1217 314 C 1296 222 1715 328 1693 479"
 						},
 						{
-							order: 3,
-							path: "M 1270 375 C 1254 213 1169 160 990 151"
+							"order": 3,
+							"path": "M 1270 375 C 1252 206 1169 155 974 150"
 						},
 						{
-							order: 4,
-							path: "M 1689 499 C 1687 4 548 -5 371 228"
+							"order": 4,
+							"path": "M 1689 499 C 1909 332 1034 -250 373 231"
 						},
 						{
-							order: 4,
-							path: "M 968 150 C 793 207 626 316 624 411"
+							"order": 4,
+							"path": "M 957 151 C 778 167 677 233 629 411"
 						},
 						{
-							order: 5,
-							path: "M 623 432 C 1178 758 1811 533 1236 322"
+							"order": 5,
+							"path": "M 623 432 C 1214 830 1692 327 1238 315"
 						}
 
 					]
 				},
 				{	
-					color: "orange",
-					menu: [ "Full Waveform Inversions" ],
-					curves: [
+					"color": "orange",
+					"menu": [ "Full Waveform Inversions" ],
+					"arrows": [
 
-						{
-							order: 1,
-							path: "M 986 182 C 1097 168 1184 189 1214 253"
-						},
-						{
-							order: 2,
-							path: "M 1222 273 C 977 201 768 288 638 418"
-						},
-						{
-							order: 3,
-							path: "M 624 431 C 604 370 553 340 492 342"
-						},
-						{
-							order: 4,
-							path: "M 471 341 C 422 156 769 140 932 149"
-						},
-						{
-							order: 5,
-							path: "M 953 150 C 1022 47 1812 133 1696 480"
-						},
-						{
-							order: 6,
-							path: "M 1689 500 C 1458 473 1371 588 1037 550"
-						},
-						{
-							order: 7,
-							path: "M 1016 548 C 1018 391 1101 450 1117 334"
-						},
-						{
-							order: 8,
-							path: "M 1119 314 C 720 524 903 5 232 100"
-						},
-						{
-							order: 9,
-							path: "M 212 103 C 243 455 263 687 730 618"
-						}
+						// {
+						// 	"order": 1,
+						// 	"path": "M 986 182 C 1097 168 1184 189 1214 253"
+						// },
+						// {
+						// 	'order': 2,
+						// 	"path": "M 1222 273 C 977 201 768 288 638 418"
+						// },
+						// {
+						// 	"order": 3,
+						// 	"path": "M 624 431 C 604 370 553 340 492 342"
+						// },
+						// {
+						// 	"order": 4,
+						// 	"path": "M 471 341 C 422 156 769 140 932 149"
+						// },
+						// {
+						// 	"order": 5,
+						// 	"path": "M 953 150 C 1022 47 1812 133 1696 480"
+						// },
+						// {
+						// 	"order": 6,
+						// 	"path": "M 1689 500 C 1458 473 1371 588 1037 550"
+						// },
+						// {
+						// 	"order": 7,
+						// 	"path": "M 1016 548 C 1018 391 1101 450 1117 334"
+						// },
+						// {
+						// 	"order": 8,
+						// 	"path": "M 1119 314 C 720 524 903 5 232 100"
+						// },
+						// {
+						// 	"order": 9,
+						// 	"path": "M 212 103 C 243 455 263 687 730 618"
+						// }
 						
 					]
 				},
 				{	
-					color: "blue",
-					menu: [ "Multi-Azimuth Seismic", "Wide Azimuth Towed Streamer", "Ocean Bottom Nodes", "Seismic Simulations", "4D Seismic" ],
-					curves: []
+					"color": "blue",
+					"menu": [ "Multi-Azimuth Seismic", "Wide Azimuth Towed Streamer", "Ocean Bottom Nodes", "Seismic Simulations", "4D Seismic" ],
+					"arrows": []
 				}
 			]
 		},

@@ -85,17 +85,57 @@ BP.handlers = {
 			$('div.mapPoint').removeClass('start');
 			if(color == 'green'){
 
-				// Hard code green ASI sequence here.
-
 				$('div.mapPoint#algeria').addClass('start');
 
-				setTimeout(function(){
+				var steps = [];
 
-					console.log('GO TEAM GREEN SAUCE!!');
+				arrows.forEach(function(a, i){ 
+						
+					if(!steps[a.order]) steps[a.order] = [];
+					
+					steps[a.order].push(i);
+				
+				});
 
-				},1000);
+				var o = 1, i = 0, m = 0;
+				
+				var seq = function() {
+					
+					if(o >= steps.length) { return 'fin'; }
 
+					var asyncs = [];
 
+					for(var n=0; n<steps[o].length; n++){
+
+						asyncs.push(function(next){
+
+							var idx = steps[o][m];
+
+							arrows[idx].play(function(){ 
+								i++; 
+								next();
+							});
+
+							m++;
+
+						});
+
+					}
+
+					async.parallel(asyncs, function(){
+
+						console.log('async steps done');
+						
+						o++; m = 0;
+						
+						seq();
+
+					});
+
+				}
+
+				// Delays start of sequence until post is extended.
+				setTimeout(function(){ seq(); },1000);
 
 			} else if(color == 'orange'){
 
@@ -111,6 +151,8 @@ BP.handlers = {
 
 			// Active, so reset section state.
 			BP.handlers.resetProjectsStateEvent();
+			
+			arrows.forEach(function(val, i){val.reset()});
 
 		}
 

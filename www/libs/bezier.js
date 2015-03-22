@@ -1,8 +1,8 @@
-/**
+/** 1.0.4
   A javascript Bezier curve library by Pomax.
 
   Based on http://pomax.github.io/bezierinfo
-  
+
   This code is MIT licensed.
 **/
 (function() {
@@ -450,6 +450,7 @@
     }
     var len = args.length;
     if(len!==6 && len!==8 && len!==9 && len!==12) {
+      console.log(coords);
       throw new Error("This Bezier curve library only supports quadratic and cubic curves (in 2d and 3d)");
     }
     var _3d = (len === 9 || len === 12);
@@ -482,6 +483,23 @@
     this._t1 = 0;
     this._t2 = 1;
     this.update();
+  };
+
+  Bezier.fromSVG = function(svgString) {
+    var relative = (svgString.indexOf('m') > -1);
+    var list = svgString.match(/(-?\d+(\.\d+)*)\s*[, ]\s*(-?\d+(\.\d+)*)/g).map(function(v) {
+      v = v.split(" ").map(function(v) { return parseFloat(v); });
+      return { x: v[0], y: v[1] };
+    });
+    if(!relative) return new Bezier(list);
+    var coords = [list[0]];
+    list.reduce(function(a,b) {
+      b.x += a.x;
+      b.y += a.y;
+      coords.push({ x: b.x, y: b.y });
+      return b;
+    });
+    return new Bezier(coords);
   };
 
   Bezier.utils = utils;
