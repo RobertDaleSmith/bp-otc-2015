@@ -87,55 +87,23 @@ BP.handlers = {
 
 				$('div.mapPoint#algeria').addClass('start');
 
-				var steps = [];
+				// Delays start of sequence until post is extended.
+				setTimeout(function(){
 
-				arrows.forEach(function(a, i){ 
-						
-					if(!steps[a.order]) steps[a.order] = [];
-					
-					steps[a.order].push(i);
-				
-				});
+					BP.handlers.sequencer(arrows1, function(){
 
-				var o = 1, i = 0, m = 0;
-				
-				var seq = function() {
-					
-					if(o >= steps.length) { return 'fin'; }
+						console.log('arrows 1 done');
 
-					var asyncs = [];
+						BP.handlers.sequencer(arrows2, function(){
 
-					for(var n=0; n<steps[o].length; n++){
-
-						asyncs.push(function(next){
-
-							var idx = steps[o][m];
-
-							arrows[idx].play(function(){ 
-								i++; 
-								next();
-							});
-
-							m++;
+							console.log('arrows 2 done');
 
 						});
 
-					}
-
-					async.parallel(asyncs, function(){
-
-						console.log('async steps done');
-						
-						o++; m = 0;
-						
-						seq();
-
 					});
 
-				}
-
-				// Delays start of sequence until post is extended.
-				setTimeout(function(){ seq(); },1000);
+				},800);
+				
 
 			} else if(color == 'orange'){
 
@@ -152,9 +120,63 @@ BP.handlers = {
 			// Active, so reset section state.
 			BP.handlers.resetProjectsStateEvent();
 			
-			arrows.forEach(function(val, i){val.reset()});
+			arrows1.forEach(function(val, i){val.reset()});
+			arrows2.forEach(function(val, i){val.reset()});
 
 		}
+
+	},
+
+	sequencer: function(arrows, cb) {
+
+		var steps = [];
+
+		arrows.forEach(function(a, i){ 
+				
+			if(!steps[a.order]) steps[a.order] = [];
+			
+			steps[a.order].push(i);
+		
+		});
+
+		var o = 1, i = 0, m = 0;
+		
+		var seq = function() {
+			
+			if(o >= steps.length) { return cb('fin'); }
+
+			var asyncs = [];
+
+			for(var n=0; n<steps[o].length; n++){
+
+				asyncs.push(function(next){
+
+					var idx = steps[o][m];
+
+					arrows[idx].play(function(){ 
+						i++; 
+						next();
+					});
+
+					m++;
+
+				});
+
+			}
+
+			async.parallel(asyncs, function(){
+
+				console.log('async steps done');
+				
+				o++; m = 0;
+				
+				seq();
+
+			});
+
+		}
+
+		seq();
 
 	},
 

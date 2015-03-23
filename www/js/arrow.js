@@ -9,7 +9,7 @@
 
 	var svg = null;
 
-	var pps = 360;
+	var pps = 720;
 
 	var fps = 60;
 
@@ -134,7 +134,7 @@
 	 * Arrow bezier line curve constructor. 
 	 *
 	 */
-	var Arrow = function(section, color, index, path){
+	var Arrow = function(section, color, seq, index, path){
 
 		if(!svg) svg = $('svg#arrow_paths')[0];
 
@@ -145,6 +145,8 @@
 		this.section = section;
 
 		this.color = color;
+
+		this.seqId = seq;
 
 		this.index = index;
 
@@ -158,7 +160,7 @@
 
 		this.loop = null;
 		
-		this.group = $('#arrow_paths #lines_'+this.section+' .lines.'+this.color+' .line.line_'+this.index);
+		this.group = $('#arrow_paths #lines_'+this.section+' .lines.'+this.color+' .line.line_'+this.seqId+'_'+this.index);
 		
 		this.group.find('g.curve, g.handles circle').dblclick( function(e){ self.play() } );
 
