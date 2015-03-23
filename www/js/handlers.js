@@ -166,7 +166,7 @@ BP.handlers = {
 
 			async.parallel(asyncs, function(){
 
-				console.log('async steps done');
+				// console.log('async steps done');
 				
 				o++; m = 0;
 				
@@ -195,20 +195,28 @@ BP.handlers = {
 
 			if(e.keyCode == 27){ //esc
 				
-				if( $('div#header_wrapper .btn.open').length > 0 ){
+				if(gui){
 
-					// Close any open header menu buttons.
-					$('div#header_button_wrapper .btn.open .icon').click();
-
-				} else if ( $('div.mapPoint.open').length > 0 ) {
-
-					// Close any open mapPoints.
-					$('div.mapPoint.open').find('.close').click();
-
+					gui.App.quit();
+					
 				} else {
 
-					// 
-					BP.handlers.resetProjectsStateEvent();
+					if( $('div#header_wrapper .btn.open').length > 0 ){
+
+						// Close any open header menu buttons.
+						$('div#header_button_wrapper .btn.open .icon').click();
+
+					} else if ( $('div.mapPoint.open').length > 0 ) {
+
+						// Close any open mapPoints.
+						$('div.mapPoint.open').find('.close').click();
+
+					} else {
+
+						// 
+						BP.handlers.resetProjectsStateEvent();
+
+					}
 
 				}
 

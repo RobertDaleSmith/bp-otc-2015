@@ -10,6 +10,10 @@ var BP = {
 
 };
 
+
+var gui = null;
+try{ gui = require('nw.gui'); }catch(e){}
+
 Array.prototype.shuffle = function(){
 
 	var array = this;

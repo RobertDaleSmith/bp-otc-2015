@@ -1,5 +1,6 @@
 node_modules
 dev_conf.js
+build
 *.ini
 # Compiled source #
 ###################
