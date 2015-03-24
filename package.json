@@ -9,7 +9,8 @@
   },
   "keywords": [],
   "dependencies": {
-    "express": "*"
+    "express": "*",
+    "node-webkit-builder": "*"
   },
   "scripts": {
     "start": "node server.js",

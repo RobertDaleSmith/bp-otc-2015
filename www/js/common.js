@@ -10,9 +10,8 @@ var BP = {
 
 };
 
-
-var gui = null;
-try{ gui = require('nw.gui'); }catch(e){}
+// Initializes NW.js gui object.
+var gui = null; try{gui = require('nw.gui');}catch(e){console.log('NW.js libs not found.');}
 
 Array.prototype.shuffle = function(){
 

@@ -1,6 +1,13 @@
+# Local Dev #
+#############
 node_modules
 dev_conf.js
+
+# NW.js build files #
+#####################
 build
+cache
+
 *.ini
 # Compiled source #
 ###################
