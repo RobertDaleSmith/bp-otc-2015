@@ -17,4 +17,5 @@ https://github.com/mllrsohn/node-webkit-builder
 
 Package Mac and Windows Apps:
 ----
-cli command:	nwbuild www
+sudo chown -R root ~/.wine
+node build
