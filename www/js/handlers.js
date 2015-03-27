@@ -51,6 +51,8 @@ BP.handlers = {
 
 		var activePoints = [], inactivePoints = [];
 
+		var hasStartPt = false;
+
 		$('.sub_details .item').removeClass('active');
 
 		if(!active){
@@ -99,7 +101,15 @@ BP.handlers = {
 			var sequences = arrows[project][color];
 
 			// Extends section post.
+			if(!sequences.start || sequences.start == "") {
+				sequences.start = "none";
+			} else {
+				hasStartPt = true;
+			}
 			$('div.mapPoint#'+sequences.start).addClass('start');
+
+			var time = 750;
+			if(!hasStartPt) time = 100;
 
 			window.clearInterval(BP.intervals.sequences);
 			// Delays start of sequence until post is extended.
@@ -117,7 +127,7 @@ BP.handlers = {
 				}
 				sequencesLoop(0);
 
-			},800);
+			},time);
 				
 
 		} else {

@@ -1553,7 +1553,7 @@ BP.data = {
 				},
 				{
 					"color": "blue",
-					"start": "brazil",
+					"start": "",
 					"sequences": [
 						{
 							"id": "multiAzimuthSeismic",
