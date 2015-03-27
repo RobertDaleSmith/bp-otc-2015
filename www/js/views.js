@@ -10,6 +10,8 @@ BP.views = {
 
 		this.loadProjectsMapElements();
 
+		this.loadProjectsSubMenus();
+
 	},
 
 	render: function(view, data, callback ){
@@ -163,6 +165,26 @@ BP.views = {
 		} else {//( heights[0] == heights[1] )
 
 			$(lists[0]).addClass('short'); $(lists[1]).addClass('short');
+
+		}
+
+	},
+
+	loadProjectsSubMenus: function(){
+		// Renders projects sub menu elements.
+		var subMenuElement = $('div#sub_menu_container');
+
+		for(var i=0; i < BP.data.projects.length; i++){
+
+			var data = BP.data.projects[i];
+			
+			var model = {id: data.id, title: data.title, sections: data.sections};
+
+			BP.views.render('projectSubMenu', model, function(html){
+
+				subMenuElement.append(html);
+
+			});
 
 		}
 

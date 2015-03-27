@@ -414,7 +414,7 @@ html, body{
 			.sub_menu_wrapper .menu .btn.green:active,
 			.sub_menu_wrapper .menu .btn.green.active{
 				background-color: #00a22f;
-				color: #ececec;
+				color: #fff;
 			}
 
 			.sub_menu_wrapper .menu .btn.orange{
@@ -427,7 +427,7 @@ html, body{
 			.sub_menu_wrapper .menu .btn.orange:active,
 			.sub_menu_wrapper .menu .btn.orange.active{
 				background-color: #ff6600;
-				color: #ececec;
+				color: #fff;
 			}
 
 			.sub_menu_wrapper .menu .btn.blue{
@@ -440,7 +440,7 @@ html, body{
 			.sub_menu_wrapper .menu .btn.blue:active,
 			.sub_menu_wrapper .menu .btn.blue.active{
 				background-color: #000099;
-				color: #ececec;
+				color: #fff;
 			}
 
 				.sub_menu_wrapper .menu .btn .item{

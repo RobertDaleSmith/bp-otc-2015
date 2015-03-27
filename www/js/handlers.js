@@ -109,7 +109,7 @@ BP.handlers = {
 					if(count >= sequences.length) return;
 					
 					//Open corresponding footer description.
-					console.log(sequences[count].name);
+					// console.log(sequences[count].name);
 					$('.sub_details .item#'+sequences[count].name).addClass('active')
 
 					BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
