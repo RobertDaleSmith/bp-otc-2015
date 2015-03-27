@@ -297,7 +297,7 @@ html, body{
 
 /* SUBMENU -- start */
 
-	#sub_menu_wrapper{
+	.sub_menu_wrapper{
 
 		display: inline-block;
 		position: absolute;
@@ -315,12 +315,12 @@ html, body{
 				transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 
 	}
-	#sub_menu_wrapper.open{
+	.sub_menu_wrapper.open{
 
 		top: 110px;
 
 	}
-		#sub_menu_wrapper .title{
+		.sub_menu_wrapper .title{
 			display: inline-block;
 			position: relative;
 			float: left;
@@ -342,7 +342,7 @@ html, body{
 
 		}
 
-		#sub_menu_wrapper .menu{
+		.sub_menu_wrapper .menu{
 			display: inline-block;
 			position: relative;
 			float: left;
@@ -370,13 +370,13 @@ html, body{
 			overflow: hidden;
 
 		}
-		#sub_menu_wrapper.open .menu{
+		.sub_menu_wrapper.open .menu{
 
 			top: 0px;
 
 		}
 
-			#sub_menu_wrapper .menu .gap{
+			.sub_menu_wrapper .menu .gap{
 				content: ' ';
 				display: inline-block;
 				position: relative;
@@ -387,7 +387,7 @@ html, body{
 
 			}
 
-			#sub_menu_wrapper .menu .btn{
+			.sub_menu_wrapper .menu .btn{
 
 				display: inline-block;
 				position: relative;
@@ -403,53 +403,47 @@ html, body{
 				border-width: 0 0 6px 0;
 
 			}
-			
 
-			/*#sub_menu_wrapper .menu .btn.filler{
-				width: 100%;
-				border-width: 0px;
-			}*/
-
-			#sub_menu_wrapper .menu .btn.green{
+			.sub_menu_wrapper .menu .btn.green{
 				border-color: #00a22f;
 				color: #00a22f;
 			}
-			#sub_menu_wrapper .menu .btn.green:hover{
+			.sub_menu_wrapper .menu .btn.green:hover{
 				background-color: rgba(178,211,188,0.5);
 			}
-			#sub_menu_wrapper .menu .btn.green:active,
-			#sub_menu_wrapper .menu .btn.green.active{
+			.sub_menu_wrapper .menu .btn.green:active,
+			.sub_menu_wrapper .menu .btn.green.active{
 				background-color: #00a22f;
 				color: #ececec;
 			}
 
-			#sub_menu_wrapper .menu .btn.orange{
+			.sub_menu_wrapper .menu .btn.orange{
 				border-color: #ff6600;
 				color: #ff6600;
 			}
-			#sub_menu_wrapper .menu .btn.orange:hover{
+			.sub_menu_wrapper .menu .btn.orange:hover{
 				background-color: rgba(229,199,178,0.4);
 			}
-			#sub_menu_wrapper .menu .btn.orange:active,
-			#sub_menu_wrapper .menu .btn.orange.active{
+			.sub_menu_wrapper .menu .btn.orange:active,
+			.sub_menu_wrapper .menu .btn.orange.active{
 				background-color: #ff6600;
 				color: #ececec;
 			}
 
-			#sub_menu_wrapper .menu .btn.blue{
+			.sub_menu_wrapper .menu .btn.blue{
 				border-color: #000099;
 				color: #000099;
 			}
-			#sub_menu_wrapper .menu .btn.blue:hover{
+			.sub_menu_wrapper .menu .btn.blue:hover{
 				background-color: rgba(178,178,209,0.4);
 			}
-			#sub_menu_wrapper .menu .btn.blue:active,
-			#sub_menu_wrapper .menu .btn.blue.active{
+			.sub_menu_wrapper .menu .btn.blue:active,
+			.sub_menu_wrapper .menu .btn.blue.active{
 				background-color: #000099;
 				color: #ececec;
 			}
 
-				#sub_menu_wrapper .menu .btn .item{
+				.sub_menu_wrapper .menu .btn .item{
 
 					display: inline-block;
 					position: relative;

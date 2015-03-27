@@ -285,7 +285,7 @@
 			var lambda = 0;
 			var loopCount = 0;
 
-			clearInterval(self.loop);
+			window.clearInterval(self.loop);
 
 			self.loop = setInterval(function(){
 
@@ -298,7 +298,7 @@
 				loopCount++;
 
 				if(lambda >= 1) {
-					clearInterval(self.loop);
+					window.clearInterval(self.loop);
 					if(cb) cb();
 				}
 
@@ -308,7 +308,7 @@
 
 		stop: function(){
 
-			clearInterval(this.loop);
+			window.clearInterval(this.loop);
 
 		},
 

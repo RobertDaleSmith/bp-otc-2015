@@ -8,7 +8,7 @@ BP.handlers = {
 
 		$('div.menuItem').click(this.headerMenuItemClickEvent);
 
-		$('#sub_menu_wrapper .menu .btn').click(this.subMenuClickEvent);
+		$('.sub_menu_wrapper .menu .btn').click(this.subMenuClickEvent);
 
 		$('div#deployments div.mapPoint').click(this.mapPointClickEvent);
 
@@ -89,8 +89,8 @@ BP.handlers = {
 			$('div.sub_details_wrapper#asi div.sub_details.'+color).addClass('active');
 
 			// Submenu btn active state toggle.
-			$('div#sub_menu_wrapper .menu .btn').removeClass('active');
-			$('div#sub_menu_wrapper .menu .btn.'+color).addClass('active');
+			$('div.sub_menu_wrapper .menu .btn').removeClass('active');
+			$('div.sub_menu_wrapper#asi .menu .btn.'+color).addClass('active');
 
 			// Manual Sequences
 			$('div.mapPoint').removeClass('start');
@@ -101,8 +101,9 @@ BP.handlers = {
 			// Extends section post.
 			$('div.mapPoint#'+sequences.start).addClass('start');
 
+			window.clearInterval(BP.intervals.sequences);
 			// Delays start of sequence until post is extended.
-			setTimeout(function(){
+			BP.intervals.sequences = setTimeout(function(){
 				
 				var sequencesLoop = function(count){
 					if(count >= sequences.length) return;
@@ -121,7 +122,9 @@ BP.handlers = {
 
 		} else {
 
-			$('div#sub_menu_wrapper .menu .btn').removeClass('active');
+			window.clearInterval(BP.intervals.sequences);
+
+			$('div.sub_menu_wrapper .menu .btn').removeClass('active');
 
 			$('div.mapPoint').removeClass('start')
 							 .removeClass('inactive')
@@ -193,7 +196,6 @@ BP.handlers = {
 		
 		// Fires without a color, hence resets points.
 		// BP.handlers.subMenuClickEvent();
-
 
 	},
 
@@ -274,7 +276,7 @@ BP.handlers = {
 
 		if(sectionId == 'deployments') {
 			
-			$('div#sub_menu_wrapper').removeClass('open');
+			$('div.sub_menu_wrapper').removeClass('open');
 
 			$('div#map_canvas').css('left', '0px').css('top', '0px');
 			BP.views.revealMapPoints('deployments');
@@ -290,7 +292,7 @@ BP.handlers = {
 		} 
 		if(sectionId == 'projects') {
 
-			$('div#sub_menu_wrapper').addClass('open');
+			$('div.sub_menu_wrapper#asi').addClass('open');
 
 			$('div#map_canvas').css('left', '0px').css('top', '100px');
 			BP.views.revealMapPoints('projects');
@@ -450,7 +452,7 @@ BP.handlers = {
 
 				function(next){
 
-					clearInterval(checkLoop);
+					window.clearInterval(checkLoop);
 					BP.views.checklistGroupLengths(listGroup);
 					
 					setTimeout(function(){  
@@ -556,7 +558,7 @@ BP.handlers = {
 				parent.removeClass('open');
 
 				//Check if short.
-				clearInterval(checkLoop);
+				window.clearInterval(checkLoop);
 				BP.views.checklistGroupLengths(listGroup);
 
 			});
@@ -567,7 +569,7 @@ BP.handlers = {
 				
 				parent.addClass('open');
 
-				clearInterval(checkLoop);
+				window.clearInterval(checkLoop);
 				BP.views.checklistGroupLengths(listGroup);
 
 			});
