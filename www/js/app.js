@@ -4,7 +4,7 @@ BP.handlers.init();
 
 
 var projectArrows = [];
-var arrows = [];
+var arrows = {};
 
 BP.views.render('svg', {projects: BP.data.projects}, function(html){
 	
@@ -15,7 +15,7 @@ BP.views.render('svg', {projects: BP.data.projects}, function(html){
 	BP.data.projects.forEach(function(project, proIndex){
 		
 		// projectArrows.push( {project: project.id, sections: [] } );
-		arrows[project.id] = [];
+		arrows[project.id] = {};
 
 
 		// Loops through all sections within a project.
@@ -29,7 +29,7 @@ BP.views.render('svg', {projects: BP.data.projects}, function(html){
 			section.sequences.forEach(function(sequence, seqIndex){
 
 				// projectArrows[proIndex].sections[secIndex].sequences.push( {sequence: sequence.id, arrows: [] } );
-				arrows[project.id][section.color].push( {sequence: sequence.id, arrows: [] } );
+				arrows[project.id][section.color].push( { name: sequence.id, arrows: [] } );
 				arrows[project.id][section.color].start = section.start;
 
 				

@@ -1505,45 +1505,46 @@ BP.data = {
 					"start": "norway",
 					"sequences": [
 						{
+							"id": "fullWaveInversions",
 							"title": "Full Waveform Inversions",
 							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed do eisumod",
 							"arrows": [
-								// {
-								// 	"order": 1,
-								// 	"path": "M 986 182 C 1097 168 1184 189 1214 253"
-								// },
-								// {
-								// 	'order': 2,
-								// 	"path": "M 1222 273 C 977 201 768 288 638 418"
-								// },
-								// {
-								// 	"order": 3,
-								// 	"path": "M 624 431 C 604 370 553 340 492 342"
-								// },
-								// {
-								// 	"order": 4,
-								// 	"path": "M 471 341 C 422 156 769 140 932 149"
-								// },
-								// {
-								// 	"order": 5,
-								// 	"path": "M 953 150 C 1022 47 1812 133 1696 480"
-								// },
-								// {
-								// 	"order": 6,
-								// 	"path": "M 1689 500 C 1458 473 1371 588 1037 550"
-								// },
-								// {
-								// 	"order": 7,
-								// 	"path": "M 1016 548 C 1018 391 1101 450 1117 334"
-								// },
-								// {
-								// 	"order": 8,
-								// 	"path": "M 1119 314 C 720 524 903 5 232 100"
-								// },
-								// {
-								// 	"order": 9,
-								// 	"path": "M 212 103 C 243 455 263 687 730 618"
-								// }
+								{
+									"order": 1,
+									"path": "M 986 159 C 1102 143 1202 185 1217 252"
+								},
+								{
+									'order': 2,
+									"path": "M 1222 273 C 977 201 768 288 638 418"
+								},
+								{
+									"order": 3,
+									"path": "M 624 431 C 604 370 553 340 492 342"
+								},
+								{
+									"order": 4,
+									"path": "M 471 341 C 422 156 769 140 932 149"
+								},
+								{
+									"order": 5,
+									"path": "M 953 150 C 1022 47 1812 133 1696 480"
+								},
+								{
+									"order": 6,
+									"path": "M 1689 500 C 1458 473 1371 588 1037 550"
+								},
+								{
+									"order": 7,
+									"path": "M 1016 548 C 1018 391 1101 450 1117 334"
+								},
+								{
+									"order": 8,
+									"path": "M 1119 314 C 720 524 903 5 232 100"
+								},
+								{
+									"order": 9,
+									"path": "M 212 103 C 243 455 263 687 730 618"
+								}
 							]
 						}
 					]
@@ -1553,26 +1554,31 @@ BP.data = {
 					"start": "brazil",
 					"sequences": [
 						{
+							"id": "multiAzimuthSeismic",
 							"title": "Multi-Azimuth Seismic",
 							"description": "Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
 							"arrows": []
 						},
 						{
+							"id": "wideAzimuthTowedStreamer",
 							"title": "Wide Azimuth Towed Streamer",
 							"description": "Sed ut perspiciatis unde omnis iste natus error sit coluptatem",
 							"arrows": []
 						},
 						{
+							"id": "oceanBottomNodes",
 							"title": "Ocean Bottom Nodes",
 							"description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quams",
 							"arrows": []
 						},
 						{
+							"id": "seismicSimulations",
 							"title": "Seismic Simulations",
 							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed do eisumod",
 							"arrows": []
 						},
 						{
+							"id": "fourDemSeismic",
 							"title": "4D Seismic",
 							"description": "Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
 							"arrows": []

@@ -38,7 +38,6 @@ BP.handlers = {
 			if(active) anyActive = false;
 			
 		});
-		// console.log(anyActive);
 
 		if(anyActive && !active){
 			// Resets all arrows to lambda 0.
@@ -51,6 +50,8 @@ BP.handlers = {
 			color = color.replace('btn ','').replace(' active','') || 'none';
 
 		var activePoints = [], inactivePoints = [];
+
+		$('.sub_details .item').removeClass('active');
 
 		if(!active){
 
@@ -106,10 +107,12 @@ BP.handlers = {
 				var sequencesLoop = function(count){
 					if(count >= sequences.length) return;
 					
-					//Open coorisponding footer description.
-					console.log(sequences[count].sequence);
+					//Open corresponding footer description.
+					console.log(sequences[count].name);
+					$('.sub_details .item#'+sequences[count].name).addClass('active')
 
 					BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
+
 				}
 				sequencesLoop(0);
 
@@ -120,7 +123,12 @@ BP.handlers = {
 
 			$('div#sub_menu_wrapper .menu .btn').removeClass('active');
 
-			$('div.mapPoint').removeClass('start').removeClass('inactive');
+			$('div.mapPoint').removeClass('start')
+							 .removeClass('inactive')
+							 .removeClass('green')
+							 .removeClass('blue')
+							 .removeClass('orange')
+							 .removeClass('purple');
 
 			BP.handlers.resetAllArrows();
 
@@ -191,19 +199,18 @@ BP.handlers = {
 
 	resetAllArrows: function() {
 
-		// Loops through all projects.
-		projectArrows.forEach(function(project){
-			// Loops through all sections within a project.
-			project.sections.forEach(function(section){
-				// Loops through all sequences within a section.
-				section.sequences.forEach(function(sequence){
-					// Loops through all arrows within a sequence.
-					sequence.arrows.forEach(function(arrow){ 
-						arrow.reset();
-					});
-				});
-			});
-		});
+		for (var key in arrows) {
+			var project = arrows[key];
+			for (var key in project) {
+				var section = project[key];
+				for (var key in section) if( key != 'start' ) {
+					var sequence = section[key];
+					for (var idx in sequence.arrows) {
+						sequence.arrows[idx].reset();
+					}
+				}
+			}
+		}
 
 	},
 

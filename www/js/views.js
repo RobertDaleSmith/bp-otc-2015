@@ -94,7 +94,7 @@ BP.views = {
 		for(var i=0; i<$(parentMap+'div.mapPoint').length; i++){
 			times.push( (i * tDiff) + tMin );
 		}
-		times.shuffle();
+		times = shuffle(times);
 
 		// Fires when all points have been revealed.
 		var finalize = function(){
