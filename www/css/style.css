@@ -385,7 +385,7 @@ html, body{
 
 			}
 			#sub_menu_wrapper .menu .btn.active{
-				cursor: default;
+				/*cursor: default;*/
 			}
 
 			#sub_menu_wrapper .menu .btn.green{

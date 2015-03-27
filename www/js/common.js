@@ -11,7 +11,7 @@ var BP = {
 };
 
 // Initializes NW.js gui object.
-var gui = null; try{gui = require('nw.gui');}catch(e){console.log('NW.js libs not found.');}
+var gui = null; try{gui = require('nw.gui');}catch(e){console.log('NW.js libs not detected.');}
 
 Array.prototype.shuffle = function(){
 

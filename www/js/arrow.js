@@ -211,6 +211,7 @@
 			this.draggingEl = element;
 
 			if( $(element).attr('class') =='start' || $(element).attr('class') =='end' ) $(element).attr('stroke-width','1');
+
 		},
 
 		mouseMove: function(e, element){
@@ -277,8 +278,6 @@
 			
 			var self = this;
 
-			
-
 			var length = this.bezier.length();
 			var duration = (length / pps) * 1000;
 			var inc = ((1000/fps) / duration);
@@ -304,6 +303,12 @@
 				}
 
 			}, (1000/fps) );
+
+		},
+
+		stop: function(){
+
+			clearInterval(this.loop);
 
 		},
 
@@ -335,6 +340,8 @@
 		},
 
 		reset: function(){
+
+			this.stop();
 
 			this.render(0);
 

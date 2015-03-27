@@ -1446,6 +1446,7 @@ BP.data = {
 			"sections":[
 				{
 					"color": "green",
+					"start": "algeria",
 					"sequences": [
 						{
 							"id": "iss",
@@ -1501,6 +1502,7 @@ BP.data = {
 				},
 				{
 					"color": "orange",
+					"start": "norway",
 					"sequences": [
 						{
 							"title": "Full Waveform Inversions",
@@ -1546,8 +1548,9 @@ BP.data = {
 						}
 					]
 				},
-				{	
+				{
 					"color": "blue",
+					"start": "brazil",
 					"sequences": [
 						{
 							"title": "Multi-Azimuth Seismic",
@@ -1581,32 +1584,38 @@ BP.data = {
 
 		{	"id":"bpwa",
 			"title":"BP Well Advisor",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		},
 
 		{	"id":"bsc",
 			"title":"Beyond Sand Control",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		},
 
 		{	"id":"eor",
 			"title":"Enhanced Oil Recovery",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		},
 
 		{	"id":"fotf",
 			"title":"Field of the Future® Technology",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		},
 
 		{	"id":"ft",
 			"title":"Facilities & Integrity",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		},
 
 		{	"id":"ur",
 			"title":"Unconventional Reservoirs",
-			"locations":[]
+			"locations":[],
+			"sections":[]
 		}
 
 	]

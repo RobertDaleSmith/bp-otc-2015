@@ -30,12 +30,27 @@ BP.handlers = {
 
 		var active = $(self).hasClass('active');
 
+		var anyActive = false;
+		$(self).parent().find('.btn').each(function(btn){
+			
+			var hasClass = $(this).hasClass('active');
+			if(hasClass) anyActive = true;
+			if(active) anyActive = false;
+			
+		});
+		// console.log(anyActive);
+
+		if(anyActive && !active){
+			// Resets all arrows to lambda 0.
+			BP.handlers.resetAllArrows();
+		}
+
+		var project = $(self).parent().attr("id");
+
 		var color = $(self).attr('class') || "";
 			color = color.replace('btn ','').replace(' active','') || 'none';
 
-		var activePoints = [];
-
-		var inactivePoints = [];
+		var activePoints = [], inactivePoints = [];
 
 		if(!active){
 
@@ -43,16 +58,11 @@ BP.handlers = {
 
 			$('div#projects div.mapPoint').each(function(){
 
-				if( $(this).attr('color').contains(color) ){
-
-					activePoints.push( this );
-
-				} else {
-					
-					inactivePoints.push( this );
-
-				}
-
+				if( $(this).attr('color').contains(color) )
+					activePoints.push(this);
+				else
+					inactivePoints.push(this);
+				
 			});
 
 			$(activePoints).each(function(){
@@ -83,51 +93,42 @@ BP.handlers = {
 
 			// Manual Sequences
 			$('div.mapPoint').removeClass('start');
-			if(color == 'green'){
 
-				$('div.mapPoint#algeria').addClass('start');
+			// Section's sequences.
+			var sequences = arrows[project][color];
 
-				// Delays start of sequence until post is extended.
-				setTimeout(function(){
+			// Extends section post.
+			$('div.mapPoint#'+sequences.start).addClass('start');
 
-					BP.handlers.sequencer(arrows1, function(){
-
-						console.log('arrows 1 done');
-
-						BP.handlers.sequencer(arrows2, function(){
-
-							console.log('arrows 2 done');
-
-						});
-
-					});
-
-				},800);
+			// Delays start of sequence until post is extended.
+			setTimeout(function(){
 				
+				var sequencesLoop = function(count){
+					if(count >= sequences.length) return;
+					
+					//Open coorisponding footer description.
+					console.log(sequences[count].sequence);
 
-			} else if(color == 'orange'){
+					BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
+				}
+				sequencesLoop(0);
 
-				$('div.mapPoint#norway').addClass('start');
-
-			} else if(color == 'blue'){
-
-				$('div.mapPoint#brazil').addClass('start');
-
-			}
+			},800);
+				
 
 		} else {
 
-			// Active, so reset section state.
-			BP.handlers.resetProjectsStateEvent();
-			
-			arrows1.forEach(function(val, i){val.reset()});
-			arrows2.forEach(function(val, i){val.reset()});
+			$('div#sub_menu_wrapper .menu .btn').removeClass('active');
+
+			$('div.mapPoint').removeClass('start').removeClass('inactive');
+
+			BP.handlers.resetAllArrows();
 
 		}
 
 	},
 
-	sequencer: function(arrows, cb) {
+	playSequence: function(arrows, cb) {
 
 		var steps = [];
 
@@ -183,7 +184,26 @@ BP.handlers = {
 	resetProjectsStateEvent: function() {
 		
 		// Fires without a color, hence resets points.
-		BP.handlers.subMenuClickEvent();
+		// BP.handlers.subMenuClickEvent();
+
+
+	},
+
+	resetAllArrows: function() {
+
+		// Loops through all projects.
+		projectArrows.forEach(function(project){
+			// Loops through all sections within a project.
+			project.sections.forEach(function(section){
+				// Loops through all sequences within a section.
+				section.sequences.forEach(function(sequence){
+					// Loops through all arrows within a sequence.
+					sequence.arrows.forEach(function(arrow){ 
+						arrow.reset();
+					});
+				});
+			});
+		});
 
 	},
 
@@ -213,8 +233,6 @@ BP.handlers = {
 
 					} else {
 
-						// 
-						BP.handlers.resetProjectsStateEvent();
 
 					}
 
