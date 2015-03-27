@@ -256,7 +256,7 @@
 
 		<script type="text/template" name="projectSubMenu">
 
-			<div class="sub_menu_wrapper" id="{id}" style="border-color:#00745d;">
+			<div class="sub_menu_wrapper" id="{id}" disclaimer="{disclaimer}" style="border-color:#{color};">
 
 				<div class="title">{title}</div>
 
@@ -289,7 +289,7 @@
 
 			{#sections}
 
-				<div class="sub_details_wrapper" id="{id}" disclaimer="{disclaimer}">
+				<div class="sub_details_wrapper" id="{id}">
 
 					<div class="sub_details {color}">
 
@@ -329,7 +329,9 @@
 							<span class="icon"></span>
 
 							<div class="dropDownMenu">
+
 								<!-- templates :: menuItem -->
+
 							</div>
 
 						</div>
@@ -341,7 +343,9 @@
 							<span class="icon"></span>
 
 							<div class="dropDownMenu">
+
 								<!-- templates :: menuItem -->
+
 							</div>
 
 						</div>
@@ -366,7 +370,7 @@
 
 				<div id="sub_details_container">
 
-					<!-- template :: projectSubDetails-->
+					<!-- template :: projectSubDetail-->
 
 				</div>
 
@@ -396,7 +400,7 @@
 
 								</div>
 
-								<!-- <svg></svg> -->
+								<!-- template :: svg -->
 
 							</div>
 
@@ -423,6 +427,7 @@
 			</div>
 
 		</div>
+
 		<!-- Project Scripts -->
 		<script src="js/common.js"></script>
 		<script src="js/data.js"></script>

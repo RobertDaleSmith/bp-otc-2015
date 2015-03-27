@@ -1274,6 +1274,7 @@ BP.data = {
 
 		{	"id":"asi",
 			"title":"Advanced Seismic Imaging",
+			"color": "02745d",
 			"disclaimer":"ISS is a registered trade mark of BP plc  |  ISSN is a trade mark of BP plc",
 			"locations":[
 
@@ -1508,7 +1509,7 @@ BP.data = {
 						{
 							"id": "fullWaveInversions",
 							"title": "Full Waveform Inversions",
-							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed do eisumod",
+							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, do eisumod",
 							"arrows": [
 								{
 									"order": 1,
@@ -1575,7 +1576,7 @@ BP.data = {
 						{
 							"id": "seismicSimulations",
 							"title": "Seismic Simulations",
-							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed do eisumod",
+							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, eisumod",
 							"arrows": []
 						},
 						{
@@ -1591,6 +1592,7 @@ BP.data = {
 
 		{	"id":"bpwa",
 			"title":"BP Well Advisor",
+			"color": "660099",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]
@@ -1598,6 +1600,7 @@ BP.data = {
 
 		{	"id":"bsc",
 			"title":"Beyond Sand Control",
+			"color": "ffe300",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]
@@ -1605,6 +1608,7 @@ BP.data = {
 
 		{	"id":"eor",
 			"title":"Enhanced Oil Recovery",
+			"color": "f26721",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]
@@ -1612,6 +1616,7 @@ BP.data = {
 
 		{	"id":"fotf",
 			"title":"Field of the Future® Technology",
+			"color": "007cbb",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]
@@ -1619,6 +1624,7 @@ BP.data = {
 
 		{	"id":"ft",
 			"title":"Facilities & Integrity",
+			"color": "98ca3c",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]
@@ -1626,6 +1632,7 @@ BP.data = {
 
 		{	"id":"ur",
 			"title":"Unconventional Reservoirs",
+			"color": "0899cc",
 			"disclaimer":"",
 			"locations":[],
 			"sections":[]

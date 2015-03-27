@@ -260,50 +260,55 @@ BP.handlers = {
 
 		var sectionId = $(self).parent().attr('id'); 
 
-		// console.log(sectionId);
+		var isActive = false;
+			isActive = $(self).parent().hasClass('active');
 
-		$('div.mapPoint.open').find('.close').click();
-		
-		$("#header_button_wrapper .btn").removeClass('active');
+		if(!isActive){
 
-		$(self).parent().addClass('active');
-		
-		$("#intro_wrapper").css('display','none');
-		
-		$("div.mapPoint").addClass('hide');
-
-		$("div.mapPoint div.label_wrapper").addClass('hide');
-
-		if(sectionId == 'deployments') {
+			$('div.mapPoint.open').find('.close').click();
 			
-			$('div.sub_menu_wrapper').removeClass('open');
+			$("#header_button_wrapper .btn").removeClass('active');
 
-			$('div#map_canvas').css('left', '0px').css('top', '0px');
-			BP.views.revealMapPoints('deployments');
+			$(self).parent().addClass('active');
+			
+			$("#intro_wrapper").css('display','none');
+			
+			$("div.mapPoint").addClass('hide');
 
-			$('div.sub_details_wrapper').removeClass('active');
-			$('div.sub_details_wrapper div.sub_details').removeClass('active');
+			$("div.mapPoint div.label_wrapper").addClass('hide');
 
-			$('div#footer_wrapper').text('');
-			$('div#footer_wrapper').removeClass('on');
+			if(sectionId == 'deployments') {
+				
+				$('div.sub_menu_wrapper').removeClass('open');
 
-			$('svg#arrow_paths').attr('class','');
+				$('div#map_canvas').css('left', '0px').css('top', '0px');
+				BP.views.revealMapPoints('deployments');
 
-		} 
-		if(sectionId == 'projects') {
+				$('div.sub_details_wrapper').removeClass('active');
+				$('div.sub_details_wrapper div.sub_details').removeClass('active');
 
-			$('div.sub_menu_wrapper#asi').addClass('open');
+				$('div#footer_wrapper').text('');
+				$('div#footer_wrapper').removeClass('on');
 
-			$('div#map_canvas').css('left', '0px').css('top', '100px');
-			BP.views.revealMapPoints('projects');
+				$('svg#arrow_paths').attr('class','');
 
-			$('div.sub_details_wrapper#asi').addClass('active');
+			} 
+			if(sectionId == 'projects') {
 
-			$('div#footer_wrapper').text( $('div.sub_details_wrapper#asi').attr('disclaimer') );
-			$('div#footer_wrapper').addClass('on');
+				// Shift map down a bit to make room for sub menu.
+				$('div#map_canvas').css('left', '0px').css('top', '100px');
 
-			$('svg#arrow_paths').attr('class','on');
+				// Show arrows SVG element.
+				$('svg#arrow_paths').attr('class','on');
 
+				// Initiate the first element in the projects list.
+				$( $('div#header_button_wrapper div#projects div.menuItem')[0] ).click();
+
+			}
+
+		} else {
+
+			$(self).parent().find('.icon').click();
 
 		}
 
@@ -334,7 +339,7 @@ BP.handlers = {
 	},
 
 	headerMenuItemClickEvent: function(event) {
-		console.log('1');
+		
 		var self = this;
 
 		var titleElement = $(self).parent().parent().find('span.title');
@@ -344,6 +349,7 @@ BP.handlers = {
 		if( $(self).parent().parent().hasClass('active') == false ) {
 
 			titleElement.click();
+
 		}
 
 		var thisId = $(self).attr('id');
@@ -360,10 +366,23 @@ BP.handlers = {
 			$('div.points#deployments div.mapPoint#'+thisId).click();
 
 		} else {
+			// console.log('loads projects section: ' + thisId);
 
-			// TODO: DUDE! Finish this...
-			console.log('load projects section: ' + thisId);
+			$('div.sub_menu_wrapper div.menu span.btn.active').click();
 
+			$('div#header_button_wrapper div#projects div.menuItem').removeClass('active');
+			$('div#header_button_wrapper div#projects div.menuItem#'+thisId).addClass('active');
+
+			$('div.sub_menu_wrapper').removeClass('open');
+			$('div.sub_menu_wrapper#' + thisId).addClass('open');
+
+			$('div.sub_details_wrapper').removeClass('active');
+			$('div.sub_details_wrapper#' + thisId).addClass('active');
+
+			$('div#footer_wrapper').text( $('div.sub_menu_wrapper#' + thisId).attr('disclaimer') );
+			$('div#footer_wrapper').addClass('on');
+
+			BP.views.revealMapPoints('projects', thisId);
 
 		}
 

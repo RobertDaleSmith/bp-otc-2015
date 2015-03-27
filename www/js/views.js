@@ -66,6 +66,12 @@ BP.views = {
 
 			});
 
+			var wrapperEl = document.createElement('div');
+				wrapperEl.setAttribute('class', 'project');
+				wrapperEl.setAttribute('id', section.id);
+
+			mapPointsElement.append(wrapperEl)
+
 			for(var n=0; n < BP.data.projects[i].locations.length; n++){
 
 				var data = BP.data.projects[i].locations[n];
@@ -74,7 +80,7 @@ BP.views = {
 
 				BP.views.render('mapPoint', model, function(html){
 
-					mapPointsElement.append(html);
+					$(wrapperEl).append(html);
 
 				});
 
@@ -84,11 +90,16 @@ BP.views = {
 
 	},
 
-	revealMapPoints: function(map){
+	revealMapPoints: function(map, sub){
 
 		var parentMap = '';
-		if( map ) parentMap = 'div#' + map + ' ';
 
+		if( map ) parentMap = 'div#mapPoints div#' + map + ' ';
+		if( sub ) parentMap = parentMap + 'div.project#' + sub + ' ';
+
+		$("div.mapPoint").addClass('hide');
+		$("div.mapPoint div.label_wrapper").addClass('hide');
+		
 		// Shuffle the reveal of the mapPoints.
 		var times = [];
 		var tDiff = 75;
@@ -179,7 +190,12 @@ BP.views = {
 
 			var data = BP.data.projects[i];
 			
-			var model = {id: data.id, title: data.title, sections: data.sections};
+			var model = {	id: data.id, 
+						 	title: data.title, 
+						 	color: data.color, 
+						 	sections: data.sections, 
+						 	disclaimer: data.disclaimer
+						};
 
 			BP.views.render('projectSubMenu', model, function(html){
 
