@@ -1274,6 +1274,7 @@ BP.data = {
 
 		{	"id":"asi",
 			"title":"Advanced Seismic Imaging",
+			"disclaimer":"ISS is a registered trade mark of BP plc  |  ISSN is a trade mark of BP plc",
 			"locations":[
 
 				{	"id":"alaska",
@@ -1590,36 +1591,42 @@ BP.data = {
 
 		{	"id":"bpwa",
 			"title":"BP Well Advisor",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		},
 
 		{	"id":"bsc",
 			"title":"Beyond Sand Control",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		},
 
 		{	"id":"eor",
 			"title":"Enhanced Oil Recovery",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		},
 
 		{	"id":"fotf",
 			"title":"Field of the Future® Technology",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		},
 
 		{	"id":"ft",
 			"title":"Facilities & Integrity",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		},
 
 		{	"id":"ur",
 			"title":"Unconventional Reservoirs",
+			"disclaimer":"",
 			"locations":[],
 			"sections":[]
 		}

@@ -10,7 +10,7 @@ BP.views = {
 
 		this.loadProjectsMapElements();
 
-		this.loadProjectsSubMenus();
+		this.loadProjectsSubElements();
 
 	},
 
@@ -170,9 +170,10 @@ BP.views = {
 
 	},
 
-	loadProjectsSubMenus: function(){
-		// Renders projects sub menu elements.
-		var subMenuElement = $('div#sub_menu_container');
+	loadProjectsSubElements: function(){
+		// Renders projects sub menu and sub details elements.
+		var subMenusContainerElement = $('div#sub_menu_container');
+		var subDetailsContainerElement = $('div#sub_details_container');
 
 		for(var i=0; i < BP.data.projects.length; i++){
 
@@ -182,7 +183,13 @@ BP.views = {
 
 			BP.views.render('projectSubMenu', model, function(html){
 
-				subMenuElement.append(html);
+				subMenusContainerElement.append(html);
+
+			});
+
+			BP.views.render('projectSubDetail', model, function(html){
+
+				subDetailsContainerElement.append(html);
 
 			});
 
