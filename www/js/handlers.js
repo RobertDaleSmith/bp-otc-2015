@@ -101,11 +101,10 @@ BP.handlers = {
 			var sequences = arrows[project][color];
 
 			// Extends section post.
-			if(!sequences.start || sequences.start == "") {
-				sequences.start = "none";
-			} else {
-				hasStartPt = true;
-			}
+			if( !sequences.start || sequences.start == "")
+				 sequences.start = "none";
+			else hasStartPt = true;
+			
 			$('div.mapPoint#'+sequences.start).addClass('start');
 
 			var time = 750;
