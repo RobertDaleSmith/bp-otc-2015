@@ -9,7 +9,7 @@
 
 	var svg = null;
 
-	var pps = 720;
+	var pps = 512;
 
 	var fps = 60;
 

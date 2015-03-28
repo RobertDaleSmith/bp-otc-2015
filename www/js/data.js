@@ -1594,8 +1594,189 @@ BP.data = {
 			"title":"BP Well Advisor",
 			"color": "660099",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{   "id":"angola",
+				    "title":"Angola",
+				    "left":false,
+					"color":["green"],
+				    "location":{
+				        "x":"1001",
+				        "y":"533"
+				    }
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["green", "blue"],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"brazil",
+				    "title":"Brazil",
+				    "left":true,
+				    "under":true,
+					"color":["green"],
+				    "location":{
+				        "x":"735",
+				        "y":"600"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":true,
+					"color":["green", "blue"],
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+				
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "color":["green", "blue"],
+				    "location":{
+				        "x":"938",
+				        "y":"135"
+				    }
+				},
+
+				{   "id":"norway",
+				    "title":"Norway",
+				    "left":true,
+				    "under":true,
+				    "color":["green", "blue"],
+				    "location":{
+				        "x":"971",
+				        "y":"167"
+				    }
+				},
+				
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":false,
+				    "under":true,
+				    "color":["green", "blue"],
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }
+				}
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "azerbaijan",
+					"sequences": [
+						{
+							"id": "caseRunConsole",
+							"title": "Casing Running Console",
+							"description": "The console detects changes in observed friction between casing and the wellbore",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 1222 250 C 1094 359 906 427 645 432"
+								},
+								{
+									"order": 2,
+									"path": "M 623 433 C 663 281 759 182 964 182"
+								},
+								{
+									"order": 3,
+									"path": "M 988 180 C 1041 180 1036 142 975 148"
+								},
+								{
+									"order": 4,
+									"path": "M 953 151 C 780 150 605 204 486 326"
+								}
+							]
+						},
+						{
+							"id": "bopMonitoring",
+							"title": "BOP Monitoring",
+							"description": "Remote monitoring of BOP health and valves performance, with control system diagnostics beyond rig site",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 469 342 C 375 539 801 541 994 547"
+								},
+								{
+									"order": 2,
+									"path": "M 1017 547 C 997 616 954 651 771 618"
+								},
+								{
+									"order": 3,
+									"path": "M 750 615 C 339 567 318 402 451 349"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "blue",
+					"start": "",
+					"sequences": [
+						{
+							"id": "pressureTesting",
+							"title": "Pressure Testing",
+							"description": "Real-time display, interpretation and do-umentation of positive well barrier pres-sure tests",
+							"arrows": []
+						},
+						{
+							"id": "rigsiteFluidManage",
+							"title": "Rigsite Fluid Management",
+							"description": "Early warning indicators for potential lost circulation and well control issues",
+							"arrows": []
+						},
+						{
+							"id": "noDrillingSurprises",
+							"title": "No Drilling Surprises",
+							"description": "Key subsurface and geohazard risks iden-tified from offset wells, updated in real time during drilling operations",
+							"arrows": []
+						},
+						{
+							"id": "cementing",
+							"title": "Cementing",
+							"description": "Real-time cement placement and centralizer stand-off analysis, with verification of cement well barriers to reduce zonal isolation events",
+							"arrows": []
+						},
+						{
+							"id": "dataQualityConsole",
+							"title": "Data Quality Console",
+							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+							"arrows": []
+						},
+						{
+							"id": "ropOptimisation",
+							"title": "ROP Optimisation",
+							"description": "Maximising drilling efficiency in hard rock environments",
+							"arrows": []
+						},
+						{
+							"id": "compMakeupTorque",
+							"title": "Completions (Makeup Torque)",
+							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+							"arrows": []
+						},
+						{
+							"id": "tripping",
+							"title": "Tripping",
+							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+							"arrows": []
+						}
+					]
+				}
+
+			]
 		},
 
 		{	"id":"bsc",

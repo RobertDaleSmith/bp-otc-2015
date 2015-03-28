@@ -28,6 +28,8 @@ BP.handlers = {
 
 		var id = $(self).attr('id');
 
+		var projectId = $(self).parent().attr('id');
+
 		var active = $(self).hasClass('active');
 
 		var anyActive = false;
@@ -59,7 +61,7 @@ BP.handlers = {
 
 			// Not active, so activate it.
 
-			$('div#projects div.mapPoint').each(function(){
+			$('div#projects div.project#' + projectId + ' div.mapPoint').each(function(){
 
 				if( $(this).attr('color').contains(color) )
 					activePoints.push(this);
@@ -87,12 +89,12 @@ BP.handlers = {
 			});
 
 			// Hide/show sub_details_wrapper.
-			$('div.sub_details_wrapper#asi div.sub_details').removeClass('active');
-			$('div.sub_details_wrapper#asi div.sub_details.'+color).addClass('active');
+			$('div.sub_details_wrapper#' + projectId + ' div.sub_details').removeClass('active');
+			$('div.sub_details_wrapper#' + projectId + ' div.sub_details.'+color).addClass('active');
 
 			// Submenu btn active state toggle.
 			$('div.sub_menu_wrapper .menu .btn').removeClass('active');
-			$('div.sub_menu_wrapper#asi .menu .btn.'+color).addClass('active');
+			$('div.sub_menu_wrapper#' + projectId + ' .menu .btn.'+color).addClass('active');
 
 			// Manual Sequences
 			$('div.mapPoint').removeClass('start');
