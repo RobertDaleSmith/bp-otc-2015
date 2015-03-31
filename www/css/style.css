@@ -948,7 +948,7 @@ html, body{
 						display: inline-block;
 						position: absolute;
 
-						left: 15px; top: -40px;
+						left: 15px; bottom: 15px;
 
 						width: 21px; height: 55px;
 
@@ -1620,3 +1620,8 @@ html, body{
 	}
 
 /* CONTENT -- end */
+
+
+svg{
+	display: none !important;
+}
