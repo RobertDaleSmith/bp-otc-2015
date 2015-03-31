@@ -78,6 +78,8 @@ BP.views = {
 
 				var model = new BP.models.mapPoint(data);
 
+				model.project = true;
+
 				BP.views.render('mapPoint', model, function(html){
 
 					$(wrapperEl).append(html);

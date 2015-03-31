@@ -1314,6 +1314,7 @@ BP.data = {
 				{   "id":"angola",
 				    "title":"Angola",
 				    "left":false,
+				    "under":true,
 					"color":["orange", "blue"],
 					"statuses":[
 						{

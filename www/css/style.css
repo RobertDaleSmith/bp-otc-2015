@@ -952,15 +952,12 @@ html, body{
 
 						width: 21px; height: 55px;
 
-						/*background-image: url('../images/mapPointArrow_right.png');
-						background-size: 100% 100%;*/
+						background-image: url('../images/mapPointArrow_right.png');
+						background-size: 100% 100%;
 
-						background-color: rgba(85,85,89,0.7);
+						/*background-color: rgba(85,85,89,0.7);
 						-webkit-clip-path: polygon(100% 0, 0 100%, 100% 37px);
-								clip-path: polygon(100% 0, 0 100%, 100% 37px);
-						
-						/*-webkit-clip-path: polygon(21px 0, 21px 37px, 0 55px);
-								clip-path: polygon(21px 0, 21px 37px, 0 55px);*/
+								clip-path: polygon(100% 0, 0 100%, 100% 37px);*/
 
 						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
 						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
@@ -973,24 +970,23 @@ html, body{
 						left: initial;
 						right: 15px;
 
-						/*background-image: url('../images/mapPointArrow_left.png');*/
+						background-image: url('../images/mapPointArrow_left.png');
 
-						-webkit-clip-path: polygon(0 0, 100% 100%, 0 37px);
-								clip-path: polygon(0 0, 100% 100%, 0 37px);
+						/*-webkit-clip-path: polygon(0 0, 100% 100%, 0 37px);
+								clip-path: polygon(0 0, 100% 100%, 0 37px);*/
 					}
 
 					.mapPoint.under .arrow{
 						top: 15px;
 
-						-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
-								clip-path: polygon(0 0, 100% 18px, 100% 100%);
+						/*-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
+								clip-path: polygon(0 0, 100% 18px, 100% 100%);*/
 					}
 
 					.mapPoint.left.under .arrow{
-						
 
-						-webkit-clip-path: polygon(0 18px, 21px 0, 0 55px);
-								clip-path: polygon(0 18px, 21px 0, 0 55px);
+						/*-webkit-clip-path: polygon(0 18px, 21px 0, 0 55px);
+								clip-path: polygon(0 18px, 21px 0, 0 55px);*/
 					}
 
 					.mapPoint.open .arrow{
@@ -998,13 +994,11 @@ html, body{
 						height: 140px;
 						width: 30px;
 
-						/*background-image: url('../images/mapPointArrowOpen_right.png');*/
+						background-image: url('../images/mapPointArrowOpen_right.png');
 
-						background-color: #00a22f;
+						/*background-color: #00a22f;
 						-webkit-clip-path: polygon(100% 4px, 0 100%, 100% 106px);
-								clip-path: polygon(100% 4px, 0 100%, 100% 106px);
-						/*-webkit-clip-path: polygon(30px 4px, 30px 106px, 0 140px);
-								clip-path: polygon(30px 4px, 30px 106px, 0 140px);*/
+								clip-path: polygon(100% 4px, 0 100%, 100% 106px);*/
 					}
 
 					.mapPoint.left.open .arrow{
@@ -1012,10 +1006,10 @@ html, body{
 						height: 140px;
 						width: 30px;
 
-						/*background-image: url('../images/mapPointArrowOpen_left.png');*/
+						background-image: url('../images/mapPointArrowOpen_left.png');
 
-						-webkit-clip-path: polygon(0 4px, 100% 100%, 0 106px);
-								clip-path: polygon(0 4px, 100% 100%, 0 106px);
+						/*-webkit-clip-path: polygon(0 4px, 100% 100%, 0 106px);
+								clip-path: polygon(0 4px, 100% 100%, 0 106px);*/
 					}
 
 					.mapPoint.under.open .arrow{
@@ -1023,9 +1017,70 @@ html, body{
 						height: 140px;
 						width: 30px;
 
+						/*-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
+								clip-path: polygon(0 0, 100% 18px, 100% 100%);*/
+					}
+
+
+
+					/* ALTERNATE LABEL ARROW FOR PROJECTS SECTION -- START */
+
+					.mapPoint .arrow.clip{
+
+						background-image: none;
+						background-color: rgba(85,85,89,0.7);
+						-webkit-clip-path: polygon(100% 0, 0 100%, 100% 37px);
+								clip-path: polygon(100% 0, 0 100%, 100% 37px);
+
+					}
+
+					.mapPoint.left .arrow.clip{
+
+						-webkit-clip-path: polygon(0 0, 100% 100%, 0 37px);
+								clip-path: polygon(0 0, 100% 100%, 0 37px);
+
+					}
+
+					.mapPoint.under .arrow.clip{
+
 						-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
 								clip-path: polygon(0 0, 100% 18px, 100% 100%);
+
 					}
+
+					.mapPoint.left.under .arrow.clip{
+
+						-webkit-clip-path: polygon(0 18px, 21px 0, 0 55px);
+								clip-path: polygon(0 18px, 21px 0, 0 55px);
+
+					}
+
+					.mapPoint.open .arrow.clip{
+
+						background-image: none;
+						background-color: #00a22f;
+						-webkit-clip-path: polygon(100% 4px, 0 100%, 100% 106px);
+								clip-path: polygon(100% 4px, 0 100%, 100% 106px);
+
+					}
+
+					.mapPoint.left.open .arrow.clip{
+
+						-webkit-clip-path: polygon(0 4px, 100% 100%, 0 106px);
+								clip-path: polygon(0 4px, 100% 100%, 0 106px);
+
+					}
+
+					.mapPoint.under.open .arrow.clip{
+
+						-webkit-clip-path: polygon(0 0, 100% 18px, 100% 100%);
+								clip-path: polygon(0 0, 100% 18px, 100% 100%);
+
+					}
+
+					/* ALTERNATE LABEL ARROW FOR PROJECTS SECTION -- END */
+
+
 
 					.mapPoint .label{
 
@@ -1206,16 +1261,16 @@ html, body{
 						left: 36px; top: -3px;
 						width: auto; height: auto;						
 
-						background-color: rgba(255, 255, 255, 0.5);
+						padding: 7px 10px;
 
+						background-color: rgba(255, 255, 255, 0.73);
+						color: #555559;
+						text-align: left;
+						
 						border-style: solid;
 						border-width: 0 0 5px 0;
 						border-color: rgba(85,85,89,0.7);
-
-						text-align: left;
-
-						padding: 8px 10px;
-
+						
 					}
 					.mapPoint.green  .stats.green,
 					.mapPoint.orange .stats.orange,
@@ -1242,10 +1297,12 @@ html, body{
 							position: relative;
 							width: auto; height: 18px;
 
-							line-height: 18px;
+							line-height: 20px;
 							white-space: nowrap;
 
 							font-size: 14px;
+
+							margin: 0 0 1px 0;
 
 						}
 
