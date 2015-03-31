@@ -24,6 +24,8 @@ BP.models = {
 
 		this.technology = point.technology || [ [], [] ];
 
+		this.statuses = point.statuses || null;
+
 	}
 
 }

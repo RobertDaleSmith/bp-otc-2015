@@ -70,7 +70,7 @@ BP.data = {
 							},
 							{
 								"name": "Designer Water® - LoSal® EOR",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 					},
@@ -256,7 +256,7 @@ BP.data = {
 							},
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 
@@ -365,7 +365,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "BOP Monitoring",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 
@@ -395,7 +395,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "ISS®",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -468,7 +468,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 
@@ -571,7 +571,7 @@ BP.data = {
 							},
 							{
 								"name": "No Drilling Surprises",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 
@@ -697,7 +697,7 @@ BP.data = {
 							},
 							{
 								"name": "ISSN™",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Full Waveform Inversion",
@@ -757,7 +757,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "ISSN™",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -803,7 +803,7 @@ BP.data = {
 							},
 							{
 								"name": "ISSN™",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Low Cost Land Receivers",
@@ -818,7 +818,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							}
 						]
 					}
@@ -882,7 +882,7 @@ BP.data = {
 							},
 							{
 								"name": "ISS®",
-								"status": "Field Trial Completed"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Full Waveform Inversion",
@@ -941,11 +941,11 @@ BP.data = {
 							},
 							{
 								"name": "Digital Radiography",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							},
 							{
 								"name": "EMAT Inspection",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 					},
@@ -1016,11 +1016,11 @@ BP.data = {
 							},
 							{
 								"name": "Cementing Console",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							},
 							{
 								"name": "Data Quality Console",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							}
 						]
 
@@ -1142,11 +1142,11 @@ BP.data = {
 							},
 							{
 								"name": "Cementing Console",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							},
 							{
 								"name": "Data Quality Console",
-								"status": "Field Trail Completed"
+								"status": "Field Trail Complete"
 							},
 							{
 								"name": "Rate of Penetration Optimization",
@@ -1283,6 +1283,12 @@ BP.data = {
 					"left":true,
 					"under":true,
 					"color":["orange"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						}
+					],
 					"location":{
 						"x":"197",
 						"y":"88"
@@ -1293,6 +1299,12 @@ BP.data = {
 					"title":"Algeria",
 					"left":true,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Deployment"]
+						}
+					],
 					"location":{
 						"x":"986",
 						"y":"321"
@@ -1303,6 +1315,16 @@ BP.data = {
 				    "title":"Angola",
 				    "left":false,
 					"color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": []
+						},
+						{
+							"color": "blue",
+							"status": ["Wide Azimuth Towed Streamer - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1001",
 				        "y":"533"
@@ -1313,6 +1335,16 @@ BP.data = {
 				    "title":"Azerbaijan",
 				    "left":false,
 				    "color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": []
+						},
+						{
+							"color": "blue",
+							"status": ["4D Seismic - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1207",
 				        "y":"258"
@@ -1323,6 +1355,16 @@ BP.data = {
 				    "title":"Brazil",
 				    "left":false,
 					"color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["4D Seismic - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"735",
 				        "y":"600"
@@ -1333,6 +1375,12 @@ BP.data = {
 				    "title":"Canada",
 				    "left":false,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Field Trail Complete"]
+						}
+					],
 				    "location":{
 				        "x":"343",
 				        "y":"146"
@@ -1344,6 +1392,16 @@ BP.data = {
 				    "left":false,
 				    "under":true,
 					"color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Seismic Simulations - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1104",
 				        "y":"298"
@@ -1354,6 +1412,16 @@ BP.data = {
 				    "title":"Gulf of Mexico",
 				    "left":false,
 					"color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Multi-Azimuth Seismic - Deployment", "Wide Azimuth Towed Streamer - Deployment", "Ocean Bottom Nodes - Deployment", "Seismic Simulations - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"456",
 				        "y":"326"
@@ -1364,6 +1432,20 @@ BP.data = {
 				    "title":"Indonesia",
 				    "left":true,
 				    "color":["green", "orange", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISSN™ - Field Trail Complete"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Wide Azimuth Towed Streamer - Deployment", "Seismic Simulations - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1674",
 				        "y":"485"
@@ -1374,6 +1456,12 @@ BP.data = {
 				    "title":"Iraq",
 				    "left":true,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISSN™ - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1202",
 				        "y":"299"
@@ -1385,6 +1473,12 @@ BP.data = {
 				    "left":false,
 				    "under":false,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Deployment", "ISSN™ - Field Trail Complete"]
+						}
+					],
 				    "location":{
 				        "x":"1016",
 				        "y":"310"
@@ -1395,6 +1489,16 @@ BP.data = {
 				    "title":"North America",
 				    "left":true,
 				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISSN™ - Field Trail Complete"]
+						},
+						{
+							"color": "blue",
+							"status": ["Multi-Azimuth Seismic - Deployment", "Seismic Simulations - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"341",
 				        "y":"229"
@@ -1405,6 +1509,20 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "color":["green", "orange", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Field Trail Complete"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Wide Azimuth Towed Streamer - Field Trail Complete", "4D Seismic - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"938",
 				        "y":"135"
@@ -1416,6 +1534,16 @@ BP.data = {
 				    "left":false,
 				    "under":true,
 				    "color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["4D Seismic - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"971",
 				        "y":"167"
@@ -1427,6 +1555,12 @@ BP.data = {
 				    "left":false,
 				    "under":true,
 				    "color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1256",
 				        "y":"360"
@@ -1438,6 +1572,20 @@ BP.data = {
 				    "left":true,
 				    "under":true,
 				    "color":["green", "orange", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["ISS® - Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Seismic Simulations - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"608",
 				        "y":"417"
@@ -1600,6 +1748,12 @@ BP.data = {
 				    "title":"Angola",
 				    "left":false,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Casing Running Console - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"1001",
 				        "y":"533"
@@ -1610,6 +1764,16 @@ BP.data = {
 				    "title":"Azerbaijan",
 				    "left":false,
 				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Casing Running Console - Deployment"]
+						},						
+						{
+							"color": "blue",
+							"status": ["No Drilling Surprises - Deployment", "Completions - Field Trail", "Tripping - Field Trail"]
+						}
+					],
 				    "location":{
 				        "x":"1207",
 				        "y":"258"
@@ -1621,6 +1785,12 @@ BP.data = {
 				    "left":true,
 				    "under":true,
 					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["BOP Monitoring - Field Trail Complete"]
+						}
+					],
 				    "location":{
 				        "x":"735",
 				        "y":"600"
@@ -1631,6 +1801,16 @@ BP.data = {
 				    "title":"Gulf of Mexico",
 				    "left":true,
 					"color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["BOP Monitoring - Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Pressure Testing - Deployment", "Rigsite Fluid Management - Field Trail", "No Drilling Surprises - Deployment"]
+						}
+					],
 				    "location":{
 				        "x":"456",
 				        "y":"326"
@@ -1641,6 +1821,16 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Casing Running Console - Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Cementing Console - Field Trail Complete"]
+						}
+					],
 				    "location":{
 				        "x":"938",
 				        "y":"135"
@@ -1652,6 +1842,16 @@ BP.data = {
 				    "left":true,
 				    "under":true,
 				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Casing Running Console - Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Data Quality - Field Trail Complete", "ROP Optimisation - Field Trail"]
+						}
+					],
 				    "location":{
 				        "x":"971",
 				        "y":"167"
@@ -1663,6 +1863,16 @@ BP.data = {
 				    "left":false,
 				    "under":true,
 				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Casing Running Console - Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Rigsite Fluid Management - Field Trail"]
+						}
+					],
 				    "location":{
 				        "x":"608",
 				        "y":"417"

@@ -1197,6 +1197,58 @@ html, body{
 
 						}
 
+
+					.mapPoint .stats{
+
+						display: none;
+						position: absolute;
+
+						left: 36px; top: -3px;
+						width: auto; height: auto;						
+
+						background-color: rgba(255, 255, 255, 0.5);
+
+						border-style: solid;
+						border-width: 0 0 5px 0;
+						border-color: rgba(85,85,89,0.7);
+
+						text-align: left;
+
+						padding: 8px 10px;
+
+					}
+					.mapPoint.green  .stats.green,
+					.mapPoint.orange .stats.orange,
+					.mapPoint.blue 	 .stats.blue,
+					.mapPoint.purple .stats.purple{
+
+						display: inline-block;
+
+					}
+					.mapPoint.left .stats {
+					
+						left: initial;
+						right: 36px;
+
+					}
+					.mapPoint.under .stats {
+
+						top: 70px;
+
+					}
+						.mapPoint .stats .stat{
+
+							display: block;
+							position: relative;
+							width: auto; height: 18px;
+
+							line-height: 18px;
+							white-space: nowrap;
+
+							font-size: 14px;
+
+						}
+
 					.mapPoint .listGroup{
 
 						display: block;

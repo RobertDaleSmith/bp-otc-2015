@@ -29,6 +29,14 @@
 		<link href="css/responsive.css" media="all" rel="stylesheet" type="text/css" />
 
 		<!-- Dust HTML Templates -->
+		<script type="text/template" name="status">
+
+			 {#section}
+			 	<span>{.}</span>
+			 {/section}
+
+		</script>
+
 		<script type="text/template" name="mapPoint">
 
 			<div class="mapPoint{?left} left{/left}{?under} under{/under} hide" 
@@ -54,6 +62,24 @@
 						<div class="close"></div>
 
 					</div>
+
+					{#statuses}
+
+						{?.status}
+
+							<div class="stats {.color}">
+
+								{#.status}
+
+									<span class="stat">{.}</span>
+
+								{/.status}
+
+							</div>
+
+						{/.status}
+						
+					{/statuses}
 
 				</div>
 
