@@ -48,16 +48,21 @@ BP.handlers = {
 
 			mouseDown: function(e, element){
 				
-				this.isDown = true;
-				this.elDragging = element;
-				this.start = {x: e.clientX, y: e.clientY};
-				this.elPos = {x: parseInt($(this.elDragging).css('left').replace('px','')),
-							  y: parseInt($(this.elDragging).css('top' ).replace('px',''))};
+				if( e.which == 1 ){
 
+					this.isDown = true;
+					this.elDragging = element;
+					this.start = {x: e.clientX, y: e.clientY};
+					this.elPos = {x: parseInt($(this.elDragging).css('left').replace('px','')),
+								  y: parseInt($(this.elDragging).css('top' ).replace('px',''))};
+					
+					$('#mapImage')[0].addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
+					$('#mapImage')[0].addEventListener("mouseUp",   function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
+
+					$(this.elDragging).addClass('dragging');
+
+				}
 				
-				$('#mapImage')[0].addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
-				$('#mapImage')[0].addEventListener("mouseUp",   function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
-
 			},
 
 			mouseMove: function(e, element){
@@ -67,23 +72,21 @@ BP.handlers = {
 					// console.log( diff.x + " x " + diff.y );
 
 					var newPos = { x: (this.elPos.x + diff.x), y: (this.elPos.y + diff.y) };
-					console.log( newPos.x + " x " + newPos.y );
+					// console.log( newPos.x + " x " + newPos.y );
 
 					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);
-
-					$(this.elDragging).addClass('dragging');
 
 				}
 			},
 
 			mouseUp: function(e, element){
 
+				$(this.elDragging).removeClass('dragging');
+
 				this.isDown = false;
 				this.elDragging = false;
 				this.start = {x:0, y:0};
 				this.elPos = {x:0, y:0};
-
-				$(this.elDragging).removeClass('dragging');
 
 				$('#mapImage').unbind();
 
