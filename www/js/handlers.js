@@ -79,98 +79,26 @@ BP.handlers = {
 				if( left &&  under) direction = "SW"; else 
 				if( left && !under) direction = "NW"; else 
 				if(!left &&  under) direction = "SE";
-
-				// console.log(direction);
 				
 				var diff = { x:e.clientX-this.start.x, y:e.clientY-this.start.y };
 				var newPos = { x:(this.elPos.x + diff.x), y:(this.elPos.y + diff.y) };
+				if(direction == "NW" || direction == "SW") newPos.x = (this.elPos.x - diff.x);
 
-				if(direction == "NE"){
-					
-					// Max/Mins
-					if(newPos.x <=  30) newPos.x =   30; else 
-					if(newPos.x >  120) newPos.x =  120;
-					if(newPos.y >= -22) newPos.y =  -22; else 
-					if(newPos.y < -120) newPos.y = -120;
-					
-					$(this.elDragging).parent().find('.arrow')
-						.css('height', (newPos.y * -1) + 15)
-						.css('width' ,  newPos.x - 15)
-					;
-
-					$(this.elDragging).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
-
-					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);															
-
-				} else 
-				if(direction == "SE"){
-					
-					// Max/Mins
-					if(newPos.x <= 30) newPos.x =  30; else 
-					if(newPos.x > 120) newPos.x = 120;
-					if(newPos.y >= 120) newPos.y =  120; else 
-					if(newPos.y <  15) newPos.y =  15;
-					
-					$(this.elDragging).parent().find('.arrow')
-						.css('-webkit-clip-path' , "polygon(0 0, 100% 100%, 100% " + (newPos.y + 22 - 37) + "px)")
-						.css('height', newPos.y + 22)
-						.css('width' , newPos.x - 15)
-					;
-
-					$(this.elDragging).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
-
-					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);
-
-				} else 
-				if(direction == "NW"){
-
-					newPos.x = (this.elPos.x - diff.x);
-
-					// Max/Mins
-					if(newPos.x <= 30) newPos.x =  30; else 
-					if(newPos.x > 120) newPos.x = 120;
-					if(newPos.y >= -23) newPos.y =  -23; else 
-					if(newPos.y < -120) newPos.y = -120;
-					
-					$(this.elDragging).parent().find('.arrow')
-						.css('height', (newPos.y * -1) + 15)
-						.css('width' , newPos.x - 15)
-					;
-
-					$(this.elDragging).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
-
-					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
-					
-				} else 
-				if(direction == "SW"){
-
-					newPos.x = (this.elPos.x - diff.x);
-
-					// Max/Mins
-					if(newPos.x <= 30) newPos.x =  30; else 
-					if(newPos.x > 120) newPos.x = 120;
-					if(newPos.y >= 120) newPos.y = 120; else 
-					if(newPos.y < 15) newPos.y = 15;
-
-					console.log(newPos.x);
-					
-					$(this.elDragging).parent().find('.arrow')
-						.css('-webkit-clip-path' , "polygon(0 " + (newPos.y + 22 - 37) + "px, 100% 0, 0 100%)")
-						.css('height', newPos.y + 22)
-						.css('width' , newPos.x - 15)
-					;
-
-					$(this.elDragging).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
-
-					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
-					
-				}
-
-				
-				
+				this.updatePosition(element, newPos);
+								
 			}},
 
 			mouseUp: function(e, element){
+				if(this.elDragging){
+					var top = parseInt( $(this.elDragging).css('top')+"".replace('px','') ),
+					   left = parseInt( $(this.elDragging).css('left')+"".replace('px','') ),
+					  right = parseInt( $(this.elDragging).css('right')+"".replace('px','') ),
+						loc = {top:top};
+
+					if(left) loc.left  = left; else 
+					if(right)loc.right = right;
+					console.log(loc);
+				}
 
 				$(this.elDragging).removeClass('dragging');
 
@@ -181,7 +109,106 @@ BP.handlers = {
 
 				$('#mapImage').unbind();
 
-			}		
+			},
+
+			updatePositions: function(){
+
+				var self = this;
+
+				$('.points#projects .mapPoint .label_wrapper .label').each(function(){ 
+
+					var pos = { x: parseInt($(this).css('left').replace('px','')),
+							 	y: parseInt($(this).css('top' ).replace('px','')) };
+					
+					if(!pos.x) pos.x = parseInt($(this).css('right').replace('px',''));
+
+					self.updatePosition(this, pos);
+
+				});
+
+			},
+
+			updatePosition: function(element, newPos){
+
+				var direction = "NE", left = false, under = false;;
+				var dirSelector = $(element).parent().parent().attr('class').replace('mapPoint ','');
+
+				if(dirSelector.indexOf("left" ) > -1) left  = true;
+				if(dirSelector.indexOf("under") > -1) under = true;
+
+				if( left &&  under) direction = "SW"; else 
+				if( left && !under) direction = "NW"; else 
+				if(!left &&  under) direction = "SE";
+
+				if(direction == "NE"){
+
+					// Calc Max/Mins
+					if(newPos.x <=  30) newPos.x =   30; else 
+					if(newPos.x >  120) newPos.x =  120;
+					if(newPos.y >= -22) newPos.y =  -22; else 
+					if(newPos.y < -120) newPos.y = -120;
+					
+					// Update CSS
+					$(element).parent().find('.arrow')
+						.css('height', (newPos.y * -1) + 15)
+						.css('width' ,  newPos.x - 15)
+					;
+					$(element).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
+					$(element).css('left', newPos.x).css('top', newPos.y);															
+
+				} else 
+				if(direction == "SE"){
+					
+					// Calc Max/Mins
+					if(newPos.x <=  30) newPos.x =  30; else 
+					if(newPos.x >  120) newPos.x = 120;
+					if(newPos.y >= 120) newPos.y = 120; else 
+					if(newPos.y <   15) newPos.y =  15;
+					
+					// Update CSS
+					$(element).parent().find('.arrow')
+						.css('-webkit-clip-path' , "polygon(0 0, 100% 100%, 100% " + (newPos.y + 22 - 37) + "px)")
+						.css('height', newPos.y + 22)
+						.css('width' , newPos.x - 15)
+					;
+					$(element).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
+					$(element).css('left', newPos.x).css('top', newPos.y);
+
+				} else 
+				if(direction == "NW"){
+
+					// Calc Max/Mins
+					if(newPos.x <=  30) newPos.x =   30; else 
+					if(newPos.x >  120) newPos.x =  120;
+					if(newPos.y >= -23) newPos.y =  -23; else 
+					if(newPos.y < -120) newPos.y = -120;
+					
+					// Update CSS
+					$(element).parent().find('.arrow').css('height', (newPos.y * -1) + 15).css('width' , newPos.x - 15);
+					$(element).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
+					$(element).css('top', newPos.y).css('right', newPos.x);
+					
+				} else 
+				if(direction == "SW"){
+
+					// Calc Max/Mins
+					if(newPos.x <=  30) newPos.x =  30; else 
+					if(newPos.x >  120) newPos.x = 120;
+					if(newPos.y >= 120) newPos.y = 120; else 
+					if(newPos.y <   15) newPos.y =  15;
+					
+					// Update CSS
+					$(element).parent().find('.arrow')
+						.css('-webkit-clip-path' , "polygon(0 " + (newPos.y + 22 - 37) + "px, 100% 0, 0 100%)")
+						.css('height', newPos.y + 22)
+						.css('width' , newPos.x - 15)
+					;
+					$(element).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
+					$(element).css('top', newPos.y).css('right', newPos.x);
+					
+				}
+
+			}
 
 		}
 

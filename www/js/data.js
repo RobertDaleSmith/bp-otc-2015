@@ -1281,7 +1281,8 @@ BP.data = {
 				{	"id":"alaska",
 					"title":"Alaska",
 					"left":true,
-					"under":true,
+					"under":false,
+					"position": {"top": -40, "right": 36},
 					"color":["orange"],
 					"statuses":[
 						{
@@ -1298,6 +1299,8 @@ BP.data = {
 				{	"id":"algeria",
 					"title":"Algeria",
 					"left":true,
+					"under":true,
+					"position": {top: 29, right: 55},
 					"color":["green"],
 					"statuses":[
 						{
@@ -1315,6 +1318,7 @@ BP.data = {
 				    "title":"Angola",
 				    "left":false,
 				    "under":true,
+					"position": {top: 53, left: 39},
 					"color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1335,6 +1339,7 @@ BP.data = {
 				{   "id":"azerbaijan",
 				    "title":"Azerbaijan",
 				    "left":false,
+					"position": {top: -85, left: 65},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1355,7 +1360,8 @@ BP.data = {
 				{   "id":"brazil",
 				    "title":"Brazil",
 				    "left":false,
-					"color":["orange", "blue"],
+					"position": null,
+				    "color":["orange", "blue"],
 					"statuses":[
 						{
 							"color": "orange",
@@ -1374,8 +1380,9 @@ BP.data = {
 
 				{   "id":"canada",
 				    "title":"Canada",
-				    "left":false,
-					"color":["green"],
+				    "left":true,
+					"position": null,
+				    "color":["green"],
 					"statuses":[
 						{
 							"color": "green",
@@ -1390,9 +1397,10 @@ BP.data = {
 
 				{   "id":"egypt",
 				    "title":"Egypt",
-				    "left":false,
+				    "left":true,
 				    "under":true,
-					"color":["orange", "blue"],
+					"position": {top: 73, right: 52},
+				    "color":["orange", "blue"],
 					"statuses":[
 						{
 							"color": "orange",
@@ -1412,7 +1420,8 @@ BP.data = {
 				{   "id":"gulfOfMexico",
 				    "title":"Gulf of Mexico",
 				    "left":false,
-					"color":["orange", "blue"],
+					"position": {top: -60, left: 41},
+				    "color":["orange", "blue"],
 					"statuses":[
 						{
 							"color": "orange",
@@ -1432,6 +1441,8 @@ BP.data = {
 				{   "id":"indonesia",
 				    "title":"Indonesia",
 				    "left":true,
+				    "under":true,
+				    "position": null,
 				    "color":["green", "orange", "blue"],
 					"statuses":[
 						{
@@ -1455,8 +1466,9 @@ BP.data = {
 
 				{   "id":"iraq",
 				    "title":"Iraq",
-				    "left":true,
-					"color":["green"],
+				    "left":false,
+					"position": {top: -36, left: 66},
+				    "color":["green"],
 					"statuses":[
 						{
 							"color": "green",
@@ -1471,9 +1483,10 @@ BP.data = {
 
 				{   "id":"libya",
 				    "title":"Libya",
-				    "left":false,
+				    "left":true,
 				    "under":false,
-					"color":["green"],
+					"position": {top: -101, right: 69},
+				    "color":["green"],
 					"statuses":[
 						{
 							"color": "green",
@@ -1489,6 +1502,7 @@ BP.data = {
 				{   "id":"northAmerica",
 				    "title":"North America",
 				    "left":true,
+				    "position": null,
 				    "color":["green", "blue"],
 					"statuses":[
 						{
@@ -1509,6 +1523,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
+				    "position": null,
 				    "color":["green", "orange", "blue"],
 					"statuses":[
 						{
@@ -1534,6 +1549,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":false,
 				    "under":true,
+				    "position": {top: 31, left: 43},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1555,6 +1571,7 @@ BP.data = {
 				    "title":"Oman",
 				    "left":false,
 				    "under":true,
+				    "position": null,
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1572,6 +1589,7 @@ BP.data = {
 				    "title":"Trinidad & Tobago",
 				    "left":true,
 				    "under":true,
+				    "position": null,
 				    "color":["green", "orange", "blue"],
 					"statuses":[
 						{

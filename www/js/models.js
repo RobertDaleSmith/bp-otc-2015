@@ -26,6 +26,8 @@ BP.models = {
 
 		this.statuses = point.statuses || null;
 
+		this.position = point.position || null;
+
 	}
 
 }

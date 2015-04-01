@@ -45,7 +45,9 @@
 
 					<div class="arrow{?.project} clip{/.project}"></div>
 
-					<div class="label">
+					<div class="label"{?position} style="{?position.top}top: {position.top}px;{/position.top}
+														 {?position.left}left: {position.left}px;{/position.left}
+														 {?position.right}right: {position.right}px;{/position.right}"{/position}>
 
 						<div class="title">{title}</div>
 

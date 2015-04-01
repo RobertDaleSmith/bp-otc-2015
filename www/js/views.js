@@ -90,6 +90,8 @@ BP.views = {
 
 		}
 
+		BP.handlers.tools.labels.updatePositions();
+
 	},
 
 	revealMapPoints: function(map, sub){
