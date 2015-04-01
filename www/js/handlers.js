@@ -506,7 +506,9 @@ BP.handlers = {
 				$('svg#arrow_paths').attr('class','on');
 
 				// Initiate the first element in the projects list.
-				$( $('div#header_button_wrapper div#projects div.menuItem')[0] ).click();
+				var otherOpen = $('div#header_button_wrapper div#projects div.menuItem').hasClass('active');
+				console.log(otherOpen);
+				if(!otherOpen){ $( $('div#header_button_wrapper div#projects div.menuItem')[0] ).click(); }
 
 			}
 
@@ -764,7 +766,7 @@ BP.handlers = {
 
 						//Also for disclaimer
 						$('div#footer_wrapper').removeClass('on');
-						
+
 					}
 
 				}

@@ -103,6 +103,8 @@ BP.views = {
 		if( map ) parentMap = 'div#mapPoints div#' + map + ' ';
 		if( sub ) parentMap = parentMap + 'div.project#' + sub + ' ';
 
+		console.log(parentMap);
+
 		$("div.mapPoint").addClass('hide');
 		$("div.mapPoint div.label_wrapper").addClass('hide');
 		
