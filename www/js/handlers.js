@@ -55,9 +55,12 @@ BP.handlers = {
 					this.start = {x: e.clientX, y: e.clientY};
 					this.elPos = {x: parseInt($(this.elDragging).css('left').replace('px','')),
 								  y: parseInt($(this.elDragging).css('top' ).replace('px',''))};
+
+					
+					if(!this.elPos.x) this.elPos.x = parseInt($(this.elDragging).css('right').replace('px',''));
 					
 					$('#mapImage')[0].addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
-					$('#mapImage')[0].addEventListener("mouseUp",   function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
+					$('#mapImage')[0].addEventListener("mouseup"  , function(e){ BP.handlers.tools.labels.mouseUp(  e, this) }, false);
 
 					$(this.elDragging).addClass('dragging');
 
@@ -65,19 +68,97 @@ BP.handlers = {
 				
 			},
 
-			mouseMove: function(e, element){
-				if(this.isDown) {
-					
-					var diff = {x: e.clientX-this.start.x, y: e.clientY-this.start.y};
-					// console.log( diff.x + " x " + diff.y );
+			mouseMove: function(e, element){ if(this.isDown){ 		
+				
+				var direction = "NE", left = false, under = false;;
+				var dirSelector = $(this.elDragging).parent().parent().attr('class').replace('mapPoint ','');
 
-					var newPos = { x: (this.elPos.x + diff.x), y: (this.elPos.y + diff.y) };
-					// console.log( newPos.x + " x " + newPos.y );
+				if(dirSelector.indexOf("left" ) > -1) left  = true;
+				if(dirSelector.indexOf("under") > -1) under = true;
+
+				if( left &&  under) direction = "SW"; else 
+				if( left && !under) direction = "NW"; else 
+				if(!left &&  under) direction = "SE";
+
+				// console.log(direction);
+				
+				var diff = { x:e.clientX-this.start.x, y:e.clientY-this.start.y };
+				var newPos = { x:(this.elPos.x + diff.x), y:(this.elPos.y + diff.y) };
+
+				if(direction == "NE"){
+					
+					// Max/Mins
+					if(newPos.x <=  30) newPos.x =   30; else 
+					if(newPos.x >  120) newPos.x =  120;
+					if(newPos.y >= -22) newPos.y =  -22; else 
+					if(newPos.y < -120) newPos.y = -120;
+					
+					$(this.elDragging).parent().find('.arrow')
+						.css('height', (newPos.y * -1) + 15)
+						.css('width' ,  newPos.x - 15)
+					;
+
+					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);															
+
+				} else 
+				if(direction == "SE"){
+					
+					// Max/Mins
+					if(newPos.x <= 30) newPos.x =  30; else 
+					if(newPos.x > 120) newPos.x = 120;
+					if(newPos.y >= 120) newPos.y =  120; else 
+					if(newPos.y <  15) newPos.y =  15;
+					
+					$(this.elDragging).parent().find('.arrow')
+						.css('-webkit-clip-path' , "polygon(0 0, 100% 100%, 100% " + (newPos.y + 22 - 37) + "px)")
+						.css('height', newPos.y + 22)
+						.css('width' , newPos.x - 15)
+					;
 
 					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);
 
+				} else 
+				if(direction == "NW"){
+
+					newPos.x = (this.elPos.x - diff.x);
+
+					// Max/Mins
+					if(newPos.x <= 30) newPos.x =  30; else 
+					if(newPos.x > 120) newPos.x = 120;
+					if(newPos.y >= -23) newPos.y =  -23; else 
+					if(newPos.y < -120) newPos.y = -120;
+					
+					$(this.elDragging).parent().find('.arrow')
+						.css('height', (newPos.y * -1) + 15)
+						.css('width' , newPos.x - 15)
+					;
+
+					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
+					
+				} else 
+				if(direction == "SW"){
+
+					newPos.x = (this.elPos.x - diff.x);
+
+					// Max/Mins
+					// if(newPos.x <= 30) newPos.x =  30; else 
+					// if(newPos.x > 120) newPos.x = 120;
+					// if(newPos.y >= -23) newPos.y =  -23; else 
+					// if(newPos.y < -120) newPos.y = -120;
+					
+					$(this.elDragging).parent().find('.arrow')
+						.css('-webkit-clip-path' , "polygon(0 " + (newPos.y + 22 - 37) + "px, 100% 0, 0 100%)")
+						.css('height', newPos.y + 22)
+						.css('width' , newPos.x - 15)
+					;
+
+					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
+					
 				}
-			},
+
+				
+				
+			}},
 
 			mouseUp: function(e, element){
 
