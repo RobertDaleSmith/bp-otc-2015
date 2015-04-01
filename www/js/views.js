@@ -12,6 +12,8 @@ BP.views = {
 
 		this.loadProjectsSubElements();
 
+		this.loadProjectsArrowsSVG();
+
 	},
 
 	render: function(view, data, callback ){
@@ -214,6 +216,52 @@ BP.views = {
 			});
 
 		}
+
+	},
+
+	loadProjectsArrowsSVG: function(){
+
+		BP.arrows = {};
+
+		BP.views.render('svg', {projects: BP.data.projects}, function(html){
+			
+			// Insert rendered SVG markup
+			$('#map_content_wrapper').append(html);
+			
+			// Loops through all projects.
+			BP.data.projects.forEach(function(project, proIndex){
+				
+				BP.arrows[project.id] = {};
+
+				// Loops through all sections within a project.
+				project.sections.forEach(function(section, secIndex){
+
+					BP.arrows[project.id][section.color] = [];
+
+					var colorIndex = -1;
+					
+					// Loops through all sequences within a section.
+					section.sequences.forEach(function(sequence, seqIndex){
+
+						BP.arrows[project.id][section.color].push( { name: sequence.id, arrows: [] } );
+						BP.arrows[project.id][section.color].start = section.start;
+						
+						// Loops through all arrows within a sequence.
+						sequence.arrows.forEach(function(arrow, arrIndex){
+
+							colorIndex++;
+
+							BP.arrows[project.id][section.color][seqIndex].arrows.push( new Arrow(project.id, section.color, sequence.id, arrIndex, colorIndex, arrow.path) );
+							
+						});
+
+					});
+
+				});
+
+			});
+
+		});
 
 	}
 

@@ -1282,7 +1282,7 @@ BP.data = {
 					"title":"Alaska",
 					"left":true,
 					"under":false,
-					"position": {"top": -40, "right": 36},
+					"position": {top: -40, right: 36},
 					"color":["orange"],
 					"statuses":[
 						{
@@ -1339,7 +1339,7 @@ BP.data = {
 				{   "id":"azerbaijan",
 				    "title":"Azerbaijan",
 				    "left":false,
-					"position": {top: -85, left: 65},
+					"position": {top: -120, left: 87},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1467,7 +1467,7 @@ BP.data = {
 				{   "id":"iraq",
 				    "title":"Iraq",
 				    "left":false,
-					"position": {top: -36, left: 66},
+					"position": {top: -78, left: 103},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1485,7 +1485,7 @@ BP.data = {
 				    "title":"Libya",
 				    "left":true,
 				    "under":false,
-					"position": {top: -101, right: 69},
+					"position": {top: -106, right: 79},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1523,7 +1523,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
-				    "position": null,
+				    "position": {top: -66, right: 45},
 				    "color":["green", "orange", "blue"],
 					"statuses":[
 						{
@@ -1624,7 +1624,7 @@ BP.data = {
 							"arrows": [
 								{
 									"order": 1,
-									"path": "M 1001 313 C 846 283 923 482 1019 342"
+									"path": "M 1001 313 C 950 266 1069 253 1041 306"
 								},
 								{
 									"order": 2,

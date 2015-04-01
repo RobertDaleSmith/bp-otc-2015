@@ -12,7 +12,9 @@ var BP = {
 
 		sequences: null
 
-	}
+	},
+
+	arrows : {}
 
 };
 

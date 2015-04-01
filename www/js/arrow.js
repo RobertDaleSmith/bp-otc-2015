@@ -134,7 +134,7 @@
 	 * Arrow bezier line curve constructor. 
 	 *
 	 */
-	var Arrow = function(section, color, seq, index, path){
+	var Arrow = function(section, color, seq, index, colorIndex, path){
 
 		if(!svg) svg = $('svg#arrow_paths')[0];
 
@@ -149,6 +149,8 @@
 		this.seqId = seq;
 
 		this.index = index;
+
+		this.colorIndex = colorIndex;
 
 		this.bMouseDragging = false;
 
@@ -365,7 +367,7 @@
 
 				var jsonStr='{ section: "' + this.section + 
 							'", color: "'  + this.color   + 
-							'", index: '   + this.index   + 
+							'", index: '   + this.colorIndex   + 
 							',  path: "'   + this.bezier.toSVG() + 
 							'" }';
 

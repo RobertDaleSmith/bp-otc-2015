@@ -292,7 +292,7 @@ BP.handlers = {
 			$('div.mapPoint').removeClass('start');
 
 			// Section's sequences.
-			var sequences = arrows[project][color];
+			var sequences = BP.arrows[project][color];
 
 			// Extends section post.
 			if( !sequences.start || sequences.start == "")
@@ -404,8 +404,8 @@ BP.handlers = {
 
 	resetAllArrows: function() {
 
-		for (var key in arrows) {
-			var project = arrows[key];
+		for (var key in BP.arrows) {
+			var project = BP.arrows[key];
 			for (var key in project) {
 				var section = project[key];
 				for (var key in section) if( key != 'start' ) {
