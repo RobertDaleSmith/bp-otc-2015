@@ -98,6 +98,8 @@ BP.handlers = {
 						.css('width' ,  newPos.x - 15)
 					;
 
+					$(this.elDragging).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
+
 					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);															
 
 				} else 
@@ -114,6 +116,8 @@ BP.handlers = {
 						.css('height', newPos.y + 22)
 						.css('width' , newPos.x - 15)
 					;
+
+					$(this.elDragging).parent().find('.stats').css('left', newPos.x).css('top', newPos.y+37);
 
 					$(this.elDragging).css('left', newPos.x).css('top', newPos.y);
 
@@ -132,6 +136,8 @@ BP.handlers = {
 						.css('height', (newPos.y * -1) + 15)
 						.css('width' , newPos.x - 15)
 					;
+
+					$(this.elDragging).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
 
 					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
 					
@@ -153,6 +159,8 @@ BP.handlers = {
 						.css('height', newPos.y + 22)
 						.css('width' , newPos.x - 15)
 					;
+
+					$(this.elDragging).parent().find('.stats').css('right', newPos.x).css('top', newPos.y+37);
 
 					$(this.elDragging).css('top', newPos.y).css('right', newPos.x);
 					
