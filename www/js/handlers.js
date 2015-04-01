@@ -212,7 +212,7 @@ BP.handlers = {
 
 	subMenuClickEvent: function() {
 
-		window.clearInterval( BP.intervals.arrowDelay );
+		window.clearInterval( BP.timers.arrowDelay );
 
 		var self = this;
 
@@ -299,12 +299,11 @@ BP.handlers = {
 			
 			$('div.points#projects div.mapPoint#'+sequences.start).addClass('start');
 
-			var time = 750;
-			if(!hasStartPt) time = 100;
+			var time = 750; if(!hasStartPt) time = 100;
 			
 			// Delays start of sequence until post is extended.
-			window.clearInterval(BP.intervals.sequences);
-			BP.intervals.sequences = setTimeout(function(){
+			window.clearInterval(BP.timers.sequences);
+			BP.timers.sequences = setTimeout(function(){
 				
 				var sequencesLoop = function(count){
 
@@ -312,9 +311,16 @@ BP.handlers = {
 					
 					//Open corresponding footer description.
 					// console.log(sequences[count].name);
-					$('.sub_details .item#'+sequences[count].name).addClass('active')
+					$('.sub_details .item#'+sequences[count].name).addClass('active');
 
-					BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
+					var delay = 250; if(count == 0) delay = 0;
+
+					window.clearInterval(BP.timers.sequenceDelay);
+					BP.timers.sequenceDelay = setTimeout(function(){
+
+						BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
+
+					},delay);
 
 				}
 				sequencesLoop(0);
@@ -324,7 +330,7 @@ BP.handlers = {
 
 		} else {
 
-			window.clearInterval(BP.intervals.sequences);
+			window.clearInterval(BP.timers.sequences);
 
 			$('div.sub_menu_wrapper .menu .btn').removeClass('active');
 
@@ -370,7 +376,7 @@ BP.handlers = {
 					arrows[idx].play(function(){ 
 						i++;
 
-						BP.intervals.arrowDelay = setTimeout(function(){ next(); }, 250);
+						BP.timers.arrowDelay = setTimeout(function(){ next(); }, 250);
 					});
 
 					m++;
@@ -452,7 +458,7 @@ BP.handlers = {
 
 	headerMainMenuClickEvent: function(event) {
 
-		window.clearInterval( BP.intervals.arrowDelay );
+		window.clearInterval( BP.timers.arrowDelay );
 
 		var self = this;
 
@@ -734,9 +740,11 @@ BP.handlers = {
 				point.removeClass('open');
 				
 				if(!$('div.mapPoint.open').length) {
-					
+					var secStillOpen = true;
+					if($('div#header_button_wrapper div.btn#projects').hasClass('active')) secStillOpen = false;
+
 					//Check if any others have opened before shifting back to origin.	
-					$('div#map_canvas').css('left', '0px').css('top', '0px');
+					if(secStillOpen) $('div#map_canvas').css('left', '0px').css('top', '0px');
 
 					//Also for disclaimer
 					$('div#footer_wrapper').removeClass('on');

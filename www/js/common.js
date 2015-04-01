@@ -8,9 +8,10 @@ var BP = {
 
 	},
 
-	intervals : {
+	timers : {
 
 		sequences: null,
+		sequenceDelay: null,
 		arrowDelay: null
 
 	},
