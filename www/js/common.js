@@ -10,7 +10,8 @@ var BP = {
 
 	intervals : {
 
-		sequences: null
+		sequences: null,
+		arrowDelay: null
 
 	},
 

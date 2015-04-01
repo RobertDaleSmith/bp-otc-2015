@@ -18,19 +18,15 @@ BP.handlers = {
 
 		$('div#mapImage').click(this.mapClickEvent);
 
-		this.keyboardKeyEventsInit();
-
-
-		var mapPointLabels = $('div#projects div.mapPoint div.label');
-		// draggable(mapPointLabels[0]);
-
-		mapPointLabels.each(function(){
+		$('div#projects div.mapPoint div.label').each(function(){
 
 			this.addEventListener("mousedown", function(e){ BP.handlers.tools.labels.mouseDown(e, this) }, false);
 			this.addEventListener("mouseup"  , function(e){ BP.handlers.tools.labels.mouseUp(  e, this) }, false);
 			this.addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
 
 		});
+
+		this.keyboardKeyEventsInit();
 
 	},
 
@@ -216,6 +212,8 @@ BP.handlers = {
 
 	subMenuClickEvent: function() {
 
+		window.clearInterval( BP.intervals.arrowDelay );
+
 		var self = this;
 
 		var id = $(self).attr('id');
@@ -299,7 +297,7 @@ BP.handlers = {
 				 sequences.start = "none";
 			else hasStartPt = true;
 			
-			$('div.mapPoint#'+sequences.start).addClass('start');
+			$('div.points#projects div.mapPoint#'+sequences.start).addClass('start');
 
 			var time = 750;
 			if(!hasStartPt) time = 100;
@@ -370,8 +368,9 @@ BP.handlers = {
 					var idx = steps[o][m];
 
 					arrows[idx].play(function(){ 
-						i++; 
-						setTimeout(function(){ next(); }, 250);
+						i++;
+
+						BP.intervals.arrowDelay = setTimeout(function(){ next(); }, 250);
 					});
 
 					m++;
@@ -393,13 +392,6 @@ BP.handlers = {
 		}
 
 		seq();
-
-	},
-
-	resetProjectsStateEvent: function() {
-		
-		// Fires without a color, hence resets points.
-		// BP.handlers.subMenuClickEvent();
 
 	},
 
@@ -459,6 +451,8 @@ BP.handlers = {
 	},
 
 	headerMainMenuClickEvent: function(event) {
+
+		window.clearInterval( BP.intervals.arrowDelay );
 
 		var self = this;
 
