@@ -12,7 +12,8 @@ var BP = {
 
 		sequences: null,
 		sequenceDelay: null,
-		arrowDelay: null
+		arrowDelay: null,
+		mapPointOpenDelay: null
 
 	},
 

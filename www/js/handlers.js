@@ -537,7 +537,7 @@ BP.handlers = {
 			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
 				$(self).parent().removeClass('open');
 			});
-			
+
 		}
 
 	},
@@ -550,7 +550,9 @@ BP.handlers = {
 
 		var parentId = $(self).parent().parent().attr('id');
 
-		if( $(self).parent().parent().hasClass('active') == false ) {
+		var parentIsActive = $(self).parent().parent().hasClass('active');
+
+		if( parentIsActive == false ) {
 
 			titleElement.click();
 
@@ -564,12 +566,22 @@ BP.handlers = {
 
 		});
 
+		window.clearInterval(BP.timers.mapPointOpenDelay);
 
 		if( parentId == 'deployments' ){
 
-			$('div.points#deployments div.mapPoint#'+thisId).click();
+			//Find out if it is already open or not.
+			var delay = 0; if(!parentIsActive) delay = 2250;
+			
+			//If not, then delay before firing.
+			BP.timers.mapPointOpenDelay = setTimeout(function(){
+
+				$('div.points#deployments div.mapPoint#'+thisId).click();
+
+			},delay);
 
 		} else {
+
 			// console.log('loads projects section: ' + thisId);
 
 			$('div.sub_menu_wrapper div.menu span.btn.active').click();
@@ -740,14 +752,20 @@ BP.handlers = {
 				point.removeClass('open');
 				
 				if(!$('div.mapPoint.open').length) {
+
 					var secStillOpen = true;
+
 					if($('div#header_button_wrapper div.btn#projects').hasClass('active')) secStillOpen = false;
 
 					//Check if any others have opened before shifting back to origin.	
-					if(secStillOpen) $('div#map_canvas').css('left', '0px').css('top', '0px');
+					if(secStillOpen) {
 
-					//Also for disclaimer
-					$('div#footer_wrapper').removeClass('on');
+						$('div#map_canvas').css('left', '0px').css('top', '0px');
+
+						//Also for disclaimer
+						$('div#footer_wrapper').removeClass('on');
+						
+					}
 
 				}
 
