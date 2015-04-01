@@ -1112,6 +1112,9 @@ html, body{
 						/*-webkit-animation: pointLabelFadeIn 1s 1;*/
 
 					}
+					.mapPoint .label.dragging{
+						
+					}
 					.mapPoint.left .label{
 						left: initial;
 						right: 36px;
