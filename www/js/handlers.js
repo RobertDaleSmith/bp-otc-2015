@@ -141,10 +141,12 @@ BP.handlers = {
 					newPos.x = (this.elPos.x - diff.x);
 
 					// Max/Mins
-					// if(newPos.x <= 30) newPos.x =  30; else 
-					// if(newPos.x > 120) newPos.x = 120;
-					// if(newPos.y >= -23) newPos.y =  -23; else 
-					// if(newPos.y < -120) newPos.y = -120;
+					if(newPos.x <= 30) newPos.x =  30; else 
+					if(newPos.x > 120) newPos.x = 120;
+					if(newPos.y >= 120) newPos.y = 120; else 
+					if(newPos.y < 15) newPos.y = 15;
+
+					console.log(newPos.x);
 					
 					$(this.elDragging).parent().find('.arrow')
 						.css('-webkit-clip-path' , "polygon(0 " + (newPos.y + 22 - 37) + "px, 100% 0, 0 100%)")
