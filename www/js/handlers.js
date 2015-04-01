@@ -303,12 +303,13 @@ BP.handlers = {
 
 			var time = 750;
 			if(!hasStartPt) time = 100;
-
-			window.clearInterval(BP.intervals.sequences);
+			
 			// Delays start of sequence until post is extended.
+			window.clearInterval(BP.intervals.sequences);
 			BP.intervals.sequences = setTimeout(function(){
 				
 				var sequencesLoop = function(count){
+
 					if(count >= sequences.length) return;
 					
 					//Open corresponding footer description.
@@ -370,7 +371,7 @@ BP.handlers = {
 
 					arrows[idx].play(function(){ 
 						i++; 
-						next();
+						setTimeout(function(){ next(); }, 250);
 					});
 
 					m++;

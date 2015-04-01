@@ -282,6 +282,7 @@
 
 			var length = this.bezier.length();
 			var duration = (length / pps) * 1000;
+			if(duration < 500) duration = 500;
 			var inc = ((1000/fps) / duration);
 
 			var lambda = 0;
