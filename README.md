@@ -18,4 +18,10 @@ https://github.com/mllrsohn/node-webkit-builder
 Package Mac and Windows Apps:
 ----
 sudo chown -R root ~/.wine
+
 node build
+
+
+Compiled builds hosted on Dropbox:
+----
+https://www.dropbox.com/sh/nbrfr6alt19bqww/AAC2xznBmOgKyG2IeUUZXY22a?dl=0
