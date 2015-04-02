@@ -89,7 +89,7 @@ html, body{
 			color: #8B8C8D;
 
 			text-transform: capitalize;
-			letter-spacing: 3px;
+			letter-spacing: -0.5px;
 
 		}
 
@@ -151,7 +151,7 @@ html, body{
 				width: auto; height: 110px;
 
 				line-height: 90px;
-				letter-spacing: 3px;
+				letter-spacing: -0.5px;
 				padding: 0 110px 0 40px;
 
 				border-style: solid;
