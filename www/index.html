@@ -9,7 +9,7 @@
 		<meta name=viewport content="width=1920, initial-scale=1">
 
 		<link rel="shortcut icon" href="favicon.ico"/>
-		
+
 		<!-- Additional Libraries -->
 		<script type="text/javascript" src="libs/async.js"></script>
 		<script type="text/javascript" src="libs/bezier.js"></script>
@@ -306,21 +306,49 @@
 
 		<script type="text/template" name="projectSubDetail">
 
-
 			{#sections}
 
 				<div class="sub_details_wrapper" id="{id}">
 
 					<div class="sub_details {color}">
 
-						{#sequences}
-					
-							<div class="item" id="{id}">
-								<div class="title">{title}</div>
-								<div class="description">{description}</div>
-							</div>
+						{@gt key="{sequences.length}" value="5"}
 
-						{/sequences}
+							{#sequences}
+
+								{@math key=$idx method="mod" operand=2} {@eq value=0}
+
+								<div class="item stacked" id="{id}">
+
+								{/eq}{/math}
+
+									<div class="title">{title}</div>
+
+									<div class="description">{description}</div>
+
+								{@math key=$idx method="mod" operand=2}{@eq value=1}
+
+								</div>
+
+								{/eq}{/math}
+
+							{/sequences}
+
+						{:else}
+
+							{#sequences}
+								
+								<div class="item" id="{id}">
+
+									<div class="title">{title}</div>
+
+									<div class="description">{description}</div>
+
+								</div>
+
+							{/sequences}
+
+						{/gt}
 
 					</div>
 

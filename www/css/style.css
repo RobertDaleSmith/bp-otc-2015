@@ -464,7 +464,7 @@ html, body{
 	display: none;
 	position: absolute;
 	bottom: 40px; left: 120px;
-	width: auto; height: 124px;
+	width: auto; height: auto;
 
 	z-index: 45;
 
@@ -475,22 +475,22 @@ html, body{
 
 	.sub_details{
 
-		display: inline-block;
+		display: table;
 		position: relative;
-		width: auto; height: 124px;
-		float: left;
+		width: auto; height: auto;
+		/*float: left;*/
 
 	}
 	
 
 		.sub_details .item{
 
-			display: none;
+			display: table-cell;
 			position: relative;
-			float: left;
-			height: 100%; width: 336px;
+			/*float: left;*/
+			height: auto; width: 336px;
 
-			padding: 25px 25px 0;
+			padding: 20px 25px 5px 25px;
 
 			background-color: rgba(255,255,255,0.74);
 
@@ -498,11 +498,14 @@ html, body{
 			border-width: 9px 0 0 0;
 			border-color: #56565a;
 
-			-webkit-animation: subDetailSlideUp 1s 1;
+			bottom: -600px;
 
-		}	
+		}
 			.sub_details .item.active{
-				display: inline-block;
+				display: table-cell;
+
+				-webkit-animation: subDetailSlideUp 1s 1;
+				bottom: 0px;
 			}
 			.sub_details.green .item{
 				border-color:#00a22f;
@@ -539,7 +542,7 @@ html, body{
 
 			.sub_details .item .description{
 
-				margin: 6px 0 0 0;
+				margin: 6px 0 20px 0;
 				line-height: 22px;
 
 				font-size: 15px;
