@@ -19,7 +19,7 @@ Package Mac and Windows Apps:
 ----
 sudo chown -R root ~/.wine
 
-node build
+sudo node build
 
 
 Compiled builds hosted on Dropbox:
