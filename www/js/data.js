@@ -1790,7 +1790,7 @@ BP.data = {
 						},						
 						{
 							"color": "blue",
-							"status": ["No Drilling Surprises - Deployment", "Completions - Field Trail", "Tripping - Field Trail"]
+							"status": ["No Drilling Surprises - Deployment"]
 						}
 					],
 				    "location":{
@@ -1872,7 +1872,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Data Quality - Field Trail Complete", "ROP Optimisation - Field Trail"]
+							"status": ["ROP Optimisation - Field Trail"]
 						}
 					],
 				    "location":{
