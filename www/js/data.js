@@ -1803,6 +1803,7 @@ BP.data = {
 				    "title":"Brazil",
 				    "left":true,
 				    "under":true,
+				    "position": {top: 28, right: 30},
 					"color":["green"],
 					"statuses":[
 						{
@@ -1819,6 +1820,7 @@ BP.data = {
 				{   "id":"gulfOfMexico",
 				    "title":"Gulf of Mexico",
 				    "left":true,
+				    "position": {top: -82, right: 49},
 					"color":["green", "blue"],
 					"statuses":[
 						{
@@ -1839,6 +1841,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
+				    "position": {top: -74, right: 57},
 				    "color":["green", "blue"],
 					"statuses":[
 						{
@@ -1860,6 +1863,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":true,
 				    "under":true,
+				    "position": {top: 37, right: 30},
 				    "color":["green", "blue"],
 					"statuses":[
 						{
@@ -1916,7 +1920,7 @@ BP.data = {
 								},
 								{
 									"order": 2,
-									"path": "M 623 433 C 663 281 759 182 964 182"
+									"path": "M 623 433 C 360 460 594 183 964 182"
 								},
 								{
 									"order": 3,
@@ -1935,15 +1939,15 @@ BP.data = {
 							"arrows": [
 								{
 									"order": 1,
-									"path": "M 469 342 C 375 539 801 541 994 547"
+									"path": "M 469 342 C 302 569 793 546 994 547"
 								},
 								{
 									"order": 2,
-									"path": "M 1017 547 C 997 616 954 651 771 618"
+									"path": "M 1017 547 C 1017 615 955 631 771 618"
 								},
 								{
 									"order": 3,
-									"path": "M 750 615 C 339 567 318 402 451 349"
+									"path": "M 750 615 C 374 612 289 349 450 342"
 								}
 							]
 						}
