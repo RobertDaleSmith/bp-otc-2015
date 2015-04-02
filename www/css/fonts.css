@@ -1,4 +1,21 @@
 @font-face {
+    font-family: 'Univers-Medium';
+    src: url('../fonts/unvr55w.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Univers-Bold';
+    src: url('../fonts/unvr65w.ttf');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/OpenSans-Regular-webfont.eot');
     src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
