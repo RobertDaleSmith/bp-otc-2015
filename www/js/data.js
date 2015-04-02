@@ -5,7 +5,7 @@ BP.data = {
 		{   "id":"alaska",
 		    "title":"Alaska",
 		    "left":false,
-		    "description":"Alaska BP is the largest gross producer of oil in Alaska and operates 13 oil fields on the North Slope, including the supergiant Prudhoe Bay.",
+		    "description":"Alaska BP is the largest gross producer of oil in Alaska and operates 12 oil fields on the North slope, including the supergiant Prudhoe Bay.",
 		    "disclaimer":"Designer Gas is a registered trade mark of BP plc | Designer Water and LoSal are registered trade marks of BP plc | Bright Water is a trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"197",
@@ -91,7 +91,7 @@ BP.data = {
 		{   "id":"algeria",
 		    "title":"Algeria",
 		    "left":true,
-		    "description":"Major gas business, with two large gas developments — In Salah (dry gas) and In Amenas (wet gas) — both in partnership with Sonatrach and Statoil.",
+		    "description":"Major gas business, with two large gas developments – in Salah (dry gas) and in Amenas (wet gas) – both in partnership with Sonatrach and Statoil.",
 		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
 		        "x":"986",
@@ -134,7 +134,7 @@ BP.data = {
 		{   "id":"angola",
 		    "title":"Angola",
 		    "left":true,
-		    "description":"200,00 barrels per day from BP’s operated and non-operated deepwater and ultra deepwater fields. BP is also exploring pre-salt plays in the Kwanza Basin.",
+		    "description":"200,000 barrels per day from BP’s operated and non-operated deepwater and ultra deepwater fields. BP is also exploring pre-salt plays in the Kwanza Basin.",
 		    "disclaimer":"",
 		    "location":{
 		        "x":"1001",
@@ -200,7 +200,7 @@ BP.data = {
 		{   "id":"azerbaijan",
 		    "title":"Azerbaijan",
 		    "left":false,
-		    "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant ACG.",
+		    "description":"BP, with partners, is developing the giant high pressure Shah Deniz gas field and moving into the next phase of development of the supergiant oil field ACG.",
 		    "disclaimer":"20K is a trade mark of BP plc | Designer Gas is a registered trade mark of BP plc | Bright Water is a registered trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"1207",
@@ -236,7 +236,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Completions (Markup Torque)",
+								"name": "Completions (Makeup Torque)",
 								"status": "Field Trail"
 							},
 							{
@@ -283,7 +283,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Completions (Markup Torque)",
+								"name": "Completions (Makeup Torque)",
 								"status": "Field Trial"
 							},
 							{
@@ -313,7 +313,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Completions (Markup Torque)",
+								"name": "Completions (Makeup Torque)",
 								"status": "Field Trial"
 							},
 							{
@@ -347,7 +347,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -377,7 +377,7 @@ BP.data = {
 		{   "id":"canada",
 		    "title":"Canada",
 		    "left":false,
-		    "description":"Developing energy from Canada’s oil sands, the third-largest crude reserves in the world, as well as offshore frontiers such as the Arctic and Nova Scotia.",
+		    "description":"Developing energy from Canada’s oil sands, the third-largest crude reserves in the world, as well as exploring offshore frontiers in the Beaufort Sea Arctic and Nova Scotia.",
 		    "disclaimer":"ISS is a registered trade mark of BP plc | Designer Steam trade mark of BP plc",
 		    "location":{
 		        "x":"343",
@@ -431,7 +431,7 @@ BP.data = {
 		{   "id":"egypt",
 		    "title":"Egypt",
 		    "left":true,
-		    "description":"Sustaining oil production plateau in the Gulf of Suez and opening up a new gas business in the Nile Delta.",
+		    "description":"Sustaining oil production plateau in the Gulf of Suez and opening up a new deepwater gas business in the Nile Delta.",
 		    "disclaimer":"Designer Water and LoSal are registered trade mark of BP plc | 20K is a trade mark of BP plc | Bright Water is a trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"1104",
@@ -452,7 +452,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -540,7 +540,7 @@ BP.data = {
 							},
 
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -671,7 +671,7 @@ BP.data = {
 		{   "id":"indonesia",
 		    "title":"Indonesia",
 		    "left":true,
-		    "description":"Significant LNG hub at Tangguh, with material potential in the region for unconventionals",
+		    "description":"Significant LNG hub at Tangguh, with material potential in the region for unconventionals.",
 		    "disclaimer":"ISSN is a trade mark of BP plc",
 		    "location":{
 		        "x":"1674",
@@ -692,7 +692,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -739,7 +739,7 @@ BP.data = {
 		{   "id":"iraq",
 		    "title":"Iraq",
 		    "left":true,
-		    "description":"In partnership with Iraqi State Oil Marketing Organisation and CNPC, BP is aiming to almost treble output from the supergiant Rualia to 2.8 million barrels per day.",
+		    "description":"In partnership with Iraqi State Oil Marketing Organization and CNPC, BP is aiming to almost treble output from the supergiant Rumaila to 2.8 million barrels per day.",
 		    "disclaimer":"ISSN is a trade mark of BP plc",
 		    "location":{
 		        "x":"1197",
@@ -798,7 +798,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -1179,7 +1179,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -1408,7 +1408,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Seismic Simulations - Deployment"]
+							"status": ["Seismic Modeling - Deployment"]
 						}
 					],
 				    "location":{
@@ -1429,7 +1429,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Multi-Azimuth Seismic - Deployment", "Wide Azimuth Towed Streamer - Deployment", "Ocean Bottom Nodes - Deployment", "Seismic Simulations - Deployment"]
+							"status": ["Multi-Azimuth Seismic - Deployment", "Wide Azimuth Towed Streamer - Deployment", "Ocean Bottom Nodes - Deployment", "Seismic Modeling - Deployment"]
 						}
 					],
 				    "location":{
@@ -1455,7 +1455,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Wide Azimuth Towed Streamer - Deployment", "Seismic Simulations - Deployment"]
+							"status": ["Wide Azimuth Towed Streamer - Deployment", "Seismic Modeling - Deployment"]
 						}
 					],
 				    "location":{
@@ -1511,7 +1511,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Multi-Azimuth Seismic - Deployment", "Seismic Simulations - Deployment"]
+							"status": ["Multi-Azimuth Seismic - Deployment", "Seismic Modeling - Deployment"]
 						}
 					],
 				    "location":{
@@ -1602,7 +1602,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Seismic Simulations - Deployment"]
+							"status": ["Seismic Modeling - Deployment"]
 						}
 					],
 				    "location":{
@@ -1619,8 +1619,8 @@ BP.data = {
 					"sequences": [
 						{
 							"id": "iss",
-							"title": "ISS™",
-							"description": "ISS™ technology using nodes to record seismic data",
+							"title": "ISS®",
+							"description": "Multiple sources acquiring seismic simultaneously, with noise distortion processed out",
 							"arrows": [
 								{
 									"order": 1,
@@ -1647,7 +1647,7 @@ BP.data = {
 						{
 							"id": "issn",
 							"title": "ISSN™",
-							"description": "Multiple sources working independently but recored continuously",
+							"description": "Multiple sources working independently but recorded continuously",
 							"arrows": [
 								{
 									"order": 1,
@@ -1676,7 +1676,7 @@ BP.data = {
 						{
 							"id": "fullWaveInversions",
 							"title": "Full Waveform Inversions",
-							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, do eisumod",
+							"description": "High-resolution velocity model-building through inversion of entire 3D data sets",
 							"arrows": [
 								{
 									"order": 1,
@@ -1725,31 +1725,31 @@ BP.data = {
 						{
 							"id": "multiAzimuthSeismic",
 							"title": "Multi-Azimuth Seismic",
-							"description": "Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+							"description": "Illuminates target from different azimuths with multiple surveys over the same area",
 							"arrows": []
 						},
 						{
 							"id": "wideAzimuthTowedStreamer",
 							"title": "Wide Azimuth Towed Streamer",
-							"description": "Sed ut perspiciatis unde omnis iste natus error sit coluptatem",
+							"description": "Receivers illuminated with multiple sources to survey from many azimuths and offsets",
 							"arrows": []
 						},
 						{
 							"id": "oceanBottomNodes",
 							"title": "Ocean Bottom Nodes",
-							"description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quams",
+							"description": "Seabed receivers enable surveys around facilities and high density survey configurations",
 							"arrows": []
 						},
 						{
-							"id": "seismicSimulations",
-							"title": "Seismic Simulations",
-							"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, eisumod",
+							"id": "seismicModeling",
+							"title": "Seismic Modeling",
+							"description": "Synthetic data generation to support data acquisition, processing and analysis",
 							"arrows": []
 						},
 						{
 							"id": "fourDemSeismic",
 							"title": "4D Seismic",
-							"description": "Expcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+							"description": "Reservoir monitoring to detect gas and fluid changes over time",
 							"arrows": []
 						}
 					]
@@ -1912,7 +1912,7 @@ BP.data = {
 						{
 							"id": "caseRunConsole",
 							"title": "Casing Running Console",
-							"description": "The console detects changes in observed friction between casing and the wellbore",
+							"description": "Detects changes in observed friction between casing and the wellbore",
 							"arrows": [
 								{
 									"order": 1,
@@ -1935,7 +1935,7 @@ BP.data = {
 						{
 							"id": "bopMonitoring",
 							"title": "BOP Monitoring",
-							"description": "Remote monitoring of BOP health and valves performance, with control system diagnostics beyond rig site",
+							"description": "Remote monitoring of BOP health and valves performance, with control systems diagnostics beyond rig site",
 							"arrows": [
 								{
 									"order": 1,
@@ -1961,7 +1961,7 @@ BP.data = {
 						{
 							"id": "pressureTesting",
 							"title": "Pressure Testing",
-							"description": "Real-time display, interpretation and do-umentation of positive well barrier pres-sure tests",
+							"description": "Real-time display, interpretation and documentation of positive well barrier pressure tests",
 							"arrows": []
 						},
 						{
@@ -1973,7 +1973,7 @@ BP.data = {
 						{
 							"id": "noDrillingSurprises",
 							"title": "No Drilling Surprises",
-							"description": "Key subsurface and geohazard risks iden-tified from offset wells, updated in real time during drilling operations",
+							"description": "Key subsurface and hazardous risks identified from offset wells, updated in real time during drilling operations",
 							"arrows": []
 						},
 						{
@@ -1982,30 +1982,30 @@ BP.data = {
 							"description": "Real-time cement placement and centralizer stand-off analysis, with verification of cement well barriers to reduce zonal isolation events",
 							"arrows": []
 						},
-						{
-							"id": "dataQualityConsole",
-							"title": "Data Quality Console",
-							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
-							"arrows": []
-						},
+						// {
+						// 	"id": "dataQualityConsole",
+						// 	"title": "Data Quality Console",
+						// 	"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+						// 	"arrows": []
+						// },
 						{
 							"id": "ropOptimisation",
 							"title": "ROP Optimisation",
 							"description": "Maximising drilling efficiency in hard rock environments",
 							"arrows": []
 						},
-						{
-							"id": "compMakeupTorque",
-							"title": "Completions (Makeup Torque)",
-							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
-							"arrows": []
-						},
-						{
-							"id": "tripping",
-							"title": "Tripping",
-							"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
-							"arrows": []
-						}
+						// {
+						// 	"id": "compMakeupTorque",
+						// 	"title": "Completions (Makeup Torque)",
+						// 	"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+						// 	"arrows": []
+						// },
+						// {
+						// 	"id": "tripping",
+						// 	"title": "Tripping",
+						// 	"description": "Lorem ipsum dolor set consecteteur de cuma dolor ipsum lorem set",
+						// 	"arrows": []
+						// }
 					]
 				}
 
