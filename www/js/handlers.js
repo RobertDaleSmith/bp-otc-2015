@@ -464,7 +464,9 @@ BP.handlers = {
 
 		var self = this;
 
-		var sectionId = $(self).parent().attr('id'); 
+		var sectionId = $(self).parent().attr('id');
+
+		if(sectionId == "deployments") $('.btn#projects .menuItem.active').removeClass('active');
 
 		var isActive = false;
 			isActive = $(self).parent().hasClass('active');
@@ -509,7 +511,6 @@ BP.handlers = {
 
 				// Initiate the first element in the projects list.
 				var otherOpen = $('div#header_button_wrapper div#projects div.menuItem').hasClass('active');
-				console.log(otherOpen);
 				if(!otherOpen){ $( $('div#header_button_wrapper div#projects div.menuItem')[0] ).click(); }
 
 			}
@@ -533,7 +534,21 @@ BP.handlers = {
 		if(!isOpen) {
 
 			$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
+				
 				$(self).parent().addClass('open');
+
+				$('#main_wrapper').click(function(){
+
+					$(self).parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
+						
+						$(self).parent().removeClass('open');
+
+					});
+
+					$('#main_wrapper').unbind();
+
+				});
+
 			});
 
 		} else {

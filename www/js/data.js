@@ -1801,9 +1801,9 @@ BP.data = {
 
 				{   "id":"brazil",
 				    "title":"Brazil",
-				    "left":true,
+				    "left":false,
 				    "under":true,
-				    "position": {top: 28, right: 30},
+				    "position": {top: 66, left: 74},
 					"color":["green"],
 					"statuses":[
 						{
