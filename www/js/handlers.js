@@ -212,7 +212,9 @@ BP.handlers = {
 
 	subMenuClickEvent: function() {
 
-		window.clearInterval( BP.timers.arrowDelay );
+		window.clearInterval(BP.timers.arrowDelay);
+
+		window.clearInterval(BP.timers.sequenceDelay);
 
 		var self = this;
 
