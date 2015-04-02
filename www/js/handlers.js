@@ -554,12 +554,6 @@ BP.handlers = {
 
 		var parentIsActive = $(self).parent().parent().hasClass('active');
 
-		if( parentIsActive == false ) {
-
-			titleElement.click();
-
-		}
-
 		var thisId = $(self).attr('id');
 		
 		$(self).parent().parent().find('div.dropDownMenu').cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s' }, function(){
@@ -603,6 +597,9 @@ BP.handlers = {
 			BP.views.revealMapPoints('projects', thisId);
 
 		}
+
+		// Click parent if another section hasn't been activated yet.
+		if( parentIsActive == false ) titleElement.click();
 
 	},
 
