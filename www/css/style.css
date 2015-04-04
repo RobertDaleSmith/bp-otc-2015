@@ -428,6 +428,27 @@ html, body{
 				color: #fff;
 			}
 
+
+
+
+
+			.sub_menu_wrapper .menu .btn.purple{
+				border-color: #650f97;
+				color: #650f97;
+			}
+			.sub_menu_wrapper .menu .btn.purple:hover{
+				background-color: rgba(101, 15, 151, 0.15);
+			}
+			.sub_menu_wrapper .menu .btn.purple:active,
+			.sub_menu_wrapper .menu .btn.purple.active{
+				background-color: #cc66ff;
+				color: #fff;
+			}
+
+
+
+
+
 			.sub_menu_wrapper .menu .btn.blue{
 				border-color: #000099;
 				color: #000099;
@@ -525,6 +546,7 @@ html, body{
 				height: 18px;
 				line-height: 18px;
 				font-size: 19px;
+				white-space: nowrap;
 
 			}
 			.sub_details.green .item .title{
@@ -1560,7 +1582,7 @@ html, body{
 						#arrow_paths .purple .curve .arrow{
 							fill: #650f97;
 						}
-						
+
 					#arrow_paths .line .handles{
 						display: none;
 					}

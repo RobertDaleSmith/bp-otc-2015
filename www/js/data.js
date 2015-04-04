@@ -2259,8 +2259,346 @@ BP.data = {
 			"title":"Enhanced Oil Recovery",
 			"color": "f26721",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{	"id":"alaska",
+					"title":"Alaska",
+					"left":false,
+					"under":true,
+					"position": {},
+					"color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["LoSal® EOR - Field Trial Complete"]
+						}
+					],
+					"location":{
+						"x":"197",
+						"y":"88"
+					}
+				},
+
+				{	"id":"algeria",
+					"title":"Algeria",
+					"left":true,
+					"under":false,
+					"position": {},
+					"color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail"]
+						}
+					],
+					"location":{
+						"x":"986",
+						"y":"321"
+					}
+				},
+
+				{	"id":"argentina",
+					"title":"Argentina",
+					"left":false,
+					"under":true,
+					"position": {},
+					"color":["orange"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						}
+					],
+					"location":{
+						"x":"622",
+						"y":"674"
+					}
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["green", "orange", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"egypt",
+				    "title":"Egypt",
+				    "left":true,
+				    "under":true,
+					"position": {},
+				    "color":["orange", "purple"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["LoSal® EOR - Planned"]
+						}
+					],
+				    "location":{
+				        "x":"1104",
+				        "y":"298"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":true,
+				    "position": {},
+					"color":["blue", "purple"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Deployment", "Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["LoSal® EOR - Planned"]
+						}
+					],
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "under":false,
+				    "position": {top: -84, right: 54},
+				    "color":["green", "blue", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["LoSal® EOR - Deployment", "Polymer Flood - Planned"]
+						}
+					],
+				    "location":{
+				        "x":"938",
+				        "y":"135"
+				    }
+				},
+
+				{   "id":"norway",
+				    "title":"Norway",
+				    "left":false,
+				    "under":true,
+				    "position": {},
+				    "color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"971",
+				        "y":"167"
+				    }
+				},
+
+				{   "id":"oman",
+				    "title":"Oman",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail", "Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1256",
+				        "y":"360"
+				    }
+				},
+
+				{   "id":"russia",
+				    "title":"Russia",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["orange"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1395",
+				        "y":"130"
+				    }
+				},
+				
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":false,
+				    "under":true,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }
+				}
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "alaska",
+					"sequences": [
+						{
+							"id": "designerGas",
+							"title": "Designer Gas®",
+							"description": "Miscible gas injection to displace oil from the rock, often alternated with water injection to improve sweep, can improve recovery by 6% to 10% over base waterflooding. Lean gas such as methane, vaporizes oil from the rock surface and carries it to production wells, before being recycled",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 212 80 C 539 50 875 339 946 170"
+								},
+								{
+									"order": 2,
+									"path": "M 953 150 C 962 70 1033 87 995 163"
+								},
+								{
+									"order": 3,
+									"path": "M 986 182 C 1088 174 1180 213 1210 256"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "orange",
+					"start": "alaska",
+					"sequences": [
+						{
+							"id": "brightWater",
+							"title": "Bright Water®",
+							"description": "Bright Water® is a submicron thermally activated particle that expands reducing the flow in thief zones and diverting injection water into poorly swept areas of the reservoir, thereby increasing oil recovery",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 212 79 C 6 38 640 546 638 668"
+								},
+								{
+									"order": 2,
+									"path": "M 641 689 C 1006 691 1227 597 1222 294"
+								},
+								{
+									"order": 3,
+									"path": "M 1222 273 C 1222 188 1274 145 1389 145"
+								},
+								{
+									"order": 4,
+									"path": "M 1409 142 C 1347 62 1114 65 1119 292"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "purple",
+					"start": "",
+					"sequences": [
+						{
+							"id": "designerWaterLosalEor",
+							"title": "Designer Water® - LoSal® EOR",
+							"description": "A breakthrough reduced salinity waterflooding technology that significantly increases compared to conventional waterflooding",
+							"arrows": []
+						},
+						{
+							"id": "designerWaterPolymerFlood",
+							"title": "Designer Water® - Polymer Flood",
+							"description": "The polymer particles flow with the water and warm up as they pass through the reservoir",
+							"arrows": []
+						}
+					]
+				},
+
+				{
+					"color": "blue",
+					"start": "gulfOfMexico",
+					"sequences": [
+						{
+							"id": "digitalRocks",
+							"title": "Digital Rocks",
+							"description": "Application of image-based modeling and simulation techniques to derive reservoir rock properties",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 471 318 C 540 357 1072 467 1253 386"
+								},
+								{
+									"order": 2,
+									"path": "M 1271 375 C 1213 352 1080 314 1021 331"
+								},
+								{
+									"order": 3,
+									"path": "M 1002 329 C 1007 251 1001 215 966 167"
+								},
+								{
+									"order": 4,
+									"path": "M 953 150 C 616 159 500 169 475 297"
+								},
+								{
+									"order": 5,
+									"path": "M 471 318 C 616 251 906 254 1200 272"
+								}
+							]
+						}
+					]
+				}
+			]
 		},
 
 		{	"id":"fotf",
