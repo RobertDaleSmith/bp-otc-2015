@@ -13,7 +13,14 @@ var BP = {
 		sequences: null,
 		sequenceDelay: null,
 		arrowDelay: null,
-		mapPointOpenDelay: null
+		mapPointOpenDelay: null,
+		refreshRequest: null
+
+	},
+
+	counters : {
+
+		refreshRequest: 0
 
 	},
 

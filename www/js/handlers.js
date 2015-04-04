@@ -2,6 +2,8 @@ BP.handlers = {
 
 	init: function() {
 
+		$('div#logo_wrapper').click(this.headerLogoClickEvent);
+
 		$('div#header_button_wrapper .btn .title').click(this.headerMainMenuClickEvent);
 
 		$('div#header_button_wrapper .btn .icon').click(this.headerDropDownMenuClickEvent);
@@ -456,6 +458,36 @@ BP.handlers = {
 
 		});
 
+	},
+
+	headerLogoClickEvent: function(event) {
+
+		if($("#intro_wrapper").css('display') == 'none'){
+
+			// Shows intro video.
+			$("#intro_wrapper").css('display','');
+
+			// Resets & hides everything else.
+			$('div.sub_details_wrapper div.sub_details').removeClass('active');
+			$('.btn#projects .menuItem.active').removeClass('active');
+			$('div#map_canvas').css('left', '0px').css('top', '0px');
+			$("#header_button_wrapper .btn").removeClass('active');
+			$('div.sub_details_wrapper').removeClass('active');
+			$('div.sub_menu_wrapper').removeClass('open');
+			$('div#footer_wrapper').removeClass('on');
+			$('svg#arrow_paths').attr('class','');
+			$("div.mapPoint").addClass('hide');
+			$('div#footer_wrapper').text('');
+			$('div.mapPoint.open').find('.close').click();
+
+		}
+
+		// Increments count to check for refresh request.
+		BP.counters.refreshRequest++;
+		if(BP.counters.refreshRequest == 5){ console.log('refresh page'); window.location.reload(); }
+		window.clearInterval(BP.timers.refreshRequest);
+		BP.timers.refreshRequest = setTimeout(function(){ BP.counters.refreshRequest = 0; }, 5000);
+		
 	},
 
 	headerMainMenuClickEvent: function(event) {
