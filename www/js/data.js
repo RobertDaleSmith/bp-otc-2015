@@ -2016,8 +2016,243 @@ BP.data = {
 			"title":"Beyond Sand Control",
 			"color": "ffe300",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{	"id":"alaska",
+					"title":"Alaska",
+					"left":true,
+					"under":false,
+					"position": {},
+					"color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail Complete"]
+						}
+					],
+					"location":{
+						"x":"197",
+						"y":"88"
+					}
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},						
+						{
+							"color": "blue",
+							"status": ["Field Trail Complete"]
+						}
+					],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"canada",
+				    "title":"Canada",
+				    "left":false,
+					"position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail Complete"]
+						}
+					],
+				    "location":{
+				        "x":"343",
+				        "y":"146"
+				    }
+				},
+
+				{   "id":"egypt",
+				    "title":"Egypt",
+				    "left":false,
+				    "under":true,
+					"position": {},
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail Complete"]
+						}
+					],
+				    "location":{
+				        "x":"1104",
+				        "y":"298"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":true,
+				    "position": {},
+					"color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+
+				{   "id":"indonesia",
+				    "title":"Indonesia",
+				    "left":true,
+				    "under":true,
+				    "position": null,
+				    "color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1674",
+				        "y":"485"
+				    }
+				},
+
+				{   "id":"northAmerica",
+				    "title":"North America",
+				    "left":true,
+				    "position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Field Trail Complete"]
+						}
+					],
+				    "location":{
+				        "x":"341",
+				        "y":"229"
+				    }
+				},
+				
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "position": {},
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Field Trail"]
+						}
+					],
+				    "location":{
+				        "x":"938",
+				        "y":"135"
+				    }
+				},
+				
+				
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":false,
+				    "under":true,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Field Trail"]
+						}
+					],
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }
+				}
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "azerbaijan",
+					"sequences": [
+						{
+							"id": "downholeSandManagement",
+							"title": "Downhole Sand Management",
+							"description": "Proprietary software to support optimal completion design selection and define well operating parameters",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 1222 250 C 989 188 689 224 489 331"
+								},
+								{
+									"order": 2,
+									"path": "M 471 341 C 532 350 594 385 612 414"
+								},
+								{
+									"order": 3,
+									"path": "M 623 435 C 943 369 1356 368 1670 493"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "blue",
+					"start": "northAmerica",
+					"sequences": [
+						{
+							"id": "sandConsolidation",
+							"title": "Sand Consolidation",
+							"description": "Adds strength to weak rock formation to increase productivity from sand-prone wells",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 354 220 C 379 220 375 199 366 181"
+								},
+								{
+									"order": 2,
+									"path": "M 358 161 C 331 108 293 98 234 102"
+								},
+								{
+									"order": 3,
+									"path": "M 212 103 C 213 -3 887 189 1201 268"
+								},
+								{
+									"order": 4,
+									"path": "M 1222 273 C 1229 317 1186 317 1141 314"
+								},
+								{
+									"order": 5,
+									"path": "M 1118 306 C 1120 186 1059 150 974 150"
+								},
+								{
+									"order": 6,
+									"path": "M 953 150 C 951 446 708 430 644 432"
+								}
+							]
+						}
+					]
+				}
+			]
 		},
 
 		{	"id":"eor",

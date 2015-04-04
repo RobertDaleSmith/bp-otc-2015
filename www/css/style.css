@@ -1547,7 +1547,20 @@ html, body{
 							fill: #fa630c;
 						}
 
+						#arrow_paths .blue .curve .lambda{
+							stroke: #000099;
+						}
+						#arrow_paths .blue .curve .arrow{
+							fill: #000099;
+						}
 
+						#arrow_paths .purple .curve .lambda{
+							stroke: #650f97;
+						}
+						#arrow_paths .purple .curve .arrow{
+							fill: #650f97;
+						}
+						
 					#arrow_paths .line .handles{
 						display: none;
 					}
