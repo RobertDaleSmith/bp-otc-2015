@@ -18,7 +18,7 @@ $(window).bind("load", function() {
 
 	], function(err){
 
-		setTimeout(function(){	BP.views.endSplashScreen();	 }, 1000);
+		setTimeout(BP.views.endSplashScreen, 1000);
 
 	});	
 

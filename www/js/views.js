@@ -273,6 +273,8 @@ BP.views = {
 
 			$('#splash_wrapper').css('display','none');
 
+			BP.player.play();
+
 		}, 500);
 		
 

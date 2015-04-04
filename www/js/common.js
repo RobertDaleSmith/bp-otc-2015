@@ -24,7 +24,9 @@ var BP = {
 
 	},
 
-	arrows : {}
+	arrows : {},
+
+	player: null
 
 };
 

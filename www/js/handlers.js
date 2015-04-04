@@ -30,6 +30,8 @@ BP.handlers = {
 
 		this.keyboardKeyEventsInit();
 
+		this.videoPlayerInit();
+
 	},
 
 	tools:{
@@ -460,6 +462,12 @@ BP.handlers = {
 
 	},
 
+	videoPlayerInit: function(){
+
+		videojs("introVideo").ready(function(){ BP.player = this; });
+
+	},
+
 	headerLogoClickEvent: function(event) {
 
 		if($("#intro_wrapper").css('display') == 'none'){
@@ -480,6 +488,9 @@ BP.handlers = {
 			$('div#footer_wrapper').text('');
 			$('div.mapPoint.open').find('.close').click();
 
+			// Start intro video.
+			BP.player.play();
+
 		}
 
 		// Increments count to check for refresh request.
@@ -491,6 +502,8 @@ BP.handlers = {
 	},
 
 	headerMainMenuClickEvent: function(event) {
+
+		BP.player.load();
 
 		window.clearInterval( BP.timers.arrowDelay );
 
