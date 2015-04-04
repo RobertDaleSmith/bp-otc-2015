@@ -2605,8 +2605,386 @@ BP.data = {
 			"title":"Field of the Future® Technology",
 			"color": "007cbb",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{	"id":"alaska",
+					"title":"Alaska",
+					"left":true,
+					"under":false,
+					"position": {},
+					"color":["orange"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						}
+					],
+					"location":{
+						"x":"197",
+						"y":"88"
+					}
+				},
+
+
+				{   "id":"angola",
+				    "title":"Angola",
+				    "left":true,
+				    "under":true,
+					"color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["Casing Running Console - Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1001",
+				        "y":"533"
+				    }
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["green", "orange", "blue", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":true,
+				    "position": {},
+					"color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+
+				{   "id":"indonesia",
+				    "title":"Indonesia",
+				    "left":true,
+				    "under":false,
+				    "position": null,
+				    "color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1674",
+				        "y":"485"
+				    }
+				},
+
+				{   "id":"iraq",
+				    "title":"Iraq",
+				    "left":true,
+				    "under":true,
+					"position": {},
+				    "color":["orange"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1202",
+				        "y":"299"
+				    }
+				},
+
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "under":false,
+				    "position": {top: -78, right: 43},
+				    "color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"938",
+				        "y":"135"
+				    }
+				},
+
+				{   "id":"norway",
+				    "title":"Norway",
+				    "left":false,
+				    "under":false,
+				    "position": {top: -45, left: 39},
+				    "color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"971",
+				        "y":"167"
+				    }
+				},
+
+				{   "id":"oman",
+				    "title":"Oman",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["orange", "purple"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1256",
+				        "y":"360"
+				    }
+				},
+				
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":true,
+				    "under":true,
+				    "color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }
+				}
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "azerbaijan",
+					"sequences": [
+						{
+							"id": "designerGas",
+							"title": "Production Management Advisor",
+							"description": "Integrated real-time information system to optimize short and long term hydrocarbon value",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 1220 249 C 910 256 761 274 492 337"
+								},
+								{
+									"order": 2,
+									"path": "M 471 334 C 461 145 622 145 932 149"
+								},
+								{
+									"order": 3,
+									"path": "M 954 150 C 909 259 919 406 1004 530"
+								},
+								{
+									"order": 4,
+									"path": "M 1016 548 C 1065 444 1067 332 996 201"
+								},
+								{
+									"order": 5,
+									"path": "M 986 182 C 692 183 630 265 624 411"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "orange",
+					"start": "northSea",
+					"sequences": [
+						{
+							"id": "operationsAdvisor",
+							"title": "Operations Advisor",
+							"description": "Analysis and intelligent alters management system, with condition-based monitoring and pro-active risk management",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 952 127 C 1124 86 1193 122 1218 252"
+								},
+								{
+									"order": 2,
+									"path": "M 1223 272 C 961 302 804 349 642 423"
+								},
+								{
+									"order": 3,
+									"path": "M 625 431 C 524 451 479 412 473 362"
+								},
+								{
+									"order": 4,
+									"path": "M 471 344 C 158 638 726 566 995 549"
+								},
+								{
+									"order": 5,
+									"path": "M 1016 548 C 1335 518 1675 698 1687 521"
+								},
+								{
+									"order": 6,
+									"path": "M 1690 495 C 1693 -175 828 438 976 200"
+								},
+								{
+									"order": 7,
+									"path": "M 985 182 C 733 220 411 166 232 110"
+								},
+								{
+									"order": 8,
+									"path": "M 211 103 C 297 267 672 308 1196 314"
+								}
+							]
+						}
+					]
+				},
+				
+				{
+					"color": "blue",
+					"start": "",
+					"sequences": [
+						{
+							"id": "distTempSensing",
+							"title": "Distributed Temperature Sensing",
+							"description": "Provides a near real-time view of how fluids such as oil, gas and water enter wells from different reservoir units, without the need for costly well interventions and production shut-downs",
+							"arrows": []
+						}
+					]
+				},
+
+				{
+					"color": "purple",
+					"start": "norway",
+					"sequences": [
+						{
+							"id": "advancedColEnv",
+							"title": "Advanced Collaborative Environments (ACE)",
+							"description": "Enables people to work collaboratively regardless of distance, encouraging more efficient decision making, enhanced productivity and improved operational performance",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 986 159 C 990 107 977 64 959 130"
+								},
+								{
+									"order": 2,
+									"path": "M 954 150 C 749 135 535 196 478 323"
+								},
+								{
+									"order": 3,
+									"path": "M 471 341 C 766 246 1155 167 1211 258"
+								},
+								{
+									"order": 4,
+									"path": "M 1222 275 C 935 262 779 298 639 419"
+								},
+								{
+									"order": 5,
+									"path": "M 623 432 C 1034 491 1310 505 1668 500"
+								},
+								{
+									"order": 6,
+									"path": "M 1689 500 C 1472 672 1214 763 1031 564"
+								},
+								{
+									"order": 7,
+									"path": "M 1016 548 C 1184 551 1261 504 1269 396"
+								}
+							]
+						}
+					]
+				}
+			]
 		},
 
 		{	"id":"ft",
