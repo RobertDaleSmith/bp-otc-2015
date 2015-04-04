@@ -1,3 +1,25 @@
-BP.views.init();
+$(window).bind("load", function() {
 
-BP.handlers.init();
+	async.series([
+
+		function(next){
+
+			BP.views.init();
+			next();
+
+		},
+
+		function(next){
+
+			BP.handlers.init();
+			next();
+
+		}
+
+	], function(err){
+
+		setTimeout(function(){	BP.views.endSplashScreen();	 }, 1000);
+
+	});	
+
+});

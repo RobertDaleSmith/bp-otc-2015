@@ -263,6 +263,25 @@ BP.views = {
 
 		});
 
+	},
+
+	endSplashScreen: function(){
+
+		$('#splash_wrapper').addClass('hide');
+
+		setTimeout(function(){
+
+			$('#splash_wrapper').css('display','none');
+
+		}, 500);
+		
+
+	},
+
+	loading: function(percent){
+
+		$('div#splash_wrapper div.preloader div.progress').css('width', percent+"%");
+
 	}
 
 }
