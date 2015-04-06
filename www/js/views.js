@@ -136,7 +136,11 @@ BP.views = {
 
 			});
 
-		};
+		};	
+
+		// Clear any other pending reveals..
+		BP.timers.mapPointReveals.forEach(function(t){ window.clearTimeout(t) });
+		BP.timers.mapPointReveals = [];
 
 		// Reveals all points randomly.
 		var remaining = $(parentMap+'div.mapPoint').length;
@@ -144,7 +148,7 @@ BP.views = {
 
 			var self = this;
 
-			setTimeout(function(){
+			var timer = setTimeout(function(){
 
 				$(self).removeClass('hide');
 
@@ -158,6 +162,8 @@ BP.views = {
 				if(!BP.settings.revealLabelsTogether) setTimeout(function(){ $(self).find('.label_wrapper').removeClass('hide'); }, 500 );
 
 			}, times[n] );
+
+			BP.timers.mapPointReveals.push(timer);
 
 		});
 		

@@ -14,7 +14,10 @@ var BP = {
 		sequenceDelay: null,
 		arrowDelay: null,
 		mapPointOpenDelay: null,
-		refreshRequest: null
+		refreshRequest: null,		
+		revealTogether: null,
+		revealTogetherFinal: null,
+		mapPointReveals: []
 
 	},
 
