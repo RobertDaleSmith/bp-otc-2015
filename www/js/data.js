@@ -34,7 +34,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -70,7 +70,7 @@ BP.data = {
 							},
 							{
 								"name": "Designer Water® - LoSal® EOR",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 					},
@@ -237,11 +237,11 @@ BP.data = {
 							},
 							{
 								"name": "Completions (Makeup Torque)",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							},
 							{
 								"name": "Tripping",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -256,7 +256,7 @@ BP.data = {
 							},
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -365,7 +365,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "BOP Monitoring",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -406,7 +406,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -468,7 +468,7 @@ BP.data = {
 						"types": [
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -563,15 +563,15 @@ BP.data = {
 							},
 							{
 								"name": "Pressure Testing Console",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							},
 							{
 								"name": "Rigsite Fluid Management Console",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							},
 							{
 								"name": "No Drilling Surprises",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -611,7 +611,7 @@ BP.data = {
 							},
 							{
 								"name": "Digital Radiography",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							},
 							{
 								"name": "Subsea Pumping",
@@ -901,7 +901,7 @@ BP.data = {
 							},
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -941,11 +941,11 @@ BP.data = {
 							},
 							{
 								"name": "Digital Radiography",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "EMAT Inspection",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 					},
@@ -1016,11 +1016,11 @@ BP.data = {
 							},
 							{
 								"name": "Cementing Console",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Data Quality Console",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							}
 						]
 
@@ -1142,15 +1142,15 @@ BP.data = {
 							},
 							{
 								"name": "Cementing Console",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Data Quality Console",
-								"status": "Field Trail Complete"
+								"status": "Field Trial Complete"
 							},
 							{
 								"name": "Rate of Penetration Optimization",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -1202,7 +1202,7 @@ BP.data = {
 							},
 							{
 								"name": "Rigsite Fluid Management Console",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -1229,7 +1229,7 @@ BP.data = {
 							},
 							{
 								"name": "Sand Consolidation",
-								"status": "Field Trail"
+								"status": "Field Trial"
 							}
 						]
 
@@ -1386,7 +1386,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Field Trail Complete"]
+							"status": ["ISS® - Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -1447,7 +1447,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISSN™ - Field Trail Complete"]
+							"status": ["ISSN™ - Field Trial Complete"]
 						},
 						{
 							"color": "orange",
@@ -1490,7 +1490,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Deployment", "ISSN™ - Field Trail Complete"]
+							"status": ["ISS® - Deployment", "ISSN™ - Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -1507,7 +1507,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISSN™ - Field Trail Complete"]
+							"status": ["ISSN™ - Field Trial Complete"]
 						},
 						{
 							"color": "blue",
@@ -1528,7 +1528,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Field Trail Complete"]
+							"status": ["ISS® - Field Trial Complete"]
 						},
 						{
 							"color": "orange",
@@ -1536,7 +1536,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Wide Azimuth Towed Streamer - Field Trail Complete", "4D Seismic - Deployment"]
+							"status": ["Wide Azimuth Towed Streamer - Field Trial Complete", "4D Seismic - Deployment"]
 						}
 					],
 				    "location":{
@@ -1808,7 +1808,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["BOP Monitoring - Field Trail Complete"]
+							"status": ["BOP Monitoring - Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -1829,7 +1829,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Pressure Testing - Deployment", "Rigsite Fluid Management - Field Trail", "No Drilling Surprises - Deployment"]
+							"status": ["Pressure Testing - Deployment", "Rigsite Fluid Management - Field Trial", "No Drilling Surprises - Deployment"]
 						}
 					],
 				    "location":{
@@ -1850,7 +1850,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Cementing Console - Field Trail Complete"]
+							"status": ["Cementing Console - Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -1872,7 +1872,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["ROP Optimisation - Field Trail"]
+							"status": ["ROP Optimisation - Field Trial"]
 						}
 					],
 				    "location":{
@@ -1893,7 +1893,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Rigsite Fluid Management - Field Trail"]
+							"status": ["Rigsite Fluid Management - Field Trial"]
 						}
 					],
 				    "location":{
@@ -2027,7 +2027,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail Complete"]
+							"status": ["Field Trial Complete"]
 						}
 					],
 					"location":{
@@ -2047,7 +2047,7 @@ BP.data = {
 						},						
 						{
 							"color": "blue",
-							"status": ["Field Trail Complete"]
+							"status": ["Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -2064,7 +2064,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail Complete"]
+							"status": ["Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -2082,7 +2082,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail Complete"]
+							"status": ["Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -2134,7 +2134,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail Complete"]
+							"status": ["Field Trial Complete"]
 						}
 					],
 				    "location":{
@@ -2155,7 +2155,7 @@ BP.data = {
 						},
 						{
 							"color": "blue",
-							"status": ["Field Trail"]
+							"status": ["Field Trial"]
 						}
 					],
 				    "location":{
@@ -2169,15 +2169,15 @@ BP.data = {
 				    "title":"Trinidad & Tobago",
 				    "left":false,
 				    "under":true,
-				    "color":["green", "blue"],
+				    "color":["green", "orange"],
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": ["Field Trial"]
 						},
 						{
-							"color": "blue",
-							"status": ["Field Trail"]
+							"color": "orange",
+							"status": ["GWIS - Development", "EMAT - Development"]
 						}
 					],
 				    "location":{
@@ -2296,7 +2296,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail"]
+							"status": ["Field Trial"]
 						}
 					],
 					"location":{
@@ -2443,7 +2443,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["Field Trail", "Deployment"]
+							"status": ["Field Trial", "Deployment"]
 						}
 					],
 				    "location":{
@@ -2991,8 +2991,349 @@ BP.data = {
 			"title":"Facilities & Integrity",
 			"color": "98ca3c",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{	"id":"alaska",
+					"title":"Alaska",
+					"left":false,
+					"under":false,
+					"position": {top: -56, left: 39},
+					"color":["orange", "purple"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["GWIS - Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["Corrosion & Erosion Modeling - Deployment"]
+						}
+					],
+					"location":{
+						"x":"197",
+						"y":"88"
+					}
+				},
+
+
+				{   "id":"angola",
+				    "title":"Angola",
+				    "left":true,
+				    "under":true,
+					"color":["green", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "purple",
+							"status": ["Subsea Pumping - Deployment", "Subsea Metering - Deployment", "Subsea Processing - Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"1001",
+				        "y":"533"
+				    }
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Field Trial"]
+						},
+						{
+							"color": "blue",
+							"status": ["Planned Development"]
+						}
+					],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+
+				{   "id":"china",
+				    "title":"China",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": ["Planned Development"]
+						}
+					],
+				    "location":{
+				        "x":"1560",
+				        "y":"365"
+				    }
+				},
+
+				{   "id":"egypt",
+				    "title":"Egypt",
+				    "left":true,
+				    "under":true,
+					"position": {},
+				    "color":["orange", "blue"],
+					"statuses":[
+						{
+							"color": "orange",
+							"status": ["GWIS - Development"]
+						},
+						{
+							"color": "blue",
+							"status": ["Planned Development"]
+						}
+					],
+				    "location":{
+				        "x":"1104",
+				        "y":"298"
+				    }
+				},
+
+				{   "id":"gulfOfMexico",
+				    "title":"Gulf of Mexico",
+				    "left":true,
+				    "position": {},
+					"color":["green", "orange", "purple", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Field Trial"]
+						},
+						{
+							"color": "orange",
+							"status": ["EMAT - Field Trial", "DR - Field Trial"]
+						},
+						{
+							"color": "purple",
+							"status": ["Corrosion & Erosion Modeling - Deployment", "Subsea Pumping - Deployment", "Subsea Metering - Deployment", "Subsea Processing - Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": ["Planned Development"]
+						}
+					],
+				    "location":{
+				        "x":"456",
+				        "y":"326"
+				    }
+				},
+
+				{   "id":"northSea",
+				    "title":"North Sea",
+				    "left":true,
+				    "under":false,
+				    "position": {top: -93, right: 49},
+				    "color":["green", "orange", "purple"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "orange",
+							"status": ["GWIS - Deployment", "EMAT - Field Trial Complete", "DR - Field Trial Complete"]
+						},
+						{
+							"color": "purple",
+							"status": ["Corrosion & Erosion Modeling - Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"938",
+				        "y":"135"
+				    }
+				},
+
+				{   "id":"norway",
+				    "title":"Norway",
+				    "left":false,
+				    "under":false,
+				    "position": {top: -45, left: 39},
+				    "color":["green"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						}
+					],
+				    "location":{
+				        "x":"971",
+				        "y":"167"
+				    }
+				},
+				
+				{   "id":"trinidad",
+				    "title":"Trinidad & Tobago",
+				    "left":true,
+				    "under":true,
+				    "color":["green", "orange"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Field Trial"]
+						},
+						{
+							"color": "orange",
+							"status": ["GWIS - Deployment", "EMAT - Development"]
+						}
+					],
+				    "location":{
+				        "x":"608",
+				        "y":"417"
+				    }
+				}
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "northSea",
+					"sequences": [
+						{
+							"id": "highlyReliableChemicalInjection",
+							"title": "Highly Reliable Chemical Injection",
+							"description": "Efficient, reliable application of chemical barriers, supported by BP’s Chemical Management Suite to track performance",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 953 127 C 1026 99 1196 81 1219 251"
+								},
+								{
+									"order": 2,
+									"path": "M 1222 273 C 1256 462 935 443 645 433"
+								},
+								{
+									"order": 3,
+									"path": "M 618 432 C 504 429 452 429 467 363"
+								},
+								{
+									"order": 4,
+									"path": "M 472 337 C 498 208 715 183 932 132"
+								},
+								{
+									"order": 5,
+									"path": "M 953 128 C 845 223 741 560 994 548"
+								},
+								{
+									"order": 6,
+									"path": "M 1016 548 C 984 427 973 306 984 204"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"color": "orange",
+					"start": "northSea",
+					"sequences": [
+						{
+							"id": "guidedWaveInspectionSystem",
+							"title": "Guided Wave Inspection System",
+							"description": "An inspection technique that offers rapid screening of long lengths of pipework for corrosion and other defects",
+							"arrows": []
+						},
+						{
+							"id": "ematInspection",
+							"title": "EMAT Inspection",
+							"description": "Electromagnetic acoustic transducers provide a permanent image of the entire inspection segment",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 952 127 C 798 188 635 277 625 410"
+								},
+								{
+									"order": 2,
+									"path": "M 623 432 C 105 453 193 235 210 125"
+								},
+								{
+									"order": 3,
+									"path": "M 212 103 C 368 186 790 329 1097 313"
+								}
+							]
+						},
+						{
+							"id": "digitalRadiography",
+							"title": "Digital Radiography",
+							"description": "An inspection technology for subsea environments, an alternative to traditional pipeline inspection gauges, or 'pigs'.",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 953 127 C 830 278 757 343 493 341"
+								}
+							]
+						}
+					]
+				},
+				
+				{
+					"color": "purple",
+					"start": "",
+					"sequences": [
+						{
+							"id": "Corrosion & Erosion Modeling",
+							"title": "Corrosion & Erosion Modeling",
+							"description": "State-of-the-art integrity monitoring and control system models that inform decision making in corrosion monitoring and management",
+							"arrows": []
+						},
+						{
+							"id": "subseaPumping",
+							"title": "Subsea Pumping",
+							"description": "Used to raise the rate of recovery, extend the duration of the peak production plateau and reduce the final abandonment pressure, increasing total recovery",
+							"arrows": []
+						},
+						{
+							"id": "subseaMetering",
+							"title": "Subsea Metering",
+							"description": "Combine flow- and composition-sensing elements and apply empirical flow modeling algorithms to infer the flow rates of oil, water and gas in the production stream",
+							"arrows": []
+						},
+						{
+							"id": "subseaProcessing",
+							"title": "Subsea Processing",
+							"description": "Enables the development of smaller fields that were previously considered uneconomical by tying them back to hub facilities miles away",
+							"arrows": []
+						}
+					]
+				},
+
+				{
+					"color": "blue",
+					"start": "gulfOfMexico",
+					"sequences": [
+						{
+							"id": "project20K",
+							"title": "Project 20K™",
+							"description": "20K technologies will unlock the next wave of deepwater resources, trapped in ultra-high pressure reservoirs",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 471 318 C 691 273 1020 265 1199 272"
+								},
+								{
+									"order": 2,
+									"path": "M 1222 273 C 1225 318 1189 313 1141 313"
+								},
+								{
+									"order": 3,
+									"path": "M 1119 313 C 1223 451 1457 522 1561 397"
+								}
+							]
+						}
+					]
+				}
+
+			]
 		},
 
 		{	"id":"ur",
