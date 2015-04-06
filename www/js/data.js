@@ -3340,8 +3340,165 @@ BP.data = {
 			"title":"Unconventional Reservoirs",
 			"color": "0899cc",
 			"disclaimer":"",
-			"locations":[],
-			"sections":[]
+			"locations":[
+
+				{	"id":"algeria",
+					"title":"Algeria",
+					"left":true,
+					"under":true,
+					"position": {},
+					"color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+					"location":{
+						"x":"986",
+						"y":"321"
+					}
+				},
+
+				{   "id":"azerbaijan",
+				    "title":"Azerbaijan",
+				    "left":false,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1207",
+				        "y":"258"
+				    }
+				},
+
+				{   "id":"canada",
+				    "title":"Canada",
+				    "left":false,
+					"position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"343",
+				        "y":"146"
+				    }
+				},
+
+				{   "id":"northAmerica",
+				    "title":"North America",
+				    "left":true,
+				    "position": null,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Field Trial"]
+						},
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"341",
+				        "y":"229"
+				    }
+				},
+
+				{   "id":"oman",
+				    "title":"Oman",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["green", "blue"],
+					"statuses":[
+						{
+							"color": "green",
+							"status": ["Deployment"]
+						},
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1256",
+				        "y":"360"
+				    }
+				},
+
+				{   "id":"russia",
+				    "title":"Russia",
+				    "left":false,
+				    "under":false,
+				    "position": null,
+				    "color":["blue"],
+					"statuses":[
+						{
+							"color": "blue",
+							"status": []
+						}
+					],
+				    "location":{
+				        "x":"1395",
+				        "y":"130"
+				    }
+				}
+
+
+
+			],
+			"sections":[
+
+				{
+					"color": "green",
+					"start": "",
+					"sequences": [
+						{
+							"id": "geoCompletionOptimization",
+							"title": "Geo-Engineered Completion Optimization",
+							"description": "Proprietary integrated seismic, petrophysics, geomechanics and reservoir modelling tool to optimize well and field design to maximize economic recovery from unconventionals",
+							"arrows": []
+						}
+					]
+				},
+				
+				{
+					"color": "blue",
+					"start": "northAmerica",
+					"sequences": [
+						{
+							"id": "tightGas",
+							"title": "Tight Gas",
+							"description": "Full range of Upstream Technologies, seismic, reservoir management, drilling, completions and operations applied to unconventional, low permeability rocks",
+							"arrows": [
+								{
+									"order": 1,
+									"path": "M 356 221 C 600 329 988 329 1201 277"
+								},
+								{
+									"order": 2,
+									"path": "M 1219 270 C 1085 173 795 158 380 161"
+								},
+								{
+									"order": 2,
+									"path": "M 1222 273 C 1186 335 1126 345 1023 337"
+								}
+							]
+						}
+					]
+				}
+
+			]
 		}
 
 	]
