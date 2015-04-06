@@ -14,10 +14,9 @@ var BP = {
 		sequenceDelay: null,
 		arrowDelay: null,
 		mapPointOpenDelay: null,
-		refreshRequest: null,		
-		revealTogether: null,
-		revealTogetherFinal: null,
-		mapPointReveals: []
+		refreshRequest: null,
+		mapPointReveals: [],
+		techListReveals: []
 
 	},
 

@@ -716,11 +716,15 @@ BP.handlers = {
 
 			var checkLoop;
 
+			BP.timers.techListReveals.forEach(function(t){ window.clearTimeout(t) });
+			BP.timers.techListReveals = [];
+
 			async.series([
 
 				function(next){
 
-					setTimeout(next, 400);
+					var t = setTimeout(next, 400);
+					BP.timers.techListReveals.push(t);
 
 				},
 				
@@ -729,9 +733,13 @@ BP.handlers = {
 					$( lists[0] ).cssAnimationReset();
 					$( lists[0] ).find('div.techs').cssAnimationReset();
 
-					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+					$( lists[0] ).addClass('is-opening');
+					$( lists[0] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
+						$( lists[0] ).removeClass('is-opening');
+					});
 					
-					setTimeout(next, 150);
+					var t = setTimeout(next, 150);
+					BP.timers.techListReveals.push(t);
 
 				},
 
@@ -742,9 +750,14 @@ BP.handlers = {
 					$( lists[1] ).cssAnimationReset();
 					$( lists[1] ).find('div.techs').cssAnimationReset();
 
-					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+					$( lists[1] ).addClass('is-opening');
+					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
+						$( lists[1] ).removeClass('is-opening');
+					});
 
-					setTimeout(next, 500);
+
+					var t = setTimeout(next, 500);
+					BP.timers.techListReveals.push(t);
 
 				},
 
@@ -753,17 +766,29 @@ BP.handlers = {
 					window.clearInterval(checkLoop);
 					BP.views.checklistGroupLengths(listGroup);
 					
-					setTimeout(function(){  
+					var t = setTimeout(function(){  
 					
 						$(self).css('z-index', '');
 					
 						next();
 
 					}, 250);
+					BP.timers.techListReveals.push(t);
 					
 				}
 
-			]);
+			], function(){
+
+				// Finished opening sequence, now clean up.
+
+				var stillOpen = $(self).hasClass('open');
+				if(!stillOpen){
+
+					// $( lists ).cssAnimationReset();
+
+				}
+
+			});
 
 		}
 
@@ -796,23 +821,56 @@ BP.handlers = {
 
 			function(next){
 
-				$( lists[1] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
+				if(!$( lists[1] ).data().transitioning){
+					$( lists[1] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
+					setTimeout(next, 150);
+				} else {
+					var t = setInterval(function(){
+						if(!$(lists[1]).data().transitioning){
 
-				setTimeout(next, 150);
+							window.clearInterval(t);
+
+							$( lists[1] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
+
+							setTimeout(next, 150);
+						}
+					}, 250);
+				}
 
 			},
 			
 			function(next){
 
-				$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' });
-				
-				setTimeout(next, 500);
+				if(!$( lists[0] ).data().transitioning){
+					$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
+					setTimeout(next, 500);
+				} else {
+					var t = setInterval(function(){
+						if(!$(lists[0]).data().transitioning){
+
+							window.clearInterval(t);
+
+							$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
+
+							setTimeout(next, 500);
+						}
+					}, 250);
+				}
+
+				setTimeout(function(){
+
+					console.log('mapPoint finished closing');
+
+					$(lists).css('height', '0px');
+
+				}, 700);
 
 			},
 			
 			function(next){
 				
 				point.removeClass('open');
+				
 				
 				if(!$('div.mapPoint.open').length) {
 
