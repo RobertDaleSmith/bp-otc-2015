@@ -2,23 +2,23 @@ BP.handlers = {
 
 	init: function() {
 
-		$('div#logo_wrapper').click(this.headerLogoClickEvent);
+		$('div#logo_wrapper').on('tap, click', this.headerLogoClickEvent);
 
-		$('div#header_button_wrapper .btn .title').click(this.headerMainMenuClickEvent);
+		$('div#header_button_wrapper .btn .title').on('tap, click', this.headerMainMenuClickEvent);
 
-		$('div#header_button_wrapper .btn .icon').click(this.headerDropDownMenuClickEvent);
+		$('div#header_button_wrapper .btn .icon').on('tap, click', this.headerDropDownMenuClickEvent);
 
-		$('div.menuItem').click(this.headerMenuItemClickEvent);
+		$('div.menuItem').on('tap, click', this.headerMenuItemClickEvent);
 
-		$('.sub_menu_wrapper .menu .btn').click(this.subMenuClickEvent);
+		$('.sub_menu_wrapper .menu .btn').on('tap, click', this.subMenuClickEvent);
 
-		$('div#deployments div.mapPoint').click(this.mapPointClickEvent);
+		$('div#deployments div.mapPoint').on('tap, click', this.mapPointClickEvent);
 
-		$('div#deployments div.mapPoint .close').click(this.mapPointLabelCloseBtnClickEvent);
+		$('div#deployments div.mapPoint .close').on('tap, click', this.mapPointLabelCloseBtnClickEvent);
 
-		$('div.listGroup div.title, div.listGroup div.toggle').click(this.techCategoryToggleClickEvent);
+		$('div.listGroup div.title, div.listGroup div.toggle').on('tap, click', this.techCategoryToggleClickEvent);
 
-		$('div#mapImage').click(this.mapClickEvent);
+		$('div#mapImage').on('tap, click', this.mapClickEvent);
 
 		if(BP.settings.editMode){
 			$('div#projects div.mapPoint div.label').each(function(){
