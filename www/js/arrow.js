@@ -164,23 +164,27 @@
 		
 		this.group = $('#arrow_paths #lines_'+this.section+' .lines.'+this.color+' .line.line_'+this.seqId+'_'+this.index);
 		
-		this.group.find('g.curve, g.handles circle').dblclick( function(e){ self.play() } );
+		if(BP.settings.editMode){
 
-		this.group.find('g.curve').bind('mouseheld', function(e){ self.editToolToggle() } );
+			this.group.find('g.curve, g.handles circle').dblclick( function(e){ self.play() } );
 
-		this.group.find('g.handles circle').each(function(){
+			this.group.find('g.curve').bind('mouseheld', function(e){ self.editToolToggle() } );
 
-			this.addEventListener("mousedown", function(e){ self.mouseDown(e, this) }, false);
-			this.addEventListener("mouseup"  , function(e){ self.mouseUp(  e, this) }, false);
-			this.addEventListener("mousemove", function(e){ self.mouseMove(e, this) }, false);
+			this.group.find('g.handles circle').each(function(){
 
-			var whichPoint = $(this).attr('class')+'';
-			if(whichPoint == 'start') $(this).attr('cx', self.bezier.points[0].x).attr('cy', self.bezier.points[0].y);
-			if(whichPoint == 'ctr1')  $(this).attr('cx', self.bezier.points[1].x).attr('cy', self.bezier.points[1].y);
-			if(whichPoint == 'ctr2')  $(this).attr('cx', self.bezier.points[2].x).attr('cy', self.bezier.points[2].y);
-			if(whichPoint == 'end')	  $(this).attr('cx', self.bezier.points[3].x).attr('cy', self.bezier.points[3].y);
+				this.addEventListener("mousedown", function(e){ self.mouseDown(e, this) }, false);
+				this.addEventListener("mouseup"  , function(e){ self.mouseUp(  e, this) }, false);
+				this.addEventListener("mousemove", function(e){ self.mouseMove(e, this) }, false);
 
-		});
+				var whichPoint = $(this).attr('class')+'';
+				if(whichPoint == 'start') $(this).attr('cx', self.bezier.points[0].x).attr('cy', self.bezier.points[0].y);
+				if(whichPoint == 'ctr1')  $(this).attr('cx', self.bezier.points[1].x).attr('cy', self.bezier.points[1].y);
+				if(whichPoint == 'ctr2')  $(this).attr('cx', self.bezier.points[2].x).attr('cy', self.bezier.points[2].y);
+				if(whichPoint == 'end')	  $(this).attr('cx', self.bezier.points[3].x).attr('cy', self.bezier.points[3].y);
+
+			});
+		
+		}
 
 		this.order = this.group.attr('order');
 

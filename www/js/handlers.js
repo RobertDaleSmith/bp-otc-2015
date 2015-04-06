@@ -20,13 +20,15 @@ BP.handlers = {
 
 		$('div#mapImage').click(this.mapClickEvent);
 
-		$('div#projects div.mapPoint div.label').each(function(){
+		if(BP.settings.editMode){
+			$('div#projects div.mapPoint div.label').each(function(){
 
-			this.addEventListener("mousedown", function(e){ BP.handlers.tools.labels.mouseDown(e, this) }, false);
-			this.addEventListener("mouseup"  , function(e){ BP.handlers.tools.labels.mouseUp(  e, this) }, false);
-			this.addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
+				this.addEventListener("mousedown", function(e){ BP.handlers.tools.labels.mouseDown(e, this) }, false);
+				this.addEventListener("mouseup"  , function(e){ BP.handlers.tools.labels.mouseUp(  e, this) }, false);
+				this.addEventListener("mousemove", function(e){ BP.handlers.tools.labels.mouseMove(e, this) }, false);
 
-		});
+			});
+		}
 
 		this.keyboardKeyEventsInit();
 
