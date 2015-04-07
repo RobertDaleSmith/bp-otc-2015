@@ -30,6 +30,8 @@ BP.handlers = {
 			});
 		}
 
+		$(window).resize(this.windowResizeEvent); this.windowResizeEvent();
+
 		this.keyboardKeyEventsInit();
 
 		this.videoPlayerInit();
@@ -973,6 +975,15 @@ BP.handlers = {
 	mapClickEvent: function() {
 
 		$('div.mapPoint.open').find('.close').click();
+		
+	},
+
+	windowResizeEvent: function(e) {
+    	var width = $(window).width();
+    	console.log(width);
+    	var percent = width / 1920;
+
+		$('div#main_wrapper').css('transform','scale('+percent+')')
 		
 	}
 
