@@ -766,21 +766,14 @@ BP.handlers = {
 					window.clearInterval(checkLoop);
 					BP.views.checklistGroupLengths(listGroup);
 					
-					var t = setTimeout(function(){  
-					
-						$(self).css('z-index', '');
-					
-						next();
+					next();
 
-					}, 250);
-					BP.timers.techListReveals.push(t);
-					
 				}
 
 			], function(){
 
 				// Finished opening sequence, now clean up.
-
+				$(self).css('z-index', '');
 				var stillOpen = $(self).hasClass('open');
 				if(!stillOpen){
 
@@ -813,6 +806,8 @@ BP.handlers = {
 
 			function(next){
 
+				$(point).css('z-index', '25');
+
 				next();
 
 				// setTimeout(next, 250);
@@ -833,6 +828,7 @@ BP.handlers = {
 							$( lists[1] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
 
 							setTimeout(next, 150);
+
 						}
 					}, 250);
 				}
@@ -853,17 +849,16 @@ BP.handlers = {
 							$( lists[0] ).cssAnimateAuto({ action: 'close', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){});
 
 							setTimeout(next, 500);
+
 						}
 					}, 250);
 				}
 
 				setTimeout(function(){
-
 					console.log('mapPoint finished closing');
-
 					$(lists).css('height', '0px');
-
 				}, 700);
+				setTimeout(function(){ $(point).css('z-index', ''); }, 800);
 
 			},
 			
