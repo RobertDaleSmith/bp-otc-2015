@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>BP OTC 2015 - Interactive Map</title>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Language" content="en">
+		<meta name=viewport content="width=1920, initial-scale=1">
+
+		<link rel="shortcut icon" href="favicon.ico"/>
+
+		<!-- Additional Libraries -->
+		<script type="text/javascript" src="libs/async.js"></script>
+		<script type="text/javascript" src="libs/bezier.js"></script>
+
+		<link href="libs/video-js/video-js.css" rel="stylesheet" type="text/css" />
+		<link href="libs/video-js/videojs-bp-skin.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="libs/video-js/video.js"></script>
+
+		<script type="text/javascript" src="libs/dustjs/dust-full.min.js"></script>
+		<script type="text/javascript" src="libs/dustjs/dust-helpers.min.js"></script>
+
+		<script type="text/javascript" src="libs/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery.cssAnimateAuto.min.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery.clickAndHold.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery.mobile.custom.min.js"></script>
+
+		<!-- Project Style -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600,300' rel='stylesheet' type='text/css' />
+		<!-- <link href="css/fonts.css" media="all" rel="stylesheet" type="text/css" /> -->
+		<link href="css/animation.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="css/responsive.css" media="all" rel="stylesheet" type="text/css" />
+
+		<!-- Dust HTML Templates -->
+		<script type="text/template" name="mapPoint">
+
+			<div class="mapPoint{?left} left{/left}{?under} under{/under} hide" 
+				  id="{id}" 
+				  mapLeft="{map.x}" 
+				  mapTop="{map.y}" 
+				  style="left:{location.x}px; top:{location.y}px;"
+				  {?disclaimer}disclaimer="{disclaimer}"{/disclaimer}
+				  color="{color}">
+
+				{>"point" count="{color.length}" color="{color}"/}
+
+				<div class="label_wrapper hide">
+
+					<div class="arrow{?.project} clip{/.project}"></div>
+
+					<div class="label" position='{position|js}' {?position} style="{?position.top}top: {position.top}px;{/position.top}
+														 {?position.left}left: {position.left}px;{/position.left}
+														 {?position.right}right: {position.right}px;{/position.right}"{/position}>
+
+						<div class="title">{title}</div>
+
+						<div class="description">{description}</div>
+
+						<div class="close"></div>
+
+					</div>
+
+					{#statuses}
+
+						{?.status}
+
+							<div class="stats {.color}">
+
+								{#.status}
+
+									<span class="stat">{.}</span>
+
+								{/.status}
+
+							</div>
+
+						{/.status}
+
+					{/statuses}
+
+				</div>
+
+				<div class="listGroup">
+
+					{#technology}
+
+						<div class='list list_{$idx}'>
+
+							{#.}
+
+								{>"techCategory"/}
+
+							{/.}
+
+							<div class="grip"></div>
+
+						</div>
+
+					{/technology}
+
+				</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="point">
+
+			{@select key="{count}"}
+
+				{@eq value="1"} {>"soloPoint"/} {/eq}
+
+				{@eq value="2"} {>"dualPoint"/} {/eq}
+
+				{@eq value="3"} {>"triPoint" /} {/eq}
+
+				{@eq value="4"} {>"quadPoint"/} {/eq}
+
+				{@none} {>"soloPoint"/} {/none}
+
+			{/select}
+			
+		</script>
+
+		<script type="text/template" name="soloPoint">
+
+			<div class="point_wrapper {color}">
+				<div class="post"></div>
+				<div class="point"></div>
+			</div>
+
+		</script>
+
+		<script type="text/template" name="dualPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="triPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+					{@eq value="2"}top{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="quadPoint">
+
+			{#color}
+				<div class='partPoint 
+				{@select key="{$idx}"}
+					{@eq value="0"}left{/eq}
+					{@eq value="1"}right{/eq}
+					{@eq value="2"}bottomRight{/eq}
+					{@eq value="3"}bottomLeft{/eq}
+				{/select}'>
+					{>"soloPoint" color="{.}"/}
+				</div>
+			{/color}
+
+		</script>
+
+		<script type="text/template" name="techCategory">
+
+			<div class="category">
+
+				<div class="title" style="border-color:#{color};">{name}</div>
+
+				<div class="toggle"></div>
+
+				<div class="techs" style="border-color:#{color};">
+
+					<div class="tech head">
+
+						<div class="name">Technology</div>
+
+						<div class="status">Status</div>
+
+					</div>
+
+					{#types}
+
+						{>"techType" name="{.name}" status="{.status}" /}
+
+					{/types}
+
+				</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="techType">
+
+			<div class="tech">
+
+				<div class="name">{name}</div>
+
+				<div class="status">{status}</div>
+
+			</div>
+
+		</script>
+
+		<script type="text/template" name="menuItem">
+
+			<div class="menuItem" id="{id}">{title}</div>
+
+		</script>
+
+		<script type="text/template" name="svg">
+		
+			<svg id="arrow_paths" class="" viewBox="0 0 1920 970" width="1920px" height="970px" baseProfile="tiny" version="1.2">
+				
+				{#projects}
+
+					<g id="lines_{id}" class="section">
+
+						{#sections}
+
+							<g class="lines {color}">
+
+								{#sequences}
+
+									{#arrows}
+
+										<g class="line line_{id}_{$idx}" order="{order}">
+
+											<g class="guides">
+												<path class="guide guide1" d="M0 0 0 0" />
+												<path class="guide guide2" d="M0 0 0 0" />
+												<path class="guide guide3" d="M0 0 0 0" stroke="GREY" stroke-width="1" fill="none" stroke-dasharray="10,10" />
+												<path class="base" d="{path}" stroke="transparent" stroke-width="6" fill="none" stroke-linecap="butt" />
+											</g>
+											<g class="curve">
+												<path class="lambda" d="{path}" />
+												<polygon class="arrow" points="0,28 13,0 26,28 13,17 " width="26" height="28" transform="translate(0, 0) rotate(0 13 14)" />
+											</g>
+											<g class="handles">
+												<circle class="start" pointer-events="auto" cursor="pointer" fill="rgba(164,164,164,0)" cx="0" cy="0" r="15" stroke="#99cc00" stroke-width="0" />
+												<circle class="end"   pointer-events="auto" cursor="pointer" fill="rgba(164,164,164,0)" cx="0" cy="0" r="15" stroke="#99cc00" stroke-width="0" />
+												<circle class="ctr1"  pointer-events="auto" cursor="pointer" fill="rgba(255,255,255,1)" cx="0" cy="0" r="8" stroke="#00a22f" stroke-width="2" />
+												<circle class="ctr2"  pointer-events="auto" cursor="pointer" fill="rgba(255,255,255,1)" cx="0" cy="0" r="8" stroke="#00a22f" stroke-width="2" />
+											</g>
+
+										</g>
+
+									{/arrows}
+
+								{/sequences}
+
+							</g>
+
+						{/sections}
+
+					</g>
+
+				{/projects}
+
+			</svg>
+
+		</script>
+
+		<script type="text/template" name="projectSubMenu">
+
+			<div class="sub_menu_wrapper" id="{id}" disclaimer="{disclaimer}" style="border-color:#{color};">
+
+				<div class="title">{title}</div>
+
+				<div class="menu" id="{id}">
+					
+					<span class="gap"></span><span class="gap"></span>
+
+					{#sections}
+
+						<span class="btn {color}" color="{color}" id="{id}_{color}">
+
+							{#sequences}
+
+								<span class="item">{title}</span>
+
+							{/sequences}
+
+						</span><span class="gap"></span>
+
+					{/sections}
+
+				</div>
+
+			</div>			
+
+		</script>
+
+		<script type="text/template" name="projectSubDetail">
+
+			{#sections}
+
+				<div class="sub_details_wrapper" id="{id}">
+
+					<div class="sub_details {color}">
+
+						{@gt key="{sequences.length}" value="5"}
+
+							{#sequences}
+
+								{@math key=$idx method="mod" operand=2} {@eq value=0}
+
+								<div class="item stacked" id="{id}">
+
+								{/eq}{/math}
+
+									<div class="title">{title}</div>
+
+									<div class="description">{description}</div>
+
+								{@math key=$idx method="mod" operand=2}{@eq value=1}
+
+								</div>
+
+								{/eq}{/math}
+
+							{/sequences}
+
+						{:else}
+
+							{#sequences}
+								
+								<div class="item" id="{id}">
+
+									<div class="title">{title}</div>
+
+									<div class="description">{description}</div>
+
+								</div>
+
+							{/sequences}
+
+						{/gt}
+
+					</div>
+
+				</div>
+
+			{/sections}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="center_wrapper">
+
+			<div id="main_wrapper">
+
+				<div id="header_wrapper">
+
+					<div id="header_button_wrapper">
+
+						<div class="btn" id="deployments">
+
+							<span class="title">technology deployment</span>
+
+							<span class="icon"></span>
+
+							<div class="dropDownMenu">
+
+								<!-- templates :: menuItem -->
+
+							</div>
+
+						</div>
+
+						<div class="btn" id="projects">
+
+							<span class="title">technology projects</span>
+
+							<span class="icon"></span>
+
+							<div class="dropDownMenu">
+
+								<!-- templates :: menuItem -->
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="logo_wrapper" id="logo_wrapper">
+
+						<div class="name">Upstream Technologies</div>
+
+						<div class="logo"></div>
+
+					</div>
+
+				</div>
+
+				<div id="sub_menu_container">
+
+					<!-- template :: projectSubMenu -->
+
+				</div>
+
+				<div id="sub_details_container">
+
+					<!-- template :: projectSubDetail-->
+
+				</div>
+
+				<div id="content_wrapper">
+
+					<div id="map_viewport">
+
+						<div id="map_canvas">
+
+							<div id="map_content_wrapper">
+
+								<div id="mapImage"></div>
+
+								<div id="mapPoints">
+
+									<div class="points" id="deployments">
+
+										<!-- template :: mapPoint -->
+
+									</div>
+
+									<div class="points" id="projects">
+
+										<!-- template :: mapPoint -->
+
+									</div>
+
+								</div>
+
+								<!-- template :: svg -->
+
+							</div>
+
+						</div>
+					
+					</div>
+
+					<div id="intro_wrapper">
+
+						<div class="title">Select a deployment or project above to get started</div>
+
+						<video id="introVideo" class="video video-js vjs-bp-skin" controls preload="auto" width="1320" height="742" data-setup='{}'>
+							<source src="intro.webm" type='video/webm'>
+							<source src="intro.mp4" type='video/mp4'>
+							<p class="vjs-no-js">To view this video please enable JavaScript.</p>
+						</video>
+
+					</div>
+
+				</div>
+
+				<div id="footer_wrapper">
+
+					<!-- Trademarks appears in this area -->
+
+				</div>
+
+			</div>
+
+			<div id="splash_wrapper">
+
+				<div class="out">
+
+					<div class="in">
+
+						<div class="splash_content">
+
+							<div class="logo"></div>
+
+							<div class="loading_title">Loading..</div>
+
+							<div class="preloader_wrapper"><div class="preloader"><div class="progress">	</div></div></div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Project Scripts -->
+		<script src="js/common.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/models.js"></script>
+		<script src="js/views.js"></script>
+		<script src="js/handlers.js"></script>
+		<script src="js/arrow.js"></script>
+		<script src="js/app.js"></script>
+
+	</body>
+
+</html>

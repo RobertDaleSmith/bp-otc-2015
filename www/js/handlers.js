@@ -30,7 +30,7 @@ BP.handlers = {
 			});
 		}
 
-		$(window).resize(this.windowResizeEvent); this.windowResizeEvent();
+		this.windowResizeEventInit();
 
 		this.keyboardKeyEventsInit();
 
@@ -428,6 +428,14 @@ BP.handlers = {
 
 	},
 
+	windowResizeEventInit: function(){
+			
+		$(window).resize(this.windowResizeEvent); 
+
+		this.windowResizeEvent();
+
+	},
+
 	keyboardKeyEventsInit: function() {
 
 		$(window).on('keyup',function(e){
@@ -461,14 +469,24 @@ BP.handlers = {
 
 			}
 
-
 		});
 
 	},
 
 	videoPlayerInit: function(){
 
-		videojs("introVideo").ready(function(){ BP.player = this; });
+		videojs("introVideo", { "reportTouchActivity": true }).ready(function(){ BP.player = this; });
+
+		// $('#introVideo_html5_api').on('click, tap', this.videoPlayerTapEvent);
+
+	},
+
+	videoPlayerTapEvent: function(){
+
+		if(!BP.player.paused()) 
+			BP.player.pause(); 
+		else 
+			BP.player.play();
 
 	},
 
@@ -521,8 +539,6 @@ BP.handlers = {
 			isActive = $(self).parent().hasClass('active');
 
 		if(!isActive){
-
-
 			
 			$("#header_button_wrapper .btn").removeClass('active');
 
@@ -769,7 +785,6 @@ BP.handlers = {
 					$( lists[1] ).cssAnimateAuto({ action: 'open', transition: 'height cubic-bezier(.62,.28,.23,.99) 0.5s' }, function(){
 						$( lists[1] ).removeClass('is-opening');
 					});
-
 
 					var t = setTimeout(next, 500);
 					BP.timers.techListReveals.push(t);

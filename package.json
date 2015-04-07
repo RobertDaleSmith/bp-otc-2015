@@ -23,5 +23,8 @@
     "url": "git@github.com:BouncingPixel/BP-OTC-2015.git"
   },
   "author": "BouncingPixel",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "grunt-contrib-copy": "^0.8.0"
+  }
 }
