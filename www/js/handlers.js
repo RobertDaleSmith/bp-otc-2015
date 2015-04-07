@@ -979,12 +979,8 @@ BP.handlers = {
 	},
 
 	windowResizeEvent: function(e) {
-    	var width = $(window).width();
-    	console.log(width);
-    	var percent = width / 1920;
-
+    	var percent = $(window).width() / 1920;
 		$('div#main_wrapper').css('transform','scale('+percent+')')
-		
 	}
 
 }

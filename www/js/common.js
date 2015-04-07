@@ -3,6 +3,7 @@ var BP = {
 	settings : {
 
 		editMode: false,
+		arrowEasing: true,
 		revealLabelsTogether: true,
 		transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s'
 

@@ -288,7 +288,6 @@
 			var duration = (length / pps) * 1000;
 			if(duration < 500) duration = 500;
 			var inc = ((1000/fps) / duration);
-
 			var lambda = 0;
 			var loopCount = 0;
 
@@ -296,7 +295,15 @@
 
 			self.loop = setInterval(function(){
 
-				lambda = (lambda + inc);
+				var easing = 1;
+
+				if(BP.settings.arrowEasing && lambda > 0.8){
+					if(lambda > 0.8  && lambda < 0.9 ) easing = 0.80; else
+					if(lambda > 0.89 && lambda < 0.95) easing = 0.66; else
+					if(lambda > 0.94 && lambda < 1   ) easing = 0.33;
+				}
+
+				lambda = (lambda + (inc * easing));
 
 				if(lambda > 1) lambda = 1;
 
