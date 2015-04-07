@@ -853,7 +853,7 @@ BP.handlers = {
 						}
 					}, 250);
 				}
-
+				
 				setTimeout(function(){
 					console.log('mapPoint finished closing');
 					$(lists).css('height', '0px');
