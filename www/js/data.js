@@ -2169,15 +2169,15 @@ BP.data = {
 				    "title":"Trinidad & Tobago",
 				    "left":false,
 				    "under":true,
-				    "color":["green", "orange"],
+				    "color":["green", "blue"],
 					"statuses":[
 						{
 							"color": "green",
 							"status": ["Field Trial"]
 						},
 						{
-							"color": "orange",
-							"status": ["GWIS - Development", "EMAT - Development"]
+							"color": "blue",
+							"status": ["Field Trial"]
 						}
 					],
 				    "location":{
@@ -3183,7 +3183,7 @@ BP.data = {
 						},
 						{
 							"color": "orange",
-							"status": ["GWIS - Deployment", "EMAT - Development"]
+							"status": ["Field Trial"]
 						}
 					],
 				    "location":{
