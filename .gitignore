@@ -5,7 +5,7 @@ dev_conf.js
 
 # NW.js build files #
 #####################
-build
+builds
 cache
 
 *.ini
