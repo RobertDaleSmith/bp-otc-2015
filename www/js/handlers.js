@@ -475,9 +475,7 @@ BP.handlers = {
 
 	videoPlayerInit: function(){
 
-		videojs("introVideo", { "reportTouchActivity": true }).ready(function(){ BP.player = this; });
-
-		// $('#introVideo_html5_api').on('click, tap', this.videoPlayerTapEvent);
+		videojs("introVideo").ready(function(){ BP.player = this; });
 
 	},
 
