@@ -925,6 +925,8 @@ BP.handlers = {
 
 		if( parent.hasClass('open') ){
 
+			parent.removeClass('open');
+
 			parent.find('.techs').cssAnimateAuto({ action: 'close' }, function(){
 				
 				parent.removeClass('open');
@@ -936,6 +938,8 @@ BP.handlers = {
 			});
 
 		} else {
+
+			parent.addClass('open');
 
 			parent.find('.techs').cssAnimateAuto({ action: 'open' }, function(){
 				
