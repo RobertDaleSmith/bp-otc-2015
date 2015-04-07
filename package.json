@@ -10,7 +10,8 @@
   "keywords": [],
   "dependencies": {
     "express": "*",
-    "node-webkit-builder": "*"
+    "grunt": "latest",
+    "grunt-node-webkit-builder": "latest"
   },
   "scripts": {
     "start": "node server.js",
