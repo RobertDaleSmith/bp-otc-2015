@@ -520,7 +520,7 @@ BP.handlers = {
 
 		if(!isActive){
 
-			$('div.mapPoint.open').find('.close').click();
+
 			
 			$("#header_button_wrapper .btn").removeClass('active');
 
@@ -549,6 +549,19 @@ BP.handlers = {
 
 			} 
 			if(sectionId == 'projects') {
+
+				$('div.mapPoint.open').find('.close').click();
+				
+				//Patch if was in-action when switched.
+				setTimeout(function(){ if( $('div.mapPoint.open').length>0 ) {
+					// console.log("ouch something probably broke?");
+					$('div.mapPoint').removeClass('open');
+					$('div.mapPoint .list')
+						.data("transitioning", 0)
+						.removeClass('is-opening')
+						.removeClass('short')
+						.attr('style','');
+				} }, 1500);
 
 				// Shift map down a bit to make room for sub menu.
 				$('div#map_canvas').css('left', '0px').css('top', '100px');
@@ -853,7 +866,7 @@ BP.handlers = {
 						}
 					}, 250);
 				}
-				
+
 				setTimeout(function(){
 					console.log('mapPoint finished closing');
 					$(lists).css('height', '0px');
