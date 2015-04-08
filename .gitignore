@@ -47,3 +47,7 @@ Icon?
 
 IIRF.ini
 ~*.*
+
+# SublimeText project files #
+#############################
+*.sublime-*
