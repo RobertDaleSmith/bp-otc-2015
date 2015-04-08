@@ -995,8 +995,13 @@ BP.handlers = {
 	},
 
 	windowResizeEvent: function(e) {
+
     	var percent = $(window).width() / 1920;
-		$('div#main_wrapper').css('transform','scale('+percent+')')
+
+		$('div#main_wrapper').css('transform','scale('+percent+')');
+		
+		$('div#center_wrapper').css('height', (percent*1080) );
+
 	}
 
 }
