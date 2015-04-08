@@ -10,7 +10,6 @@
 			user-select: none;
 }
 
-
 html, body{
 
 	display: block; position: absolute;
@@ -19,7 +18,7 @@ html, body{
 	padding: 0; margin: 0;
 	color: #000000;
 	background-color: #FFFFFF;
-	font-family: 'Univers-Medium', 'Open Sans', sans-serif;
+	font-family: Univers-lt-45, Arial, Helvetica, sans-serif;
 	text-align: center;
 	background-color: #f5f5f5;
 
@@ -1593,9 +1592,9 @@ html, body{
 
 									}	
 										.mapPoint .tech.head{
+											font-family: Univers-lt-65, Arial, Helvetica, sans-serif;
 											color: #a7d322;
 											border-color: #ffffff;
-											font-weight: 700;
 										}
 
 										.mapPoint .tech .name{
