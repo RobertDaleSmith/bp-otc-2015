@@ -430,12 +430,13 @@ BP.handlers = {
 
 	windowResizeEventInit: function(){
 		
-		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
 			$(window).resize(this.windowResizeEvent); 
 
 			this.windowResizeEvent();
-		}
+			
+		// }
 
 	},
 
