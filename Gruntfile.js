@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         version: '0.12.0',
         buildDir: './builds', // Where the build version of my node-webkit app is saved
         macZip: false,
-        macIcns: './www/nw.icns', // Path to the Mac icon file
+        macIcns: './www/icon.icns', // Path to the Mac icon file
         winIco: './www/favicon.ico',
 
         platforms: ['osx', 'win'] // These are the platforms that we want to build
