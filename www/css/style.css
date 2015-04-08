@@ -31,9 +31,9 @@ html, body{
 	overflow: hidden;
 	background-color: #f5f5f5;
 
-	-webkit-box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7)
-	   -moz-box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7)
-			box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7)
+	-webkit-box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7);
+	   -moz-box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7);
+			box-shadow: 0 5px 60px 0 rgba(0,0,0,0.7);
 }
 
 #main_wrapper{
