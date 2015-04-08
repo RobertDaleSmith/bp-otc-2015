@@ -43,11 +43,12 @@ cache
 thumbs.db
 Thumbs.db
 Icon?
-*.sublime-workspace
-
-IIRF.ini
-~*.*
 
 # SublimeText project files #
 #############################
 *.sublime-*
+
+# Misc files #
+##############
+IIRF.ini
+~*.*
