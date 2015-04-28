@@ -314,6 +314,8 @@ html, body{
 
 				cursor: pointer;
 
+				text-transform: none;
+
 			}
 			.dropDownMenu .menuItem:hover{
 				color: #00a330;

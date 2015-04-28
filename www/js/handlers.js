@@ -309,7 +309,7 @@ BP.handlers = {
 			
 			$('div.points#projects div.mapPoint#'+sequences.start).addClass('start');
 
-			var time = 750; if(!hasStartPt) time = 100;
+			var time = BP.delays.arrow; if(!hasStartPt) time = 100;
 			
 			// Delays start of sequence until post is extended.
 			window.clearInterval(BP.timers.sequences);
@@ -319,14 +319,16 @@ BP.handlers = {
 
 					if(count >= sequences.length) return;
 					
-					//Open corresponding footer description.
-					// console.log(sequences[count].name);
-					$('.sub_details .item#'+sequences[count].name).addClass('active');
+					
 
-					var delay = 250; if(count == 0) delay = 0;
+					var delay = BP.delays.sequence; if(count == 0) delay = 0;
 
 					window.clearInterval(BP.timers.sequenceDelay);
 					BP.timers.sequenceDelay = setTimeout(function(){
+
+						//Open corresponding footer description.
+						// console.log(sequences[count].name);
+						$('.sub_details .item#'+sequences[count].name).addClass('active');
 
 						BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
 
@@ -887,7 +889,7 @@ BP.handlers = {
 				}
 
 				setTimeout(function(){
-					console.log('mapPoint finished closing');
+					// console.log('mapPoint finished closing');
 					$(lists).css('height', '0px');
 				}, 700);
 				setTimeout(function(){ $(point).css('z-index', ''); }, 800);

@@ -2,7 +2,7 @@ var BP = {
 
 	settings : {
 
-		editMode: false,
+		editMode: true,
 		arrowEasing: true,
 		revealLabelsTogether: true,
 		transition: 'height cubic-bezier(.62,.28,.23,.99) 0.7s'
@@ -24,6 +24,12 @@ var BP = {
 	counters : {
 
 		refreshRequest: 0
+
+	},
+
+	delays : {
+		arrow: 750,
+		sequence: 1250
 
 	},
 

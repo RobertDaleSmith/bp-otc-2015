@@ -293,9 +293,9 @@
 						<span class="btn {color}" color="{color}" id="{id}_{color}">
 
 							{#sequences}
-
-								<span class="item">{title}</span>
-
+								{?hide}{:else}
+									<span class="item">{title}</span>
+								{/hide}
 							{/sequences}
 
 						</span><span class="gap"></span>
@@ -319,22 +319,26 @@
 						{@gt key="{sequences.length}" value="5"}
 
 							{#sequences}
+								
+								{?hide}{:else}
+								
+									{@math key=$idx method="mod" operand=2} {@eq value=0}
 
-								{@math key=$idx method="mod" operand=2} {@eq value=0}
+									<div class="item stacked" id="{id}">
 
-								<div class="item stacked" id="{id}">
+									{/eq}{/math}
 
-								{/eq}{/math}
+										<div class="title">{title}</div>
 
-									<div class="title">{title}</div>
+										<div class="description">{description}</div>
 
-									<div class="description">{description}</div>
+									{@math key=$idx method="mod" operand=2}{@eq value=1}
 
-								{@math key=$idx method="mod" operand=2}{@eq value=1}
+									</div>
 
-								</div>
-
-								{/eq}{/math}
+									{/eq}{/math}
+								
+								{/hide}
 
 							{/sequences}
 
@@ -342,13 +346,17 @@
 
 							{#sequences}
 								
-								<div class="item" id="{id}">
+								{?hide}{:else}
 
-									<div class="title">{title}</div>
+									<div class="item" id="{id}">
 
-									<div class="description">{description}</div>
+										<div class="title">{title}</div>
 
-								</div>
+										<div class="description">{description}</div>
+
+									</div>
+
+								{/hide}
 
 							{/sequences}
 
@@ -376,7 +384,7 @@
 
 						<div class="btn" id="deployments">
 
-							<span class="title">technology deployment</span>
+							<span class="title">Regional View</span>
 
 							<span class="icon"></span>
 
@@ -390,7 +398,7 @@
 
 						<div class="btn" id="projects">
 
-							<span class="title">technology projects</span>
+							<span class="title">Technology View</span>
 
 							<span class="icon"></span>
 
