@@ -1646,7 +1646,7 @@ BP.data = {
 						{
 							"id": "obs",
 							"title": "Ocean Bottom Seismic",
-							"description": "...",
+							"description": "Ocean Bottom Seismic acquisition includes Ocean Bottom Nodes (OBN) and Ocean Bottom Cable (OBC).",
 							"arrows": [
 								{
 									"order": 1,
