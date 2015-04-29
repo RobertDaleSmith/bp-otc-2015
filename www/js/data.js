@@ -22,7 +22,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -176,7 +176,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Wave Inversions",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -215,7 +215,7 @@ BP.data = {
 						"color": "98ca3c",
 						"types": [
 							{
-								"name": "Corrosion & Erosion Modeling",
+								"name": "Highly Reliable Chemical Injection",
 								"status": "Deployment"
 							}
 						]
@@ -249,7 +249,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -469,7 +469,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -557,7 +557,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -687,7 +687,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -863,7 +863,7 @@ BP.data = {
 								"status": "Field Trial Complete"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -994,7 +994,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
@@ -1171,7 +1171,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Full Waveform Inversion",
+								"name": "Full Waveform Inversions",
 								"status": "Deployment"
 							}
 						]
