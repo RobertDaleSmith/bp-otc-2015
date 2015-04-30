@@ -1834,7 +1834,7 @@ BP.data = {
 								},
 								{
 									"order": 5,
-									"path": "M 953 150 C 940 0 1603 18 1689 479"
+									"path": "M 953 150 C 940 0 1603 18 1686 479"
 								},
 								{
 									"order": 6,
@@ -2462,15 +2462,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"DGa","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"BWa","text":"Deployment"}]
 						},
 						{
 							"color": "blue",
-							"status": ["LoSal® EOR - Field Trial Complete"]
+							"status": [{"type":"EOR","text":"LoSal® EOR - Field Trial Complete"}]
 						}
 					],
 					"location":{
@@ -2488,7 +2488,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "purple",
-							"status": ["Field Trial"]
+							"status": [{"type":"DRo","text":"Field Trial"}]
 						}
 					],
 					"location":{
@@ -2506,7 +2506,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"BWa","text":"Deployment"}]
 						}
 					],
 					"location":{
@@ -2522,11 +2522,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"BWa","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
-							"status": ["Deployment"]
+							"status": [{"type":"DRo","text":"Deployment"}]
 						}
 					],
 				    "location":{
@@ -2544,11 +2544,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"BWa","text":"Deployment"}]
 						},
 						{
 							"color": "blue",
-							"status": ["LoSal® EOR - Planned"]
+							"status": [{"type":"EOR","text":"LoSal® EOR - Planned"}]
 						}
 					],
 				    "location":{
@@ -2565,11 +2565,16 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "purple",
-							"status": ["Field Trial", "Deployment"]
+							"status": [
+								{"type":"DRo","text":"Field Trial"},
+								{"type":"DRo2","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["LoSal® EOR - Planned"]
+							"status": [
+								{"type":"EOR","text":"LoSal® EOR - Planned"}
+							]
 						}
 					],
 				    "location":{
@@ -2587,7 +2592,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "purple",
-							"status": ["Deployment"]
+							"status": [{"type":"DRo","text":"Deployment"}]
 						}
 					],
 				    "location":{
@@ -2605,15 +2610,18 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"DGa","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
-							"status": ["Deployment"]
+							"status": [{"type":"DRo","text":"Deployment"}]
 						},
 						{
 							"color": "blue",
-							"status": ["LoSal® EOR - Deployment", "Polymer Flood - Planned"]
+							"status": [
+								{"type":"EOR","text":"LoSal® EOR - Deployment"},
+								{"type":"DWPF","text":"Polymer Flood - Planned"}
+							]
 						}
 					],
 				    "location":{
@@ -2631,7 +2639,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"DGa","text":"Deployment"}]
 						}
 					],
 				    "location":{
@@ -2649,7 +2657,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "purple",
-							"status": ["Field Trial"]
+							"status": [{"type":"DRo","text":"Field Trial"}]
 						}
 					],
 				    "location":{
@@ -2667,7 +2675,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"BWa","text":"Deployment"}]
 						}
 					],
 				    "location":{
@@ -2684,7 +2692,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "purple",
-							"status": ["Deployment"]
+							"status": [{"type":"DRo","text":"Deployment"}]
 						}
 					],
 				    "location":{
@@ -2768,21 +2776,27 @@ BP.data = {
 								{
 									"order": 3,
 									"path": "M 1002 329 C 1007 251 1001 215 966 167"
-								},
+								}
+							]
+						},
+						{
+							"id": "DRo2",
+							"hide": true,
+							"arrows": [
 								{
-									"order": 4,
+									"order": 1,
 									"path": "M 953 150 C 716 152 611 197 488 305"
-								},
+								},						
 								{
-									"order": 5,
+									"order": 2,
 									"path": "M 471 318 C 484 -50 1050 -50 1212 254"
 								},
 								{
-									"order": 6,
+									"order": 3,
 									"path": "M 1222 273 C 1223 -100 2200 550 645 434"
 								},
 								{
-									"order": 7,
+									"order": 4,
 									"path": "M 623 432 C 264 461 1272 827 1220 336"
 								}
 							]
@@ -2795,7 +2809,7 @@ BP.data = {
 					"start": "",
 					"sequences": [
 						{
-							"id": "DWLE",
+							"id": "EOR",
 							"title": "Designer Water® - LoSal® EOR",
 							"description": "A breakthrough reduced salinity waterflooding technology that significantly increases compared to conventional waterflooding",
 							"arrows": []
@@ -2826,7 +2840,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						}
 					],
 					"location":{
@@ -2844,11 +2858,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -2868,15 +2882,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "blue",
-							"status": ["Deployment"]
+							"status": [{"type":"DTS","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -2897,11 +2911,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -2923,7 +2937,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -2945,11 +2959,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -2971,11 +2985,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -3014,11 +3028,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Deployment"]
+							"status": [{"type":"PMA","text":"Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [{"type":"OAd","text":"Deployment"}]
 						},
 						{
 							"color": "purple",
@@ -3182,11 +3196,11 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["C&EM - Deployment"]
+							"status": [{"type":"CEM","text":"C&EM - Deployment"}]
 						},
 						{
 							"color": "orange",
-							"status": ["GWIS - Deployment"]
+							"status": [{"type":"GWIS","text":"GWIS - Deployment"}]
 						}						
 					],
 					"location":{
@@ -3204,7 +3218,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Deployment"]
+							"status": [{"type":"HRCI","text":"HRCI - Deployment"}]
 						}
 					],
 				    "location":{
@@ -3220,7 +3234,10 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Field Trial", "C&EM - Deployment"]
+							"status": [
+								{"type":"HRCI","text":"HRCI - Field Trial"},
+								{"type":"CEM","text":"C&EM - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -3256,7 +3273,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["GWIS - Development"]
+							"status": [{"type":"GWIS","text":"GWIS - Deployment"}]
 						}
 					],
 				    "location":{
@@ -3273,15 +3290,25 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Field Trial", "C&EM - Deployment"]
+							"status": [
+								{"type":"HRCI","text":"HRCI - Field Trial"},
+								{"type":"CEM","text":"C&EM - Deployment"}
+							]
 						},
 						{
 							"color": "orange",
-							"status": ["DR - Field Trial", "EMAT - Field Trial"]
+							"status": [
+								{"type":"DRa","text":"DR - Field Trial"},
+								{"type":"EMAT","text":"EMAT - Field Trial"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Subsea Pumping - Deployment", "Subsea Metering - Deployment", "Subsea Processing - Deployment"]
+							"status": [
+								{"type":"SPu","text":"Subsea Pumping - Deployment"},
+								{"type":"SMe","text":"Subsea Metering - Deployment"},
+								{"type":"SPr","text":"Subsea Processing - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -3299,11 +3326,19 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Field Trail", "HRCI - Deployment", "C&EM - Deployment"]
+							"status": [
+								{"type":"HRCI","text":"HRCI - Field Trial"},
+								{"type":"HRCI2","text":"HRCI - Deployment"},
+								{"type":"CEM","text":"C&EM - Deployment"}
+							]
 						},
 						{
 							"color": "orange",
-							"status": ["GWIS - Deployment", "DR - Field Trial Complete", "EMAT - Field Trial Complete"]
+							"status": [
+								{"type":"GWIS","text":"GWIS - Deployment"},
+								{"type":"DRa","text":"DR - Field Trial Complete"},
+								{"type":"EMAT","text":"EMAT - Field Trial Complete"}
+							]
 						}
 					],
 				    "location":{
@@ -3321,7 +3356,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Deployment"]
+							"status": [{"type":"HRCI","text":"HRCI - Deployment"}]
 						}
 					],
 				    "location":{
@@ -3338,11 +3373,14 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["HRCI - Field Trial", "C&EM - Deployment"]
+							"status": [
+								{"type":"HRCI","text":"HRCI - Field Trial"},
+								{"type":"CEM","text":"C&EM - Deployment"}
+							]
 						},
 						{
 							"color": "orange",
-							"status": ["GWIS - Deployment"]
+							"status": [{"type":"GWIS","text":"GWIS - Deployment"}]
 						}
 					],
 				    "location":{
@@ -3374,23 +3412,29 @@ BP.data = {
 								{
 									"order": 3,
 									"path": "M 618 432 C 504 429 452 429 467 363"
-								},
+								}
+							]
+						},
+						{
+							"id": "HRCI2",
+							"hide": true,
+							"arrows": [
 								{
-									"order": 4,
+									"order": 1,
 									"path": "M 472 337 C 498 208 715 183 932 132"
 								},
 								{
-									"order": 5,
+									"order": 2,
 									"path": "M 953 128 C 845 223 741 560 994 548"
 								},
 								{
-									"order": 6,
+									"order": 3,
 									"path": "M 1016 548 C 984 427 973 306 984 204"
 								}
 							]
 						},
 						{
-							"id": "corrosionErosionModeling",
+							"id": "CEM",
 							"title": "Corrosion & Erosion Modeling",
 							"description": "State-of-the-art integrity monitoring and control system models that inform decision making in corrosion monitoring and management",
 							"arrows": []
@@ -3439,7 +3483,7 @@ BP.data = {
 							"arrows": [
 								{
 									"order": 1,
-									"path": "M 953 127 C 830 278 757 343 493 341"
+									"path": "M 953 127 C 732 155 565 220 483 323"
 								}
 							]
 						}
