@@ -35,7 +35,7 @@
 		<!-- Dust HTML Templates -->
 		<script type="text/template" name="mapPoint">
 
-			<div class="mapPoint{?left} left{/left}{?under} under{/under} hide" 
+			<div class="mapPoint{?left} left{:else} right{/left}{?under} under{/under}{?half} half{/half} hide" 
 				  id="{id}" 
 				  mapLeft="{map.x}" 
 				  mapTop="{map.y}" 
@@ -65,11 +65,11 @@
 
 						{?.status}
 
-							<div class="stats {.color}">
+							<div class="stats hide {.color}">
 
 								{#.status}
 
-									<span class="stat">{.}</span>
+									<span class="stat hide {.type}">{.text}</span>
 
 								{/.status}
 

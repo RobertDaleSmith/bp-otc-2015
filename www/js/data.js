@@ -48,7 +48,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Permanently Installed Sensors",
+								"name": "Guided Wave Inspection Systems",
 								"status": "Deployment"
 							}
 						]
@@ -105,8 +105,8 @@ BP.data = {
 		    "description":"Major gas business, with two large gas developments – in Salah (dry gas) and in Amenas (wet gas) – both in partnership with Sonatrach and Statoil.",
 		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
-		        "x":"986",
-		        "y":"321"
+		        "x":"976",
+		        "y":"350"
 		    },
 		    "map":{
 		    	"x":"210",
@@ -222,6 +222,37 @@ BP.data = {
 
 					}
 				]
+			]
+		},
+
+		{   "id":"argentina",
+		    "title":"Argentina",
+		    "left":false,
+		    "half":true,
+		    "description":"...",
+		    "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
+		    "location":{
+		        "x":"622",
+		        "y":"674"  
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
+				[					
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "f26721",
+						"types": [
+							{
+								"name": "Bright Water®",
+								"status": "Deployment"
+							}
+						]
+					}
+				],
+				[]
 			]
 		},
 
@@ -761,6 +792,41 @@ BP.data = {
 			]
 		},
 
+		{   "id":"libya",
+		    "title":"Libya",
+		    "left":true,
+		    "half":true,
+		    "description":"...",
+		    "disclaimer":"ISS is a registered trade mark of BP plc",
+		    "location":{
+		        "x":"1016",
+		        "y":"310"
+		    },
+		    "map":{
+		        "x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
+				[],[
+					{
+						"name": "Advanced Seismic Imaging",
+						"color": "02745d",
+						"types": [
+							{
+								"name": "4D Seismic Simulations",
+								"status": "Deployment"
+							},
+							{
+								"name": "ISS®",
+								"status": "Field Trial Complete"
+							}
+						]
+
+					}
+				]				
+			]
+		},
+
 		{   "id":"northAmerica",
 		    "title":"North America",
 		    "left":false,
@@ -1102,17 +1168,7 @@ BP.data = {
 							}
 						]
 
-					},
-					// {
-					// 	"name": "Wells",
-					// 	"color": "b41f24",
-					// 	"types": [
-					// 		{
-					// 			"name": "Horizontal Drilling",
-					// 			"status": "Deployment"
-					// 		}
-					// 	]
-					// }
+					}
 				],
 				[
 					{
@@ -1140,6 +1196,36 @@ BP.data = {
 						]
 					}
 				]
+			]
+		},
+
+		{   "id":"russia",
+		    "title":"Russia",
+		    "left":true,
+		    "half":true,
+		    "description":"...",
+		    "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
+		    "location":{
+		        "x":"1395",
+		        "y":"130"
+		    },
+		    "map":{
+		    	"x":"0",
+		        "y":"0"            
+		    },
+		    "technology":[
+				[],[
+					{
+						"name": "Enhanced Oil Recovery",
+						"color": "f26721",
+						"types": [
+							{
+								"name": "Bright Water®",
+								"status": "Deployment"
+							}
+						]
+					}
+				]				
 			]
 		},
 
@@ -1266,7 +1352,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						}
 					],
 					"location":{
@@ -1284,7 +1372,10 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Field Trial", "ISS® - Deployment"]
+							"status": [
+								{"type":"ISS","text":"ISS® - Field Trial"},
+								{"type":"OBS","text":"ISS® - Deployment"}
+							]
 						}
 					],
 					"location":{
@@ -1302,11 +1393,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Wide Azimuth Towed Streamer - Deployment"]
+							"status": [
+								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
+							]
 						}
 					],
 				    "location":{
@@ -1323,11 +1418,13 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["4D Seismic - Deployment"]
+							"status": [{"type":"4DS","text":"4D Seismic - Deployment"}]
 						}
 					],
 				    "location":{
@@ -1344,7 +1441,7 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["4D Seismic - Deployment"]
+							"status": [{"type":"4DS","text":"4D Seismic - Deployment"}]
 						}
 					],
 				    "location":{
@@ -1361,7 +1458,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Field Trial Complete"]
+							"status": [
+								{"type":"ISS","text":"ISS® - Field Trial Complete"},
+							]
 						}
 					],
 				    "location":{
@@ -1379,11 +1478,16 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Multi-Azimuth Seismic - Deployment", "Seismic Simulations - Deployment"]
+							"status": [
+								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
+								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1400,11 +1504,18 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Multi-Azimuth Seismic - Deployment", "Wide Azimuth Towed Streamer - Deployment", "Ocean Bottom Nodes - Deployment", "Seismic Simulations - Deployment"]
+							"status": [
+								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
+								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
+								{"type":"OBN","text":"Ocean Bottom Nodes - Deployment"}, 
+								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1422,11 +1533,16 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Wide Azimuth Towed Streamer - Deployment", "Seismic Simulations - Deployment"]
+							"status": [
+								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
+								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1443,7 +1559,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISSN™ - Deployment"]
+							"status": [
+								{"type":"ISSN","text":"ISSN™ - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1461,7 +1579,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["DS³ - Deployment"]
+							"status": [
+								{"type":"DS3","text":"DS³ - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1479,7 +1599,10 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISS® - Deployment", "ISSN™ - Field Trial Complete"]
+							"status": [
+								{"type":"ISS","text":"ISS® - Deployment"},
+								{"type":"ISSN","text":"ISSN™ - Field Trial Complete"}
+							]
 						}
 					],
 				    "location":{
@@ -1496,11 +1619,16 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["ISSN™ - Field Trial Complete"]
+							"status": [
+								{"type":"ISSN","text":"ISSN™ - Field Trial Complete"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Multi-Azimuth Seismic - Deployment", "Seismic Simulations - Deployment"]
+							"status": [
+								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
+								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1517,15 +1645,22 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["OBS - Field Trial"]
+							"status": [
+								{"type":"OBS","text":"OBS - Field Trial"}
+							]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Wide Azimuth Towed Streamer - Field Trial Complete", "4D Seismic - Deployment"]
+							"status": [
+								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Field Trial Complete"}, 
+								{"type":"4DS","text":"4D Seismic - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1543,11 +1678,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["4D Seismic - Deployment"]
+							"status": [
+								{"type":"4DS","text":"4D Seismic - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1565,7 +1704,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["DS³ - Field Trail"]
+							"status": [
+								{"type":"DS3","text":"DS³ - Field Trail"}
+							]
 						}
 					],
 				    "location":{
@@ -1583,15 +1724,21 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["OBS - Deployment"]
+							"status": [
+								{"type":"OBS","text":"OBS - Deployment"}
+							]
 						},
 						{
 							"color": "orange",
-							"status": ["Deployment"]
+							"status": [
+								{"type":"FWI","text":"Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Seismic Simulations - Deployment"]
+							"status": [
+								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1607,7 +1754,7 @@ BP.data = {
 					"start": "algeria",
 					"sequences": [
 						{
-							"id": "iss",
+							"id": "ISS",
 							"title": "ISS®",
 							"description": "Multiple sources acquiring seismic simultaneously, with noise distortion processed out",
 							"arrows": [
@@ -1622,7 +1769,7 @@ BP.data = {
 							]
 						},
 						{
-							"id": "ds3",
+							"id": "DS3",
 							"title": "DS³",
 							"description": "Distance separated simulations sweeping, with sources separated by distance",
 							"arrows": [
@@ -1633,7 +1780,7 @@ BP.data = {
 							]
 						},
 						{
-							"id": "issn",
+							"id": "ISSN",
 							"title": "ISSN™",
 							"description": "Multiple sources working independently but recorded continuously",
 							"arrows": [
@@ -1644,9 +1791,9 @@ BP.data = {
 							]
 						},
 						{
-							"id": "obs",
+							"id": "OBS",
 							"title": "Ocean Bottom Seismic",
-							"description": "Ocean Bottom Seismic acquisition includes Ocean Bottom Nodes (OBN) and Ocean Bottom Cable (OBC).",
+							"description": "Ocean Bottom Seismic acquisition includes Ocean Bottom Nodes (OBN) and Ocean Bottom Cable (OBC)",
 							"arrows": [
 								{
 									"order": 1,
@@ -1665,7 +1812,7 @@ BP.data = {
 					"start": "norway",
 					"sequences": [
 						{
-							"id": "fullWaveInversions",
+							"id": "FWI",
 							"title": "Full Waveform Inversions",
 							"description": "High-resolution velocity model-building through inversion of entire 3D data sets",
 							"arrows": [
@@ -1710,31 +1857,31 @@ BP.data = {
 					"start": "",
 					"sequences": [
 						{
-							"id": "multiAzimuthSeismic",
+							"id": "MAS",
 							"title": "Multi-Azimuth Seismic",
 							"description": "Illuminates target from different azimuths with multiple surveys over the same area",
 							"arrows": []
 						},
 						{
-							"id": "wideAzimuthTowedStreamer",
+							"id": "WATS",
 							"title": "Wide Azimuth Towed Streamer",
 							"description": "Receivers illuminated with multiple sources to survey from many azimuths and offsets",
 							"arrows": []
 						},
 						{
-							"id": "oceanBottomNodes",
+							"id": "OBN",
 							"title": "Ocean Bottom Nodes",
 							"description": "Seabed receivers enable surveys around facilities and high density survey configurations",
 							"arrows": []
 						},
 						{
-							"id": "seismicModeling",
+							"id": "SeS",
 							"title": "Seismic Simulations",
 							"description": "Synthetic data generation to support data acquisition, processing and analysis",
 							"arrows": []
 						},
 						{
-							"id": "fourDemSeismic",
+							"id": "4DS",
 							"title": "4D Seismic",
 							"description": "Reservoir monitoring to detect gas and fluid changes over time",
 							"arrows": []
@@ -1757,7 +1904,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1773,11 +1922,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}
+							]
 						},						
 						{
 							"color": "blue",
-							"status": ["No Drilling Surprises - Deployment"]
+							"status": [
+								{"type":"NDS","text":"No Drilling Surprises - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1795,7 +1948,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["BOP Monitoring - Field Trial Complete"]
+							"status": [
+								{"type":"BOP","text":"BOP Monitoring - Field Trial Complete"}
+							]
 						}
 					],
 				    "location":{
@@ -1812,11 +1967,18 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment", "BOP Monitoring - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}, 
+								{"type":"BOP","text":"BOP Monitoring - Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Pressure Testing Console - Deployment", "Rigsite Fluid Management - Field Trial", "No Drilling Surprises - Deployment"]
+							"status": [
+								{"type":"PTC","text":"Pressure Testing Console - Deployment"}, 
+								{"type":"RFM","text":"Rigsite Fluid Management - Field Trial"}, 
+								{"type":"NDS","text":"No Drilling Surprises - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1833,7 +1995,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1851,11 +2015,15 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Cementing Console - Deployment"]
+							"status": [
+								{"type":"CCo","text":"Cementing Console - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1873,7 +2041,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "blue",
-							"status": ["ROP Optimization - Field Trial"]
+							"status": [
+								{"type":"ROP","text":"ROP Optimization - Field Trial"}
+							]
 						}
 					],
 				    "location":{
@@ -1890,7 +2060,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "green",
-							"status": ["Casing Running Console - Deployment"]
+							"status": [
+								{"type":"CRC","text":"Casing Running Console - Deployment"}
+							]
 						}
 					],
 				    "location":{
@@ -1907,7 +2079,7 @@ BP.data = {
 					"start": "azerbaijan",
 					"sequences": [
 						{
-							"id": "caseRunConsole",
+							"id": "CRC",
 							"title": "Casing Running Console",
 							"description": "Detects changes in observed friction between casing and the wellbore",
 							"arrows": [
@@ -1934,7 +2106,7 @@ BP.data = {
 							]
 						},
 						{
-							"id": "bopMonitoring",
+							"id": "BOP",
 							"title": "BOP Monitoring",
 							"description": "Remote monitoring of BOP health and valves performance, with control systems diagnostics beyond rig site",
 							"arrows": [
@@ -1952,31 +2124,31 @@ BP.data = {
 					"start": "",
 					"sequences": [
 						{
-							"id": "pressureTesting",
+							"id": "PTC",
 							"title": "Pressure Testing Console",
 							"description": "Real-time display, interpretation and documentation of positive well barrier pressure tests",
 							"arrows": []
 						},
 						{
-							"id": "rigsiteFluidManage",
+							"id": "RFM",
 							"title": "Rigsite Fluid Management",
 							"description": "Early warning indicators for potential lost circulation and well control issues",
 							"arrows": []
 						},
 						{
-							"id": "noDrillingSurprises",
+							"id": "NDS",
 							"title": "No Drilling Surprises",
 							"description": "Key subsurface and hazardous risks identified from offset wells, updated in real time during drilling operations",
 							"arrows": []
 						},
 						{
-							"id": "cementing",
+							"id": "CCo",
 							"title": "Cementing Console",
 							"description": "Real-time cement placement and centralizer stand-off analysis, with verification of cement well barriers to reduce zonal isolation events",
 							"arrows": []
 						},
 						{
-							"id": "ropOptimization",
+							"id": "ROP",
 							"title": "ROP Optimization",
 							"description": "Maximising drilling efficiency in hard rock environments",
 							"arrows": []
@@ -2002,7 +2174,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Field Trial"]
+							"status": [
+								{"type":"SCo","text":"Field Trial"}
+							]
 						}
 					],
 					"location":{
@@ -2039,11 +2213,15 @@ BP.data = {
 						},
 						{
 							"color": "orange",
-							"status": ["Field Trial"]
+							"status": [
+								{"type":"SCo","text":"Field Trial"}
+							]
 						},
 						{
 							"color": "blue",
-							"status": ["Field Trial Complete"]
+							"status": [
+								{"type":"DSMo","text":"Field Trial Complete"}
+							]
 						}
 					],
 				    "location":{
@@ -2060,7 +2238,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Field Trial"]
+							"status": [
+								{"type":"SCo","text":"Field Trial"}
+							]
 						}
 					],
 				    "location":{
@@ -2082,7 +2262,9 @@ BP.data = {
 						},
 						{
 							"color": "orange",
-							"status": ["Field Trial"]
+							"status": [
+								{"type":"SCo","text":"Field Trial"}
+							]
 						}
 					],
 				    "location":{
@@ -2134,7 +2316,9 @@ BP.data = {
 					"statuses":[
 						{
 							"color": "orange",
-							"status": ["Field Trial"]
+							"status": [
+								{"type":"SCo","text":"Field Trial"}
+							]
 						}
 					],
 				    "location":{
@@ -2147,15 +2331,11 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "position": {},
-				    "color":["green", "orange"],
+				    "color":["green"],
 					"statuses":[
 						{
 							"color": "green",
 							"status": []
-						},
-						{
-							"color": "orange",
-							"status": ["Field Trial"]
 						}
 					],
 				    "location":{
@@ -2189,7 +2369,7 @@ BP.data = {
 					"start": "northSea",
 					"sequences": [
 						{
-							"id": "downholeSandManagement",
+							"id": "DSMa",
 							"title": "Downhole Sand Management",
 							"description": "Proprietary software to support optimal completion design selection and define well operating parameters",
 							"arrows": [
@@ -2227,7 +2407,7 @@ BP.data = {
 					"start": "northAmerica",
 					"sequences": [
 						{
-							"id": "sandConsolidation",
+							"id": "SCo",
 							"title": "Sand Consolidation",
 							"description": "Adds strength to weak rock formation to increase productivity from sand-prone wells",
 							"arrows": [
@@ -2257,7 +2437,7 @@ BP.data = {
 					"start": "northAmerica",
 					"sequences": [
 						{
-							"id": "downholeSandMonitoring",
+							"id": "DSMo",
 							"title": "Downhole Sand Monitoring",
 							"description": "Fiber-optic-based sand monitoring system to detect sand ingress location and quantification in real time",
 							"arrows": []
@@ -2270,7 +2450,7 @@ BP.data = {
 		{	"id":"eor",
 			"title":"Enhanced Oil Recovery",
 			"color": "f26721",
-			"disclaimer":"",
+			"disclaimer":"Designer Gas is a registered trade mark of BP plc | Bright Water is a trade mark of Nalco Energy Services | Designer Water and LoSal are registered trade marks of BP plc ",
 			"locations":[
 
 				{	"id":"alaska",
@@ -2521,7 +2701,7 @@ BP.data = {
 					"start": "alaska",
 					"sequences": [
 						{
-							"id": "designerGas",
+							"id": "DGa",
 							"title": "Designer Gas®",
 							"description": "Miscible gas injection to displace oil from the rock, often alternated with water injection to improve sweep, can improve recovery by 6% to 10% over base waterflooding. Lean gas such as methane, vaporizes oil from the rock surface and carries it to production wells, before being recycled",
 							"arrows": [
@@ -2543,7 +2723,7 @@ BP.data = {
 					"start": "alaska",
 					"sequences": [
 						{
-							"id": "brightWater",
+							"id": "BWa",
 							"title": "Bright Water®",
 							"description": "Bright Water® is a submicron thermally activated particle that expands reducing the flow in thief zones and diverting injection water into poorly swept areas of the reservoir, thereby increasing oil recovery",
 							"arrows": [
@@ -2573,7 +2753,7 @@ BP.data = {
 					"start": "gulfOfMexico",
 					"sequences": [
 						{
-							"id": "digitalRocks",
+							"id": "DRo",
 							"title": "Digital Rocks",
 							"description": "Application of image-based modeling and simulation techniques to derive reservoir rock properties",
 							"arrows": [
@@ -2615,13 +2795,13 @@ BP.data = {
 					"start": "",
 					"sequences": [
 						{
-							"id": "designerWaterLosalEor",
+							"id": "DWLE",
 							"title": "Designer Water® - LoSal® EOR",
 							"description": "A breakthrough reduced salinity waterflooding technology that significantly increases compared to conventional waterflooding",
 							"arrows": []
 						},
 						{
-							"id": "designerWaterPolymerFlood",
+							"id": "DWPF",
 							"title": "Designer Water® - Polymer Flood",
 							"description": "The polymer particles flow with the water and warm up as they pass through the reservoir",
 							"arrows": []
@@ -2859,7 +3039,7 @@ BP.data = {
 					"start": "azerbaijan",
 					"sequences": [
 						{
-							"id": "designerGas",
+							"id": "PMA",
 							"title": "Production Management Advisor",
 							"description": "Integrated real-time information system to optimize short and long term hydrocarbon value",
 							"arrows": [
@@ -2893,7 +3073,7 @@ BP.data = {
 					"start": "northSea",
 					"sequences": [
 						{
-							"id": "operationsAdvisor",
+							"id": "OAd",
 							"title": "Operations Advisor",
 							"description": "Analysis and intelligent alters management system, with condition-based monitoring and pro-active risk management",
 							"arrows": [
@@ -2935,7 +3115,7 @@ BP.data = {
 					"start": "norway",
 					"sequences": [
 						{
-							"id": "advancedColEnv",
+							"id": "ACE",
 							"title": "Advanced Collaborative Environments (ACE)",
 							"description": "Enables people to work collaboratively regardless of distance, encouraging more efficient decision making, enhanced productivity and improved operational performance",
 							"arrows": [
@@ -2977,7 +3157,7 @@ BP.data = {
 					"start": "",
 					"sequences": [
 						{
-							"id": "distTempSensing",
+							"id": "DTS",
 							"title": "Distributed Temperature Sensing",
 							"description": "Provides a near real-time view of how fluids such as oil, gas and water enter wells from different reservoir units, without the need for costly well interventions and production shut-downs",
 							"arrows": []
@@ -3179,7 +3359,7 @@ BP.data = {
 					"start": "northSea",
 					"sequences": [
 						{
-							"id": "highlyReliableChemicalInjection",
+							"id": "HRCI",
 							"title": "Highly Reliable Chemical Injection",
 							"description": "Efficient, reliable application of chemical barriers, supported by BP’s Chemical Management Suite to track performance",
 							"arrows": [
@@ -3223,7 +3403,7 @@ BP.data = {
 					"start": "northSea",
 					"sequences": [
 						{
-							"id": "guidedWaveInspectionSystem",
+							"id": "GWIS",
 							"title": "Guided Wave Inspection System",
 							"description": "An inspection technique that offers rapid screening of long lengths of pipework for corrosion and other defects",
 							"arrows": [
@@ -3242,7 +3422,7 @@ BP.data = {
 							]
 						},
 						{
-							"id": "digitalRadiography",
+							"id": "DRa",
 							"title": "Digital Radiography",
 							"description": "An inspection technology for subsea environments, an alternative to traditional pipeline inspection gauges, or 'pigs'.",
 							"arrows": [
@@ -3253,7 +3433,7 @@ BP.data = {
 							]
 						},
 						{
-							"id": "ematInspection",
+							"id": "EMAT",
 							"title": "EMAT Inspection",
 							"description": "Electromagnetic acoustic transducers provide a permanent image of the entire inspection segment",
 							"arrows": [
@@ -3271,19 +3451,19 @@ BP.data = {
 					"start": "",
 					"sequences": [						
 						{
-							"id": "subseaPumping",
+							"id": "SPu",
 							"title": "Subsea Pumping",
 							"description": "Used to raise the rate of recovery, extend the duration of the peak production plateau and reduce the final abandonment pressure, increasing total recovery",
 							"arrows": []
 						},
 						{
-							"id": "subseaMetering",
+							"id": "SMe",
 							"title": "Subsea Metering",
 							"description": "Combine flow- and composition-sensing elements and apply empirical flow modeling algorithms to infer the flow rates of oil, water and gas in the production stream",
 							"arrows": []
 						},
 						{
-							"id": "subseaProcessing",
+							"id": "SPr",
 							"title": "Subsea Processing",
 							"description": "Enables the development of smaller fields that were previously considered uneconomical by tying them back to hub facilities miles away",
 							"arrows": []
@@ -3305,10 +3485,10 @@ BP.data = {
 					"left":true,
 					"under":true,
 					"position": {},
-					"color":["green"],
+					"color":["orange"],
 					"statuses":[
 						{
-							"color": "green",
+							"color": "orange",
 							"status": []
 						}
 					],
@@ -3322,10 +3502,10 @@ BP.data = {
 				    "title":"Canada",
 				    "left":false,
 					"position": null,
-				    "color":["green"],
+				    "color":["orange"],
 					"statuses":[
 						{
-							"color": "green",
+							"color": "orange",
 							"status": []
 						}
 					],
@@ -3339,10 +3519,14 @@ BP.data = {
 				    "title":"North America",
 				    "left":true,
 				    "position": null,
-				    "color":["green"],
+				    "color":["green", "orange"],
 					"statuses":[
 						{
 							"color": "green",
+							"status": []
+						},
+						{
+							"color": "orange",
 							"status": []
 						}
 					],
@@ -3357,10 +3541,14 @@ BP.data = {
 				    "left":false,
 				    "under":false,
 				    "position": null,
-				    "color":["green"],
+				    "color":["green", "orange"],
 					"statuses":[
 						{
 							"color": "green",
+							"status": []
+						},
+						{
+							"color": "orange",
 							"status": []
 						}
 					],
@@ -3375,10 +3563,10 @@ BP.data = {
 				    "left":false,
 				    "under":false,
 				    "position": null,
-				    "color":["green"],
+				    "color":["orange"],
 					"statuses":[
 						{
-							"color": "green",
+							"color": "orange",
 							"status": []
 						}
 					],
@@ -3398,7 +3586,7 @@ BP.data = {
 					"start": "northAmerica",
 					"sequences": [
 						{
-							"id": "geoCompletionOptimization",
+							"id": "GCO",
 							"title": "Geo-Engineered Completion Optimization",
 							"description": "Proprietary integrated seismic, petrophysics, geomechanics and reservoir modelling tool to optimize well and field design to maximize economic recovery from unconventionals",
 							"arrows": [
@@ -3407,9 +3595,16 @@ BP.data = {
 									"path": "M 356 221 C 707 228 857 552 1252 384"
 								}
 							]
-						},
+						}
+					]
+				},
+
+				{
+					"color": "orange",
+					"start": "northAmerica",
+					"sequences": [
 						{
-							"id": "tightGas",
+							"id": "TGa",
 							"title": "Tight Gas",
 							"description": "Full range of Upstream Technologies, seismic, reservoir management, drilling, completions and operations applied to unconventional, low permeability rocks",
 							"arrows": [								

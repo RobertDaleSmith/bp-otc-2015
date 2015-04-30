@@ -255,6 +255,9 @@ BP.handlers = {
 
 		var hasStartPt = false;
 
+		$('.stat').parent().addClass('hide');
+		$('.stat').addClass('hide');
+
 		$('.sub_details .item').removeClass('active');
 
 		if(!active){
@@ -318,8 +321,6 @@ BP.handlers = {
 				var sequencesLoop = function(count){
 
 					if(count >= sequences.length) return;
-					
-					
 
 					var delay = BP.delays.sequence; if(count == 0) delay = 0;
 
@@ -329,6 +330,9 @@ BP.handlers = {
 						//Open corresponding footer description.
 						// console.log(sequences[count].name);
 						$('.sub_details .item#'+sequences[count].name).addClass('active');
+
+						$('.stat.'+sequences[count].name).parent().removeClass('hide')
+						$('.stat.'+sequences[count].name).removeClass('hide')
 
 						BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
 

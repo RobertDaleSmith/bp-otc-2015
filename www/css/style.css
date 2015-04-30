@@ -1213,6 +1213,9 @@ html, body{
 						z-index: 20;
 					}
 
+
+
+
 						.mapPoint .label .title{
 
 							display: inline-block;
@@ -1339,6 +1342,12 @@ html, body{
 						border-style: solid;
 						border-width: 0 0 5px 0;
 						border-color: rgba(85,85,89,0.7);
+
+						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+							-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+							 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+								transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
 						
 					}
 					.mapPoint.green  .stats.green,
@@ -1360,6 +1369,11 @@ html, body{
 						top: 70px;
 
 					}
+					.mapPoint .stats.hide{
+						padding: 0px;
+						border:0px;
+
+					}
 						.mapPoint .stats .stat{
 
 							display: block;
@@ -1373,6 +1387,19 @@ html, body{
 
 							margin: 0 0 1px 0;
 
+							overflow: hidden;
+
+							-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+							   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+								-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+								 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+									transition: all cubic-bezier(.62,.28,.23,.99) 0.5s;
+
+						}
+
+						.mapPoint .stats .stat.hide{
+							height: 0px;
+							width: 0px;
 						}
 
 					.mapPoint .listGroup{
@@ -1419,7 +1446,8 @@ html, body{
 						}
 						.mapPoint .listGroup .list.list_1{
 							float: right;
-						}
+						}						
+
 						.mapPoint .listGroup .list.list_1.short{
 							float: right;
 							border-radius: 0 0 7px 0;
@@ -1622,6 +1650,26 @@ html, body{
 											text-align: left;
 										}
 
+					.mapPoint.half.right .listGroup .list.list_1{
+						height: 0px !important;
+					}
+					.mapPoint.half.left .listGroup .list.list_0{
+						height: 0px !important;
+					}
+					.mapPoint.half.open .arrow,
+					.mapPoint.half.open .label,
+					.mapPoint.half.open .label .title,
+					.mapPoint.half.open .label .description,
+					.mapPoint.half.open .label .close{
+						-webkit-transition: all cubic-bezier(.62,.28,.23,.99) 0.4s;
+						   -moz-transition: all cubic-bezier(.62,.28,.23,.99) 0.4s;
+							-ms-transition: all cubic-bezier(.62,.28,.23,.99) 0.4s;
+							 -o-transition: all cubic-bezier(.62,.28,.23,.99) 0.4s;
+								transition: all cubic-bezier(.62,.28,.23,.99) 0.4s;
+					}
+					.mapPoint.half.open .label{
+						width: 580px !important;
+					}
 
 /* SVG arrows  -  START */
 
