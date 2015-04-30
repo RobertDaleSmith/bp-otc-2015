@@ -326,13 +326,18 @@ BP.handlers = {
 
 					window.clearInterval(BP.timers.sequenceDelay);
 					BP.timers.sequenceDelay = setTimeout(function(){
-
+						var idClass = sequences[count].name;
 						//Open corresponding footer description.
-						// console.log(sequences[count].name);
-						$('.sub_details .item#'+sequences[count].name).addClass('active');
+						// console.log(id);
+						$('.sub_details .item#'+idClass).addClass('active');
 
-						$('.stat.'+sequences[count].name).parent().removeClass('hide')
-						$('.stat.'+sequences[count].name).removeClass('hide')
+						$('.stat.'+idClass).parent().removeClass('hide');
+						$('.stat.'+idClass).removeClass('hide');
+
+						if(idClass[idClass.length-1] == 2){
+							var rootClass = idClass.replace('2','');
+							$('.stat.'+idClass).parent().find('.stat.'+rootClass).addClass('hide');
+						}
 
 						BP.handlers.playSequence(sequences[count].arrows, function(){ sequencesLoop(count+1) });
 
