@@ -105,8 +105,8 @@ BP.data = {
 		    "description":"Major gas business, with two large gas developments – in Salah (dry gas) and in Amenas (wet gas) – both in partnership with Sonatrach and Statoil.",
 		    "disclaimer":"ISS is a registered trade mark of BP plc",
 		    "location":{
-		        "x":"976",
-		        "y":"350"
+		        "x":"986",
+		        "y":"321"
 		    },
 		    "map":{
 		    	"x":"210",
@@ -229,7 +229,7 @@ BP.data = {
 		    "title":"Argentina",
 		    "left":false,
 		    "half":true,
-		    "description":"...",
+		    "description":"Hugely important region for BP.",
 		    "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
 		    "location":{
 		        "x":"622",
@@ -395,7 +395,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							}
 						]
@@ -496,7 +496,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -584,7 +584,7 @@ BP.data = {
 							},
 
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -714,7 +714,7 @@ BP.data = {
 								"status": "Deployment"
 							},
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -792,40 +792,40 @@ BP.data = {
 			]
 		},
 
-		{   "id":"libya",
-		    "title":"Libya",
-		    "left":true,
-		    "half":true,
-		    "description":"...",
-		    "disclaimer":"ISS is a registered trade mark of BP plc",
-		    "location":{
-		        "x":"1016",
-		        "y":"310"
-		    },
-		    "map":{
-		        "x":"0",
-		        "y":"0"            
-		    },
-		    "technology":[
-				[],[
-					{
-						"name": "Advanced Seismic Imaging",
-						"color": "02745d",
-						"types": [
-							{
-								"name": "4D Seismic Simulations",
-								"status": "Deployment"
-							},
-							{
-								"name": "ISS®",
-								"status": "Field Trial Complete"
-							}
-						]
+		// {   "id":"libya",
+		//     "title":"Libya",
+		//     "left":true,
+		//     "half":true,
+		//     "description":"...",
+		//     "disclaimer":"ISS is a registered trade mark of BP plc",
+		//     "location":{
+		//         "x":"1016",
+		//         "y":"310"
+		//     },
+		//     "map":{
+		//         "x":"0",
+		//         "y":"0"            
+		//     },
+		//     "technology":[
+		// 		[],[
+		// 			{
+		// 				"name": "Advanced Seismic Imaging",
+		// 				"color": "02745d",
+		// 				"types": [
+		// 					{
+		// 						"name": "ISS®",
+		// 						"status": "Deployment"
+		// 					},
+		// 					{
+		// 						"name": "ISSN™",
+		// 						"status": "Field Trial Complete"
+		// 					}
+		// 				]
 
-					}
-				]				
-			]
-		},
+		// 			}
+		// 		]
+		// 	]
+		// },
 
 		{   "id":"northAmerica",
 		    "title":"North America",
@@ -847,7 +847,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -1199,35 +1199,35 @@ BP.data = {
 			]
 		},
 
-		{   "id":"russia",
-		    "title":"Russia",
-		    "left":true,
-		    "half":true,
-		    "description":"...",
-		    "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
-		    "location":{
-		        "x":"1395",
-		        "y":"130"
-		    },
-		    "map":{
-		    	"x":"0",
-		        "y":"0"            
-		    },
-		    "technology":[
-				[],[
-					{
-						"name": "Enhanced Oil Recovery",
-						"color": "f26721",
-						"types": [
-							{
-								"name": "Bright Water®",
-								"status": "Deployment"
-							}
-						]
-					}
-				]				
-			]
-		},
+		// {   "id":"russia",
+		//     "title":"Russia",
+		//     "left":true,
+		//     "half":true,
+		//     "description":"...",
+		//     "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
+		//     "location":{
+		//         "x":"1395",
+		//         "y":"130"
+		//     },
+		//     "map":{
+		//     	"x":"0",
+		//      "y":"0"
+		//     },
+		//     "technology":[
+		// 		[],[
+		// 			{
+		// 				"name": "Enhanced Oil Recovery",
+		// 				"color": "f26721",
+		// 				"types": [
+		// 					{
+		// 						"name": "Bright Water®",
+		// 						"status": "Deployment"
+		// 					}
+		// 				]
+		// 			}
+		// 		]
+		// 	]
+		// },
 
 		{   "id":"trinidad",
 		    "title":"Trinidad & Tobago",
@@ -1249,7 +1249,7 @@ BP.data = {
 						"color": "02745d",
 						"types": [
 							{
-								"name": "Seismic Simulations",
+								"name": "Seismic Modeling",
 								"status": "Deployment"
 							},
 							{
@@ -1374,7 +1374,7 @@ BP.data = {
 							"color": "green",
 							"status": [
 								{"type":"ISS","text":"ISS® - Field Trial"},
-								{"type":"OBS","text":"ISS® - Deployment"}
+								{"type":"ISS2","text":"ISS® - Deployment"}
 							]
 						}
 					],
@@ -1450,24 +1450,24 @@ BP.data = {
 				    }
 				},
 
-				{   "id":"canada",
-				    "title":"Canada",
-				    "left":true,
-					"position": null,
-				    "color":["green"],
-					"statuses":[
-						{
-							"color": "green",
-							"status": [
-								{"type":"ISS","text":"ISS® - Field Trial Complete"},
-							]
-						}
-					],
-				    "location":{
-				        "x":"343",
-				        "y":"146"
-				    }
-				},
+				// {   "id":"canada",
+				//     "title":"Canada",
+				//     "left":true,
+				// 	"position": null,
+				//     "color":["green"],
+				// 	"statuses":[
+				// 		{
+				// 			"color": "green",
+				// 			"status": [
+				// 				{"type":"ISS","text":"ISS® - Field Trial Complete"},
+				// 			]
+				// 		}
+				// 	],
+				//     "location":{
+				//         "x":"343",
+				//         "y":"146"
+				//     }
+				// },
 
 				{   "id":"egypt",
 				    "title":"Egypt",
@@ -1486,7 +1486,7 @@ BP.data = {
 							"color": "blue",
 							"status": [
 								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
-								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+								{"type":"SeS","text":"Seismic Modeling - Deployment"}
 							]
 						}
 					],
@@ -1514,7 +1514,7 @@ BP.data = {
 								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
 								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
 								{"type":"OBN","text":"Ocean Bottom Nodes - Deployment"}, 
-								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+								{"type":"SeS","text":"Seismic Modeling - Deployment"}
 							]
 						}
 					],
@@ -1541,7 +1541,7 @@ BP.data = {
 							"color": "blue",
 							"status": [
 								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
-								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+								{"type":"SeS","text":"Seismic Modeling - Deployment"}
 							]
 						}
 					],
@@ -1580,7 +1580,7 @@ BP.data = {
 						{
 							"color": "green",
 							"status": [
-								{"type":"DS3","text":"DS³ - Deployment"}
+								{"type":"DST","text":"DS³ - Deployment"}
 							]
 						}
 					],
@@ -1615,19 +1615,13 @@ BP.data = {
 				    "title":"North America",
 				    "left":true,
 				    "position": null,
-				    "color":["green", "blue"],
+				    "color": ["blue"],
 					"statuses":[
-						{
-							"color": "green",
-							"status": [
-								{"type":"ISSN","text":"ISSN™ - Field Trial Complete"}
-							]
-						},
 						{
 							"color": "blue",
 							"status": [
 								{"type":"MAS","text":"Multi-Azimuth Seismic - Deployment"}, 
-								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+								{"type":"SeS","text":"Seismic Modeling - Deployment"}
 							]
 						}
 					],
@@ -1705,7 +1699,7 @@ BP.data = {
 						{
 							"color": "green",
 							"status": [
-								{"type":"DS3","text":"DS³ - Field Trail"}
+								{"type":"DST","text":"DS³ - Field Trail"}
 							]
 						}
 					],
@@ -1737,7 +1731,7 @@ BP.data = {
 						{
 							"color": "blue",
 							"status": [
-								{"type":"SeS","text":"Seismic Simulations - Deployment"}
+								{"type":"SeS","text":"Seismic Modeling - Deployment"}
 							]
 						}
 					],
@@ -1761,15 +1755,21 @@ BP.data = {
 								{
 									"order": 1,
 									"path": "M 1001 313 C 970 285 1021 265 1027 303"
-								},
+								}
+							]
+						},
+						{
+							"id": "ISS2",
+							"hide": true,
+							"arrows": [
 								{
-									"order": 2,
+									"order": 1,
 									"path": "M 1031 325 C 1055 355 1029 365 1012 332"
 								}
 							]
 						},
 						{
-							"id": "DS3",
+							"id": "DST",
 							"title": "DS³",
 							"description": "Distance separated simulations sweeping, with sources separated by distance",
 							"arrows": [
@@ -1876,7 +1876,7 @@ BP.data = {
 						},
 						{
 							"id": "SeS",
-							"title": "Seismic Simulations",
+							"title": "Seismic Modeling",
 							"description": "Synthetic data generation to support data acquisition, processing and analysis",
 							"arrows": []
 						},
@@ -2776,27 +2776,27 @@ BP.data = {
 								{
 									"order": 3,
 									"path": "M 1002 329 C 1007 251 1001 215 966 167"
+								},
+								{
+									"order": 4,
+									"path": "M 953 150 C 716 152 611 197 488 305"
 								}
 							]
 						},
 						{
 							"id": "DRo2",
 							"hide": true,
-							"arrows": [
+							"arrows": [						
 								{
 									"order": 1,
-									"path": "M 953 150 C 716 152 611 197 488 305"
-								},						
-								{
-									"order": 2,
 									"path": "M 471 318 C 484 -50 1050 -50 1212 254"
 								},
 								{
-									"order": 3,
+									"order": 2,
 									"path": "M 1222 273 C 1223 -100 2200 550 645 434"
 								},
 								{
-									"order": 4,
+									"order": 3,
 									"path": "M 623 432 C 264 461 1272 827 1220 336"
 								}
 							]
@@ -3245,24 +3245,6 @@ BP.data = {
 				        "y":"258"
 				    }
 				},
-
-				// {   "id":"china",
-				//     "title":"China",
-				//     "left":false,
-				//     "under":false,
-				//     "position": null,
-				//     "color":["blue"],
-				// 	"statuses":[
-				// 		{
-				// 			"color": "blue",
-				// 			"status": ["Planned Development"]
-				// 		}
-				// 	],
-				//     "location":{
-				//         "x":"1560",
-				//         "y":"365"
-				//     }
-				// },
 
 				{   "id":"egypt",
 				    "title":"Egypt",

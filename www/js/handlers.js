@@ -322,11 +322,16 @@ BP.handlers = {
 
 					if(count >= sequences.length) return;
 
-					var delay = BP.delays.sequence; if(count == 0) delay = 0;
+					var idClass = sequences[count].name,
+						delay = BP.delays.sequence;
+
+					if(count == 0) delay = 0;
+					if(idClass[idClass.length-1]==2) delay = 0;
+					console.log(idClass + " " + delay);
 
 					window.clearInterval(BP.timers.sequenceDelay);
 					BP.timers.sequenceDelay = setTimeout(function(){
-						var idClass = sequences[count].name;
+						
 						//Open corresponding footer description.
 						// console.log(id);
 						$('.sub_details .item#'+idClass).addClass('active');
