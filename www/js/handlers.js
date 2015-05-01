@@ -4,6 +4,8 @@ BP.handlers = {
 
 		$('div#logo_wrapper').on('tap, click', this.headerLogoClickEvent);
 
+		$('div#exitButton').on('tap, click', this.introExitClickEvent);
+
 		$('div#header_button_wrapper .btn .title').on('tap, click', this.headerMainMenuClickEvent);
 
 		$('div#header_button_wrapper .btn .icon').on('tap, click', this.headerDropDownMenuClickEvent);
@@ -538,6 +540,16 @@ BP.handlers = {
 		if(BP.counters.refreshRequest == 5){ console.log('refresh page'); window.location.reload(); }
 		window.clearInterval(BP.timers.refreshRequest);
 		BP.timers.refreshRequest = setTimeout(function(){ BP.counters.refreshRequest = 0; }, 5000);
+		
+	},
+
+	introExitClickEvent: function(event) {
+
+		// Increments count to check for refresh request.
+		BP.counters.exitRequest++;
+		if(BP.counters.exitRequest == 5){ console.log('exit page'); gui.App.quit(); }
+		window.clearInterval(BP.timers.exitRequest);
+		BP.timers.exitRequest = setTimeout(function(){ BP.counters.exitRequest = 0; }, 5000);
 		
 	},
 

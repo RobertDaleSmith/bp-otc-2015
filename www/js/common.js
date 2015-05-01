@@ -16,6 +16,7 @@ var BP = {
 		arrowDelay: null,
 		mapPointOpenDelay: null,
 		refreshRequest: null,
+		exitRequest: null,
 		mapPointReveals: [],
 		techListReveals: []
 
@@ -23,7 +24,8 @@ var BP = {
 
 	counters : {
 
-		refreshRequest: 0
+		refreshRequest: 0,
+		exitRequest: 0
 
 	},
 

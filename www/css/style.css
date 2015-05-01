@@ -1916,7 +1916,15 @@ html, body{
 
 		}
 
+#exitButton{
+	display: block;
+	position: absolute;
+	right:0px; bottom:0px;
 
+	width:200px; height:200px;
+
+	background-color:transparent;
+}
 /*svg{
 	display: none !important;
 }*/
