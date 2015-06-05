@@ -1,6 +1,6 @@
 # Local Dev #
 #############
-node_modules
+/node_modules
 dev_conf.js
 
 # NW.js build files #
