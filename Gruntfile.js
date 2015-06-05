@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     nodewebkit: {
       options: {
-        version: '1.1',
+        version: '0.12.0',
         buildDir: './builds', // Where the build version of my node-webkit app is saved
         macZip: false,
         macIcns: './www/icon.icns', // Path to the Mac icon file
