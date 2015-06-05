@@ -15,6 +15,8 @@ $(window).bind("load", function() {
 			
 			if(jf){
 
+				// var filePath = process.execPath + '/data.json';
+				console.log(process.execPath);
 				jf.readFile('../data.json', function(err, customData) {
 
 					if(!err){
