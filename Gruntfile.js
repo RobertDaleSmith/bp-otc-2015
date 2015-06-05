@@ -15,32 +15,22 @@ module.exports = function(grunt) {
       },
       src: './www/**/*' // Your node-webkit app
     },
-    // copy: {
-    //   main: {
-    //     files: [
-    //       {
-    //         src: 'libraries/win/ffmpegsumo.dll',
-    //         dest: 'builds/bp-otc-2015/win32/ffmpegsumo.dll',
-    //         flatten: true
-    //       },
-    //       {
-    //         src: 'libraries/win/ffmpegsumo.dll',
-    //         dest: 'builds/bp-otc-2015/win64/ffmpegsumo.dll',
-    //         flatten: true
-    //       },
-    //       {
-    //         src: 'libraries/mac/ffmpegsumo.so',
-    //         dest: 'builds/bp-otc-2015/osx32/bp-otc-2015.app/Contents/Frameworks/node-webkit Framework.framework/Libraries/ffmpegsumo.so',
-    //         flatten: true
-    //       },
-    //       {
-    //         src: 'libraries/mac/ffmpegsumo.so',
-    //         dest: 'builds/bp-otc-2015/osx64/bp-otc-2015.app/Contents/Frameworks/node-webkit Framework.framework/Libraries/ffmpegsumo.so',
-    //         flatten: true
-    //       }
-    //     ]
-    //   }
-    // }
+    copy: {
+      main: {
+        files: [
+          {
+            src: 'data.json',
+            dest: 'builds/bp-otc-2015/win32/data.json',
+            flatten: true
+          },
+          {
+            src: 'data.json',
+            dest: 'builds/bp-otc-2015/win64/data.json',
+            flatten: true
+          }
+        ]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-node-webkit-builder');
