@@ -1,6 +1,6 @@
 BP.data = {
 
-	deployments: [
+	"deployments": [
 
 		{   "id":"alaska",
 		    "title":"Alaska",
@@ -84,17 +84,7 @@ BP.data = {
 								"status": "Field Trial Complete"
 							}
 						]
-					},
-					// {
-					// 	"name": "Wells",
-					// 	"color": "b41f24",
-					// 	"types": [
-					// 		{
-					// 			"name": "Horizontal Drilling",
-					// 			"status": "Deployment"
-					// 		}
-					// 	]
-					// }
+					}
 				]
 			]
 		},
@@ -136,18 +126,7 @@ BP.data = {
 								"status": "Field Trial"
 							}							
 						]
-					},
-					// {
-					// 	"name": "Wells",
-					// 	"color": "b41f24",
-					// 	"types": [
-					// 		{
-					// 			"name": "Horizontal Drilling",
-					// 			"status": "Deployment"
-					// 		}
-					// 	]
-
-					// }
+					}
 				]
 			]
 		},
@@ -457,17 +436,7 @@ BP.data = {
 							}
 						]
 
-					},
-					// {
-					// 	"name": "Wells",
-					// 	"color": "b41f24",
-					// 	"types": [
-					// 		{
-					// 			"name": "Horizontal Drilling",
-					// 			"status": "Deployment"
-					// 		}
-					// 	]
-					// }
+					}
 				]
 			]
 		},
@@ -792,41 +761,6 @@ BP.data = {
 			]
 		},
 
-		// {   "id":"libya",
-		//     "title":"Libya",
-		//     "left":true,
-		//     "half":true,
-		//     "description":"...",
-		//     "disclaimer":"ISS is a registered trade mark of BP plc",
-		//     "location":{
-		//         "x":"1016",
-		//         "y":"310"
-		//     },
-		//     "map":{
-		//         "x":"0",
-		//         "y":"0"            
-		//     },
-		//     "technology":[
-		// 		[],[
-		// 			{
-		// 				"name": "Advanced Seismic Imaging",
-		// 				"color": "02745d",
-		// 				"types": [
-		// 					{
-		// 						"name": "ISS®",
-		// 						"status": "Deployment"
-		// 					},
-		// 					{
-		// 						"name": "ISSN™",
-		// 						"status": "Field Trial Complete"
-		// 					}
-		// 				]
-
-		// 			}
-		// 		]
-		// 	]
-		// },
-
 		{   "id":"northAmerica",
 		    "title":"North America",
 		    "left":false,
@@ -882,17 +816,7 @@ BP.data = {
 								"status": "Deployment"
 							}
 						]
-					},
-					// {
-					// 	"name": "Wells",
-					// 	"color": "b41f24",
-					// 	"types": [
-					// 		{
-					// 			"name": "Horizontal Drilling",
-					// 			"status": "Deployment"
-					// 		}
-					// 	]
-					// }
+					}
 				]
 			]
 		},
@@ -1199,36 +1123,6 @@ BP.data = {
 			]
 		},
 
-		// {   "id":"russia",
-		//     "title":"Russia",
-		//     "left":true,
-		//     "half":true,
-		//     "description":"...",
-		//     "disclaimer":"Bright Water is a trade mark of Nalco Energy Services",
-		//     "location":{
-		//         "x":"1395",
-		//         "y":"130"
-		//     },
-		//     "map":{
-		//     	"x":"0",
-		//      "y":"0"
-		//     },
-		//     "technology":[
-		// 		[],[
-		// 			{
-		// 				"name": "Enhanced Oil Recovery",
-		// 				"color": "f26721",
-		// 				"types": [
-		// 					{
-		// 						"name": "Bright Water®",
-		// 						"status": "Deployment"
-		// 					}
-		// 				]
-		// 			}
-		// 		]
-		// 	]
-		// },
-
 		{   "id":"trinidad",
 		    "title":"Trinidad & Tobago",
 		    "left":false,
@@ -1335,7 +1229,7 @@ BP.data = {
 
 	],
 
-	projects: [
+	"projects": [
 
 		{	"id":"asi",
 			"title":"Advanced Seismic Imaging",
@@ -1347,7 +1241,7 @@ BP.data = {
 					"title":"Alaska",
 					"left":true,
 					"under":false,
-					"position": {top: -40, right: 36},
+					"position": {"top": -40, "right": 36},
 					"color":["orange"],
 					"statuses":[
 						{
@@ -1367,7 +1261,7 @@ BP.data = {
 					"title":"Algeria",
 					"left":true,
 					"under":true,
-					"position": {top: 29, right: 55},
+					"position": {"top": 29, "right": 55},
 					"color":["green"],
 					"statuses":[
 						{
@@ -1388,7 +1282,7 @@ BP.data = {
 				    "title":"Angola",
 				    "left":false,
 				    "under":true,
-					"position": {top: 53, left: 39},
+					"position": {"top": 53, "left": 39},
 					"color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1400,7 +1294,7 @@ BP.data = {
 						{
 							"color": "blue",
 							"status": [
-								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"}, 
+								{"type":"WATS","text":"Wide Azimuth Towed Streamer - Deployment"} 
 							]
 						}
 					],
@@ -1413,7 +1307,7 @@ BP.data = {
 				{   "id":"azerbaijan",
 				    "title":"Azerbaijan",
 				    "left":false,
-					"position": {top: -120, left: 87},
+					"position": {"top": -120, "left": 87},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1450,30 +1344,11 @@ BP.data = {
 				    }
 				},
 
-				// {   "id":"canada",
-				//     "title":"Canada",
-				//     "left":true,
-				// 	"position": null,
-				//     "color":["green"],
-				// 	"statuses":[
-				// 		{
-				// 			"color": "green",
-				// 			"status": [
-				// 				{"type":"ISS","text":"ISS® - Field Trial Complete"},
-				// 			]
-				// 		}
-				// 	],
-				//     "location":{
-				//         "x":"343",
-				//         "y":"146"
-				//     }
-				// },
-
 				{   "id":"egypt",
 				    "title":"Egypt",
 				    "left":true,
 				    "under":true,
-					"position": {top: 65, right: 55},
+					"position": {"top": 65, "right": 55},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1499,7 +1374,7 @@ BP.data = {
 				{   "id":"gulfOfMexico",
 				    "title":"Gulf of Mexico",
 				    "left":false,
-					"position": {top: -60, left: 41},
+					"position": {"top": -60, "left": 41},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1554,7 +1429,7 @@ BP.data = {
 				{   "id":"iraq",
 				    "title":"Iraq",
 				    "left":false,
-					"position": {top: -78, left: 103},
+					"position": {"top": -78, "left": 103},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1574,7 +1449,7 @@ BP.data = {
 				    "title":"Jordan",
 				    "left":true,
 				    "under":false,
-					"position": {top: -115, right: 58},
+					"position": {"top": -115, "right": 58},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1594,7 +1469,7 @@ BP.data = {
 				    "title":"Libya",
 				    "left":true,
 				    "under":false,
-					"position": {top: -120, right: 104},
+					"position": {"top": -120, "right": 104},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -1634,7 +1509,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
-				    "position": {top: -66, right: 45},
+				    "position": {"top": -66, "right": 45},
 				    "color":["green", "orange", "blue"],
 					"statuses":[
 						{
@@ -1667,7 +1542,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":false,
 				    "under":false,
-				    "position": {top: -56, left: 47},
+				    "position": {"top": -56, "left": 47},
 				    "color":["orange", "blue"],
 					"statuses":[
 						{
@@ -1802,7 +1677,7 @@ BP.data = {
 								{
 									"order": 2,
 									"path": "M 953 150 C 1037 -30 584 -30 622 411"
-								},
+								}
 							]
 						}
 					]
@@ -1821,7 +1696,7 @@ BP.data = {
 									"path": "M 986 159 C 1103 206 1229 128 1223 251"
 								},
 								{
-									'order': 2,
+									"order": 2,
 									"path": "M 1222 273 C 976 232 768 288 638 418"
 								},
 								{
@@ -1943,7 +1818,7 @@ BP.data = {
 				    "title":"Brazil",
 				    "left":false,
 				    "under":true,
-				    "position": {top: 66, left: 74},
+				    "position": {"top": 66, "left": 74},
 					"color":["green"],
 					"statuses":[
 						{
@@ -1962,7 +1837,7 @@ BP.data = {
 				{   "id":"gulfOfMexico",
 				    "title":"Gulf of Mexico",
 				    "left":true,
-				    "position": {top: -82, right: 49},
+				    "position": {"top": -82, "right": 49},
 					"color":["green", "blue"],
 					"statuses":[
 						{
@@ -1990,7 +1865,7 @@ BP.data = {
 				{   "id":"northSea",
 				    "title":"North Sea",
 				    "left":true,
-				    "position": {top: -74, right: 57},
+				    "position": {"top": -74, "right": 57},
 				    "color":["green"],
 					"statuses":[
 						{
@@ -2010,7 +1885,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":true,
 				    "under":true,
-				    "position": {top: 37, right: 30},
+				    "position": {"top": 37, "right": 30},
 				    "color":["green", "blue"],
 					"statuses":[
 						{
@@ -2605,7 +2480,7 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "under":false,
-				    "position": {top: -84, right: 54},
+				    "position": {"top": -84, "right": 54},
 				    "color":["green", "purple", "blue"],
 					"statuses":[
 						{
@@ -2954,7 +2829,7 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "under":false,
-				    "position": {top: -78, right: 43},
+				    "position": {"top": -78, "right": 43},
 				    "color":["green", "orange", "purple"],
 					"statuses":[
 						{
@@ -2980,7 +2855,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":false,
 				    "under":false,
-				    "position": {top: -45, left: 39},
+				    "position": {"top": -45, "left": 39},
 				    "color":["green", "orange", "purple"],
 					"statuses":[
 						{
@@ -3191,7 +3066,7 @@ BP.data = {
 					"title":"Alaska",
 					"left":false,
 					"under":false,
-					"position": {top: -56, left: 39},
+					"position": {"top": -56, "left": 39},
 					"color":["green", "orange"],
 					"statuses":[
 						{
@@ -3303,7 +3178,7 @@ BP.data = {
 				    "title":"North Sea",
 				    "left":true,
 				    "under":false,
-				    "position": {top: -93, right: 49},
+				    "position": {"top": -93, "right": 49},
 				    "color":["green", "orange"],
 					"statuses":[
 						{
@@ -3333,7 +3208,7 @@ BP.data = {
 				    "title":"Norway",
 				    "left":false,
 				    "under":false,
-				    "position": {top: -45, left: 39},
+				    "position": {"top": -45, "left": 39},
 				    "color":["green"],
 					"statuses":[
 						{
