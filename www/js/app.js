@@ -1,6 +1,40 @@
+var jf, util;
+
+try{
+	jf 	 = require('jsonfile');
+	util = require('util');
+}catch(e){
+	console.log('default data loaded');
+}
+
 $(window).bind("load", function() {
 
 	async.series([
+
+		function(next){
+			
+			if(jf){
+
+				jf.readFile('../data.json', function(err, customData) {
+
+					if(!err){
+						BP.data = customData;
+						console.log('custom data loaded');
+					} else {
+						console.log('unable to locate custom data.json');
+					}
+					
+					next();
+
+				});
+
+			} else {
+
+				next();
+
+			}
+
+		},
 
 		function(next){
 
