@@ -2,7 +2,7 @@
   "main": "index.html",
   "name": "bp-otc-2015",
   "description": "BP OTC 2015",
-  "version": "0.1.0",
+  "version": "1.1",
   "window": {
     "icon": "images/icon_64.png",
     "toolbar": false,
