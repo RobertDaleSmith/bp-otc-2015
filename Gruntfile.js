@@ -27,6 +27,16 @@ module.exports = function(grunt) {
             src: 'data.json',
             dest: 'builds/bp-otc-2015/win64/data.json',
             flatten: true
+          },
+          {
+            src: 'data.json',
+            dest: 'builds/bp-otc-2015/osx32/bp-otc-2015.app/Contents/data.json',
+            flatten: true
+          },
+          {
+            src: 'data.json',
+            dest: 'builds/bp-otc-2015/osx64/bp-otc-2015.app/Contents/data.json',
+            flatten: true
           }
         ]
       }

@@ -15,7 +15,12 @@ $(window).bind("load", function() {
 			
 			if(jf){
 
-				var filePath = process.execPath.replace("bp-otc-2015.exe","")+"data.json";
+				var filePath = process.execPath.replace("bp-otc-2015.exe","");
+				
+				if( filePath.contains('bp-otc-2015.app') ) //isMac
+					filePath = filePath.split('bp-otc-2015.app')[0]+'bp-otc-2015.app/Contents/';
+				
+				filePath = filePath + "data.json";
 
 				jf.readFile(filePath, function(err, customData) {
 
