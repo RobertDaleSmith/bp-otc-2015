@@ -15,11 +15,11 @@ $(window).bind("load", function() {
 			
 			if(jf){
 
-				var filePath = process.execPath.replace("bp-otc-2015.exe","");
+				var filePath = process.execPath.replace("bp-otc-2015.exe","")+"data.json";
 				console.log(filePath);
 				$('#header_wrapper').html(filePath);
 
-				jf.readFile('../data.json', function(err, customData) {
+				jf.readFile(filePath, function(err, customData) {
 
 					if(!err){
 						BP.data = customData;
