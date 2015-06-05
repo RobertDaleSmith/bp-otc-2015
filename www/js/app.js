@@ -17,8 +17,7 @@ $(window).bind("load", function() {
 
 				var filePath = process.execPath.replace("bp-otc-2015.exe","");
 				console.log(filePath);
-
-				$('#header_wrapper').html(process.execPath);
+				$('#header_wrapper').html(filePath);
 
 				jf.readFile('../data.json', function(err, customData) {
 
