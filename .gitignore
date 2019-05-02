@@ -1,6 +1,7 @@
 # Local Dev #
 #############
 /node_modules
+/package-lock.json
 dev_conf.js
 
 # NW.js build files #
